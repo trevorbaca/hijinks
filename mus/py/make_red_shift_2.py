@@ -126,6 +126,13 @@ lh_staff[-1:-1] = [Rest((1, 8))]
 marktools.LilyPondCommandMark("#(set-accidental-style 'forget)")(lh_staff)
 lh_staff.override.stem.direction = 'up'
 lh_staff.override.beam.positions = (6, 6)
+third_lh_tuplet = componenttools.get_nth_component_in_expr(lh_staff, Tuplet, 2)
+third_lh_tuplet.duration.preferred_denominator = 6
+last_lh_tuplet = componenttools.get_nth_component_in_expr(lh_staff, Tuplet, -1)
+last_lh_tuplet.override.tuplet_bracket.shorten_pair = (0, 0.6)
+second_lh_note = leaftools.get_nth_leaf_in_expr(lh_staff, 1)
+markuptools.Markup(r'\italic { ped. ad libitum }', 'down')(second_lh_note)
+second_lh_note.override.text_script.padding = 2
 
 space = schemetools.SchemePair('space', 1)
 minimum_distance = schemetools.SchemePair('minimum-distance', 21)
@@ -163,10 +170,15 @@ contexttools.InstrumentMark(
 first_violin_leaf = leaftools.get_nth_leaf_in_expr(violin_staff, 0)
 markuptools.Markup(r'\dynamic pp \italic { sempre al fino }', 'down')(first_violin_leaf)
 first_violin_leaf.override.text_script.staff_padding = 5
+last_violin_tuplet = componenttools.get_nth_component_in_expr(violin_staff, Tuplet, -1)
+last_violin_tuplet.override.tuplet_bracket.shorten_pair = (0, 0.6)
 
 first_rh_leaf = leaftools.get_nth_leaf_in_expr(rh_staff, 0)
 markuptools.Markup(r'\dynamic pp \italic { sempre al fino }', 'down')(first_rh_leaf)
 first_rh_leaf.override.text_script.staff_padding = 7
+
+last_rh_tuplet = componenttools.get_nth_component_in_expr(rh_staff, Tuplet, -1)
+last_rh_tuplet.override.tuplet_bracket.shorten_pair = (0, 0.6)
 
 score.override.bar_line.transparent = True
 score.override.bar_number.transparent = True
@@ -181,18 +193,17 @@ score.override.span_bar.transparent = True
 score.override.time_signature.stencil = False
 score.override.tuplet_bracket.bracket_visibility = True
 score.override.tuplet_bracket.padding = 1.5
-score.override.tuplet_number.font_size = 0.25
 score.override.tuplet_number.text = schemetools.SchemeFunction('tuplet-number::calc-fraction-text')
 score.set.auto_beaming = False
 score.set.tuplet_full_length = True
 score.set.proportional_notation_duration = schemetools.SchemeMoment(Fraction(1, 96))
 
 last_leaf = leaftools.get_nth_leaf_in_expr(score, -1)
-marktools.LilyPondCommandMark('bar "||"', 'after')(last_leaf)
+marktools.LilyPondCommandMark('bar "|."', 'after')(last_leaf)
 marktools.LilyPondCommandMark("override Score.BarLine #'transparent = ##f", 'after')(last_leaf)
 marktools.LilyPondCommandMark("override Score.SpanBar #'transparent = ##f", 'after')(last_leaf)
-markuptools.Markup(r'\italic { Austin Feb 2006. }', 'down')(last_leaf)
-last_leaf.override.text_script.extra_offset = (-13.5, -7)
+markuptools.Markup(r'\italic { Austin Feb 2006 }', 'down')(last_leaf)
+last_leaf.override.text_script.extra_offset = (-13.5, -8)
 
 lily_file = lilyfiletools.make_basic_lily_file(score)
 lily_file.default_paper_size = 'letter', 'portrait'
@@ -216,7 +227,7 @@ lily_file.header_block.subtitle = markuptools.Markup(
 lily_file.header_block.title = markuptools.Markup(
    '\\override #\'(font-name . "Adobe Caslon Pro Bold") '
    r'\fontsize #8 '
-   r'\line { RED SHIFT HIJINKS }')
+   r'\line { RED \concat { SHIF \hspace #-0.2 T } HIJINKS }')
 lily_file.layout_block.contexts.append([r'\Voice', r'\remove Forbid_line_break_engraver'])
 lily_file.layout_block.indent = 0
 lily_file.layout_block.ragged_right = True

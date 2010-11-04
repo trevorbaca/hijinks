@@ -59,16 +59,15 @@ violin_tuplet_definitions = [
 violin_tuplets = [ ]
 for definition in violin_tuplet_definitions:
    violin_tuplet = tuplettools.make_tuplet_from_proportions_and_pair(*definition)
-   spannertools.ComplexBeamSpanner(violin_tuplet)
+   spannertools.MultipartBeamSpanner(violin_tuplet)
    violin_tuplets.append(violin_tuplet)
 
 violin_staff = Staff(violin_tuplets)
 violin_staff.name = 'Violin Staff'
 violin_staff.override.beam.positions = (-4, -4)
 violin_staff.override.stem.stem_end_position = -7
-violin_staff.override.tuplet_bracket.staff_padding = 2
 space = schemetools.SchemePair('space', 1)
-minimum_distance = schemetools.SchemePair('minimum-distance', 18)
+minimum_distance = schemetools.SchemePair('minimum-distance', 20)
 vector = schemetools.SchemeVector(space, minimum_distance)
 violin_staff.override.vertical_axis_group.next_staff_spacing = vector
 
@@ -76,6 +75,7 @@ for i, note in enumerate(notetools.iterate_notes_forward_in_expr(violin_staff)):
    note.pitch = pitches[i]
 
 violin_staff[-1:-1] = [Rest((1, 8))]
+marktools.LilyPondCommandMark("#(set-accidental-style 'forget)")(violin_staff)
 
 rh_pairs = [(n, 16) for n in (4, 3, 3, 4, 3, 3, 4, 4)]
 lh_pairs = [(n, 16) for n in (3, 4, 3, 2, 4, 4, 4, 4)]
@@ -103,7 +103,7 @@ lh_proportions = [
 rh_tuplets = [ ]
 for rh_proportion, rh_pair, aggregate in zip(rh_proportions, rh_pairs, rs):
    rh_tuplet = tuplettools.make_tuplet_from_proportions_and_pair(rh_proportion, rh_pair)
-   spannertools.BeamSpanner(rh_tuplet)
+   spannertools.MultipartBeamSpanner(rh_tuplet)
    for note, pitch_number in zip(
       notetools.iterate_notes_forward_in_expr(rh_tuplet), reversed(aggregate)):
       note.pitch = pitch_number
@@ -111,22 +111,39 @@ for rh_proportion, rh_pair, aggregate in zip(rh_proportions, rh_pairs, rs):
 rh_staff = Staff(rh_tuplets)
 rh_staff.name = 'Piano RH Staff'
 rh_staff[-1:-1] = [Rest((1, 8))]
+marktools.LilyPondCommandMark("#(set-accidental-style 'forget)")(rh_staff)
 
 lh_tuplets = [ ]
 for lh_proportion, lh_pair, aggregate in zip(lh_proportions, lh_pairs, rs):
    lh_tuplet = tuplettools.make_tuplet_from_proportions_and_pair(lh_proportion, lh_pair)
-   spannertools.BeamSpanner(lh_tuplet)
+   spannertools.MultipartBeamSpanner(lh_tuplet)
    for note, pitch_number in zip(notetools.iterate_notes_forward_in_expr(lh_tuplet), aggregate):
       note.pitch = pitch_number
    lh_tuplets.append(lh_tuplet)
 lh_staff = Staff(lh_tuplets)
 lh_staff.name = 'Piano LH Staff'
 lh_staff[-1:-1] = [Rest((1, 8))]
+marktools.LilyPondCommandMark("#(set-accidental-style 'forget)")(lh_staff)
+lh_staff.override.stem.direction = 'up'
+lh_staff.override.beam.positions = (6, 6)
 
 space = schemetools.SchemePair('space', 1)
-minimum_distance = schemetools.SchemePair('minimum-distance', 16)
+minimum_distance = schemetools.SchemePair('minimum-distance', 21)
 vector = schemetools.SchemeVector(space, minimum_distance)
 rh_staff.override.vertical_axis_group.next_staff_spacing = vector
+rh_staff.override.stem.direction = 'down'
+rh_staff.override.beam.positions = (-6, -6)
+
+for note in notetools.iterate_notes_forward_in_expr([rh_staff, lh_staff]):
+   if note.duration.written <= Fraction(1, 64):
+      marktools.Articulation('staccato')(note)
+   else:
+      marktools.Articulation('tenuto')(note)
+
+for note in notetools.iterate_notes_forward_in_expr(violin_staff):
+   if note.duration.written <= Fraction(1, 16):
+      marktools.Articulation('staccato')(note)
+   marktools.Articulation('tenuto')(note)
 
 piano_staff = scoretools.PianoStaff([rh_staff, lh_staff])
 score = Score([violin_staff, piano_staff])
@@ -149,7 +166,7 @@ first_violin_leaf.override.text_script.staff_padding = 5
 
 first_rh_leaf = leaftools.get_nth_leaf_in_expr(rh_staff, 0)
 markuptools.Markup(r'\dynamic pp \italic { sempre al fino }', 'down')(first_rh_leaf)
-first_rh_leaf.override.text_script.staff_padding = 4
+first_rh_leaf.override.text_script.staff_padding = 7
 
 score.override.bar_line.transparent = True
 score.override.bar_number.transparent = True
@@ -163,6 +180,9 @@ score.override.spacing_spanner.uniform_stretching = True
 score.override.span_bar.transparent = True
 score.override.time_signature.stencil = False
 score.override.tuplet_bracket.bracket_visibility = True
+score.override.tuplet_bracket.padding = 1.5
+score.override.tuplet_number.font_size = 0.25
+score.override.tuplet_number.text = schemetools.SchemeFunction('tuplet-number::calc-fraction-text')
 score.set.auto_beaming = False
 score.set.tuplet_full_length = True
 score.set.proportional_notation_duration = schemetools.SchemeMoment(Fraction(1, 96))
@@ -191,7 +211,7 @@ lily_file.header_block.subtitle = markuptools.Markup(
    r'\raise #-5 '
    r'\fontsize #5 '
    r'\line { For Carl on his 60th } '
-   r'\raise #-16 \hspace #0 '
+   r'\raise #-10 \hspace #0 '
    )
 lily_file.header_block.title = markuptools.Markup(
    '\\override #\'(font-name . "Adobe Caslon Pro Bold") '
@@ -200,16 +220,12 @@ lily_file.header_block.title = markuptools.Markup(
 lily_file.layout_block.contexts.append([r'\Voice', r'\remove Forbid_line_break_engraver'])
 lily_file.layout_block.indent = 0
 lily_file.layout_block.ragged_right = True
-space = schemetools.SchemePair('space', 24)
-stretchability = schemetools.SchemePair('stretchability', 0)
-vector = schemetools.SchemeVector(space, stretchability)
-#lily_file.paper_block.after_title_spacing = vector
-space = schemetools.SchemePair('space', 28)
+space = schemetools.SchemePair('space', 22)
 stretchability = schemetools.SchemePair('stretchability', 0)
 vector = schemetools.SchemeVector(space, stretchability)
 lily_file.paper_block.between_system_spacing = vector
 lily_file.paper_block.left_margin = 20
 lily_file.paper_block.right_margin = 20
-lily_file.paper_block.top_margin = 15
+lily_file.paper_block.top_margin = 12
 
 show(lily_file)

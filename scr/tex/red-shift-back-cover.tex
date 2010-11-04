@@ -1,15 +1,26 @@
 \documentclass[10pt]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[papersize={8.5in, 11in}]{geometry}
+\usepackage[papersize={17in, 11in}]{geometry}
 \usepackage[absolute]{textpos}
-\TPGrid[0.5in, 0.25in]{23}{24}
+\TPGrid[0.5in, 0.25in]{16}{24}
 \usepackage{palatino}
 \parindent=0pt
 \usepackage{nopageno}
 \usepackage{eurosym}
 \begin{document}
 
-\begin{textblock}{23}(0, 23.5)
+% 0.5 in left and right margins
+% 0.25 in top and bottom margins
+% 16 columns and 24 rows
+% (each column therefore equals exactly 1 inch width)
+
+% one text block with following attributes
+% starts at column 8.5 == 0.5 in + 8.5 in = 9 in
+% width of 7.5 columns == 7.5 in
+% ends at 9 + 7.5 = 16.5 in
+% effective right margin = 17 - 16.5 = 0.5 in
+
+\begin{textblock}{7.5}(8.5, 23.5)
 AWN-003 2006-02-02 \hfill
 \textit{Scores available from the composer at www.trevorbaca.com} \hfill
 \euro 16 / \$20

@@ -5,11 +5,11 @@ omega = duration(60, 8)
 cons = CC[0][175 - 1]
 cary = [[-2, -12, -10], [18, 8, 7, 17], [15, 25, 21, 4, 11]]
 
-order1 = [p % 12 for p in flatten(cary)]
-order2 = [p % 12 for p in flatten(rotateLeft([rotateRight(pt) for pt in cary]))]
-order3 = [p % 12 for p in flatten(rotateLeft([rotateRight(pt, 2) for pt in cary], 2))]
+order1 = [p % 12 for p in flatten_sequence(cary)]
+order2 = [p % 12 for p in flatten_sequence(rotateLeft([rotateRight(pt) for pt in cary]))]
+order3 = [p % 12 for p in flatten_sequence(rotateLeft([rotateRight(pt, 2) for pt in cary], 2))]
 
-pitches = flatten([registrate(cons, o) for o in [order1, order2, order3]])
+pitches = flatten_sequence([registrate(cons, o) for o in [order1, order2, order3]])
 
 cards = [2, 1, 1, 2, 3]
 

@@ -1,4 +1,4 @@
-#from utilities import flatten, rotateLeft, rotateRight, partition, sumUntil
+#from util import flatten, rotateLeft, rotateRight, partition, sumUntil
 #from pitchmaterial import CC
 #from music import registrate, splitPitches, splitMaterial
 #from note import note

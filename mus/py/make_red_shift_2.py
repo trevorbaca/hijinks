@@ -13,18 +13,18 @@ assert cons == [10, 19, 20, 23, 24, 26, 27, 29, 30, 33, 37, 40]
 
 cary = [[-2, -12, -10], [18, 8, 7, 17], [15, 25, 21, 4, 11]]
 
-order1 = [p % 12 for p in seqtools.flatten_sequence(cary)]
+order1 = [p % 12 for p in sequencetools.flatten_sequence(cary)]
 assert order1 == [10, 0, 2, 6, 8, 7, 5, 3, 1, 9, 4, 11]
 
-order2 = [p % 12 for p in seqtools.flatten_sequence(
-   seqtools.rotate_sequence([seqtools.rotate_sequence(pt, 1) for pt in cary], -1))]
+order2 = [p % 12 for p in sequencetools.flatten_sequence(
+   sequencetools.rotate_sequence([sequencetools.rotate_sequence(pt, 1) for pt in cary], -1))]
 assert order2 == [5, 6, 8, 7, 11, 3, 1, 9, 4, 2, 10, 0]
 
-order3 = [p % 12 for p in seqtools.flatten_sequence(
-   seqtools.rotate_sequence([seqtools.rotate_sequence(pt, 2) for pt in cary], -2))]
+order3 = [p % 12 for p in sequencetools.flatten_sequence(
+   sequencetools.rotate_sequence([sequencetools.rotate_sequence(pt, 2) for pt in cary], -2))]
 assert order3 == [4, 11, 3, 1, 9, 0, 2, 10, 7, 5, 6, 8]
 
-pitches = seqtools.flatten_sequence([
+pitches = sequencetools.flatten_sequence([
    pitchtools.register_chromatic_pitch_class_numbers_by_chromatic_pitch_number_aggregate(o, cons) 
    for o in [order1, order2, order3]])
 

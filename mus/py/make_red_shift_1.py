@@ -134,6 +134,3 @@ LH.insert(f08b, lhstarts[8])
 rsc2 = score([vln, staffGroup([RH, LH])],
 	'letter', 'global staff size 14', 'strict spacing', 'proportional spacing 1 96', 'no indent',
 	'no autobeaming', 'allow beam break', 'transparent barlines', 'no tagline', 'title RED SHIFT HIJINKS')
-
-
-

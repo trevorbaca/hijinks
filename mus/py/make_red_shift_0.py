@@ -105,7 +105,3 @@ st2 = staff([
 	enclosure = 'simultaneous'
 )
 sc2 = score(staffGroup([st1, st2], 'transparent span bars'), 'no indent', 'transparent stem', 'transparent bar numbers')
-
-
-
-

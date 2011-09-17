@@ -205,9 +205,9 @@ marktools.LilyPondCommandMark("override Score.SpanBar #'transparent = ##f", 'aft
 markuptools.Markup(r'\italic { Austin Feb 2006 }', 'down')(last_leaf)
 last_leaf.override.text_script.extra_offset = (-13.5, -8)
 
-lily_file = lilyfiletools.make_basic_lily_file(score)
-lily_file.default_paper_size = 'letter', 'portrait'
-lily_file.global_staff_size = 14
+lilypond_file = lilypondfiletools.make_basic_lilypond_file(score)
+lilypond_file.default_paper_size = 'letter', 'portrait'
+lilypond_file.global_staff_size = 14
 
 violin_leaf = leaftools.get_nth_leaf_in_expr(violin_staff, 5)
 composer_markup = markuptools.Markup(
@@ -217,26 +217,26 @@ composer_markup = markuptools.Markup(
 composer_markup(violin_leaf)
 violin_leaf.override.text_script.extra_offset = (-10, 4)
 
-lily_file.header_block.subtitle = markuptools.Markup(
+lilypond_file.header_block.subtitle = markuptools.Markup(
    '\\override #\'(font-name . "Adobe Caslon Pro") '
    r'\raise #-5 '
    r'\fontsize #5 '
    r'\line { For Carl on his 60th } '
    r'\raise #-10 \hspace #0 '
    )
-lily_file.header_block.title = markuptools.Markup(
+lilypond_file.header_block.title = markuptools.Markup(
    '\\override #\'(font-name . "Adobe Caslon Pro Bold") '
    r'\fontsize #8 '
    r'\line { RED \concat { SHIF \hspace #-0.2 T } HIJINKS }')
-lily_file.layout_block.contexts.append([r'\Voice', r'\remove Forbid_line_break_engraver'])
-lily_file.layout_block.indent = 0
-lily_file.layout_block.ragged_right = True
+lilypond_file.layout_block.contexts.append([r'\Voice', r'\remove Forbid_line_break_engraver'])
+lilypond_file.layout_block.indent = 0
+lilypond_file.layout_block.ragged_right = True
 space = schemetools.SchemePair('space', 22)
 stretchability = schemetools.SchemePair('stretchability', 0)
 vector = schemetools.SchemeVector(space, stretchability)
-lily_file.paper_block.between_system_spacing = vector
-lily_file.paper_block.left_margin = 20
-lily_file.paper_block.right_margin = 20
-lily_file.paper_block.top_margin = 12
+lilypond_file.paper_block.between_system_spacing = vector
+lilypond_file.paper_block.left_margin = 20
+lilypond_file.paper_block.right_margin = 20
+lilypond_file.paper_block.top_margin = 12
 
-show(lily_file)
+show(lilypond_file)

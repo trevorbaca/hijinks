@@ -56,7 +56,7 @@ violin_tuplet_definitions = [
    ([4, 2, 2, 2], (8, 16)),
    ([3, 2], (4, 16))]
 
-violin_tuplets = [ ]
+violin_tuplets = []
 for definition in violin_tuplet_definitions:
    violin_tuplet = tuplettools.make_tuplet_from_proportions_and_pair(*definition)
    spannertools.MultipartBeamSpanner(violin_tuplet)
@@ -100,7 +100,7 @@ lh_proportions = [
    [2, 2, 1, 1, 1, 1, 4, 4, 4],
    [6, 6, 2, 2, 1, 1]]
 
-rh_tuplets = [ ]
+rh_tuplets = []
 for rh_proportion, rh_pair, aggregate in zip(rh_proportions, rh_pairs, rs):
    rh_tuplet = tuplettools.make_tuplet_from_proportions_and_pair(rh_proportion, rh_pair)
    spannertools.MultipartBeamSpanner(rh_tuplet)
@@ -113,7 +113,7 @@ rh_staff.name = 'Piano RH Staff'
 rh_staff[-1:-1] = [Rest((1, 8))]
 marktools.LilyPondCommandMark("#(set-accidental-style 'forget)")(rh_staff)
 
-lh_tuplets = [ ]
+lh_tuplets = []
 for lh_proportion, lh_pair, aggregate in zip(lh_proportions, lh_pairs, rs):
    lh_tuplet = tuplettools.make_tuplet_from_proportions_and_pair(lh_proportion, lh_pair)
    spannertools.MultipartBeamSpanner(lh_tuplet)

@@ -4,7 +4,7 @@ import baca
 import os
 
 
-def make_back_covers( ):
+def make_back_covers():
    input_directory = os.path.join(os.environ['REDSHIFT'], 'exg', 'tex')
    output_directory = os.path.join(os.environ['REDSHIFT'], 'exg', 'pdf')
    for cover_file_name in ('red-shift-back-cover.tex', ):
@@ -14,4 +14,4 @@ def make_back_covers( ):
 
 if __name__ == '__main__':
    os.system('clear')
-   make_back_covers( )
+   make_back_covers()

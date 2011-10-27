@@ -1,8 +1,12 @@
 # -*- encoding: utf-8 -*-
+from abjad.tools import instrumenttools
+from abjad.tools import scoretools
+from baca.scf import TrevorBaca
+from collections import OrderedDict
 import mus
 
 
-score_composer = 'Trevor Bača'
-score_title = 'Red Shift Hijinks'
-score_forces = ['violin', 'piano']
-score_year = 2005
+tags = OrderedDict([
+    ('composer', TrevorBaca()),
+    ('title', 'Red Shift Hijinks'),
+    ('year_of_completion', 2005)])

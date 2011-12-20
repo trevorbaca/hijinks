@@ -8,6 +8,7 @@ import mus
 
 tags = OrderedDict([
     ('composer', TrevorBaca()),
+    ('forces_tagline', 'for violin & piano'),
     ('instrumentation', scoretools.InstrumentationSpecifier([
         scoretools.Performer(name='violinist', instruments=[instrumenttools.Violin()]),
         scoretools.Performer(name='pianist', instruments=[instrumenttools.Piano()])])),

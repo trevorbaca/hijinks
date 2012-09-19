@@ -71,7 +71,7 @@ minimum_distance = schemetools.SchemePair('minimum-distance', 20)
 vector = schemetools.SchemeVector(space, minimum_distance)
 violin_staff.override.vertical_axis_group.next_staff_spacing = vector
 
-for i, note in enumerate(notetools.iterate_notes_forward_in_expr(violin_staff)):
+for i, note in enumerate(notetools.iterate_notes_in_expr(violin_staff)):
    note.pitch = pitches[i]
 
 violin_staff[-1:-1] = [Rest((1, 8))]
@@ -105,7 +105,7 @@ for rh_proportion, rh_pair, aggregate in zip(rh_proportions, rh_pairs, rs):
    rh_tuplet = tuplettools.make_tuplet_from_proportions_and_pair(rh_proportion, rh_pair)
    spannertools.MultipartBeamSpanner(rh_tuplet)
    for note, pitch_number in zip(
-      notetools.iterate_notes_forward_in_expr(rh_tuplet), reversed(aggregate)):
+      notetools.iterate_notes_in_expr(rh_tuplet), reversed(aggregate)):
       note.pitch = pitch_number
    rh_tuplets.append(rh_tuplet)
 rh_staff = Staff(rh_tuplets)
@@ -117,7 +117,7 @@ lh_tuplets = []
 for lh_proportion, lh_pair, aggregate in zip(lh_proportions, lh_pairs, rs):
    lh_tuplet = tuplettools.make_tuplet_from_proportions_and_pair(lh_proportion, lh_pair)
    spannertools.MultipartBeamSpanner(lh_tuplet)
-   for note, pitch_number in zip(notetools.iterate_notes_forward_in_expr(lh_tuplet), aggregate):
+   for note, pitch_number in zip(notetools.iterate_notes_in_expr(lh_tuplet), aggregate):
       note.pitch = pitch_number
    lh_tuplets.append(lh_tuplet)
 lh_staff = Staff(lh_tuplets)
@@ -141,13 +141,13 @@ rh_staff.override.vertical_axis_group.next_staff_spacing = vector
 rh_staff.override.stem.direction = 'down'
 rh_staff.override.beam.positions = (-6, -6)
 
-for note in notetools.iterate_notes_forward_in_expr([rh_staff, lh_staff]):
+for note in notetools.iterate_notes_in_expr([rh_staff, lh_staff]):
    if note.duration.written <= Fraction(1, 64):
       marktools.Articulation('staccato')(note)
    else:
       marktools.Articulation('tenuto')(note)
 
-for note in notetools.iterate_notes_forward_in_expr(violin_staff):
+for note in notetools.iterate_notes_in_expr(violin_staff):
    if note.duration.written <= Fraction(1, 16):
       marktools.Articulation('staccato')(note)
    marktools.Articulation('tenuto')(note)

@@ -33,28 +33,28 @@ pps = splitPitches(pp, 0, output='objects')
 
 v1 = voice(
 		[time(48, 4)] +
-		pps[0] + 
-		['stop transparent barlines', bar('|.')]) 
+		pps[0] +
+		['stop transparent barlines', bar('|.')])
 st1 = staff([
 	voice([skip(48, 4), Bar(), Break()] * 2),
 	v1],
-	'no time signatures', 
+	'no time signatures',
 	'transparent barlines',
 	enclosure = 'simultaneous')
 st2 = staff(
 	[time(48, 4)] +
-	[clef('bass')] + 
-	pps[1] + 
-	['stop transparent barlines', 'stop transparent span bars', bar('|.')], 
+	[clef('bass')] +
+	pps[1] +
+	['stop transparent barlines', 'stop transparent span bars', bar('|.')],
 	'no time signatures',
 	'transparent barlines')
 sc1 = score(
 	staffGroup(
-		[st1, st2], 
+		[st1, st2],
 		'transparent span bars'
-	), 
-	'no indent', 
-	'transparent stem', 
+	),
+	'no indent',
+	'transparent stem',
 	'transparent bar numbers',
 	'landscape',
 	'global staff size 14'
@@ -89,7 +89,7 @@ v1 = voice(
 st1 = staff([
 	spacerVoice,
 	v1],
-	'no time signatures', 
+	'no time signatures',
 	'transparent barlines',
 	enclosure = 'simultaneous'
 )
@@ -100,7 +100,7 @@ v2 = voice(
 st2 = staff([
 	spacerVoice,
 	v2],
-	'no time signatures', 
+	'no time signatures',
 	'transparent barlines',
 	enclosure = 'simultaneous'
 )

@@ -58,7 +58,7 @@ vln = staff([time(1, 8)] + ([rest(1, 8)] * 5) * 7, 'no time signatures', 'minimu
 v1 = paint(
 	[beam(music([4, 2, 2, 2], -2, 'sixteenth')),
 		beam(music([2, 2, 4, 1, 1], -2, 'sixteenth')),
-		beam(music([4, 2, 2, 2], -2, 'sixteenth'))], 
+		beam(music([4, 2, 2, 2], -2, 'sixteenth'))],
 	pitches[:13])
 vln.insert(v1, duration(0))
 v2 = paint(beam(music([3, 2], -1, 'sixteenth')), pitches[13:15])

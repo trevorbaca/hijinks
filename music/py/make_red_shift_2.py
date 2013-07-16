@@ -130,7 +130,7 @@ third_lh_tuplet = componenttools.get_nth_component_in_expr(lh_staff, Tuplet, 2)
 third_lh_tuplet.duration.preferred_denominator = 6
 last_lh_tuplet = componenttools.get_nth_component_in_expr(lh_staff, Tuplet, -1)
 last_lh_tuplet.override.tuplet_bracket.shorten_pair = (0, 0.6)
-second_lh_note = leaftools.get_nth_leaf_in_expr(lh_staff, 1)
+second_lh_note = lh_staff[:].get(leaftools.Leaf, 1)
 markuptools.Markup(r'\italic { ped. ad libitum }', 'down')(second_lh_note)
 second_lh_note.override.text_script.padding = 2
 
@@ -167,13 +167,13 @@ contexttools.InstrumentMark(r'\hcenter-in #6 Vn.', r'\hcenter-in #6 Vn.')(violin
 contexttools.InstrumentMark(
     r'\hcenter-in #6 Pf.', r'\hcenter-in #6 Pf.', target_context = type(piano_staff))(
     piano_staff)
-first_violin_leaf = leaftools.get_nth_leaf_in_expr(violin_staff, 0)
+first_violin_leaf = violin_staff[:].get(leaftools.Leaf, 0)
 markuptools.Markup(r'\dynamic pp \italic { sempre al fino }', 'down')(first_violin_leaf)
 first_violin_leaf.override.text_script.staff_padding = 5
 last_violin_tuplet = componenttools.get_nth_component_in_expr(violin_staff, Tuplet, -1)
 last_violin_tuplet.override.tuplet_bracket.shorten_pair = (0, 0.6)
 
-first_rh_leaf = leaftools.get_nth_leaf_in_expr(rh_staff, 0)
+first_rh_leaf = rh_staff[:].get(leaftools.Leaf, 0)
 markuptools.Markup(r'\dynamic pp \italic { sempre al fino }', 'down')(first_rh_leaf)
 first_rh_leaf.override.text_script.staff_padding = 7
 
@@ -198,7 +198,7 @@ score.set.auto_beaming = False
 score.set.tuplet_full_length = True
 score.set.proportional_notation_duration = schemetools.SchemeMoment(Fraction(1, 96))
 
-last_leaf = leaftools.get_nth_leaf_in_expr(score, -1)
+last_leaf = score[:].get(leaftools.Leaf, -1)
 marktools.LilyPondCommandMark('bar "|."', 'after')(last_leaf)
 marktools.LilyPondCommandMark("override Score.BarLine #'transparent = ##f", 'after')(last_leaf)
 marktools.LilyPondCommandMark("override Score.SpanBar #'transparent = ##f", 'after')(last_leaf)
@@ -209,7 +209,7 @@ lilypond_file = lilypondfiletools.make_basic_lilypond_file(score)
 lilypond_file.default_paper_size = 'letter', 'portrait'
 lilypond_file.global_staff_size = 14
 
-violin_leaf = leaftools.get_nth_leaf_in_expr(violin_staff, 5)
+violin_leaf = violin_staff[:].get(leaftools.Leaf, 5)
 composer_markup = markuptools.Markup(
     '\\override #\'(font-name . "Adobe Caslon Pro") '
     r'\fontsize #3 '

@@ -126,9 +126,9 @@ lh_staff[-1:-1] = [Rest((1, 8))]
 marktools.LilyPondCommandMark("#(set-accidental-style 'forget)")(lh_staff)
 lh_staff.override.stem.direction = 'up'
 lh_staff.override.beam.positions = (6, 6)
-third_lh_tuplet = componenttools.get_nth_component_in_expr(lh_staff, Tuplet, 2)
+third_ly_tuplet = lh_staff.get(Tuplet, 2)
 third_lh_tuplet.duration.preferred_denominator = 6
-last_lh_tuplet = componenttools.get_nth_component_in_expr(lh_staff, Tuplet, -1)
+last_lh_tuplet = lh_staff.get(Tuplet, -1)
 last_lh_tuplet.override.tuplet_bracket.shorten_pair = (0, 0.6)
 second_lh_note = lh_staff[:].get(leaftools.Leaf, 1)
 markuptools.Markup(r'\italic { ped. ad libitum }', 'down')(second_lh_note)
@@ -170,14 +170,14 @@ contexttools.InstrumentMark(
 first_violin_leaf = violin_staff[:].get(leaftools.Leaf, 0)
 markuptools.Markup(r'\dynamic pp \italic { sempre al fino }', 'down')(first_violin_leaf)
 first_violin_leaf.override.text_script.staff_padding = 5
-last_violin_tuplet = componenttools.get_nth_component_in_expr(violin_staff, Tuplet, -1)
+last_violin_tuplet = violin_staff.get(Tuplet, -1)
 last_violin_tuplet.override.tuplet_bracket.shorten_pair = (0, 0.6)
 
 first_rh_leaf = rh_staff[:].get(leaftools.Leaf, 0)
 markuptools.Markup(r'\dynamic pp \italic { sempre al fino }', 'down')(first_rh_leaf)
 first_rh_leaf.override.text_script.staff_padding = 7
 
-last_rh_tuplet = componenttools.get_nth_component_in_expr(rh_staff, Tuplet, -1)
+last_rh_tuplet = rh_staff.get(Tuplet, -1)
 last_rh_tuplet.override.tuplet_bracket.shorten_pair = (0, 0.6)
 
 score.override.bar_line.transparent = True

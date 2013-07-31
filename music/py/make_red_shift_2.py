@@ -58,7 +58,7 @@ violin_tuplet_definitions = [
 
 violin_tuplets = []
 for definition in violin_tuplet_definitions:
-    violin_tuplet = tuplettools.make_tuplet_from_proportions_and_pair(*definition)
+    violin_tuplet = Tuplet.from_ratio_and_nonreduced_fraction(*definition)
     spannertools.MultipartBeamSpanner(violin_tuplet)
     violin_tuplets.append(violin_tuplet)
 
@@ -102,7 +102,7 @@ lh_proportions = [
 
 rh_tuplets = []
 for rh_proportion, rh_pair, aggregate in zip(rh_proportions, rh_pairs, rs):
-    rh_tuplet = tuplettools.make_tuplet_from_proportions_and_pair(rh_proportion, rh_pair)
+    rh_tuplet = Tuplet.from_ratio_and_nonreduced_fraction(rh_proportion, rh_pair)
     spannertools.MultipartBeamSpanner(rh_tuplet)
     for note, pitch_number in zip(
         notetools.iterate_notes_in_expr(rh_tuplet), reversed(aggregate)):
@@ -115,7 +115,7 @@ marktools.LilyPondCommandMark("#(set-accidental-style 'forget)")(rh_staff)
 
 lh_tuplets = []
 for lh_proportion, lh_pair, aggregate in zip(lh_proportions, lh_pairs, rs):
-    lh_tuplet = tuplettools.make_tuplet_from_proportions_and_pair(lh_proportion, lh_pair)
+    lh_tuplet = Tuplet.from_ratio_and_nonreduced_fraction(lh_proportion, lh_pair)
     spannertools.MultipartBeamSpanner(lh_tuplet)
     for note, pitch_number in zip(notetools.iterate_notes_in_expr(lh_tuplet), aggregate):
         note.pitch = pitch_number

@@ -1,7 +1,6 @@
 #! /usr/bin/env python
-
-import baca
 import os
+import baca
 
 
 def make_back_covers():
@@ -9,7 +8,11 @@ def make_back_covers():
     output_directory = os.path.join(os.environ['REDSHIFT'], 'exg', 'pdf')
     for cover_file_name in ('red-shift-back-cover.tex', ):
         cover_file_name_stem = cover_file_name[:-4]
-        baca.util.render_tex(input_directory, cover_file_name_stem, output_directory)
+        baca.utilities.render_tex(
+            input_directory, 
+            cover_file_name_stem, 
+            output_directory,
+            )
 
 
 if __name__ == '__main__':

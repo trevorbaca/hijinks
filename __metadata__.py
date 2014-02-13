@@ -2,7 +2,7 @@
 import collections
 
 
-tags = collections.OrderedDict([
+metadata = collections.OrderedDict([
     ('composer', 'Trevor Ba\xc4\x8da'),
     ('forces_tagline', 'for violin & piano'),
     ('title', 'Red Shift Hijinks'),

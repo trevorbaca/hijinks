@@ -29,7 +29,7 @@ rs[7 - 1] = CC[3][2 - 1]
 rs[8 - 1] = CC[4][85 - 1]
 
 pp = flatten_sequence([registrate(r, flatten_sequence(cary)) for r in rs])
-pps = baca.music.split_pitches(pp, 0, output='objects')
+pps = baca.utilities.split_pitches(pp, 0, output='objects')
 
 v1 = voice(
 		[time(48, 4)] +

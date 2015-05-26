@@ -1,6 +1,5 @@
 #from utilities import flatten, rotateLeft, rotateRight, partition, sumUntil
 #from pitchmaterial import CC
-#from music import registrate, splitPitches, splitMaterial
 #from note import note
 #from chord import chord
 #from skip import skip
@@ -15,6 +14,7 @@
 #from Break import Break, NoBreak
 #from bar import Bar
 #from pprint import pprint
+import baca
 
 cary = [[-2, -12, -10], [18, 8, 7, 17], [15, 25, 21, 4, 11]]
 
@@ -29,7 +29,7 @@ rs[7 - 1] = CC[3][2 - 1]
 rs[8 - 1] = CC[4][85 - 1]
 
 pp = flatten_sequence([registrate(r, flatten_sequence(cary)) for r in rs])
-pps = splitPitches(pp, 0, output='objects')
+pps = baca.music.split_pitches(pp, 0, output='objects')
 
 v1 = voice(
 		[time(48, 4)] +

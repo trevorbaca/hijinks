@@ -1,0 +1,12 @@
+# Python intermediate files
+*.py[cod]
+
+# LaTeX intermediate files
+*.synctex.gz
+
+# Miscellaneous files
+*.bak
+*.pkl
+
+# OSX files
+.DS_Store

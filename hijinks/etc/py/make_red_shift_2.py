@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ## rebuilt 2010-09-18
 
 from abjad import *

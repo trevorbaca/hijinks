@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
-import makers
-import materials
-import segments
+from hijinks import makers
+from hijinks import materials
+from hijinks import segments

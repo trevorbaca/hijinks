@@ -8,7 +8,7 @@ def make_back_covers():
     output_directory = os.path.join(os.environ['REDSHIFT'], 'exg', 'pdf')
     for cover_file_name in ('red-shift-back-cover.tex', ):
         cover_file_name_stem = cover_file_name[:-4]
-        baca.utilities.render_tex(
+        baca.tools.render_tex(
             input_directory, 
             cover_file_name_stem, 
             output_directory,

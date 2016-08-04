@@ -6,7 +6,7 @@ import collections
 
 piano = abjad.instrumenttools.Piano(
     instrument_name_markup=\
-        baca.markup.make_instrument_name_markup('Piano'),
+        baca.markup.make_short_instrument_name_markup('Pf.'),
     short_instrument_name_markup=\
         baca.markup.make_short_instrument_name_markup('Pf.'),
     )
@@ -20,8 +20,8 @@ instruments = collections.OrderedDict([
     (
         'violin', 
         abjad.instrumenttools.Violin(
-            instrument_name_markup=baca.markup.make_instrument_name_markup(
-                'Violin'),
+            instrument_name_markup=\
+                baca.markup.make_short_instrument_name_markup('Vn.'),
             short_instrument_name_markup=\
                 baca.markup.make_short_instrument_name_markup('Vn.'),
             ),

@@ -41,21 +41,20 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
 
         cary = [[-2, -12, -10], [18, 8, 7, 17], [15, 25, 21, 4, 11]]
 
-        order_1 = [p % 12 for p in abjad.sequencetools.flatten_sequence(cary)]
+        order_1 = abjad.sequencetools.flatten_sequence(cary)
+        order_1 = [_ % 12 for _ in order_1]
         assert order_1 == [10, 0, 2, 6, 8, 7, 5, 3, 1, 9, 4, 11]
 
-        order_2 = [
-            p % 12 for p in abjad.sequencetools.flatten_sequence(
-            abjad.sequencetools.rotate_sequence(
-            [abjad.sequencetools.rotate_sequence(pt, 1) for pt in cary], -1))
-            ]
+        order_2 = [abjad.sequencetools.rotate_sequence(_, 1) for _ in cary]
+        order_2 = abjad.sequencetools.rotate_sequence(order_2, -1)
+        order_2 = abjad.sequencetools.flatten_sequence(order_2)
+        order_2 = [_ % 12 for _ in order_2]
         assert order_2 == [5, 6, 8, 7, 11, 3, 1, 9, 4, 2, 10, 0]
 
-        order_3 = [
-            p % 12 for p in abjad.sequencetools.flatten_sequence(
-            abjad.sequencetools.rotate_sequence(
-            [abjad.sequencetools.rotate_sequence(pt, 2) for pt in cary], -2))
-            ]
+        order_3 = [abjad.sequencetools.rotate_sequence(_, 2) for _ in cary]
+        order_3 = abjad.sequencetools.rotate_sequence(order_3, -2)
+        order_3 = abjad.sequencetools.flatten_sequence(order_3)
+        order_3 = [_ % 12 for _ in order_3]
         assert order_3 == [4, 11, 3, 1, 9, 0, 2, 10, 7, 5, 6, 8]
 
         aggregate = abjad.pitchtools.PitchSet(
@@ -63,16 +62,11 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
             item_class=abjad.pitchtools.NumberedPitch,
             )
 
-        pitches = []
+        violin_pitches = []
         orders = (order_1, order_2, order_3)
         for order in orders:
-            pitches_ = aggregate.register(order_1)
-            pitches.extend(pitches_)
-
-        #pitches = abjad.sequencetools.flatten_sequence([
-        #    abjad.pitchtools.register_chromatic_pitch_
-        #        class_numbers_by_chromatic_pitch_number_aggregate(o, aggregate)
-        #    for o in [order_1, order_2, order_3]])
+            pitches_ = aggregate.register(order)
+            violin_pitches.extend(pitches_)
 
         #circuit = 8 * [0]
         #circuit[1-1] = CC[5][111 - 1]
@@ -101,22 +95,24 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
             ([3, 2], (4, 16)),
             ]
 
+        tuplet_maker = \
+            abjad.Tuplet.from_nonreduced_ratio_and_nonreduced_fraction
+
         violin_tuplets = []
         for definition in violin_tuplet_definitions:
-            violin_tuplet = abjad.Tuplet.from_nonreduced_ratio_and_nonreduced_fraction(
-                *definition)
+            violin_tuplet = tuplet_maker(*definition)
             leaves = list(abjad.iterate(violin_tuplet).by_leaf())
             abjad.attach(abjad.spannertools.MultipartBeam(), leaves)
             violin_tuplets.append(violin_tuplet)
 
-        violin_staff = score['Violin Music Staff']
-        violin_staff.extend(violin_tuplets)
+        violin_music_staff = score['Violin Music Staff']
+        violin_music_staff.extend(violin_tuplets)
 
-        for i, note in enumerate(abjad.iterate(violin_staff).by_leaf(
-            prototype=abjad.Note)):
-            note.written_pitch = pitches[i]
+        notes = abjad.iterate(violin_music_staff).by_leaf(pitched=True)
+        for i, note in enumerate(notes):
+            note.written_pitch = violin_pitches[i]
 
-        violin_staff[-1:-1] = [abjad.Rest((1, 8))]
+        violin_music_staff[-1:-1] = [abjad.Rest((1, 8))]
 
         rh_pairs = [(n, 16) for n in (4, 3, 3, 4, 3, 3, 4, 4)]
         lh_pairs = [(n, 16) for n in (3, 4, 3, 2, 4, 4, 4, 4)]
@@ -147,15 +143,14 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
         rh_tuplets = []
         for rh_proportion, rh_pair, aggregate in zip(
             rh_proportions, rh_pairs, circuit):
-            rh_tuplet = abjad.Tuplet.from_nonreduced_ratio_and_nonreduced_fraction(
-                rh_proportion, rh_pair)
+            rh_tuplet = tuplet_maker(rh_proportion, rh_pair)
             if isinstance(rh_tuplet, abjad.Tuplet):
                 duration = abjad.inspect_(rh_tuplet).get_duration()
                 duration = duration.with_denominator(32)
                 rh_tuplet.preferred_denominator = duration.numerator
             leaves = list(abjad.iterate(rh_tuplet).by_leaf())
             abjad.attach(abjad.spannertools.MultipartBeam(), leaves)
-            notes = list(abjad.iterate(rh_tuplet).by_leaf(prototype=abjad.Note))
+            notes = list(abjad.iterate(rh_tuplet).by_leaf(pitched=True))
             for note, pitch_number in zip(notes, reversed(aggregate)):
                 note.written_pitch = pitch_number
             rh_tuplets.append(rh_tuplet)
@@ -166,15 +161,14 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
         lh_tuplets = []
         for lh_proportion, lh_pair, aggregate in zip(
             lh_proportions, lh_pairs, circuit):
-            lh_tuplet = abjad.Tuplet.from_nonreduced_ratio_and_nonreduced_fraction(
-                lh_proportion, lh_pair)
+            lh_tuplet = tuplet_maker(lh_proportion, lh_pair)
             if isinstance(lh_tuplet, abjad.Tuplet):
                 duration = abjad.inspect_(lh_tuplet).get_duration()
                 duration = duration.with_denominator(32)
                 lh_tuplet.preferred_denominator = duration.numerator
             leaves = list(abjad.iterate(lh_tuplet).by_leaf())
             abjad.attach(abjad.spannertools.MultipartBeam(), leaves)
-            notes = abjad.iterate(lh_tuplet).by_leaf(prototype=abjad.Note)
+            notes = abjad.iterate(lh_tuplet).by_leaf(pitched=True)
             for note, pitch_number in zip(notes, aggregate):
                 note.written_pitch = pitch_number
             lh_tuplets.append(lh_tuplet)
@@ -187,15 +181,13 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
         abjad.attach(markup, second_lh_note)
         abjad.override(second_lh_note).text_script.padding = 2
 
-        for note in abjad.iterate(
-            [piano_rh_music_staff, piano_lh_music_staff]).by_leaf(
-            prototype=abjad.Note):
+        for note in abjad.iterate(piano_staff_group).by_leaf(pitched=True):
             if note.written_duration <= abjad.Duration(1, 64):
                 abjad.attach(abjad.Articulation('staccato'), note)
             else:
                 abjad.attach(abjad.Articulation('tenuto'), note)
 
-        for note in abjad.iterate(violin_staff).by_leaf(prototype=abjad.Note):
+        for note in abjad.iterate(violin_music_staff).by_leaf(pitched=True):
             if note.written_duration <= abjad.Duration(1, 16):
                 abjad.attach(abjad.Articulation('staccato'), note)
             abjad.attach(abjad.Articulation('tenuto'), note)
@@ -206,7 +198,7 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
         time_signature = abjad.TimeSignature((1, 8))
         abjad.attach(time_signature, violin_music_staff)
 
-        leaves = list(abjad.iterate(violin_staff).by_leaf())
+        leaves = list(abjad.iterate(violin_music_staff).by_leaf())
         first_violin_leaf = leaves[0]
 
         markup = abjad.Markup('pp').dynamic()

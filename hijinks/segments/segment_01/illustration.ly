@@ -1,4 +1,4 @@
-% 2016-08-04 13:14
+% 2016-08-04 13:27
 
 \version "2.19.46"
 \language "english"
@@ -62,13 +62,13 @@
                     a'''4 -\tenuto
                     e''''8 -\tenuto [
                     b''8 -\tenuto
-                    bf'8 -\tenuto ]
+                    f'''8 -\tenuto ]
                 }
                 r8
                 \override TupletBracket.shorten-pair = #'(0 . 0.6)
                 \times 4/5 {
-                    c'''8. -\tenuto [
-                    d'''8 -\tenuto ]
+                    fs'''8. -\tenuto [
+                    af''8 -\tenuto ]
                 }
                 \revert TupletBracket.shorten-pair
             }

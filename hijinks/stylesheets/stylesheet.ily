@@ -10,16 +10,13 @@
     left-margin = 20\mm
     oddFooterMarkup = \markup \null
     oddHeaderMarkup = \markup \null
-    ragged-bottom = ##t
-    ragged-last = ##t
-    ragged-last-bottom = ##t
-    ragged-right = ##t
-    right-margin = 0\mm
-    %markup-system-spacing.minimum-distance = 40
+    right-margin = 20\mm
+    markup-system-spacing.minimum-distance = 32
     system-system-spacing.minimum-distance = 24
+    system-system-spacing.stechability = 0
     top-markup-spacing.minimum-distance = 6
     top-system-spacing.minimum-distance = 40
-    top-margin = 0.5\in
+    top-margin = 12\mm
 }
 
 \header {
@@ -40,7 +37,7 @@
             }
             " "
             \override #'(font-name . "Palatino")
-            \fontsize #3
+            \fontsize #2
             \line {
                 For Carl on his 60th
             }
@@ -75,6 +72,9 @@
         \type Engraver_group
         \alias Staff
         \accepts ViolinMusicVoice
+        \override Beam.positions = #'(-4 . -4)
+        instrumentName = \violinName
+        shortInstrumentName = \shortViolinName
     }
     % PIANO
     \context {
@@ -89,6 +89,8 @@
         \type Engraver_group
         \alias Staff
         \accepts PianoRHMusicVoice
+        \override Beam.positions = #'(-6 . -6)
+        \override Stem.direction = #down
     }
     \context {
         \Voice
@@ -102,6 +104,8 @@
         \type Engraver_group
         \alias Staff
         \accepts PianoLHMusicVoice
+        \override Beam.positions = #'(6 . 6)
+        \override Stem.direction = #up
     }
     \context {
         \PianoStaff
@@ -110,7 +114,7 @@
         \alias PianoStaff
         \accepts PianoRHMusicStaff
         \accepts PianoLHMusicStaff
-        \override StaffGrouper.staff-staff-spacing.minimum-distance = 12
+        \override StaffGrouper.staff-staff-spacing.minimum-distance = 21
         instrumentName = \pianoName
         shortInstrumentName = \shortPianoName
     }
@@ -129,8 +133,6 @@
         \Score
         \accepts MusicContext
         \remove Bar_number_engraver
-        \remove Mark_engraver
-        \remove Metronome_mark_engraver
         \remove System_start_delimiter_engraver
         \override BarLine.hair-thickness = 0.5
         \override BarLine.space-alist = #'(
@@ -143,6 +145,7 @@
             (next-note semi-fixed-space . 0.0) 
             (right-edge extra-space . 0.0)
             )
+        \override BarLine.transparent = ##t
         \override BarLine.X-extent = #'(0 . 0)
         \override Beam.breakable = ##t
         \override Beam.damping = 99
@@ -150,6 +153,7 @@
         \override DynamicLineSpanner.padding = #1.5
         \override Glissando.breakable = ##t
         \override Glissando.thickness = 3
+        \override MetronomeMark.padding = 4
         \override NoteCollision.merge-differently-dotted = ##t
         \override NoteColumn.ignore-collision = ##t
         \shape #'((-2 . 0) (-1 . 0) (-0.5 . 0) (0 . 0)) RepeatTie                 
@@ -157,22 +161,24 @@
         \override SpacingSpanner.strict-grace-spacing = ##t
         \override SpacingSpanner.strict-note-spacing = ##t
         \override SpacingSpanner.uniform-stretching = ##t
+        \override SpanBar.transparent = ##t
         \override StemTremolo.beam-width = 1.5
         \override StemTremolo.flag-count = 4
         \override StemTremolo.slope = 0.5
-        \override TextScript.font-name = #"Palatino"
+        %\override TextScript.font-name = #"Palatino"
         \override TextScript.padding = 1
         \override TextScript.X-extent = ##f
         \override TextScript.Y-extent = #'(-1.5 . 1.5)
         \override TextSpanner.staff-padding = 2
+        \override TimeSignature.stencil = ##f
         \override TrillSpanner.bound-details.right.padding = 2
         \override TupletBracket.breakable = ##t
         \override TupletBracket.full-length-to-extent = ##f
-        \override TupletBracket.padding = 2
+        \override TupletBracket.padding = 1.5
         \override TupletBracket.staff-padding = 1.5
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
         autoBeaming = ##f
-        proportionalNotationDuration = #(ly:make-moment 1 96)
+        proportionalNotationDuration = #(ly:make-moment 1 86)
         tupletFullLength = ##t
     }
 }

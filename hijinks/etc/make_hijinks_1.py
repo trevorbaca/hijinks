@@ -15,7 +15,7 @@ cards = [2, 1, 1, 2, 3]
 
 sounds = partition(pitches, sumUntil(cards, len(pitches)))
 
-rst1 = staff([time(1, 4)] + [chord(s) for s in sounds], 'transparent barlines')
+rst1 = staff([time(1, 4)] + [chord(s) for s in sounds], 'transparent bar lines')
 rst2 = deepcopy(rst1)
 n = note(0, 3, 16)
 rst2.insert([n, n, n], duration(5, 4))
@@ -37,7 +37,7 @@ RH = deepcopy(rests)
 
 rsc2 = score([graft, staffGroup([rests, rests], delimiter = 'brace')],
 	'letter', 'global staff size 14', 'strict spacing', 'proportional spacing 1 96', 'no indent',
-	'no autobeaming', 'allow beam break', 'transparent barlines', 'no tagline', 'title RED SHIFT HIJINKS')
+	'no autobeaming', 'allow beam break', 'transparent bar lines', 'no tagline', 'title RED SHIFT HIJINKS')
 
 ############################
 ######### from music.py ####
@@ -133,4 +133,4 @@ LH.insert(f08b, lhstarts[8])
 
 rsc2 = score([vln, staffGroup([RH, LH])],
 	'letter', 'global staff size 14', 'strict spacing', 'proportional spacing 1 96', 'no indent',
-	'no autobeaming', 'allow beam break', 'transparent barlines', 'no tagline', 'title RED SHIFT HIJINKS')
+	'no autobeaming', 'allow beam break', 'transparent bar lines', 'no tagline', 'title RED SHIFT HIJINKS')

@@ -34,20 +34,20 @@ pps = baca.tools.split_pitches(pp, 0, output='objects')
 v1 = voice(
 		[time(48, 4)] +
 		pps[0] +
-		['stop transparent barlines', bar('|.')])
+		['stop transparent bar lines', bar('|.')])
 st1 = staff([
 	voice([skip(48, 4), Bar(), Break()] * 2),
 	v1],
 	'no time signatures',
-	'transparent barlines',
+	'transparent bar lines',
 	enclosure = 'simultaneous')
 st2 = staff(
 	[time(48, 4)] +
 	[clef('bass')] +
 	pps[1] +
-	['stop transparent barlines', 'stop transparent span bars', bar('|.')],
+	['stop transparent bar lines', 'stop transparent span bars', bar('|.')],
 	'no time signatures',
-	'transparent barlines')
+	'transparent bar lines')
 sc1 = score(
 	staffGroup(
 		[st1, st2],
@@ -78,7 +78,7 @@ upper, lower = splitMaterial(pps2, 0)
 
 spacerVoice = voice(
 	[skip(16, 4), Bar(), Break()] * 3 +
-	['stop transparent barlines',
+	['stop transparent bar lines',
 	'stop transparent span bars',
 	bar('|.')]
 )
@@ -90,7 +90,7 @@ st1 = staff([
 	spacerVoice,
 	v1],
 	'no time signatures',
-	'transparent barlines',
+	'transparent bar lines',
 	enclosure = 'simultaneous'
 )
 v2 = voice(
@@ -101,7 +101,7 @@ st2 = staff([
 	spacerVoice,
 	v2],
 	'no time signatures',
-	'transparent barlines',
+	'transparent bar lines',
 	enclosure = 'simultaneous'
 )
 sc2 = score(staffGroup([st1, st2], 'transparent span bars'), 'no indent', 'transparent stem', 'transparent bar numbers')

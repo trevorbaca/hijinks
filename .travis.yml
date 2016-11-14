@@ -20,8 +20,8 @@ install:
     - pip install -e .
 
 script:
-    - ajv doctest ./hijinks -x
-    - py.test -rf ./hijinks -x
+    - ajv doctest -x ./hijinks
+    - py.test -xrf ./hijinks
     - python ./hijinks/test/test_segments.py
 
 notifications:

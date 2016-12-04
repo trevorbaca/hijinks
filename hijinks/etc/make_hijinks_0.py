@@ -1,5 +1,4 @@
 #from tools import flatten, rotateLeft, rotateRight, partition, sumUntil
-#from pitchmaterial import CC
 #from note import note
 #from chord import chord
 #from skip import skip
@@ -16,6 +15,7 @@
 #from pprint import pprint
 import baca
 
+CC = baca.tools.make_CC()
 cary = [[-2, -12, -10], [18, 8, 7, 17], [15, 25, 21, 4, 11]]
 
 rs = ['0'] * 8

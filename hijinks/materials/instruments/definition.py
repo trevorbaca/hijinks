@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import abjad
 import baca
-import collections
 
 
 piano = abjad.instrumenttools.Piano(
@@ -12,7 +11,7 @@ piano = abjad.instrumenttools.Piano(
     )
 piano._default_scope = 'PianoStaffGroup'
 
-instruments = collections.OrderedDict([
+instruments = abjad.datastructuretools.TypedOrderedDict([
     (
         'piano', 
         piano,

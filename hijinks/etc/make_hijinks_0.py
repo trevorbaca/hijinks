@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #from tools import flatten, rotateLeft, rotateRight, partition, sumUntil
 #from note import note
 #from chord import chord

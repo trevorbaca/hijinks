@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from user import *
 
 omega = duration(60, 8)

@@ -15,6 +15,7 @@
 #from bar import Bar
 #from pprint import pprint
 import baca
+import hijinks
 
 CC = baca.tools.make_CC()
 cary = [[-2, -12, -10], [18, 8, 7, 17], [15, 25, 21, 4, 11]]
@@ -30,7 +31,7 @@ rs[7 - 1] = CC[3][2 - 1]
 rs[8 - 1] = CC[4][85 - 1]
 
 pp = flatten_sequence([registrate(r, flatten_sequence(cary)) for r in rs])
-pps = baca.tools.split_pitches(pp, 0, output='objects')
+pps = hijinks.tools.split_pitches(pp, 0, output='objects')
 
 v1 = voice(
 		[time(48, 4)] +

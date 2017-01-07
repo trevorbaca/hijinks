@@ -53,24 +53,24 @@
 perms = [line.strip() for line in file('perms.out').readlines()]
 
 def threepartition(pset):
-	result = []
-	for perm in perms:
-		new = [[], [], [], []]
-		for i, digit in enumerate(perm):
-			new[int(digit) - 1].append(pset[i])
-		result.append(new)
-	return result
-	
+    result = []
+    for perm in perms:
+        new = [[], [], [], []]
+        for i, digit in enumerate(perm):
+            new[int(digit) - 1].append(pset[i])
+        result.append(new)
+    return result
+    
 # find out if the constellation of ANY partition of ANY chord in cons contains d1[12 - 1]
 def checkconstellation(cons):
-	for i, ch in enumerate(cons):
-		for j, p in enumerate(threepartition(ch)):
-			if d1[12 - 1] in constellate(p, [0, 37]):
-				print i, ch, j, p
-	
+    for i, ch in enumerate(cons):
+        for j, p in enumerate(threepartition(ch)):
+            if d1[12 - 1] in constellate(p, [0, 37]):
+                print i, ch, j, p
+    
 # takes long time
 def checkevery(ch):
-	for i, tp in enumerate(threepartition(ch)):
-		print 'checking constellation about threepartition number %s' % i
-		checkconstellation(constellate(tp, [0, 37]))
-	print 'done with checkevery.'
+    for i, tp in enumerate(threepartition(ch)):
+        print 'checking constellation about threepartition number %s' % i
+        checkconstellation(constellate(tp, [0, 37]))
+    print 'done with checkevery.'

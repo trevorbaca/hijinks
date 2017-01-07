@@ -37,8 +37,8 @@ R1 = music([2, 2, 1, 3, 1, 1, 1], -2, 'sixtyfourth')
 RH = deepcopy(rests)
 
 rsc2 = score([graft, staffGroup([rests, rests], delimiter = 'brace')],
-	'letter', 'global staff size 14', 'strict spacing', 'proportional spacing 1 96', 'no indent',
-	'no autobeaming', 'allow beam break', 'transparent bar lines', 'no tagline', 'title RED SHIFT HIJINKS')
+    'letter', 'global staff size 14', 'strict spacing', 'proportional spacing 1 96', 'no indent',
+    'no autobeaming', 'allow beam break', 'transparent bar lines', 'no tagline', 'title RED SHIFT HIJINKS')
 
 ############################
 ######### from music.py ####
@@ -57,10 +57,10 @@ pitches = [pitch(p) for p in pitches]
 
 vln = staff([time(1, 8)] + ([rest(1, 8)] * 5) * 7, 'no time signatures', 'minimum y extent -7 7')
 v1 = paint(
-	[beam(music([4, 2, 2, 2], -2, 'sixteenth')),
-		beam(music([2, 2, 4, 1, 1], -2, 'sixteenth')),
-		beam(music([4, 2, 2, 2], -2, 'sixteenth'))],
-	pitches[:13])
+    [beam(music([4, 2, 2, 2], -2, 'sixteenth')),
+        beam(music([2, 2, 4, 1, 1], -2, 'sixteenth')),
+        beam(music([4, 2, 2, 2], -2, 'sixteenth'))],
+    pitches[:13])
 vln.insert(v1, duration(0))
 v2 = paint(beam(music([3, 2], -1, 'sixteenth')), pitches[13:15])
 vln.insert(v2, duration(13, 8))
@@ -69,28 +69,28 @@ RH = staff([time(1, 8)] + ([rest(1, 8)] * 5) * 7, 'no time signatures', 'minimum
 LH = staff([clef('bass'), time(1, 8)] + ([rest(1, 8)] * 5) * 7, 'no time signatures', 'minimum y extent -8 8')
 
 rhdurations = [duration(1, 8) * d for d in [
-	duration(2),
-	duration(3, 2),
-	duration(3, 2),
-	duration(2),
-	duration(3, 2),
-	duration(3, 2),
-	duration(2),
-	duration(1),
-	duration(2)]]
+    duration(2),
+    duration(3, 2),
+    duration(3, 2),
+    duration(2),
+    duration(3, 2),
+    duration(3, 2),
+    duration(2),
+    duration(1),
+    duration(2)]]
 
 rhstarts = [duration(0)] + reducelist(add, rhdurations)[:-1]
 
 lhdurations = [duration(1, 8) * d for d in [
-	duration(3, 2),
-	duration(2),
-	duration(3, 2),
-	duration(1),
-	duration(2),
-	duration(2),
-	duration(2),
-	duration(1),
-	duration(2)]]
+    duration(3, 2),
+    duration(2),
+    duration(3, 2),
+    duration(1),
+    duration(2),
+    duration(2),
+    duration(2),
+    duration(1),
+    duration(2)]]
 
 lhstarts = [duration(0)] + reducelist(add, lhdurations)[:-1]
 
@@ -133,5 +133,5 @@ RH.insert(f08a, rhstarts[8])
 LH.insert(f08b, lhstarts[8])
 
 rsc2 = score([vln, staffGroup([RH, LH])],
-	'letter', 'global staff size 14', 'strict spacing', 'proportional spacing 1 96', 'no indent',
-	'no autobeaming', 'allow beam break', 'transparent bar lines', 'no tagline', 'title RED SHIFT HIJINKS')
+    'letter', 'global staff size 14', 'strict spacing', 'proportional spacing 1 96', 'no indent',
+    'no autobeaming', 'allow beam break', 'transparent bar lines', 'no tagline', 'title RED SHIFT HIJINKS')

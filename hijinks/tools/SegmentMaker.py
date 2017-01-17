@@ -57,9 +57,9 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
         order_3 = [_ % 12 for _ in order_3]
         assert order_3 == [4, 11, 3, 1, 9, 0, 2, 10, 7, 5, 6, 8]
 
-        aggregate = abjad.pitchtools.PitchSet(
+        aggregate = abjad.PitchSet(
             items=aggregate,
-            item_class=abjad.pitchtools.NumberedPitch,
+            item_class=abjad.NumberedPitch,
             )
 
         violin_pitches = []

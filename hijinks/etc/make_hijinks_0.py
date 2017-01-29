@@ -30,7 +30,9 @@ rs[6 - 1] = CC[2][31 - 1]
 rs[7 - 1] = CC[3][2 - 1]
 rs[8 - 1] = CC[4][85 - 1]
 
-pp = flatten_sequence([registrate(r, flatten_sequence(cary)) for r in rs])
+pp = baca.Sequence(
+    [registrate(r, flatten_sequence(cary)) for r in rs]
+    ).flatten()
 pps = hijinks.tools.split_pitches(pp, 0, output='objects')
 
 v1 = voice(
@@ -66,7 +68,7 @@ ss = [[1, 1, 2, 4], [2, 3, 1, 2], [1, 3]]
 ss0 = ss
 ss1 = rotateRight([rotateLeft(s, 1) for s in ss], 1)
 ss2 = rotateRight([rotateLeft(s, 2) for s in ss], 2)
-sss = flatten_sequence(ss0 + ss1 + ss2)
+sss = baca.Sequence(ss0 + ss1 + ss2).flatten()
 sss = sumUntil(sss, len(pp))
 ppp = partition(pp, sss)
 

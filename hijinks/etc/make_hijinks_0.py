@@ -72,11 +72,11 @@ sss = baca.Sequence(ss0 + ss1 + ss2).flatten()
 sss = sumUntil(sss, len(pp))
 ppp = partition(pp, sss)
 
-def helper(arg):
-    if len(arg) == 1:
-        return note(arg[0])
+def helper(argument):
+    if len(argument) == 1:
+        return note(argument[0])
     else:
-        return chord(arg)
+        return chord(argument)
 pps2 = [helper(p) for p in ppp]
 upper, lower = splitMaterial(pps2, 0)
 

@@ -1,16 +1,23 @@
 # -*- coding: utf-8 -*-
-from user import *
+import abjad
+import baca
 
 omega = duration(60, 8)
 
 cons = CC[0][175 - 1]
 cary = [[-2, -12, -10], [18, 8, 7, 17], [15, 25, 21, 4, 11]]
 
-order1 = [p % 12 for p in flatten_sequence(cary)]
-order2 = [p % 12 for p in flatten_sequence(rotateLeft([rotateRight(pt) for pt in cary]))]
-order3 = [p % 12 for p in flatten_sequence(rotateLeft([rotateRight(pt, 2) for pt in cary], 2))]
+order1 = [p % 12 for p in baca.Sequence(cary).flatten()]
+order2 = [p % 12 for p in 
+    baca.Sequence(rotateLeft([rotateRight(pt) for pt in cary])).flatten()
+    ]
+order3 = [p % 12 for p in
+    baca.Sequence(rotateLeft([rotateRight(pt, 2) for pt in cary], 2)).flatten()
+    ]
 
-pitches = flatten_sequence([registrate(cons, o) for o in [order1, order2, order3]])
+pitches = baca.Sequence(
+    [registrate(cons, o) for o in [order1, order2, order3]]
+    ).flatten()
 
 cards = [2, 1, 1, 2, 3]
 

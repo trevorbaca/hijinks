@@ -31,7 +31,7 @@ rs[7 - 1] = CC[3][2 - 1]
 rs[8 - 1] = CC[4][85 - 1]
 
 pp = baca.Sequence(
-    [registrate(r, flatten_sequence(cary)) for r in rs]
+    [registrate(r, baca.Sequence(cary).flatten()) for r in rs]
     ).flatten()
 pps = hijinks.tools.split_pitches(pp, 0, output='objects')
 

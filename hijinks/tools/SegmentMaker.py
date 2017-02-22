@@ -21,9 +21,9 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
         Returns LilyPond file and segment metadata.
         '''
         self._segment_metadata = segment_metadata or \
-            abjad.datastructuretools.TypedOrderedDict()
+            abjad.TypedOrderedDict()
         self._previous_segment_metadata = previous_segment_metadata or \
-            abjad.datastructuretools.TypedOrderedDict()
+            abjad.TypedOrderedDict()
 
         score_template = hijinks.tools.ScoreTemplate()
         score = score_template()

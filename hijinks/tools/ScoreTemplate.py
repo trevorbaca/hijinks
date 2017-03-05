@@ -99,7 +99,7 @@ class ScoreTemplate(baca.tools.ScoreTemplate):
         abjad.attach(abjad.Clef('treble'), piano_rh_music_staff)
         abjad.attach(abjad.Clef('bass'), piano_lh_music_staff)
 
-        music_context = abjad.scoretools.Context(
+        music_context = abjad.Context(
             [
                 violin_music_staff,
                 piano_staff_group,

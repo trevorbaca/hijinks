@@ -252,7 +252,7 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
             'stylesheet.ily',
             )
 
-        lilypond_file = abjad.lilypondfiletools.make_basic_lilypond_file(
+        lilypond_file = abjad.LilyPondFile.new(
             score,
             default_paper_size=('letter', 'portrait'),
             global_staff_size=14,

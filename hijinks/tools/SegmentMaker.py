@@ -230,15 +230,15 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
 
         leaves = list(abjad.iterate(score).by_leaf())
         last_leaf = leaves[-1]
-        command = abjad.indicatortools.LilyPondCommand('bar "|."', 'after')
+        command = abjad.LilyPondCommand('bar "|."', 'after')
         abjad.attach(command, last_leaf)
 
         string = "override Score.BarLine #'transparent = ##f"
-        command = abjad.indicatortools.LilyPondCommand(string, 'after')
+        command = abjad.LilyPondCommand(string, 'after')
         abjad.attach(command, last_leaf)
 
         string = "override Score.SpanBar #'transparent = ##f"
-        command = abjad.indicatortools.LilyPondCommand(string, 'after')
+        command = abjad.LilyPondCommand(string, 'after')
         abjad.attach(command, last_leaf)
 
         final_markup = hijinks.tools.make_final_markup()

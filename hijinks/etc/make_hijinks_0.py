@@ -17,7 +17,7 @@
 import baca
 import hijinks
 
-CC = baca.tools.ConstellationCircuit.make_constellation_circuit_1()
+CC = baca.ConstellationCircuit.make_constellation_circuit_1()
 cary = [[-2, -12, -10], [18, 8, 7, 17], [15, 25, 21, 4, 11]]
 
 rs = ['0'] * 8

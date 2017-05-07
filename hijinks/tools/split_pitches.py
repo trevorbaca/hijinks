@@ -25,7 +25,7 @@ def split_pitches(pitches, split=-1):
                 components['bass'].append(n)
         for register in ('treble', 'bass'):
             if len(components[register]) == 0:
-                components[register] = abjad.scoretools.Skip((1, 4))
+                components[register] = abjad.Skip((1, 4))
             elif len(components[register]) == 1:
                 components[register] = abjad.Note(components[register], (1, 4))
             else:

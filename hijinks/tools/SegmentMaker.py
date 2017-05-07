@@ -202,8 +202,10 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
         leaves = list(abjad.iterate(violin_music_staff).by_leaf())
         first_violin_leaf = leaves[0]
 
-        markup = abjad.Markup('pp').dynamic()
-        markup = markup.line(abjad.Markup('sempre al fino').italic())
+        markup = abjad.Markup.line([
+            abjad.Markup('pp').dynamic(),
+            abjad.Markup('sempre al fino').italic(),
+            ])
 
         abjad.attach(markup, first_violin_leaf)
         abjad.override(first_violin_leaf).text_script.staff_padding = 5
@@ -215,8 +217,10 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
         leaves = list(abjad.iterate(piano_rh_music_staff).by_leaf())
         first_rh_leaf = leaves[0]
 
-        markup = abjad.Markup('pp').dynamic()
-        markup = markup.line(abjad.Markup('sempre al fino').italic())
+        markup = abjad.Markup.line([
+            abjad.Markup('pp').dynamic(),
+            abjad.Markup('sempre al fino').italic(),
+            ])
 
         abjad.attach(markup, first_rh_leaf)
         abjad.override(first_rh_leaf).text_script.staff_padding = 7

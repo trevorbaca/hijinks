@@ -103,7 +103,7 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
         for definition in violin_tuplet_definitions:
             violin_tuplet = tuplet_maker(*definition)
             leaves = list(abjad.iterate(violin_tuplet).by_leaf())
-            abjad.attach(abjad.spannertools.MultipartBeam(), leaves)
+            abjad.attach(abjad.MultipartBeam(), leaves)
             violin_tuplets.append(violin_tuplet)
 
         violin_music_staff = score['Violin Music Staff']
@@ -150,7 +150,7 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
                 duration = duration.with_denominator(32)
                 rh_tuplet.preferred_denominator = duration.numerator
             leaves = list(abjad.iterate(rh_tuplet).by_leaf())
-            abjad.attach(abjad.spannertools.MultipartBeam(), leaves)
+            abjad.attach(abjad.MultipartBeam(), leaves)
             notes = list(abjad.iterate(rh_tuplet).by_leaf(pitched=True))
             for note, pitch_number in zip(notes, reversed(aggregate)):
                 note.written_pitch = pitch_number
@@ -168,7 +168,7 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
                 duration = duration.with_denominator(32)
                 lh_tuplet.preferred_denominator = duration.numerator
             leaves = list(abjad.iterate(lh_tuplet).by_leaf())
-            abjad.attach(abjad.spannertools.MultipartBeam(), leaves)
+            abjad.attach(abjad.MultipartBeam(), leaves)
             notes = abjad.iterate(lh_tuplet).by_leaf(pitched=True)
             for note, pitch_number in zip(notes, aggregate):
                 note.written_pitch = pitch_number

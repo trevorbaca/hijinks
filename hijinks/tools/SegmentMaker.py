@@ -193,7 +193,7 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
                 abjad.attach(abjad.Articulation('staccato'), note)
             abjad.attach(abjad.Articulation('tenuto'), note)
 
-        tempo = abjad.Tempo((1, 8), 32)
+        tempo = abjad.MetronomeMark((1, 8), 32)
         abjad.attach(tempo, violin_music_staff)
 
         time_signature = abjad.TimeSignature((1, 8))

@@ -146,7 +146,7 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
             rh_proportions, rh_pairs, circuit):
             rh_tuplet = tuplet_maker(rh_proportion, rh_pair)
             if isinstance(rh_tuplet, abjad.Tuplet):
-                duration = abjad.inspect_(rh_tuplet).get_duration()
+                duration = abjad.inspect(rh_tuplet).get_duration()
                 duration = duration.with_denominator(32)
                 rh_tuplet.preferred_denominator = duration.numerator
             leaves = list(abjad.iterate(rh_tuplet).by_leaf())
@@ -164,7 +164,7 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
             lh_proportions, lh_pairs, circuit):
             lh_tuplet = tuplet_maker(lh_proportion, lh_pair)
             if isinstance(lh_tuplet, abjad.Tuplet):
-                duration = abjad.inspect_(lh_tuplet).get_duration()
+                duration = abjad.inspect(lh_tuplet).get_duration()
                 duration = duration.with_denominator(32)
                 lh_tuplet.preferred_denominator = duration.numerator
             leaves = list(abjad.iterate(lh_tuplet).by_leaf())

@@ -67,8 +67,8 @@ class ScoreTemplate(baca.ScoreTemplate):
             name='Violin Music Staff',
             )
         violin = abjad.instrumenttools.Violin()
-        abjad.attach(violin, violin_music_staff)
-        abjad.attach(abjad.Clef('treble'), violin_music_staff)
+        #abjad.attach(violin, violin_music_staff)
+        #abjad.attach(abjad.Clef('treble'), violin_music_staff)
 
         piano_rh_music_voice = abjad.Voice(
             context_name='PianoRHMusicVoice',
@@ -95,9 +95,9 @@ class ScoreTemplate(baca.ScoreTemplate):
             )
         piano = abjad.instrumenttools.Piano()
         piano._default_scope = 'PianoStaffGroup'
-        abjad.attach(piano, piano_staff_group)
-        abjad.attach(abjad.Clef('treble'), piano_rh_music_staff)
-        abjad.attach(abjad.Clef('bass'), piano_lh_music_staff)
+        #abjad.attach(piano, piano_staff_group)
+        #abjad.attach(abjad.Clef('treble'), piano_rh_music_staff)
+        #abjad.attach(abjad.Clef('bass'), piano_lh_music_staff)
 
         music_context = abjad.Context(
             [

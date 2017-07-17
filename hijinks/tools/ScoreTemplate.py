@@ -31,9 +31,6 @@ class ScoreTemplate(baca.ScoreTemplate):
                 \context Score = "Score" <<
                     \context MusicContext = "Music Context" <<
                         \context ViolinMusicStaff = "Violin Music Staff" {
-                            \clef "treble"
-                            \set Staff.instrumentName = \markup { Violin }
-                            \set Staff.shortInstrumentName = \markup { Vn. }
                             \context ViolinMusicVoice = "Violin Music Voice" {
                             }
                         }
@@ -41,12 +38,10 @@ class ScoreTemplate(baca.ScoreTemplate):
                             \set PianoStaffGroup.instrumentName = \markup { Piano }
                             \set PianoStaffGroup.shortInstrumentName = \markup { Pf. }
                             \context PianoRHMusicStaff = "Piano RH Music Staff" {
-                                \clef "treble"
                                 \context PianoRHMusicVoice = "Piano RH Music Voice" {
                                 }
                             }
                             \context PianoLHMusicStaff = "Piano LH Music Staff" {
-                                \clef "bass"
                                 \context PianoLHMusicVoice = "Piano LH Music Voice" {
                                 }
                             }

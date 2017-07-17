@@ -35,8 +35,6 @@ class ScoreTemplate(baca.ScoreTemplate):
                             }
                         }
                         \context PianoStaffGroup = "Piano Staff Group" <<
-                            \set PianoStaffGroup.instrumentName = \markup { Piano }
-                            \set PianoStaffGroup.shortInstrumentName = \markup { Pf. }
                             \context PianoRHMusicStaff = "Piano RH Music Staff" {
                                 \context PianoRHMusicVoice = "Piano RH Music Voice" {
                                 }

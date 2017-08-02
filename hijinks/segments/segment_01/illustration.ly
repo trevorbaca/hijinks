@@ -1,6 +1,6 @@
-% 2017-05-07 14:58
+% 2017-08-02 13:08
 
-\version "2.19.59"
+\version "2.19.64"
 \language "english"
 
 #(ly:set-option 'relative-includes #t)
@@ -19,8 +19,8 @@
 \score {
     \context Score = "Score" <<
         \context MusicContext = "Music Context" <<
+            \tempo 8=32
             \context ViolinMusicStaff = "Violin Music Staff" {
-                \clef "treble"
                 \set Staff.instrumentName = \markup {
                 \hcenter-in
                     #10
@@ -31,7 +31,6 @@
                     #10
                     Vn.
                 }
-                \tempo 8=32
                 \time 1/8
                 \context ViolinMusicVoice = "Violin Music Voice" {
                 }
@@ -84,7 +83,6 @@
                     Pf.
                 }
                 \context PianoRHMusicStaff = "Piano RH Music Staff" {
-                    \clef "treble"
                     \context PianoRHMusicVoice = "Piano RH Music Voice" {
                     }
                     \times 8/10 {
@@ -177,7 +175,6 @@
                     \revert TupletBracket.shorten-pair
                 }
                 \context PianoLHMusicStaff = "Piano LH Music Staff" {
-                    \clef "bass"
                     \context PianoLHMusicVoice = "Piano LH Music Voice" {
                     }
                     \tweak text #tuplet-number::calc-fraction-text

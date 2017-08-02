@@ -31,9 +31,9 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
         violin_music_staff = score['Violin Music Staff']
         piano_staff_group = score['Piano Staff Group']
         instruments = hijinks.materials.instruments
-        abjad.detach(abjad.instrumenttools.Instrument, violin_music_staff)
+        abjad.detach(abjad.Instrument, violin_music_staff)
         abjad.attach(instruments['violin'], violin_music_staff)
-        abjad.detach(abjad.instrumenttools.Instrument, piano_staff_group)
+        abjad.detach(abjad.Instrument, piano_staff_group)
         abjad.attach(instruments['piano'], piano_staff_group)
 
         #aggregate = pitch.CC[0][175 - 1]
@@ -102,7 +102,7 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
         violin_tuplets = []
         for definition in violin_tuplet_definitions:
             violin_tuplet = tuplet_maker(*definition)
-            leaves = list(abjad.iterate(violin_tuplet).by_leaf())
+            leaves = abjad.select(violin_tuplet).by_leaf()
             abjad.attach(abjad.MultipartBeam(), leaves)
             violin_tuplets.append(violin_tuplet)
 
@@ -149,7 +149,7 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
                 duration = abjad.inspect(rh_tuplet).get_duration()
                 duration = duration.with_denominator(32)
                 rh_tuplet.preferred_denominator = duration.numerator
-            leaves = list(abjad.iterate(rh_tuplet).by_leaf())
+            leaves = abjad.select(rh_tuplet).by_leaf()
             abjad.attach(abjad.MultipartBeam(), leaves)
             notes = list(abjad.iterate(rh_tuplet).by_leaf(pitched=True))
             for note, pitch_number in zip(notes, reversed(aggregate)):
@@ -167,7 +167,7 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
                 duration = abjad.inspect(lh_tuplet).get_duration()
                 duration = duration.with_denominator(32)
                 lh_tuplet.preferred_denominator = duration.numerator
-            leaves = list(abjad.iterate(lh_tuplet).by_leaf())
+            leaves = abjad.select(lh_tuplet).by_leaf()
             abjad.attach(abjad.MultipartBeam(), leaves)
             notes = abjad.iterate(lh_tuplet).by_leaf(pitched=True)
             for note, pitch_number in zip(notes, aggregate):

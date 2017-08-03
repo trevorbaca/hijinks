@@ -151,7 +151,7 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
                 rh_tuplet.preferred_denominator = duration.numerator
             leaves = abjad.select(rh_tuplet).by_leaf()
             abjad.attach(abjad.MultipartBeam(), leaves)
-            notes = list(abjad.iterate(rh_tuplet).by_leaf(pitched=True))
+            notes = abjad.select(rh_tuplet).by_leaf(pitched=True)
             for note, pitch_number in zip(notes, reversed(aggregate)):
                 note.written_pitch = pitch_number
             rh_tuplets.append(rh_tuplet)
@@ -176,7 +176,7 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
         piano_lh_music_staff.extend(lh_tuplets)
         piano_lh_music_staff[-1:-1] = [abjad.Rest((1, 8))]
 
-        leaves = list(abjad.iterate(piano_lh_music_staff).by_leaf())
+        leaves = abjad.select(piano_lh_music_staff).by_leaf()
         second_lh_note = leaves[1]
         markup = abjad.Markup('ped. ad libitum').italic()
         abjad.attach(markup, second_lh_note)
@@ -199,7 +199,7 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
         time_signature = abjad.TimeSignature((1, 8))
         abjad.attach(time_signature, violin_music_staff)
 
-        leaves = list(abjad.iterate(violin_music_staff).by_leaf())
+        leaves = abjad.select(violin_music_staff).by_leaf()
         first_violin_leaf = leaves[0]
 
         markup = abjad.Markup.line([
@@ -210,11 +210,10 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
         abjad.attach(markup, first_violin_leaf)
         abjad.override(first_violin_leaf).text_script.staff_padding = 5
 
-        tuplets = list(abjad.iterate(violin_music_staff).by_class(
-            prototype=abjad.Tuplet))
+        tuplets = abjad.select(violin_music_staff).by_class(abjad.Tuplet)
         abjad.override(tuplets[-1]).tuplet_bracket.shorten_pair = (0, 0.6)
 
-        leaves = list(abjad.iterate(piano_rh_music_staff).by_leaf())
+        leaves = abjad.iterate(piano_rh_music_staff).by_leaf()
         first_rh_leaf = leaves[0]
 
         markup = abjad.Markup.line([
@@ -225,15 +224,13 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
         abjad.attach(markup, first_rh_leaf)
         abjad.override(first_rh_leaf).text_script.staff_padding = 7
 
-        tuplets = list(abjad.iterate(piano_rh_music_staff).by_class(
-            prototype=abjad.Tuplet))
+        tuplets = abjad.select(piano_rh_music_staff).by_class(abjad.Tuplet)
         abjad.override(tuplets[-1]).tuplet_bracket.shorten_pair = (0, 0.6)
 
-        tuplets = list(abjad.iterate(piano_lh_music_staff).by_class(
-            prototype=abjad.Tuplet))
+        tuplets = abjad.select(piano_lh_music_staff).by_class(abjad.Tuplet)
         abjad.override(tuplets[-1]).tuplet_bracket.shorten_pair = (0, 0.6)
 
-        leaves = list(abjad.iterate(score).by_leaf())
+        leaves = abjad.iterate(score).by_leaf()
         last_leaf = leaves[-1]
         command = abjad.LilyPondCommand('bar "|."', 'after')
         abjad.attach(command, last_leaf)

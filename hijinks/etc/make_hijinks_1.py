@@ -7,15 +7,15 @@ omega = duration(60, 8)
 cons = CC[0][175 - 1]
 cary = [[-2, -12, -10], [18, 8, 7, 17], [15, 25, 21, 4, 11]]
 
-order1 = [p % 12 for p in baca.Sequence(cary).flatten()]
+order1 = [p % 12 for p in baca.sequence(cary).flatten()]
 order2 = [p % 12 for p in 
-    baca.Sequence(rotateLeft([rotateRight(pt) for pt in cary])).flatten()
+    baca.sequence(rotateLeft([rotateRight(pt) for pt in cary])).flatten()
     ]
 order3 = [p % 12 for p in
-    baca.Sequence(rotateLeft([rotateRight(pt, 2) for pt in cary], 2)).flatten()
+    baca.sequence(rotateLeft([rotateRight(pt, 2) for pt in cary], 2)).flatten()
     ]
 
-pitches = baca.Sequence(
+pitches = baca.sequence(
     [registrate(cons, o) for o in [order1, order2, order3]]
     ).flatten()
 

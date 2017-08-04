@@ -6,7 +6,7 @@ import hijinks
 import os
 
 
-class SegmentMaker(experimental.makertools.SegmentMaker):
+class SegmentMaker(experimental.SegmentMaker):
     r'''Segment-maker.
     '''
 
@@ -30,11 +30,6 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
         score = score_template()
         violin_music_staff = score['Violin Music Staff']
         piano_staff_group = score['Piano Staff Group']
-        instruments = hijinks.materials.instruments
-        abjad.detach(abjad.Instrument, violin_music_staff)
-        abjad.attach(instruments['violin'], violin_music_staff)
-        abjad.detach(abjad.Instrument, piano_staff_group)
-        abjad.attach(instruments['piano'], piano_staff_group)
 
         #aggregate = pitch.CC[0][175 - 1]
         aggregate = [10, 19, 20, 23, 24, 26, 27, 29, 30, 33, 37, 40]
@@ -193,59 +188,56 @@ class SegmentMaker(experimental.makertools.SegmentMaker):
                 abjad.attach(abjad.Articulation('staccato'), note)
             abjad.attach(abjad.Articulation('tenuto'), note)
 
-        tempo = abjad.MetronomeMark((1, 8), 32)
-        abjad.attach(tempo, violin_music_staff)
+        leaf = abjad.inspect(violin_music_staff).get_leaf(0)
 
-        time_signature = abjad.TimeSignature((1, 8))
-        abjad.attach(time_signature, violin_music_staff)
+        abjad.attach(abjad.MetronomeMark((1, 8), 32), leaf)
 
-        leaves = abjad.select(violin_music_staff).by_leaf()
-        first_violin_leaf = leaves[0]
+        abjad.attach(abjad.TimeSignature((1, 8)), leaf)
 
-        markup = abjad.Markup.line([
-            abjad.Markup('pp').dynamic(),
-            abjad.Markup('sempre al fino').italic(),
-            ])
-
-        abjad.attach(markup, first_violin_leaf)
-        abjad.override(first_violin_leaf).text_script.staff_padding = 5
-
-        tuplets = abjad.select(violin_music_staff).by_class(abjad.Tuplet)
-        abjad.override(tuplets[-1]).tuplet_bracket.shorten_pair = (0, 0.6)
-
-        leaves = abjad.iterate(piano_rh_music_staff).by_leaf()
-        first_rh_leaf = leaves[0]
+        abjad.attach(hijinks.materials.instruments['violin'], leaf)
 
         markup = abjad.Markup.line([
             abjad.Markup('pp').dynamic(),
             abjad.Markup('sempre al fino').italic(),
             ])
+        abjad.attach(markup, leaf)
+        abjad.override(leaf).text_script.staff_padding = 5
 
-        abjad.attach(markup, first_rh_leaf)
-        abjad.override(first_rh_leaf).text_script.staff_padding = 7
+        tuplet = abjad.inspect(violin_music_staff).get_tuplet(-1)
+        abjad.override(tuplet).tuplet_bracket.shorten_pair = (0, 0.6)
 
-        tuplets = abjad.select(piano_rh_music_staff).by_class(abjad.Tuplet)
-        abjad.override(tuplets[-1]).tuplet_bracket.shorten_pair = (0, 0.6)
+        leaf = abjad.inspect(piano_rh_music_staff).get_leaf(0)
 
-        tuplets = abjad.select(piano_lh_music_staff).by_class(abjad.Tuplet)
-        abjad.override(tuplets[-1]).tuplet_bracket.shorten_pair = (0, 0.6)
+        abjad.attach(hijinks.materials.instruments['piano'], leaf)
 
-        leaves = abjad.iterate(score).by_leaf()
-        last_leaf = leaves[-1]
-        command = abjad.LilyPondCommand('bar "|."', 'after')
-        abjad.attach(command, last_leaf)
+        markup = abjad.Markup.line([
+            abjad.Markup('pp').dynamic(),
+            abjad.Markup('sempre al fino').italic(),
+            ])
+        abjad.attach(markup, leaf)
+        abjad.override(leaf).text_script.staff_padding = 7
 
-        string = "override Score.BarLine #'transparent = ##f"
-        command = abjad.LilyPondCommand(string, 'after')
-        abjad.attach(command, last_leaf)
+        tuplet = abjad.inspect(piano_rh_music_staff).get_tuplet(-1)
+        abjad.override(tuplet).tuplet_bracket.shorten_pair = (0, 0.6)
 
-        string = "override Score.SpanBar #'transparent = ##f"
-        command = abjad.LilyPondCommand(string, 'after')
-        abjad.attach(command, last_leaf)
+        tuplet = abjad.inspect(piano_lh_music_staff).get_tuplet(-1)
+        abjad.override(tuplet).tuplet_bracket.shorten_pair = (0, 0.6)
+
+        leaf = abjad.inspect(score).get_leaf(-1)
+        command = abjad.LilyPondLiteral(r'\bar "|."', 'after')
+        abjad.attach(command, leaf)
+
+        string = r"\override Score.BarLine #'transparent = ##f"
+        command = abjad.LilyPondLiteral(string, 'after')
+        abjad.attach(command, leaf)
+
+        string = r"\override Score.SpanBar #'transparent = ##f"
+        command = abjad.LilyPondLiteral(string, 'after')
+        abjad.attach(command, leaf)
 
         final_markup = hijinks.tools.make_final_markup()
-        abjad.attach(final_markup, last_leaf)
-        abjad.override(last_leaf).text_script.extra_offset = (-7.5, -4)
+        abjad.attach(final_markup, leaf)
+        abjad.override(leaf).text_script.extra_offset = (-7.5, -4)
 
         stylesheet_path = os.path.join(
             '..',

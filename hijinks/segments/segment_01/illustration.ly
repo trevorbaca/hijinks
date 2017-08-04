@@ -1,4 +1,4 @@
-% 2017-08-02 13:08
+% 2017-08-04 11:34
 
 \version "2.19.64"
 \language "english"
@@ -19,23 +19,23 @@
 \score {
     \context Score = "Score" <<
         \context MusicContext = "Music Context" <<
-            \tempo 8=32
             \context ViolinMusicStaff = "Violin Music Staff" {
-                \set Staff.instrumentName = \markup {
-                \hcenter-in
-                    #10
-                    Vn.
-                }
-                \set Staff.shortInstrumentName = \markup {
-                \hcenter-in
-                    #10
-                    Vn.
-                }
-                \time 1/8
                 \context ViolinMusicVoice = "Violin Music Voice" {
                 }
                 \times 4/5 {
+                    \tempo 8=32
                     \once \override TextScript.staff-padding = #5
+                    \set Staff.instrumentName = \markup {
+                        \hcenter-in
+                            #10
+                            Vn.
+                        }
+                    \set Staff.shortInstrumentName = \markup {
+                        \hcenter-in
+                            #10
+                            Vn.
+                        }
+                    \time 1/8
                     bf'4 -\tenuto
                         - \markup {
                             \line
@@ -72,21 +72,21 @@
                 \revert TupletBracket.shorten-pair
             }
             \context PianoStaffGroup = "Piano Staff Group" <<
-                \set PianoStaffGroup.instrumentName = \markup {
-                \hcenter-in
-                    #10
-                    Pf.
-                }
-                \set PianoStaffGroup.shortInstrumentName = \markup {
-                \hcenter-in
-                    #10
-                    Pf.
-                }
                 \context PianoRHMusicStaff = "Piano RH Music Staff" {
                     \context PianoRHMusicVoice = "Piano RH Music Voice" {
                     }
                     \times 8/10 {
                         \once \override TextScript.staff-padding = #7
+                        \set PianoStaffGroup.instrumentName = \markup {
+                            \hcenter-in
+                                #10
+                                Pf.
+                            }
+                        \set PianoStaffGroup.shortInstrumentName = \markup {
+                            \hcenter-in
+                                #10
+                                Pf.
+                            }
                         f'''16 -\tenuto [
                             - \markup {
                                 \line

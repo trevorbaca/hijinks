@@ -26,8 +26,7 @@ class SegmentMaker(experimental.SegmentMaker):
         self._previous_segment_metadata = previous_segment_metadata or \
             abjad.TypedOrderedDict()
 
-        score_template = hijinks.tools.ScoreTemplate()
-        score = score_template()
+        score = hijinks.ScoreTemplate()()
         violin_music_staff = score['Violin Music Staff']
         piano_staff_group = score['Piano Staff Group']
 

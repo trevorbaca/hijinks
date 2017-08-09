@@ -1,7 +1,6 @@
 #(set-default-paper-size "letter")
 #(set-global-staff-size 14)
 
-\include "default-instrument-names.ily"
 \include "context-definitions.ily"
 
 \paper {

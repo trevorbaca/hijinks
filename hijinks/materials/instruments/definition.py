@@ -4,10 +4,10 @@ import baca
 
 
 piano = abjad.instrumenttools.Piano(
-    instrument_name_markup=\
-        baca.markup.short_instrument_name('Pf.'),
-    short_instrument_name_markup=\
-        baca.markup.short_instrument_name('Pf.'),
+    name_markup=\
+        baca.markup.short_instrument('Pf.'),
+    short_name_markup=\
+        baca.markup.short_instrument('Pf.'),
     )
 piano._default_scope = 'PianoStaffGroup'
 
@@ -19,10 +19,10 @@ instruments = abjad.TypedOrderedDict([
     (
         'violin', 
         abjad.instrumenttools.Violin(
-            instrument_name_markup=\
-                baca.markup.short_instrument_name('Vn.'),
-            short_instrument_name_markup=\
-                baca.markup.short_instrument_name('Vn.'),
+            name_markup=\
+                baca.markup.short_instrument('Vn.'),
+            short_name_markup=\
+                baca.markup.short_instrument('Vn.'),
             ),
         ),
     ])

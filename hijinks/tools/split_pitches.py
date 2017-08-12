@@ -9,9 +9,9 @@ def split_pitches(pitches, split=-1):
 
         >>> import abjad
         >>> import hijinks
-    
+
     Set `pitches` to (probably) a list of aggregates.
-    
+
     Set `split` to a pitch number.
 
     Returns dictionary of `'treble'` and `'bass'` pitches.

@@ -90,7 +90,7 @@ class ScoreTemplate(baca.ScoreTemplate):
             name='Violin Music Voice',
             )
         violin_music_staff = abjad.Staff(
-            [violin_music_voice], 
+            [violin_music_voice],
             context_name='ViolinMusicStaff',
             name='Violin Music Staff',
             )
@@ -111,7 +111,7 @@ class ScoreTemplate(baca.ScoreTemplate):
             name='Piano RH Music Voice',
             )
         piano_rh_music_staff = abjad.Staff(
-            [piano_rh_music_voice], 
+            [piano_rh_music_voice],
             context_name='PianoRHMusicStaff',
             name='Piano RH Music Staff',
             )

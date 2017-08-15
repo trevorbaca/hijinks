@@ -96,7 +96,7 @@ class ScoreTemplate(baca.ScoreTemplate):
         abjad.annotate(
             violin_music_staff,
             'default_instrument',
-            hijinks.materials.instruments['violin'],
+            hijinks.instruments['violin'],
             )
         abjad.annotate(
             violin_music_staff,
@@ -131,7 +131,7 @@ class ScoreTemplate(baca.ScoreTemplate):
         abjad.annotate(
             piano_staff_group,
             'default_instrument',
-            hijinks.materials.instruments['piano'],
+            hijinks.instruments['piano'],
             )
         abjad.annotate(
             piano_rh_music_staff,

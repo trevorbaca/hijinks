@@ -190,7 +190,7 @@ class SegmentMaker(experimental.SegmentMaker):
 
         abjad.attach(abjad.TimeSignature((1, 8)), leaf)
 
-        abjad.attach(hijinks.materials.instruments['violin'], leaf)
+        abjad.attach(hijinks.instruments['violin'], leaf)
 
         markup = abjad.Markup.line([
             abjad.Markup('pp').dynamic(),
@@ -204,7 +204,7 @@ class SegmentMaker(experimental.SegmentMaker):
 
         leaf = abjad.inspect(piano_rh_music_staff).get_leaf(0)
 
-        abjad.attach(hijinks.materials.instruments['piano'], leaf)
+        abjad.attach(hijinks.instruments['piano'], leaf)
 
         markup = abjad.Markup.line([
             abjad.Markup('pp').dynamic(),

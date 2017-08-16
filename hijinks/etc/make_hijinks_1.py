@@ -1,36 +1,43 @@
 import abjad
 import baca
+import copy
 
-omega = duration(60, 8)
 
-cons = CC[0][175 - 1]
+omega = abjad.Duration(60, 8)
+
+cons = baca.CC[0][175 - 1]
 cary = [[-2, -12, -10], [18, 8, 7, 17], [15, 25, 21, 4, 11]]
 
 order1 = [p % 12 for p in baca.sequence(cary).flatten()]
-order2 = [p % 12 for p in 
-    baca.sequence(rotateLeft([rotateRight(pt) for pt in cary])).flatten()
+order2 = [
+    p % 12 for p in
+    baca.sequence(baca.rotateLeft([baca.rotateRight(pt) for pt in cary])).flatten()
     ]
-order3 = [p % 12 for p in
-    baca.sequence(rotateLeft([rotateRight(pt, 2) for pt in cary], 2)).flatten()
+order3 = [
+    p % 12 for p in
+    baca.sequence(baca.rotateLeft([baca.rotateRight(pt, 2) for pt in cary], 2)).flatten()
     ]
 
 pitches = baca.sequence(
-    [registrate(cons, o) for o in [order1, order2, order3]]
+    [baca.registrate(cons, o) for o in [order1, order2, order3]]
     ).flatten()
 
 cards = [2, 1, 1, 2, 3]
 
-sounds = partition(pitches, sumUntil(cards, len(pitches)))
+sounds = baca.partition(pitches, baca.sumUntil(cards, len(pitches)))
 
-rst1 = staff([time(1, 4)] + [chord(s) for s in sounds], 'transparent bar lines')
-rst2 = deepcopy(rst1)
-n = note(0, 3, 16)
-rst2.insert([n, n, n], duration(5, 4))
-rsc = score([rst1, rst2], 'letter', 'proportional spacing 1 8', 'global staff size 14', 'strict spacing')
+rst1 = abjad.Staff([
+    abjad.TimeSiganture(1, 4)] + [abjad.Chord(s) for s in sounds],
+    'transparent bar lines')
+rst2 = copy.deepcopy(rst1)
+n = abjad.Note(0, (3, 16))
+rst2.insert([n, n, n], abjad.Duration(5, 4))
+rsc = abjad.Score([rst1, rst2], 'letter', 'proportional spacing 1 8', 'global staff size 14', 'strict spacing')
 
-spacer = staff([time(1, 8)] + ([skip(1, 8)] * 5) * 7, 'no time signatures', 'minimum y extent -8 8')
-rests = staff([time(1, 8)] + ([rest(1, 8)] * 5) * 7, 'no time signatures', 'minimum y extent -8 8')
-notes = staff([time(1, 8)] + ([note(0, 1, 8)] * 5 + [bar(), Break()]) * 7, 'no time signatures')
+spacer = abjad.Staff([
+   abjad.TimeSignature((1, 8))] + ([abjad.Skip(1, 8)] * 5) * 7, 'no time signatures', 'minimum y extent -8 8')
+rests = abjad.Staff([abjad.TimeSignature(1, 8)] + ([abjad.Rest(1, 8)] * 5) * 7, 'no time signatures', 'minimum y extent -8 8')
+notes = abjad.Staff([time(1, 8)] + ([note(0, 1, 8)] * 5 + [bar(), Break()]) * 7, 'no time signatures')
 
 graft = deepcopy(spacer)
 graft.insert([chord(sounds[2])], duration(6, 8))

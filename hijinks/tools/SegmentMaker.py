@@ -1,11 +1,10 @@
 import abjad
 import baca
-import experimental
 import hijinks
 import os
 
 
-class SegmentMaker(experimental.SegmentMaker):
+class SegmentMaker(abjad.SegmentMaker):
     r'''Segment-maker.
     '''
 

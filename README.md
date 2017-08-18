@@ -3,7 +3,7 @@ Red Shift Hijinks
 
 [![Build Status](https://travis-ci.org/trevorbaca/hijinks.svg?branch=master)](https://travis-ci.org/trevorbaca/hijinks)
 
-Red Shift Hijinks (2005) for violin & piano.
+Red Shift Hijinks (2006) for violin & piano.
 
 Dedicated to Carl D. Clark.
 

@@ -1,4 +1,4 @@
 import hijinks
 
 
-segment_maker = hijinks.tools.SegmentMaker()
+segment_maker = hijinks.SegmentMaker()

@@ -15,7 +15,7 @@ class ScoreTemplate(baca.ScoreTemplate):
 
         ::
 
-            >>> template = hijinks.tools.ScoreTemplate()
+            >>> template = hijinks.ScoreTemplate()
             >>> lilypond_file = template.__illustrate__()
             >>> path = pathlib.Path(hijinks.__path__[0], 'stylesheets')
             >>> path = path.joinpath('context-definitions.ily')

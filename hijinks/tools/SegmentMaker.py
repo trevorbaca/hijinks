@@ -229,7 +229,7 @@ class SegmentMaker(abjad.SegmentMaker):
         command = abjad.LilyPondLiteral(string, 'after')
         abjad.attach(command, leaf)
 
-        final_markup = hijinks.tools.make_final_markup()
+        final_markup = hijinks.final_markup()
         abjad.attach(final_markup, leaf)
         abjad.override(leaf).text_script.extra_offset = (-7.5, -4)
 

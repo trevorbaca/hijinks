@@ -1,22 +1,3 @@
-% 2017-08-18 11:45
-
-\version "2.19.65"
-\language "english"
-
-#(ly:set-option 'relative-includes #t)
-
-\include "../../stylesheets/stylesheet.ily"
-
-#(set-default-paper-size "letter" 'portrait)
-#(set-global-staff-size 14)
-
-\header {}
-
-\layout {}
-
-\paper {}
-
-\score {
     \context Score = "Score" <<
         \context MusicContext = "Music Context" <<
             \context ViolinMusicStaff = "Violin Music Staff" {
@@ -265,4 +246,3 @@
             >>
         >>
     >>
-}

@@ -17,12 +17,13 @@ class SegmentMaker(abjad.SegmentMaker):
         ):
         r'''Calls segment-maker.
 
-        Returns LilyPond file and segment metadata.
+        Returns LilyPond file and metadata.
         '''
         self._metadata = metadata or abjad.TypedOrderedDict()
         self._previous_metadata = previous_metadata or abjad.TypedOrderedDict()
 
-        score = hijinks.ScoreTemplate()()
+        template = hijinks.ScoreTemplate()
+        score = template()
         violin_music_staff = score['Violin Music Staff']
         piano_staff_group = score['Piano Staff Group']
 
@@ -189,8 +190,6 @@ class SegmentMaker(abjad.SegmentMaker):
 
         abjad.attach(abjad.TimeSignature((1, 8)), leaf)
 
-        abjad.attach(hijinks.instruments['violin'], leaf)
-
         markup = abjad.Markup.line([
             abjad.Markup('pp').dynamic(),
             abjad.Markup('sempre al fino').italic(),
@@ -203,7 +202,7 @@ class SegmentMaker(abjad.SegmentMaker):
 
         leaf = abjad.inspect(piano_rh_music_staff).get_leaf(0)
 
-        abjad.attach(hijinks.instruments['piano'], leaf)
+        template.attach_defaults(score)
 
         markup = abjad.Markup.line([
             abjad.Markup('pp').dynamic(),

@@ -88,7 +88,7 @@ class SegmentMaker(abjad.SegmentMaker):
             ]
 
         tuplet_maker = \
-            abjad.Tuplet.from_nonreduced_ratio_and_nonreduced_fraction
+            abjad.Tuplet.from_ratio_and_pair
 
         violin_tuplets = []
         for definition in violin_tuplet_definitions:

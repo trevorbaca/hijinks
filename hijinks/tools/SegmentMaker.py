@@ -1,7 +1,6 @@
 import abjad
 import baca
 import hijinks
-import os
 
 
 class SegmentMaker(abjad.SegmentMaker):
@@ -233,13 +232,7 @@ class SegmentMaker(abjad.SegmentMaker):
         abjad.attach(final_markup, leaf)
         abjad.override(leaf).text_script.extra_offset = (-7.5, -4)
 
-        stylesheet_path = os.path.join(
-            '..',
-            '..',
-            'stylesheets',
-            'stylesheet.ily',
-            )
-
+        stylesheet_path = '../../stylesheets/stylesheet.ily'
         lilypond_file = abjad.LilyPondFile.new(
             score,
             default_paper_size=('letter', 'portrait'),

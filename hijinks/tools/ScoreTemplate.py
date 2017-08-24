@@ -16,13 +16,11 @@ class ScoreTemplate(baca.ScoreTemplate):
         ::
 
             >>> template = hijinks.ScoreTemplate()
-            >>> lilypond_file = template.__illustrate__()
-            >>> path = pathlib.Path(hijinks.__path__[0], 'stylesheets')
-            >>> path = path.joinpath('context-definitions.ily')
-            >>> lilypond_file = abjad.new(
-            ...     lilypond_file,
+            >>> path = pathlib.Path(hijinks.__path__[0])
+            >>> path = path / 'stylesheets' / 'context-definitions.ily'
+            >>> lilypond_file = template.__illustrate__(
             ...     global_staff_size=15,
-            ...     includes=[str(path)],
+            ...     includes=[path],
             ...     )
             >>> show(lilypond_file) # doctest: +SKIP
 
@@ -98,12 +96,6 @@ class ScoreTemplate(baca.ScoreTemplate):
             'default_instrument',
             hijinks.instruments['violin'],
             )
-        abjad.annotate(
-            violin_music_staff,
-            'default_clef',
-            abjad.Clef('treble'),
-            )
-
         # PIANO
         piano_rh_music_voice = abjad.Voice(
             context_name='PianoRHMusicVoice',
@@ -134,22 +126,16 @@ class ScoreTemplate(baca.ScoreTemplate):
             hijinks.instruments['piano'],
             )
         abjad.annotate(
-            piano_rh_music_staff,
-            'default_clef',
-            abjad.Clef('treble'),
-            )
-        abjad.annotate(
             piano_lh_music_staff,
             'default_clef',
             abjad.Clef('bass'),
             )
-
         # SCORE
         music_context = abjad.Context(
             [
                 violin_music_staff,
                 piano_staff_group,
-            ],
+                ],
             context_name='MusicContext',
             is_simultaneous=True,
             name='Music Context',

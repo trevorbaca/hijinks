@@ -2,16 +2,13 @@ import abjad
 import baca
 
 
-piano = abjad.Piano(
-    name_markup=baca.markup.short_instrument('Pf.'),
-    short_name_markup=baca.markup.short_instrument('Pf.'),
-    )
-piano._default_scope = 'PianoStaffGroup'
-
-instruments = abjad.TypedOrderedDict([
+instruments = abjad.InstrumentDictionary([
     (
         'piano',
-        piano,
+        abjad.Piano(
+            name_markup=baca.markup.short_instrument('Pf.'),
+            short_name_markup=baca.markup.short_instrument('Pf.'),
+            )
         ),
     (
         'violin',

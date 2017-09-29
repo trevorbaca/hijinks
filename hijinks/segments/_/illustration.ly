@@ -23,12 +23,12 @@
                 \times 4/5 {
                     \tempo 8=32
                     \once \override TextScript.staff-padding = #5
-                    \set Staff.instrumentName = \markup {
+                    \set ViolinMusicStaff.instrumentName = \markup {
                         \hcenter-in
                             #10
                             Vn.
                         }
-                    \set Staff.shortInstrumentName = \markup {
+                    \set ViolinMusicStaff.shortInstrumentName = \markup {
                         \hcenter-in
                             #10
                             Vn.

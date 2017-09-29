@@ -2,7 +2,7 @@ import abjad
 import baca
 
 
-piano = abjad.instrumenttools.Piano(
+piano = abjad.Piano(
     name_markup=baca.markup.short_instrument('Pf.'),
     short_name_markup=baca.markup.short_instrument('Pf.'),
     )
@@ -15,7 +15,7 @@ instruments = abjad.TypedOrderedDict([
         ),
     (
         'violin',
-        abjad.instrumenttools.Violin(
+        abjad.Violin(
             name_markup=baca.markup.short_instrument('Vn.'),
             short_name_markup=baca.markup.short_instrument('Vn.'),
             ),

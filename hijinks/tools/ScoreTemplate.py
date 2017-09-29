@@ -9,15 +9,13 @@ class ScoreTemplate(baca.ScoreTemplate):
     ::
 
         >>> import hijinks
-        >>> import pathlib
 
     ..  container:: example
 
         ::
 
             >>> template = hijinks.ScoreTemplate()
-            >>> path = pathlib.Path(hijinks.__path__[0])
-            >>> path = path / 'stylesheets' / 'contexts.ily'
+            >>> path = abjad.Path('hijinks', 'stylesheets', 'contexts.ily')
             >>> lilypond_file = template.__illustrate__(
             ...     global_staff_size=15,
             ...     includes=[path],
@@ -31,12 +29,12 @@ class ScoreTemplate(baca.ScoreTemplate):
                 \context MusicContext = "Music Context" <<
                     \context ViolinMusicStaff = "Violin Music Staff" {
                         \context ViolinMusicVoice = "Violin Music Voice" {
-                            \set Staff.instrumentName = \markup {
+                            \set ViolinMusicStaff.instrumentName = \markup {
                                 \hcenter-in
                                     #10
                                     Vn.
                                 }
-                            \set Staff.shortInstrumentName = \markup {
+                            \set ViolinMusicStaff.shortInstrumentName = \markup {
                                 \hcenter-in
                                     #10
                                     Vn.

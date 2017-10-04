@@ -242,17 +242,24 @@
                         bf,,32 -\tenuto
                         f,32 -\tenuto
                         c64 -\staccato
-                        \once \override TextScript.extra-offset = #'(-7.5 . -4)
+                        \once \override TextScript.extra-offset = #'(-9.5 . -4)
                         ef64 -\staccato ]
                             _ \markup {
-                                \with-color
-                                    #black
-                                    \italic
-                                        \right-column
-                                            {
-                                                "Austin, TX"
-                                                "Feb. 2006"
-                                            }
+                                \whiteout
+                                    \upright
+                                        \with-color
+                                            #black
+                                            \right-column
+                                                {
+                                                    \line
+                                                        {
+                                                            "Austin, TX."
+                                                        }
+                                                    \line
+                                                        {
+                                                            "February 2006."
+                                                        }
+                                                }
                                 }
                         \bar "|."
                         \override Score.BarLine #'transparent = ##f

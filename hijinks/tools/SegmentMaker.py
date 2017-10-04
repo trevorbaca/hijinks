@@ -230,7 +230,7 @@ class SegmentMaker(abjad.SegmentMaker):
 
         final_markup = hijinks.final_markup()
         abjad.attach(final_markup, leaf)
-        abjad.override(leaf).text_script.extra_offset = (-7.5, -4)
+        abjad.override(leaf).text_script.extra_offset = (-9.5, -4)
 
         stylesheet_path = '../../stylesheets/stylesheet.ily'
         lilypond_file = abjad.LilyPondFile.new(

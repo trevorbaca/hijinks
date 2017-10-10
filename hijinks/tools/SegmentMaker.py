@@ -7,14 +7,14 @@ class SegmentMaker(abjad.SegmentMaker):
     r'''Segment-maker.
     '''
 
-    ### SPECIAL METHODS ###
+    ### PUBLIC METHODS ###
 
-    def __call__(
+    def run(
         self,
         metadata=None,
         previous_metadata=None,
         ):
-        r'''Calls segment-maker.
+        r'''Runs segment-maker.
 
         Returns LilyPond file and metadata.
         '''

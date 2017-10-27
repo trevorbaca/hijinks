@@ -167,8 +167,7 @@ class SegmentMaker(abjad.SegmentMaker):
 
         leaves = abjad.select(piano_lh_music_staff).by_leaf()
         second_lh_note = leaves[1]
-        #markup = abjad.Markup('ped. ad libitum').italic()
-        markup = abjad.Markup('senza ped').italic()
+        markup = abjad.Markup('ped. ad libitum').italic()
         abjad.attach(markup, second_lh_note)
         abjad.override(second_lh_note).text_script.padding = 2
 

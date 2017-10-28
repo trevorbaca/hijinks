@@ -91,14 +91,14 @@ class SegmentMaker(abjad.SegmentMaker):
         violin_tuplets = []
         for definition in violin_tuplet_definitions:
             violin_tuplet = tuplet_maker(*definition)
-            leaves = abjad.select(violin_tuplet).by_leaf()
+            leaves = abjad.select(violin_tuplet).leaves()
             abjad.attach(abjad.MultipartBeam(), leaves)
             violin_tuplets.append(violin_tuplet)
 
         violin_music_staff = score['Violin Music Staff']
         violin_music_staff.extend(violin_tuplets)
 
-        notes = abjad.iterate(violin_music_staff).by_leaf(pitched=True)
+        notes = abjad.iterate(violin_music_staff).leaves(pitched=True)
         for i, note in enumerate(notes):
             note.written_pitch = violin_pitches[i]
 
@@ -138,9 +138,9 @@ class SegmentMaker(abjad.SegmentMaker):
                 duration = abjad.inspect(rh_tuplet).get_duration()
                 duration = duration.with_denominator(32)
                 rh_tuplet.preferred_denominator = duration.numerator
-            leaves = abjad.select(rh_tuplet).by_leaf()
+            leaves = abjad.select(rh_tuplet).leaves()
             abjad.attach(abjad.MultipartBeam(), leaves)
-            notes = abjad.select(rh_tuplet).by_leaf(pitched=True)
+            notes = abjad.select(rh_tuplet).leaves(pitched=True)
             for note, pitch_number in zip(notes, reversed(aggregate)):
                 note.written_pitch = pitch_number
             rh_tuplets.append(rh_tuplet)
@@ -156,28 +156,28 @@ class SegmentMaker(abjad.SegmentMaker):
                 duration = abjad.inspect(lh_tuplet).get_duration()
                 duration = duration.with_denominator(32)
                 lh_tuplet.preferred_denominator = duration.numerator
-            leaves = abjad.select(lh_tuplet).by_leaf()
+            leaves = abjad.select(lh_tuplet).leaves()
             abjad.attach(abjad.MultipartBeam(), leaves)
-            notes = abjad.iterate(lh_tuplet).by_leaf(pitched=True)
+            notes = abjad.iterate(lh_tuplet).leaves(pitched=True)
             for note, pitch_number in zip(notes, aggregate):
                 note.written_pitch = pitch_number
             lh_tuplets.append(lh_tuplet)
         piano_lh_music_staff.extend(lh_tuplets)
         piano_lh_music_staff[-1:-1] = [abjad.Rest((1, 8))]
 
-        leaves = abjad.select(piano_lh_music_staff).by_leaf()
+        leaves = abjad.select(piano_lh_music_staff).leaves()
         second_lh_note = leaves[1]
         markup = abjad.Markup('ped. ad libitum').italic()
         abjad.attach(markup, second_lh_note)
         abjad.override(second_lh_note).text_script.padding = 2
 
-        for note in abjad.iterate(piano_staff_group).by_leaf(pitched=True):
+        for note in abjad.iterate(piano_staff_group).leaves(pitched=True):
             if note.written_duration <= abjad.Duration(1, 64):
                 abjad.attach(abjad.Articulation('staccato'), note)
             else:
                 abjad.attach(abjad.Articulation('tenuto'), note)
 
-        for note in abjad.iterate(violin_music_staff).by_leaf(pitched=True):
+        for note in abjad.iterate(violin_music_staff).leaves(pitched=True):
             if note.written_duration <= abjad.Duration(1, 16):
                 abjad.attach(abjad.Articulation('staccato'), note)
             abjad.attach(abjad.Articulation('tenuto'), note)

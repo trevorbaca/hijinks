@@ -6,69 +6,63 @@ import hijinks
 class ScoreTemplate(baca.ScoreTemplate):
     r'''Score template.
 
-    ::
-
-        >>> import hijinks
+    >>> import hijinks
 
     ..  container:: example
 
-        ::
+        >>> template = hijinks.ScoreTemplate()
+        >>> path = abjad.Path('hijinks', 'stylesheets', 'contexts.ily')
+        >>> lilypond_file = template.__illustrate__(
+        ...     global_staff_size=15,
+        ...     includes=[path],
+        ...     )
+        >>> abjad.show(lilypond_file) # doctest: +SKIP
 
-            >>> template = hijinks.ScoreTemplate()
-            >>> path = abjad.Path('hijinks', 'stylesheets', 'contexts.ily')
-            >>> lilypond_file = template.__illustrate__(
-            ...     global_staff_size=15,
-            ...     includes=[path],
-            ...     )
-            >>> show(lilypond_file) # doctest: +SKIP
-
-        ::
-
-            >>> f(lilypond_file[abjad.Score])
-            \context Score = "Score" <<
-                \context MusicContext = "Music Context" <<
-                    \context ViolinMusicStaff = "Violin Music Staff" {
-                        \context ViolinMusicVoice = "Violin Music Voice" {
-                            \set ViolinMusicStaff.instrumentName = \markup {
+        >>> abjad.f(lilypond_file[abjad.Score])
+        \context Score = "Score" <<
+            \context MusicContext = "Music Context" <<
+                \context ViolinMusicStaff = "Violin Music Staff" {
+                    \context ViolinMusicVoice = "Violin Music Voice" {
+                        \set ViolinMusicStaff.instrumentName = \markup {
+                            \hcenter-in
+                                #10
+                                Vn.
+                            }
+                        \set ViolinMusicStaff.shortInstrumentName = \markup {
+                            \hcenter-in
+                                #10
+                                Vn.
+                            }
+                        \clef "treble"
+                        s1
+                    }
+                }
+                \context PianoStaffGroup = "Piano Staff Group" <<
+                    \context PianoRHMusicStaff = "Piano RH Music Staff" {
+                        \context PianoRHMusicVoice = "Piano RH Music Voice" {
+                            \set PianoStaffGroup.instrumentName = \markup {
                                 \hcenter-in
                                     #10
-                                    Vn.
+                                    Pf.
                                 }
-                            \set ViolinMusicStaff.shortInstrumentName = \markup {
+                            \set PianoStaffGroup.shortInstrumentName = \markup {
                                 \hcenter-in
                                     #10
-                                    Vn.
+                                    Pf.
                                 }
                             \clef "treble"
                             s1
                         }
                     }
-                    \context PianoStaffGroup = "Piano Staff Group" <<
-                        \context PianoRHMusicStaff = "Piano RH Music Staff" {
-                            \context PianoRHMusicVoice = "Piano RH Music Voice" {
-                                \set PianoStaffGroup.instrumentName = \markup {
-                                    \hcenter-in
-                                        #10
-                                        Pf.
-                                    }
-                                \set PianoStaffGroup.shortInstrumentName = \markup {
-                                    \hcenter-in
-                                        #10
-                                        Pf.
-                                    }
-                                \clef "treble"
-                                s1
-                            }
+                    \context PianoLHMusicStaff = "Piano LH Music Staff" {
+                        \context PianoLHMusicVoice = "Piano LH Music Voice" {
+                            \clef "bass"
+                            s1
                         }
-                        \context PianoLHMusicStaff = "Piano LH Music Staff" {
-                            \context PianoLHMusicVoice = "Piano LH Music Voice" {
-                                \clef "bass"
-                                s1
-                            }
-                        }
-                    >>
+                    }
                 >>
             >>
+        >>
 
     '''
 

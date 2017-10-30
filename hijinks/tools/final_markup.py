@@ -5,20 +5,16 @@ import baca
 def final_markup():
     r'''Makes final markup.
 
-    ::
-
-        >>> import hijinks
+    >>> import hijinks
 
     ..  container:: example
 
-        ::
-
-            >>> markup = hijinks.final_markup()
-            >>> show(markup) # doctest: +SKIP
+        >>> markup = hijinks.final_markup()
+        >>> abjad.show(markup) # doctest: +SKIP
 
         ..  docs::
 
-            >>> f(markup)
+            >>> abjad.f(markup)
             _ \markup {
                 \whiteout
                     \upright

@@ -4,10 +4,7 @@ import abjad
 def split_pitches(pitches, split=-1):
     r'''Splits `pitches`.
 
-    ::
-
-        >>> import abjad
-        >>> import hijinks
+    >>> import hijinks
 
     Set `pitches` to (probably) a list of aggregates.
 

@@ -35,4 +35,4 @@ def final_markup():
 
     '''
     command = baca.markup.final_markup(['Austin, TX.'], ['February 2006.'])
-    return command.arguments[0]
+    return command.indicators[0]

@@ -7,6 +7,14 @@ class SegmentMaker(abjad.SegmentMaker):
     r'''Segment-maker.
     '''
 
+    ### PUBLIC PROPERTIES ###
+
+    @property
+    def metadata(self):
+        r'''Gets segment metadata after run.
+        '''
+        return self._metadata
+
     ### PUBLIC METHODS ###
 
     def run(
@@ -240,4 +248,4 @@ class SegmentMaker(abjad.SegmentMaker):
             use_relative_includes=True,
             )
 
-        return lilypond_file, self._metadata
+        return lilypond_file

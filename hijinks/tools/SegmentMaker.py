@@ -31,8 +31,8 @@ class SegmentMaker(abjad.SegmentMaker):
 
         template = hijinks.ScoreTemplate()
         score = template()
-        violin_music_staff = score['Violin Music Staff']
-        piano_staff_group = score['Piano Staff Group']
+        violin_music_staff = score['ViolinMusicStaff']
+        piano_staff_group = score['PianoStaffGroup']
 
         #aggregate = pitch.CC[0][175 - 1]
         aggregate = [10, 19, 20, 23, 24, 26, 27, 29, 30, 33, 37, 40]
@@ -103,7 +103,7 @@ class SegmentMaker(abjad.SegmentMaker):
             abjad.attach(abjad.MultipartBeam(), leaves)
             violin_tuplets.append(violin_tuplet)
 
-        violin_music_staff = score['Violin Music Staff']
+        violin_music_staff = score['ViolinMusicStaff']
         violin_music_staff.extend(violin_tuplets)
 
         notes = abjad.iterate(violin_music_staff).leaves(pitched=True)
@@ -137,7 +137,7 @@ class SegmentMaker(abjad.SegmentMaker):
             [6, 6, 2, 2, 1, 1],
             ]
 
-        piano_rh_music_staff = score['Piano RH Music Staff']
+        piano_rh_music_staff = score['PianoRHMusicStaff']
         rh_tuplets = []
         for rh_proportion, rh_pair, aggregate in zip(
             rh_proportions, rh_pairs, circuit):
@@ -155,7 +155,7 @@ class SegmentMaker(abjad.SegmentMaker):
         piano_rh_music_staff.extend(rh_tuplets)
         piano_rh_music_staff[-1:-1] = [abjad.Rest((1, 8))]
 
-        piano_lh_music_staff = score['Piano LH Music Staff']
+        piano_lh_music_staff = score['PianoLHMusicStaff']
         lh_tuplets = []
         for lh_proportion, lh_pair, aggregate in zip(
             lh_proportions, lh_pairs, circuit):

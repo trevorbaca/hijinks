@@ -20,9 +20,9 @@ class ScoreTemplate(baca.ScoreTemplate):
 
         >>> abjad.f(lilypond_file[abjad.Score])
         \context Score = "Score" <<
-            \context MusicContext = "Music Context" <<
-                \context ViolinMusicStaff = "Violin Music Staff" {
-                    \context ViolinMusicVoice = "Violin Music Voice" {
+            \context MusicContext = "MusicContext" <<
+                \context ViolinMusicStaff = "ViolinMusicStaff" {
+                    \context ViolinMusicVoice = "ViolinMusicVoice" {
                         \set ViolinMusicStaff.instrumentName = \markup {
                             \hcenter-in
                                 #10
@@ -37,9 +37,9 @@ class ScoreTemplate(baca.ScoreTemplate):
                         s1
                     }
                 }
-                \context PianoStaffGroup = "Piano Staff Group" <<
-                    \context PianoRHMusicStaff = "Piano RH Music Staff" {
-                        \context PianoRHMusicVoice = "Piano RH Music Voice" {
+                \context PianoStaffGroup = "PianoStaffGroup" <<
+                    \context PianoRHMusicStaff = "PianoRHMusicStaff" {
+                        \context PianoRHMusicVoice = "PianoRHMusicVoice" {
                             \set PianoStaffGroup.instrumentName = \markup {
                                 \hcenter-in
                                     #10
@@ -54,8 +54,8 @@ class ScoreTemplate(baca.ScoreTemplate):
                             s1
                         }
                     }
-                    \context PianoLHMusicStaff = "Piano LH Music Staff" {
-                        \context PianoLHMusicVoice = "Piano LH Music Voice" {
+                    \context PianoLHMusicStaff = "PianoLHMusicStaff" {
+                        \context PianoLHMusicVoice = "PianoLHMusicVoice" {
                             \clef "bass"
                             s1
                         }
@@ -76,12 +76,12 @@ class ScoreTemplate(baca.ScoreTemplate):
         # VIOLIN
         violin_music_voice = abjad.Voice(
             context_name='ViolinMusicVoice',
-            name='Violin Music Voice',
+            name='ViolinMusicVoice',
             )
         violin_music_staff = abjad.Staff(
             [violin_music_voice],
             context_name='ViolinMusicStaff',
-            name='Violin Music Staff',
+            name='ViolinMusicStaff',
             )
         abjad.annotate(
             violin_music_staff,
@@ -91,26 +91,26 @@ class ScoreTemplate(baca.ScoreTemplate):
         # PIANO
         piano_rh_music_voice = abjad.Voice(
             context_name='PianoRHMusicVoice',
-            name='Piano RH Music Voice',
+            name='PianoRHMusicVoice',
             )
         piano_rh_music_staff = abjad.Staff(
             [piano_rh_music_voice],
             context_name='PianoRHMusicStaff',
-            name='Piano RH Music Staff',
+            name='PianoRHMusicStaff',
             )
         piano_lh_music_voice = abjad.Voice(
             context_name='PianoLHMusicVoice',
-            name='Piano LH Music Voice',
+            name='PianoLHMusicVoice',
             )
         piano_lh_music_staff = abjad.Staff(
             [piano_lh_music_voice],
             context_name='PianoLHMusicStaff',
-            name='Piano LH Music Staff',
+            name='PianoLHMusicStaff',
             )
         piano_staff_group = abjad.StaffGroup(
             [piano_rh_music_staff, piano_lh_music_staff],
             context_name='PianoStaffGroup',
-            name='Piano Staff Group',
+            name='PianoStaffGroup',
             )
         abjad.annotate(
             piano_staff_group,
@@ -130,7 +130,7 @@ class ScoreTemplate(baca.ScoreTemplate):
                 ],
             context_name='MusicContext',
             is_simultaneous=True,
-            name='Music Context',
+            name='MusicContext',
             )
         score = abjad.Score(
             [music_context],

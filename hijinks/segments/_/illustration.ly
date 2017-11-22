@@ -23,6 +23,7 @@
                 \times 4/5 {
                     \tempo 8=32
                     \once \override TextScript.staff-padding = #5
+                    \time 1/8
                     \set ViolinMusicStaff.instrumentName = \markup {
                         \hcenter-in
                             #10
@@ -33,7 +34,6 @@
                             #10
                             Vn.
                         }
-                    \time 1/8
                     \clef "treble"
                     bf'4
                     -\tenuto

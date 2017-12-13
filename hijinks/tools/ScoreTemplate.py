@@ -66,6 +66,10 @@ class ScoreTemplate(baca.ScoreTemplate):
 
     '''
 
+    ### CLASS VARIABLES ###
+
+    __documentation_section__ = None
+
     ### SPECIAL METHODS ###
 
     def __call__(self):
@@ -73,6 +77,7 @@ class ScoreTemplate(baca.ScoreTemplate):
 
         Returns score.
         '''
+
         # VIOLIN
         violin_music_voice = abjad.Voice(
             context_name='ViolinMusicVoice',
@@ -88,6 +93,7 @@ class ScoreTemplate(baca.ScoreTemplate):
             'default_instrument',
             hijinks.instruments['violin'],
             )
+
         # PIANO
         piano_rh_music_voice = abjad.Voice(
             context_name='PianoRHMusicVoice',
@@ -122,6 +128,7 @@ class ScoreTemplate(baca.ScoreTemplate):
             'default_clef',
             abjad.Clef('bass'),
             )
+
         # SCORE
         music_context = abjad.Context(
             [
@@ -136,4 +143,5 @@ class ScoreTemplate(baca.ScoreTemplate):
             [music_context],
             name='Score',
             )
+
         return score

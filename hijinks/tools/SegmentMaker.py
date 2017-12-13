@@ -7,6 +7,10 @@ class SegmentMaker(abjad.SegmentMaker):
     r'''Segment-maker.
     '''
 
+    ### CLASS VARIABLES ###
+
+    __documentation_section__ = None
+
     ### PUBLIC PROPERTIES ###
 
     @property

@@ -1,7 +1,4 @@
-import abjad
-
-
-abjad.ImportManager.import_structured_package(
-    __path__[0],
-    globals(),
-    )
+from .ScoreTemplate import ScoreTemplate
+from .SegmentMaker import SegmentMaker
+from .final_markup import final_markup
+from .split_pitches import split_pitches

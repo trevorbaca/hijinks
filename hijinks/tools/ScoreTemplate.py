@@ -143,5 +143,7 @@ class ScoreTemplate(baca.ScoreTemplate):
             [music_context],
             name='Score',
             )
-
+        self._assert_lilypond_identifiers(score)
+        self._assert_unique_context_names(score)
+        self._assert_matching_custom_context_names(score)
         return score

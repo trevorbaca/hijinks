@@ -93,6 +93,11 @@ class ScoreTemplate(baca.ScoreTemplate):
             'default_instrument',
             hijinks.instruments['violin'],
             )
+        abjad.annotate(
+            violin_music_staff,
+            'default_clef',
+            abjad.Clef('treble'),
+            )
 
         # PIANO
         piano_rh_music_voice = abjad.Voice(
@@ -124,21 +129,25 @@ class ScoreTemplate(baca.ScoreTemplate):
             hijinks.instruments['piano'],
             )
         abjad.annotate(
+            piano_rh_music_staff,
+            'default_clef',
+            abjad.Clef('treble'),
+            )
+        abjad.annotate(
             piano_lh_music_staff,
             'default_clef',
             abjad.Clef('bass'),
             )
 
-        # SCORE
+        # MUSIC CONTEXT
         music_context = abjad.Context(
-            [
-                violin_music_staff,
-                piano_staff_group,
-                ],
+            [violin_music_staff, piano_staff_group],
             context_name='MusicContext',
             is_simultaneous=True,
             name='MusicContext',
             )
+
+        # SCORE
         score = abjad.Score(
             [music_context],
             name='Score',

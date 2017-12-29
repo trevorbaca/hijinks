@@ -24,17 +24,17 @@
                     \tempo 8=32
                     \once \override TextScript.staff-padding = #5
                     \time 1/8
-                    \set ViolinMusicStaff.instrumentName = \markup {           %! ST1
-                        \hcenter-in                                            %! ST1
-                            #10                                                %! ST1
-                            Vn.                                                %! ST1
-                        }                                                      %! ST1
-                    \set ViolinMusicStaff.shortInstrumentName = \markup {      %! ST1
-                        \hcenter-in                                            %! ST1
-                            #10                                                %! ST1
-                            Vn.                                                %! ST1
-                        }                                                      %! ST1
-                    \clef "treble"                                             %! ST3
+                    \set ViolinMusicStaff.instrumentName = \markup {                     %! ST1
+                        \hcenter-in                                                      %! ST1
+                            #10                                                          %! ST1
+                            Vn.                                                          %! ST1
+                        }                                                                %! ST1
+                    \set ViolinMusicStaff.shortInstrumentName = \markup {                %! ST1
+                        \hcenter-in                                                      %! ST1
+                            #10                                                          %! ST1
+                            Vn.                                                          %! ST1
+                        }                                                                %! ST1
+                    \clef "treble"                                                       %! ST3
                     bf'4
                     -\tenuto
                     - \markup {
@@ -103,17 +103,17 @@
                     }
                     \times 8/10 {
                         \once \override TextScript.staff-padding = #7
-                        \set PianoStaffGroup.instrumentName = \markup {        %! ST1
-                            \hcenter-in                                        %! ST1
-                                #10                                            %! ST1
-                                Pf.                                            %! ST1
-                            }                                                  %! ST1
-                        \set PianoStaffGroup.shortInstrumentName = \markup {   %! ST1
-                            \hcenter-in                                        %! ST1
-                                #10                                            %! ST1
-                                Pf.                                            %! ST1
-                            }                                                  %! ST1
-                        \clef "treble"                                         %! ST3
+                        \set PianoStaffGroup.instrumentName = \markup {                  %! ST1
+                            \hcenter-in                                                  %! ST1
+                                #10                                                      %! ST1
+                                Pf.                                                      %! ST1
+                            }                                                            %! ST1
+                        \set PianoStaffGroup.shortInstrumentName = \markup {             %! ST1
+                            \hcenter-in                                                  %! ST1
+                                #10                                                      %! ST1
+                                Pf.                                                      %! ST1
+                            }                                                            %! ST1
+                        \clef "treble"                                                   %! ST3
                         f'''16
                         -\tenuto
                         [
@@ -277,7 +277,7 @@
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
-                        \clef "bass"                                           %! ST3
+                        \clef "bass"                                                     %! ST3
                         b,,,16
                         -\tenuto
                         [

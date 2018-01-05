@@ -1,15 +1,21 @@
 \layout {
-    % UNNAMED CONTEXTS
+
+    % PIANO STAFF
     \context {
         \PianoStaff
     }
+
+    % STAFF
     \context {
         \Staff
     }
+
+    % VOICE
     \context {
         \Voice
         \remove Forbid_line_break_engraver
     }
+
     % VIOLIN
     \context {
         \Voice
@@ -25,6 +31,7 @@
         \accepts ViolinMusicVoice
         \override Beam.positions = #'(-4 . -4)
     }
+
     % PIANO
     \context {
         \Voice
@@ -65,16 +72,18 @@
         \accepts PianoLHMusicStaff
         \override StaffGrouper.staff-staff-spacing.minimum-distance = 21
     }
+
     % MUSIC CONTEXT
     \context {
-        \StaffGroup
+        \ChoirStaff
         \name MusicContext
         \type Engraver_group
-        \alias StaffGroup
+        \alias ChoirStaff
         \accepts ViolinMusicStaff
         \accepts PianoStaffGroup
         systemStartDelimiter = #'SystemStartBar
     }
+
     % SCORE
     \context {
         \Score

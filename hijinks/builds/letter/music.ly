@@ -8,6 +8,6 @@
 
 \score {
     {
-    \include "../_segments/segment-01.ly"
+    \include "_segments/segment-01.ly"
     }
 }

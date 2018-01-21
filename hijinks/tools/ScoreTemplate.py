@@ -80,12 +80,12 @@ class ScoreTemplate(baca.ScoreTemplate):
 
         # VIOLIN
         violin_music_voice = abjad.Voice(
-            context_name='ViolinMusicVoice',
+            lilypond_type='ViolinMusicVoice',
             name='ViolinMusicVoice',
             )
         violin_music_staff = abjad.Staff(
             [violin_music_voice],
-            context_name='ViolinMusicStaff',
+            lilypond_type='ViolinMusicStaff',
             name='ViolinMusicStaff',
             )
         abjad.annotate(
@@ -101,26 +101,26 @@ class ScoreTemplate(baca.ScoreTemplate):
 
         # PIANO
         piano_rh_music_voice = abjad.Voice(
-            context_name='PianoRHMusicVoice',
+            lilypond_type='PianoRHMusicVoice',
             name='PianoRHMusicVoice',
             )
         piano_rh_music_staff = abjad.Staff(
             [piano_rh_music_voice],
-            context_name='PianoRHMusicStaff',
+            lilypond_type='PianoRHMusicStaff',
             name='PianoRHMusicStaff',
             )
         piano_lh_music_voice = abjad.Voice(
-            context_name='PianoLHMusicVoice',
+            lilypond_type='PianoLHMusicVoice',
             name='PianoLHMusicVoice',
             )
         piano_lh_music_staff = abjad.Staff(
             [piano_lh_music_voice],
-            context_name='PianoLHMusicStaff',
+            lilypond_type='PianoLHMusicStaff',
             name='PianoLHMusicStaff',
             )
         piano_staff_group = abjad.StaffGroup(
             [piano_rh_music_staff, piano_lh_music_staff],
-            context_name='PianoStaffGroup',
+            lilypond_type='PianoStaffGroup',
             name='PianoStaffGroup',
             )
         abjad.annotate(
@@ -142,7 +142,7 @@ class ScoreTemplate(baca.ScoreTemplate):
         # MUSIC CONTEXT
         music_context = abjad.Context(
             [violin_music_staff, piano_staff_group],
-            context_name='MusicContext',
+            lilypond_type='MusicContext',
             is_simultaneous=True,
             name='MusicContext',
             )

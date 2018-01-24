@@ -1,7 +1,7 @@
 import abjad
 
 
-metadata = abjad.TypedOrderedDict(
+metadata = abjad.OrderedDict(
     [
         ('paper_size', 'letter'),
         ('price', '\\$20 / \\euro 16'),

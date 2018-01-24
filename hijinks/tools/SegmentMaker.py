@@ -31,9 +31,9 @@ class SegmentMaker(abjad.SegmentMaker):
 
         Returns LilyPond file and metadata.
         '''
-        self._documents_metadata = abjad.TypedOrderedDict(documents_metadata)
-        self._metadata = abjad.TypedOrderedDict(metadata)
-        self._previous_metadata = abjad.TypedOrderedDict(previous_metadata)
+        self._documents_metadata = abjad.OrderedDict(documents_metadata)
+        self._metadata = abjad.OrderedDict(metadata)
+        self._previous_metadata = abjad.OrderedDict(previous_metadata)
 
         template = hijinks.ScoreTemplate()
         score = template()

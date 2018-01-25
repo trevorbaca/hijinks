@@ -149,7 +149,7 @@ class SegmentMaker(abjad.SegmentMaker):
             if isinstance(rh_tuplet, abjad.Tuplet):
                 duration = abjad.inspect(rh_tuplet).get_duration()
                 duration = duration.with_denominator(32)
-                rh_tuplet.preferred_denominator = duration.numerator
+                rh_tuplet.denominator = duration.numerator
             leaves = abjad.select(rh_tuplet).leaves()
             abjad.attach(abjad.MultipartBeam(), leaves)
             notes = abjad.select(rh_tuplet).leaves(pitched=True)
@@ -167,7 +167,7 @@ class SegmentMaker(abjad.SegmentMaker):
             if isinstance(lh_tuplet, abjad.Tuplet):
                 duration = abjad.inspect(lh_tuplet).get_duration()
                 duration = duration.with_denominator(32)
-                lh_tuplet.preferred_denominator = duration.numerator
+                lh_tuplet.denominator = duration.numerator
             leaves = abjad.select(lh_tuplet).leaves()
             abjad.attach(abjad.MultipartBeam(), leaves)
             notes = abjad.iterate(lh_tuplet).leaves(pitched=True)

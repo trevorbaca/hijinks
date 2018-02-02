@@ -15,10 +15,14 @@
 \paper {}
 
 \score {
-    \context Score = "Score" <<
-        \context MusicContext = "MusicContext" <<
-            \context ViolinMusicStaff = "ViolinMusicStaff" {
-                \context ViolinMusicVoice = "ViolinMusicVoice" {
+    \context Score = "Score"
+    <<
+        \context MusicContext = "MusicContext"
+        <<
+            \context ViolinMusicStaff = "ViolinMusicStaff"
+            {
+                \context ViolinMusicVoice = "ViolinMusicVoice"
+                {
                 }
                 \times 4/5 {
                     \tempo 8=32
@@ -87,9 +91,12 @@
                 }
                 \revert TupletBracket.shorten-pair
             }
-            \context PianoStaffGroup = "PianoStaffGroup" <<
-                \context PianoRHMusicStaff = "PianoRHMusicStaff" {
-                    \context PianoRHMusicVoice = "PianoRHMusicVoice" {
+            \context PianoStaffGroup = "PianoStaffGroup"
+            <<
+                \context PianoRHMusicStaff = "PianoRHMusicStaff"
+                {
+                    \context PianoRHMusicVoice = "PianoRHMusicVoice"
+                    {
                     }
                     \times 8/10 {
                         \once \override TextScript.staff-padding = #7
@@ -252,8 +259,10 @@
                     }
                     \revert TupletBracket.shorten-pair
                 }
-                \context PianoLHMusicStaff = "PianoLHMusicStaff" {
-                    \context PianoLHMusicVoice = "PianoLHMusicVoice" {
+                \context PianoLHMusicStaff = "PianoLHMusicStaff"
+                {
+                    \context PianoLHMusicVoice = "PianoLHMusicVoice"
+                    {
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {

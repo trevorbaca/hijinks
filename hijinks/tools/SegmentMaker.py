@@ -33,6 +33,7 @@ class SegmentMaker(abjad.SegmentMaker):
         '''
         self._metadata = abjad.OrderedDict(metadata)
         self._previous_metadata = abjad.OrderedDict(previous_metadata)
+        self._segment_directory = segment_directory
 
         template = hijinks.ScoreTemplate()
         score = template()
@@ -243,6 +244,9 @@ class SegmentMaker(abjad.SegmentMaker):
         final_markup = hijinks.final_markup()
         abjad.attach(final_markup, leaf)
         abjad.override(leaf).text_script.extra_offset = (-9.5, -4)
+
+        self._score = score
+        self._add_parse_handles()
 
         stylesheet_path = '../../stylesheets/stylesheet.ily'
         lilypond_file = abjad.LilyPondFile.new(

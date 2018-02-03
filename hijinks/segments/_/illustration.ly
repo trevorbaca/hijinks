@@ -13,6 +13,8 @@
 \layout {}
 
 \paper {}
+\include "illustration.ily"
+
 
 \score {
     \context Score = "Score"
@@ -22,8 +24,7 @@
             \context ViolinMusicStaff = "ViolinMusicStaff"
             {
                 \context ViolinMusicVoice = "ViolinMusicVoice"
-                {
-                }
+                \iViolinMusicVoice
                 \times 4/5 {
                     \tempo 8=32
                     \once \override TextScript.staff-padding = #5
@@ -96,8 +97,7 @@
                 \context PianoRHMusicStaff = "PianoRHMusicStaff"
                 {
                     \context PianoRHMusicVoice = "PianoRHMusicVoice"
-                    {
-                    }
+                    \iPianoRHMusicVoice
                     \times 8/10 {
                         \once \override TextScript.staff-padding = #7
                         \clef "treble"                                                   %! ST3
@@ -262,8 +262,7 @@
                 \context PianoLHMusicStaff = "PianoLHMusicStaff"
                 {
                     \context PianoLHMusicVoice = "PianoLHMusicVoice"
-                    {
-                    }
+                    \iPianoLHMusicVoice
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
                         \clef "bass"                                                     %! ST3

@@ -1,10 +1,10 @@
-iViolinMusicVoice = {
+i_ViolinMusicVoice = {
 }
 
 
-iPianoRHMusicVoice = {
+i_PianoRHMusicVoice = {
 }
 
 
-iPianoLHMusicVoice = {
+i_PianoLHMusicVoice = {
 }

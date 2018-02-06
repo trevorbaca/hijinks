@@ -24,7 +24,7 @@
             \context ViolinMusicStaff = "ViolinMusicStaff"
             {
                 \context ViolinMusicVoice = "ViolinMusicVoice"
-                \iViolinMusicVoice
+                \i_ViolinMusicVoice
                 \times 4/5 {
                     \tempo 8=32
                     \once \override TextScript.staff-padding = #5
@@ -97,7 +97,7 @@
                 \context PianoRHMusicStaff = "PianoRHMusicStaff"
                 {
                     \context PianoRHMusicVoice = "PianoRHMusicVoice"
-                    \iPianoRHMusicVoice
+                    \i_PianoRHMusicVoice
                     \times 8/10 {
                         \once \override TextScript.staff-padding = #7
                         \clef "treble"                                                   %! ST3
@@ -262,7 +262,7 @@
                 \context PianoLHMusicStaff = "PianoLHMusicStaff"
                 {
                     \context PianoLHMusicVoice = "PianoLHMusicVoice"
-                    \iPianoLHMusicVoice
+                    \i_PianoLHMusicVoice
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
                         \clef "bass"                                                     %! ST3

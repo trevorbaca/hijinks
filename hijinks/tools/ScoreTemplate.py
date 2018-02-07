@@ -19,10 +19,14 @@ class ScoreTemplate(baca.ScoreTemplate):
         >>> abjad.show(lilypond_file) # doctest: +SKIP
 
         >>> abjad.f(lilypond_file[abjad.Score])
-        \context Score = "Score" <<
-            \context MusicContext = "MusicContext" <<
-                \context ViolinMusicStaff = "ViolinMusicStaff" {
-                    \context ViolinMusicVoice = "ViolinMusicVoice" {
+        \context Score = "Score"
+        <<
+            \context MusicContext = "MusicContext"
+            <<
+                \context ViolinMusicStaff = "ViolinMusicStaff"
+                {
+                    \context ViolinMusicVoice = "ViolinMusicVoice"
+                    {
                         \set ViolinMusicStaff.instrumentName = \markup {      %! ST1
                             \hcenter-in                                       %! ST1
                                 #10                                           %! ST1
@@ -37,9 +41,12 @@ class ScoreTemplate(baca.ScoreTemplate):
                         s1
                     }
                 }
-                \context PianoStaffGroup = "PianoStaffGroup" <<
-                    \context PianoRHMusicStaff = "PianoRHMusicStaff" {
-                        \context PianoRHMusicVoice = "PianoRHMusicVoice" {
+                \context PianoStaffGroup = "PianoStaffGroup"
+                <<
+                    \context PianoRHMusicStaff = "PianoRHMusicStaff"
+                    {
+                        \context PianoRHMusicVoice = "PianoRHMusicVoice"
+                        {
                             \set PianoStaffGroup.instrumentName = \markup {      %! ST1
                                 \hcenter-in                                      %! ST1
                                     #10                                          %! ST1
@@ -54,8 +61,10 @@ class ScoreTemplate(baca.ScoreTemplate):
                             s1
                         }
                     }
-                    \context PianoLHMusicStaff = "PianoLHMusicStaff" {
-                        \context PianoLHMusicVoice = "PianoLHMusicVoice" {
+                    \context PianoLHMusicStaff = "PianoLHMusicStaff"
+                    {
+                        \context PianoLHMusicVoice = "PianoLHMusicVoice"
+                        {
                             \clef "bass" %! ST3
                             s1
                         }

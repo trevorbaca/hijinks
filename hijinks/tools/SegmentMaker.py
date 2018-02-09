@@ -246,7 +246,7 @@ class SegmentMaker(abjad.SegmentMaker):
         abjad.override(leaf).text_script.extra_offset = (-9.5, -4)
 
         self._score = score
-        self._add_parse_handles()
+        self._add_container_identifiers()
 
         stylesheet_path = '../../stylesheets/stylesheet.ily'
         lilypond_file = abjad.LilyPondFile.new(

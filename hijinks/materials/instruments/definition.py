@@ -2,16 +2,16 @@ import abjad
 import baca
 
 
-instruments = abjad.InstrumentDictionary([
+instruments = abjad.OrderedDict([
     (
-        'piano',
+        'Piano',
         abjad.Piano(
             markup=baca.markup.short_instrument('Pf.'),
             short_markup=baca.markup.short_instrument('Pf.'),
             )
         ),
     (
-        'violin',
+        'Violin',
         abjad.Violin(
             markup=baca.markup.short_instrument('Vn.'),
             short_markup=baca.markup.short_instrument('Vn.'),

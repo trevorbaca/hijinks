@@ -3,7 +3,7 @@ i_ViolinMusicVoice = {
 
 
 i_ViolinMusicStaff = {
-    \context ViolinMusicVoice = "ViolinMusicVoice"
+    \context Voice = "ViolinMusicVoice"
     \i_ViolinMusicVoice
     \times 4/5 {
         \tempo 8=32
@@ -79,7 +79,7 @@ i_PianoRHMusicVoice = {
 
 
 i_PianoRHMusicStaff = {
-    \context PianoRHMusicVoice = "PianoRHMusicVoice"
+    \context Voice = "PianoRHMusicVoice"
     \i_PianoRHMusicVoice
     \times 8/10 {
         \once \override TextScript.staff-padding = #7
@@ -249,7 +249,7 @@ i_PianoLHMusicVoice = {
 
 
 i_PianoLHMusicStaff = {
-    \context PianoLHMusicVoice = "PianoLHMusicVoice"
+    \context Voice = "PianoLHMusicVoice"
     \i_PianoLHMusicVoice
     \tweak text #tuplet-number::calc-fraction-text
     \times 6/7 {

@@ -85,11 +85,6 @@ class ScoreTemplate(baca.ScoreTemplate):
         r'''Calls score template.
         '''
 
-        # VIOLIN
-#        violin_music_voice = abjad.Voice(
-#            #lilypond_type='ViolinMusicVoice',
-#            name='ViolinMusicVoice',
-#            )
         violin_music_staff = abjad.Staff(
             [abjad.Voice(name='ViolinMusicVoice')],
             lilypond_type='ViolinMusicStaff',
@@ -107,19 +102,11 @@ class ScoreTemplate(baca.ScoreTemplate):
             )
 
         # PIANO
-#        piano_rh_music_voice = abjad.Voice(
-#            lilypond_type='PianoRHMusicVoice',
-#            name='PianoRHMusicVoice',
-#            )
         piano_rh_music_staff = abjad.Staff(
             [abjad.Voice(name='PianoRHMusicVoice')],
             lilypond_type='PianoRHMusicStaff',
             name='PianoRHMusicStaff',
             )
-#        piano_lh_music_voice = abjad.Voice(
-#            lilypond_type='PianoLHMusicVoice',
-#            name='PianoLHMusicVoice',
-#            )
         piano_lh_music_staff = abjad.Staff(
             [abjad.Voice(name='PianoLHMusicVoice')],
             lilypond_type='PianoLHMusicStaff',

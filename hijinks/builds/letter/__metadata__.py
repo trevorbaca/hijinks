@@ -4,6 +4,6 @@ import abjad
 metadata = abjad.OrderedDict(
     [
         ('paper_size', 'letter'),
-        ('price', '\\$20 / \\euro 16'),
+        ('price', '\\$20'),
         ]
     )

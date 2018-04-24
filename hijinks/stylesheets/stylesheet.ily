@@ -12,6 +12,7 @@
     oddHeaderMarkup = \markup \null
     right-margin = 20\mm
     top-margin = 12\mm
+    top-markup-spacing.minimum-distance = 6
 }
 
 \header {

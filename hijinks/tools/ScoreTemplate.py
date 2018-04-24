@@ -21,22 +21,21 @@ class ScoreTemplate(baca.ScoreTemplate):
         >>> abjad.f(lilypond_file[abjad.Score])
         \context Score = "Score"
         <<
+            \context GlobalContext = "GlobalContext"
+            <<
+                \context GlobalRests = "GlobalRests"
+                {
+                }
+                \context GlobalSkips = "GlobalSkips"
+                {
+                }
+            >>
             \context MusicContext = "MusicContext"
             <<
                 \context ViolinMusicStaff = "ViolinMusicStaff"
                 {
                     \context Voice = "ViolinMusicVoice"
                     {
-                        \set ViolinMusicStaff.instrumentName = \markup {      %! ST1
-                            \hcenter-in                                       %! ST1
-                                #10                                           %! ST1
-                                Vn.                                           %! ST1
-                            }                                                 %! ST1
-                        \set ViolinMusicStaff.shortInstrumentName = \markup { %! ST1
-                            \hcenter-in                                       %! ST1
-                                #10                                           %! ST1
-                                Vn.                                           %! ST1
-                            }                                                 %! ST1
                         \clef "treble" %! ST3
                         s1
                     }
@@ -47,16 +46,6 @@ class ScoreTemplate(baca.ScoreTemplate):
                     {
                         \context Voice = "PianoRHMusicVoice"
                         {
-                            \set PianoStaffGroup.instrumentName = \markup {      %! ST1
-                                \hcenter-in                                      %! ST1
-                                    #10                                          %! ST1
-                                    Pf.                                          %! ST1
-                                }                                                %! ST1
-                            \set PianoStaffGroup.shortInstrumentName = \markup { %! ST1
-                                \hcenter-in                                      %! ST1
-                                    #10                                          %! ST1
-                                    Pf.                                          %! ST1
-                                }                                                %! ST1
                             \clef "treble" %! ST3
                             s1
                         }
@@ -65,7 +54,7 @@ class ScoreTemplate(baca.ScoreTemplate):
                     {
                         \context Voice = "PianoLHMusicVoice"
                         {
-                            \clef "bass" %! ST3
+                            \clef "treble" %! ST3
                             s1
                         }
                     }
@@ -143,7 +132,7 @@ class ScoreTemplate(baca.ScoreTemplate):
         abjad.annotate(
             piano_lh_music_staff,
             'default_clef',
-            abjad.Clef('bass'),
+            abjad.Clef('treble'),
             )
 
         # MUSIC CONTEXT

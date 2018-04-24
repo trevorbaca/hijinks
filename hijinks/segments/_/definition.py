@@ -61,6 +61,7 @@ maker(
 
 maker(
     'lh',
+    baca.clef('bass'),
     baca.markup(
         abjad.Markup('ped. ad libitum').italic(),
         direction=abjad.Down,

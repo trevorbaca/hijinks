@@ -1,58 +1,58 @@
 i_GlobalSkips = {
     
     % [_ GlobalSkips measure 1]                                          %! SM4
-%@% \once \override TextSpanner.bound-details.left.text =                %! SM27:EXPLICIT_METRONOME_MARK
-%@% \markup {                                                            %! SM27:EXPLICIT_METRONOME_MARK
-%@%     \fontsize                                                        %! SM27:EXPLICIT_METRONOME_MARK
-%@%         #-6                                                          %! SM27:EXPLICIT_METRONOME_MARK
-%@%         \general-align                                               %! SM27:EXPLICIT_METRONOME_MARK
-%@%             #Y                                                       %! SM27:EXPLICIT_METRONOME_MARK
-%@%             #DOWN                                                    %! SM27:EXPLICIT_METRONOME_MARK
-%@%             \note-by-number                                          %! SM27:EXPLICIT_METRONOME_MARK
-%@%                 #3                                                   %! SM27:EXPLICIT_METRONOME_MARK
-%@%                 #0                                                   %! SM27:EXPLICIT_METRONOME_MARK
-%@%                 #1.5                                                 %! SM27:EXPLICIT_METRONOME_MARK
-%@%     \upright                                                         %! SM27:EXPLICIT_METRONOME_MARK
-%@%         {                                                            %! SM27:EXPLICIT_METRONOME_MARK
-%@%             =                                                        %! SM27:EXPLICIT_METRONOME_MARK
-%@%             32                                                       %! SM27:EXPLICIT_METRONOME_MARK
-%@%         }                                                            %! SM27:EXPLICIT_METRONOME_MARK
-%@%     \hspace                                                          %! SM27:EXPLICIT_METRONOME_MARK
-%@%         #1                                                           %! SM27:EXPLICIT_METRONOME_MARK
-%@%     }                                                                %! SM27:EXPLICIT_METRONOME_MARK %! SM29:METRONOME_MARK_SPANNER
+    \once \override TextSpanner.bound-details.left.text =                %! SM27:EXPLICIT_METRONOME_MARK %@%
+    \markup {                                                            %! SM27:EXPLICIT_METRONOME_MARK %@%
+        \fontsize                                                        %! SM27:EXPLICIT_METRONOME_MARK %@%
+            #-6                                                          %! SM27:EXPLICIT_METRONOME_MARK %@%
+            \general-align                                               %! SM27:EXPLICIT_METRONOME_MARK %@%
+                #Y                                                       %! SM27:EXPLICIT_METRONOME_MARK %@%
+                #DOWN                                                    %! SM27:EXPLICIT_METRONOME_MARK %@%
+                \note-by-number                                          %! SM27:EXPLICIT_METRONOME_MARK %@%
+                    #3                                                   %! SM27:EXPLICIT_METRONOME_MARK %@%
+                    #0                                                   %! SM27:EXPLICIT_METRONOME_MARK %@%
+                    #1.5                                                 %! SM27:EXPLICIT_METRONOME_MARK %@%
+        \upright                                                         %! SM27:EXPLICIT_METRONOME_MARK %@%
+            {                                                            %! SM27:EXPLICIT_METRONOME_MARK %@%
+                =                                                        %! SM27:EXPLICIT_METRONOME_MARK %@%
+                32                                                       %! SM27:EXPLICIT_METRONOME_MARK %@%
+            }                                                            %! SM27:EXPLICIT_METRONOME_MARK %@%
+        \hspace                                                          %! SM27:EXPLICIT_METRONOME_MARK %@%
+            #1                                                           %! SM27:EXPLICIT_METRONOME_MARK %@%
+        }                                                                %! SM27:EXPLICIT_METRONOME_MARK %! SM29:METRONOME_MARK_SPANNER %@%
     \once \override TextSpanner.Y-extent = ##f                           %! SM29:METRONOME_MARK_SPANNER
     \once \override TextSpanner.bound-details.left-broken.text = ##f     %! SM29:METRONOME_MARK_SPANNER
     \once \override TextSpanner.bound-details.left.stencil-align-dir-y = #center %! SM29:METRONOME_MARK_SPANNER
-    \once \override TextSpanner.bound-details.left.text =                %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-    \markup {                                                            %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-        \with-color                                                      %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-            #(x11-color 'blue)                                           %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-            {                                                            %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                \fontsize                                                %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                    #-6                                                  %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                    \general-align                                       %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                        #Y                                               %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                        #DOWN                                            %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                        \note-by-number                                  %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                            #3                                           %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                            #0                                           %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                            #1.5                                         %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                \upright                                                 %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                    {                                                    %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                        =                                                %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                        32                                               %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                    }                                                    %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                \hspace                                                  %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                    #1                                                   %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-            }                                                            %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-        }                                                                %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR %! SM29:METRONOME_MARK_SPANNER
+%%% \once \override TextSpanner.bound-details.left.text =                %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%% \markup {                                                            %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%     \with-color                                                      %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%         #(x11-color 'blue)                                           %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%         {                                                            %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%             \fontsize                                                %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                 #-6                                                  %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                 \general-align                                       %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                     #Y                                               %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                     #DOWN                                            %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                     \note-by-number                                  %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                         #3                                           %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                         #0                                           %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                         #1.5                                         %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%             \upright                                                 %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                 {                                                    %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                     =                                                %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                     32                                               %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                 }                                                    %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%             \hspace                                                  %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                 #1                                                   %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%         }                                                            %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%     }                                                                %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR %! SM29:METRONOME_MARK_SPANNER
     \once \override TextSpanner.bound-details.right-broken.padding = 0   %! SM29:METRONOME_MARK_SPANNER
     \once \override TextSpanner.bound-details.right-broken.text = ##f    %! SM29:METRONOME_MARK_SPANNER
     \once \override TextSpanner.bound-details.right.padding = 0          %! SM29:METRONOME_MARK_SPANNER
     \once \override TextSpanner.bound-details.right.stencil-align-dir-y = #center %! SM29:METRONOME_MARK_SPANNER
     \once \override TextSpanner.dash-period = 0                          %! SM29:METRONOME_MARK_SPANNER
     \time 1/8                                                            %! SM8:EXPLICIT_TIME_SIGNATURE:SM1
-    \once \override Score.TimeSignature.color = #(x11-color 'blue)       %! SM6:EXPLICIT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'blue)       %! SM6:EXPLICIT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     \startTextSpan                                                       %! SM29:METRONOME_MARK_SPANNER
     ^ \markup {
@@ -87,7 +87,7 @@ i_GlobalSkips = {
         }
     
     % [_ GlobalSkips measure 2]                                          %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -121,7 +121,7 @@ i_GlobalSkips = {
         }
     
     % [_ GlobalSkips measure 3]                                          %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -155,7 +155,7 @@ i_GlobalSkips = {
         }
     
     % [_ GlobalSkips measure 4]                                          %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -189,7 +189,7 @@ i_GlobalSkips = {
         }
     
     % [_ GlobalSkips measure 5]                                          %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -223,7 +223,7 @@ i_GlobalSkips = {
         }
     
     % [_ GlobalSkips measure 6]                                          %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -257,7 +257,7 @@ i_GlobalSkips = {
         }
     
     % [_ GlobalSkips measure 7]                                          %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -291,7 +291,7 @@ i_GlobalSkips = {
         }
     
     % [_ GlobalSkips measure 8]                                          %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -325,7 +325,7 @@ i_GlobalSkips = {
         }
     
     % [_ GlobalSkips measure 9]                                          %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -359,7 +359,7 @@ i_GlobalSkips = {
         }
     
     % [_ GlobalSkips measure 10]                                         %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -393,7 +393,7 @@ i_GlobalSkips = {
         }
     
     % [_ GlobalSkips measure 11]                                         %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -427,7 +427,7 @@ i_GlobalSkips = {
         }
     
     % [_ GlobalSkips measure 12]                                         %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -461,7 +461,7 @@ i_GlobalSkips = {
         }
     
     % [_ GlobalSkips measure 13]                                         %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -495,7 +495,7 @@ i_GlobalSkips = {
         }
     
     % [_ GlobalSkips measure 14]                                         %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -529,7 +529,7 @@ i_GlobalSkips = {
         }
     
     % [_ GlobalSkips measure 15]                                         %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     \stopTextSpan                                                        %! SM29:METRONOME_MARK_SPANNER
     ^ \markup {
@@ -590,28 +590,28 @@ i_ViolinMusicVoice = {
                 #10                                                  %! IC:STMK:-PARTS
                 Violin                                               %! IC:STMK:-PARTS
             }                                                        %! IC:STMK:-PARTS
-        \clef "treble"                                               %! SM8:DEFAULT_CLEF:ST3
-        \once \override ViolinMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! SM6:DEFAULT_CLEF_COLOR:ST3
+    %%% \clef "treble"                                               %! SM8:DEFAULT_CLEF:ST3
+    %%% \once \override ViolinMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! SM6:DEFAULT_CLEF_COLOR:ST3
     %@% \override ViolinMusicStaff.Clef.color = ##f                  %! SM7:DEFAULT_CLEF_COLOR_CANCELLATION:ST3
-        \set ViolinMusicStaff.forceClef = ##t                        %! SM8:DEFAULT_CLEF:SM33:ST3
-        \once \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'blue) %! SM6:EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
+    %%% \set ViolinMusicStaff.forceClef = ##t                        %! SM8:DEFAULT_CLEF:SM33:ST3
+    %%% \once \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'blue) %! SM6:EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
         bf'!4
         -\tenuto                                                     %! IC
         ^ \markup {
             \column
                 {
-                    \line                                            %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                        {                                            %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                            \with-color                              %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                                #(x11-color 'DarkViolet)             %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                                (“Violin”)                           %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                        }                                            %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                    \line                                            %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-                        {                                            %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-                            \with-color                              %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-                                #(x11-color 'blue)                   %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-                                [“Vn.”]                              %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-                        }                                            %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+                %%% \line                                            %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+                %%%     {                                            %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+                %%%         \with-color                              %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+                %%%             #(x11-color 'DarkViolet)             %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+                %%%             (“Violin”)                           %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+                %%%     }                                            %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+                %%% \line                                            %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+                %%%     {                                            %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+                %%%         \with-color                              %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+                %%%             #(x11-color 'blue)                   %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+                %%%             [“Vn.”]                              %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+                %%%     }                                            %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
                 }
             }
         _ \markup {                                                  %! IC
@@ -625,8 +625,8 @@ i_ViolinMusicVoice = {
                                 "sempre al fino"                     %! IC
                         }                                            %! IC
             }                                                        %! IC
-        \override ViolinMusicStaff.Clef.color = #(x11-color 'violet) %! SM6:DEFAULT_CLEF_REDRAW_COLOR:ST3
-        \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! SM6:REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
+    %%% \override ViolinMusicStaff.Clef.color = #(x11-color 'violet) %! SM6:DEFAULT_CLEF_REDRAW_COLOR:ST3
+    %%% \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! SM6:REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
         \set ViolinMusicStaff.instrumentName =                       %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
         \markup {                                                    %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
             \hcenter-in                                              %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
@@ -736,19 +736,19 @@ i_PianoRHMusicVoice = {
                 #10                                              %! IC:STMK:-PARTS
                 Piano                                            %! IC:STMK:-PARTS
             }                                                    %! IC:STMK:-PARTS
-        \clef "treble"                                           %! SM8:DEFAULT_CLEF:ST3
-        \once \override PianoRHMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! SM6:DEFAULT_CLEF_COLOR:ST3
+    %%% \clef "treble"                                           %! SM8:DEFAULT_CLEF:ST3
+    %%% \once \override PianoRHMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! SM6:DEFAULT_CLEF_COLOR:ST3
     %@% \override PianoRHMusicStaff.Clef.color = ##f             %! SM7:DEFAULT_CLEF_COLOR_CANCELLATION:ST3
-        \set PianoRHMusicStaff.forceClef = ##t                   %! SM8:DEFAULT_CLEF:SM33:ST3
-        \once \override PianoStaffGroup.InstrumentName.color = #(x11-color 'blue) %! SM6:EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
+    %%% \set PianoRHMusicStaff.forceClef = ##t                   %! SM8:DEFAULT_CLEF:SM33:ST3
+    %%% \once \override PianoStaffGroup.InstrumentName.color = #(x11-color 'blue) %! SM6:EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
         f'''16
         -\tenuto                                                 %! IC
         [
-        ^ \markup {                                              %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-            \with-color                                          %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-                #(x11-color 'blue)                               %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-                [“Pf.”]                                          %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-            }                                                    %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+    %%% ^ \markup {                                              %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+    %%%     \with-color                                          %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+    %%%         #(x11-color 'blue)                               %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+    %%%         [“Pf.”]                                          %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+    %%%     }                                                    %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
         _ \markup {                                              %! IC
             \whiteout                                            %! IC
                 \upright                                         %! IC
@@ -760,8 +760,8 @@ i_PianoRHMusicVoice = {
                                 "sempre al fino"                 %! IC
                         }                                        %! IC
             }                                                    %! IC
-        \override PianoRHMusicStaff.Clef.color = #(x11-color 'violet) %! SM6:DEFAULT_CLEF_REDRAW_COLOR:ST3
-        \override PianoStaffGroup.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! SM6:REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
+    %%% \override PianoRHMusicStaff.Clef.color = #(x11-color 'violet) %! SM6:DEFAULT_CLEF_REDRAW_COLOR:ST3
+    %%% \override PianoStaffGroup.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! SM6:REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
         \set PianoStaffGroup.instrumentName =                    %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
         \markup {                                                %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
             \hcenter-in                                          %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
@@ -997,18 +997,18 @@ i_PianoLHMusicVoice = {
         % [_ PianoLHMusicVoice measure 1]                        %! SM4
         \override TextScript.padding = #2                        %! OC1
         \clef "bass"                                             %! SM8:EXPLICIT_CLEF:IC
-        \once \override PianoLHMusicStaff.Clef.color = #(x11-color 'blue) %! SM6:EXPLICIT_CLEF_COLOR:IC
+    %%% \once \override PianoLHMusicStaff.Clef.color = #(x11-color 'blue) %! SM6:EXPLICIT_CLEF_COLOR:IC
     %@% \override PianoLHMusicStaff.Clef.color = ##f             %! SM7:EXPLICIT_CLEF_COLOR_CANCELLATION:IC
         \set PianoLHMusicStaff.forceClef = ##t                   %! SM8:EXPLICIT_CLEF:SM33:IC
         b,,,16
         -\tenuto                                                 %! IC
         [
-        ^ \markup {                                              %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-            \with-color                                          %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                #(x11-color 'DarkViolet)                         %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                (“Piano”)                                        %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-            }                                                    %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-        \override PianoLHMusicStaff.Clef.color = #(x11-color 'DeepSkyBlue2) %! SM6:EXPLICIT_CLEF_REDRAW_COLOR:IC
+    %%% ^ \markup {                                              %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+    %%%     \with-color                                          %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+    %%%         #(x11-color 'DarkViolet)                         %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+    %%%         (“Piano”)                                        %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+    %%%     }                                                    %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+    %%% \override PianoLHMusicStaff.Clef.color = #(x11-color 'DeepSkyBlue2) %! SM6:EXPLICIT_CLEF_REDRAW_COLOR:IC
         
         fs,!32.
         -\tenuto                                                 %! IC

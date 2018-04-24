@@ -595,8 +595,7 @@ A_ViolinMusicVoice = {
     %@% \override ViolinMusicStaff.Clef.color = ##f                  %! SM7:DEFAULT_CLEF_COLOR_CANCELLATION:ST3
         \set ViolinMusicStaff.forceClef = ##t                        %! SM8:DEFAULT_CLEF:SM33:ST3
         \once \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'blue) %! SM6:EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
-        \makeRed                                                     %! SM14
-        c'4
+        bf'!4
         ^ \markup {
             \column
                 {
@@ -612,10 +611,6 @@ A_ViolinMusicVoice = {
                                 #(x11-color 'blue)                   %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
                                 [“Vn.”]                              %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
                         }                                            %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-                    \line                                            %! SM14
-                        {                                            %! SM14
-                            @                                        %! SM14
-                        }                                            %! SM14
                 }
             }
         \override ViolinMusicStaff.Clef.color = #(x11-color 'violet) %! SM6:DEFAULT_CLEF_REDRAW_COLOR:ST3
@@ -633,94 +628,52 @@ A_ViolinMusicVoice = {
                 Vn.                                                  %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
             }                                                        %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
         
-        \makeRed                                                     %! SM14
-        c'8
+        c'''8
         [
-        - \tweak color #red                                          %! SM14
-        ^ \markup { @ }                                              %! SM14
         
-        \makeRed                                                     %! SM14
-        c'8
-        - \tweak color #red                                          %! SM14
-        ^ \markup { @ }                                              %! SM14
+        d'''8
         
-        \makeRed                                                     %! SM14
-        c'8
+        fs'''!8
         ]
-        - \tweak color #red                                          %! SM14
-        ^ \markup { @ }                                              %! SM14
     }
     \times 4/5 {
         
         % [A ViolinMusicVoice measure 5]                             %! SM4
-        \makeRed                                                     %! SM14
-        c'8
+        af''!8
         [
-        - \tweak color #red                                          %! SM14
-        ^ \markup { @ }                                              %! SM14
         
-        \makeRed                                                     %! SM14
-        c'8
+        g''8
         ]
-        - \tweak color #red                                          %! SM14
-        ^ \markup { @ }                                              %! SM14
         
-        \makeRed                                                     %! SM14
-        c'4
-        - \tweak color #red                                          %! SM14
-        ^ \markup { @ }                                              %! SM14
+        f'''4
         
-        \makeRed                                                     %! SM14
-        c'16
+        ef'''!16
         [
-        - \tweak color #red                                          %! SM14
-        ^ \markup { @ }                                              %! SM14
         
-        \makeRed                                                     %! SM14
-        c'16
+        cs''''!16
         ]
-        - \tweak color #red                                          %! SM14
-        ^ \markup { @ }                                              %! SM14
     }
     \times 4/5 {
         
         % [A ViolinMusicVoice measure 9]                             %! SM4
-        \makeRed                                                     %! SM14
-        c'4
-        - \tweak color #red                                          %! SM14
-        ^ \markup { @ }                                              %! SM14
+        a'''4
         
-        \makeRed                                                     %! SM14
-        c'8
+        e''''8
         [
-        - \tweak color #red                                          %! SM14
-        ^ \markup { @ }                                              %! SM14
         
-        \makeRed                                                     %! SM14
-        c'8
-        - \tweak color #red                                          %! SM14
-        ^ \markup { @ }                                              %! SM14
+        b''8
         
-        \makeRed                                                     %! SM14
-        c'8
+        f'''8
         ]
-        - \tweak color #red                                          %! SM14
-        ^ \markup { @ }                                              %! SM14
     }
     \times 4/5 {
         
         % [A ViolinMusicVoice measure 13]                            %! SM4
-        \makeRed                                                     %! SM14
-        c'8.
+        fs'''!8.
         [
-        - \tweak color #red                                          %! SM14
-        ^ \markup { @ }                                              %! SM14
         
-        \makeRed                                                     %! SM14
-        c'8
+        af''!8
         ]
-        - \tweak color #red                                          %! SM14
-        ^ \markup { @ }                                              %! SM14
     }
     
     % [A ViolinMusicVoice measure 15]                                %! SM4

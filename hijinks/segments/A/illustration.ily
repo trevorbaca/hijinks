@@ -563,7 +563,7 @@ A_GlobalSkips = {
             }
         }
     \override Score.BarLine.transparent = ##f                            %! SM5
-    \bar "|"                                                             %! SM5
+    \bar "|."                                                            %! SM5
     
 }
 
@@ -596,6 +596,7 @@ A_ViolinMusicVoice = {
         \set ViolinMusicStaff.forceClef = ##t                        %! SM8:DEFAULT_CLEF:SM33:ST3
     %%% \once \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'blue) %! SM6:EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
         bf'!4
+        -\tenuto                                                     %! IC
         ^ \markup {
             \column
                 {
@@ -613,6 +614,17 @@ A_ViolinMusicVoice = {
                 %%%     }                                            %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
                 }
             }
+        _ \markup {                                                  %! IC
+            \whiteout                                                %! IC
+                \upright                                             %! IC
+                    \line                                            %! IC
+                        {                                            %! IC
+                            \dynamic                                 %! IC
+                                pp                                   %! IC
+                            \italic                                  %! IC
+                                "sempre al fino"                     %! IC
+                        }                                            %! IC
+            }                                                        %! IC
     %%% \override ViolinMusicStaff.Clef.color = #(x11-color 'violet) %! SM6:DEFAULT_CLEF_REDRAW_COLOR:ST3
     %%% \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! SM6:REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
         \set ViolinMusicStaff.instrumentName =                       %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
@@ -629,41 +641,53 @@ A_ViolinMusicVoice = {
             }                                                        %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
         
         c'''8
+        -\tenuto                                                     %! IC
         [
         
         d'''8
+        -\tenuto                                                     %! IC
         
         fs'''!8
+        -\tenuto                                                     %! IC
         ]
     }
     \times 4/5 {
         
         % [A ViolinMusicVoice measure 5]                             %! SM4
         af''!8
+        -\tenuto                                                     %! IC
         [
         
         g''8
+        -\tenuto                                                     %! IC
         ]
         
         f'''4
+        -\tenuto                                                     %! IC
         
         ef'''!16
+        -\staccato                                                   %! IC
         [
         
         cs''''!16
+        -\staccato                                                   %! IC
         ]
     }
     \times 4/5 {
         
         % [A ViolinMusicVoice measure 9]                             %! SM4
         a'''4
+        -\tenuto                                                     %! IC
         
         e''''8
+        -\tenuto                                                     %! IC
         [
         
         b''8
+        -\tenuto                                                     %! IC
         
         f'''8
+        -\tenuto                                                     %! IC
         ]
     }
     
@@ -673,9 +697,11 @@ A_ViolinMusicVoice = {
         
         % [A ViolinMusicVoice measure 14]                            %! SM4
         fs'''!8.
+        -\tenuto                                                     %! IC
         [
         
         af''!8
+        -\tenuto                                                     %! IC
         ]
         
     }
@@ -716,12 +742,24 @@ A_PianoRHMusicVoice = {
         \set PianoRHMusicStaff.forceClef = ##t                   %! SM8:DEFAULT_CLEF:SM33:ST3
     %%% \once \override PianoStaffGroup.InstrumentName.color = #(x11-color 'blue) %! SM6:EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
         f'''16
+        -\tenuto                                                 %! IC
         [
     %%% ^ \markup {                                              %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
     %%%     \with-color                                          %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
     %%%         #(x11-color 'blue)                               %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
     %%%         [“Pf.”]                                          %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
     %%%     }                                                    %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+        _ \markup {                                              %! IC
+            \whiteout                                            %! IC
+                \upright                                         %! IC
+                    \line                                        %! IC
+                        {                                        %! IC
+                            \dynamic                             %! IC
+                                pp                               %! IC
+                            \italic                              %! IC
+                                "sempre al fino"                 %! IC
+                        }                                        %! IC
+            }                                                    %! IC
     %%% \override PianoRHMusicStaff.Clef.color = #(x11-color 'violet) %! SM6:DEFAULT_CLEF_REDRAW_COLOR:ST3
     %%% \override PianoStaffGroup.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! SM6:REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
         \set PianoStaffGroup.instrumentName =                    %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
@@ -738,16 +776,22 @@ A_PianoRHMusicVoice = {
             }                                                    %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
         
         c'''16
+        -\tenuto                                                 %! IC
         
         bf''!16
+        -\tenuto                                                 %! IC
         
         e''32
+        -\tenuto                                                 %! IC
         
         d''32
+        -\tenuto                                                 %! IC
         
         cs''!32
+        -\tenuto                                                 %! IC
         
         ef'!32
+        -\tenuto                                                 %! IC
         ]
     }
     \tweak text #tuplet-number::calc-fraction-text
@@ -755,61 +799,84 @@ A_PianoRHMusicVoice = {
         
         % [A PianoRHMusicVoice measure 3]                        %! SM4
         cs'''!64
+        -\staccato                                               %! IC
         [
         
         a''64
+        -\staccato                                               %! IC
         
         e''16
+        -\tenuto                                                 %! IC
         
         ef''!16
+        -\tenuto                                                 %! IC
         
         f'16
+        -\tenuto                                                 %! IC
         ]
     }
     \tweak text #tuplet-number::calc-fraction-text
     \times 6/7 {
         
         a''''16
+        -\tenuto                                                 %! IC
         [
         
         fs''''!16
+        -\tenuto                                                 %! IC
         
         g'''32
+        -\tenuto                                                 %! IC
         
         b''32
+        -\tenuto                                                 %! IC
         
         cs''!64
+        -\staccato                                               %! IC
         
         ef'!64
+        -\staccato                                               %! IC
         ]
     }
     \times 8/11 {
         
         % [A PianoRHMusicVoice measure 6]                        %! SM4
         e''''16
+        -\tenuto                                                 %! IC
         [
         
         cs''''!64
+        -\staccato                                               %! IC
         
         a'''64
+        -\staccato                                               %! IC
         
         fs'''!64
+        -\staccato                                               %! IC
         
         f'''64
+        -\staccato                                               %! IC
         
         ef'''!16
+        -\tenuto                                                 %! IC
         
         d'''16
+        -\tenuto                                                 %! IC
         
         c'''32
+        -\tenuto                                                 %! IC
         
         b''64
+        -\staccato                                               %! IC
         
         af''!64
+        -\staccato                                               %! IC
         
         g''64
+        -\staccato                                               %! IC
         
         bf'!64
+        -\staccato                                               %! IC
         ]
     }
     \tweak text #tuplet-number::calc-fraction-text
@@ -817,53 +884,72 @@ A_PianoRHMusicVoice = {
         
         % [A PianoRHMusicVoice measure 8]                        %! SM4
         cs'''!16
+        -\tenuto                                                 %! IC
         [
         
         bf''!32
+        -\tenuto                                                 %! IC
         
         a''32
+        -\tenuto                                                 %! IC
         
         fs''!32
+        -\tenuto                                                 %! IC
         
         ef''!32
+        -\tenuto                                                 %! IC
         
         d''64
+        -\staccato                                               %! IC
         
         c''64
+        -\staccato                                               %! IC
         
         g'64
+        -\staccato                                               %! IC
         
         f'64
+        -\staccato                                               %! IC
         ]
     }
     \tweak text #tuplet-number::calc-fraction-text
     \times 6/8 {
         
         fs'''!16
+        -\tenuto                                                 %! IC
         [
         
         g''16
+        -\tenuto                                                 %! IC
         
         f''64
+        -\staccato                                               %! IC
         
         cs''!64
+        -\staccato                                               %! IC
         
         a'16
+        -\tenuto                                                 %! IC
         
         af'!64
+        -\staccato                                               %! IC
         
         ef'!64
+        -\staccato                                               %! IC
         ]
     }
     \times 8/14 {
         
         % [A PianoRHMusicVoice measure 11]                       %! SM4
         g'16
+        -\tenuto                                                 %! IC
         [
         
         fs'!8.
+        -\tenuto                                                 %! IC
         
         f'8.
+        -\tenuto                                                 %! IC
         ]
     }
     
@@ -872,19 +958,27 @@ A_PianoRHMusicVoice = {
     \times 8/14 {
         
         % [A PianoRHMusicVoice measure 14]                       %! SM4
+        \override TupletBracket.shorten-pair = #'(0 . 0.6)       %! OC1
         a''''32
+        -\tenuto                                                 %! IC
         [
         
         af'''!32
+        -\tenuto                                                 %! IC
         
         fs'''!16
+        -\tenuto                                                 %! IC
         
         b'16
+        -\tenuto                                                 %! IC
         
         e'8
+        -\tenuto                                                 %! IC
         
         cs'!8
+        -\tenuto                                                 %! IC
         ]
+        \revert TupletBracket.shorten-pair                       %! OC2
         
     }
 }
@@ -901,11 +995,13 @@ A_PianoLHMusicVoice = {
     \times 6/7 {
         
         % [A PianoLHMusicVoice measure 1]                        %! SM4
+        \override TextScript.padding = #2                        %! OC1
         \clef "bass"                                             %! SM8:DEFAULT_CLEF:ST3
     %%% \once \override PianoLHMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! SM6:DEFAULT_CLEF_COLOR:ST3
     %@% \override PianoLHMusicStaff.Clef.color = ##f             %! SM7:DEFAULT_CLEF_COLOR_CANCELLATION:ST3
         \set PianoLHMusicStaff.forceClef = ##t                   %! SM8:DEFAULT_CLEF:SM33:ST3
         b,,,16
+        -\tenuto                                                 %! IC
         [
     %%% ^ \markup {                                              %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
     %%%     \with-color                                          %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
@@ -915,47 +1011,70 @@ A_PianoLHMusicVoice = {
     %%% \override PianoLHMusicStaff.Clef.color = #(x11-color 'violet) %! SM6:DEFAULT_CLEF_REDRAW_COLOR:ST3
         
         fs,!32.
+        -\tenuto                                                 %! IC
+        _ \markup {                                              %! IC
+            \whiteout                                            %! IC
+                \upright                                         %! IC
+                    \italic                                      %! IC
+                        "ped. ad libitum"                        %! IC
+            }                                                    %! IC
         
         af,!32.
+        -\tenuto                                                 %! IC
         
         g32.
+        -\tenuto                                                 %! IC
         
         a64
+        -\staccato                                               %! IC
         ]
     }
     \times 8/10 {
         
         b,,16
+        -\tenuto                                                 %! IC
         [
         
         g,16
+        -\tenuto                                                 %! IC
         
         c32.
+        -\tenuto                                                 %! IC
         
         d32.
+        -\tenuto                                                 %! IC
         
         fs!32
+        -\tenuto                                                 %! IC
         
         af!32
+        -\tenuto                                                 %! IC
         
         bf!32
+        -\tenuto                                                 %! IC
         ]
     }
     \times 6/9 {
         
         c,,32
+        -\tenuto                                                 %! IC
         [
         
         d,,32
+        -\tenuto                                                 %! IC
         
         bf,,!32
+        -\tenuto                                                 %! IC
         
         % [A PianoLHMusicVoice measure 5]                        %! SM4
         e,16
+        -\tenuto                                                 %! IC
         
         af,!16
+        -\tenuto                                                 %! IC
         
         f16
+        -\tenuto                                                 %! IC
         ]
     }
     {
@@ -967,50 +1086,67 @@ A_PianoLHMusicVoice = {
         
         % [A PianoLHMusicVoice measure 7]                        %! SM4
         e16.
+        -\tenuto                                                 %! IC
         [
         
         af!16.
+        -\tenuto                                                 %! IC
         
         b8
+        -\tenuto                                                 %! IC
         ]
     }
     \times 8/14 {
         
         % [A PianoLHMusicVoice measure 9]                        %! SM4
         e,16
+        -\tenuto                                                 %! IC
         [
         
         b,16
+        -\tenuto                                                 %! IC
         
         c16.
+        -\tenuto                                                 %! IC
         
         % [A PianoLHMusicVoice measure 10]                       %! SM4
         d16.
+        -\tenuto                                                 %! IC
         
         bf!8
+        -\tenuto                                                 %! IC
         ]
     }
     \times 8/10 {
         
         % [A PianoLHMusicVoice measure 11]                       %! SM4
         c,,32
+        -\tenuto                                                 %! IC
         [
         
         e,,32
+        -\tenuto                                                 %! IC
         
         b,,64
+        -\staccato                                               %! IC
         
         d,64
+        -\staccato                                               %! IC
         
         ef,!64
+        -\staccato                                               %! IC
         
         bf,!64
+        -\staccato                                               %! IC
         
         cs!16
+        -\tenuto                                                 %! IC
         
         af!16
+        -\tenuto                                                 %! IC
         
         a16
+        -\tenuto                                                 %! IC
         ]
     }
     
@@ -1019,19 +1155,49 @@ A_PianoLHMusicVoice = {
     \times 8/9 {
         
         % [A PianoLHMusicVoice measure 14]                       %! SM4
+        \override TupletBracket.shorten-pair = #'(0 . 0.6)       %! OC1
         d,,16.
+        -\tenuto                                                 %! IC
         [
         
         g,,16.
+        -\tenuto                                                 %! IC
         
         bf,,!32
+        -\tenuto                                                 %! IC
         
         f,32
+        -\tenuto                                                 %! IC
         
         c64
+        -\staccato                                               %! IC
         
+        \override Score.SpanBar #'transparent = ##f              %! IC
+        \once \override TextScript.extra-offset = #'(-9.5 . -4)
         ef!64
+        -\staccato                                               %! IC
         ]
+        _ \markup {                                              %! SCORE2
+            \whiteout                                            %! SCORE2
+                \upright                                         %! SCORE2
+                    \override                                    %! SCORE2
+                        #'(font-name . "Palatino")               %! SCORE2
+                        \with-color                              %! SCORE2
+                            #black                               %! SCORE2
+                            \right-column                        %! SCORE2
+                                {                                %! SCORE2
+                                    \line                        %! SCORE2
+                                        {                        %! SCORE2
+                                            "Austin, TX."        %! SCORE2
+                                        }                        %! SCORE2
+                                    \line                        %! SCORE2
+                                        {                        %! SCORE2
+                                            "February 2006."     %! SCORE2
+                                        }                        %! SCORE2
+                                }                                %! SCORE2
+            }                                                    %! SCORE2
+        \revert TextScript.padding                               %! OC2
+        \revert TupletBracket.shorten-pair                       %! OC2
         
     }
 }

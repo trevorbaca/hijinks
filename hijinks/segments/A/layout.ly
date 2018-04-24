@@ -36,7 +36,7 @@
             % [PageLayout measure 6]                                                     %! SM4
             \noBreak                                                                     %! BMM2:BREAK
             \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details      %! IC:BREAK
-            #'((Y-offset . 87.5) (alignment-distances . (4 20 22)))                      %! IC:BREAK
+            #'((Y-offset . 85) (alignment-distances . (4 20 22)))                        %! IC:BREAK
             \break                                                                       %! IC:BREAK
             s1 * 1/8
             

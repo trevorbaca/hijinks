@@ -4,18 +4,13 @@
 \include "contexts.ily"
 
 \paper {
-    bottom-margin = 0.5\in
+    bottom-margin = 40\mm
     evenFooterMarkup = \markup \null
     evenHeaderMarkup = \markup \null
     left-margin = 20\mm
     oddFooterMarkup = \markup \null
     oddHeaderMarkup = \markup \null
     right-margin = 20\mm
-    markup-system-spacing.minimum-distance = 32
-    system-system-spacing.minimum-distance = 24
-    system-system-spacing.stechability = 0
-    top-markup-spacing.minimum-distance = 6
-    top-system-spacing.minimum-distance = 40
     top-margin = 12\mm
 }
 

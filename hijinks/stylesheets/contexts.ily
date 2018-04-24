@@ -205,7 +205,7 @@
         \override StemTremolo.flag-count = 4
         \override StemTremolo.slope = 0.5
 
-        \override TextScript.font-name = #"Palatino"
+        %\override TextScript.font-name = #"Palatino"
         \override TextScript.padding = 1
         \override TextScript.X-extent = ##f
         \override TextScript.Y-extent = #'(-1.5 . 1.5)

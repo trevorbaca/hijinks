@@ -40,61 +40,22 @@ class SegmentMaker(abjad.SegmentMaker):
         violin_music_staff = score['ViolinMusicStaff']
         piano_staff_group = score['PianoStaffGroup']
 
-        violin_tuplet_definitions = [
-            ([4, 2, 2, 2], (8, 16)),
-            ([2, 2, 4, 1, 1], (8, 16)),
-            ([4, 2, 2, 2], (8, 16)),
-            ([3, 2], (4, 16)),
-            ]
-
         tuplet_maker = abjad.Tuplet.from_ratio_and_pair
 
-        violin_tuplets = []
-        for definition in violin_tuplet_definitions:
-            violin_tuplet = tuplet_maker(*definition)
-            leaves = abjad.select(violin_tuplet).leaves()
-            abjad.attach(abjad.MultipartBeam(), leaves)
-            violin_tuplets.append(violin_tuplet)
-
         violin_music_staff = score['ViolinMusicStaff']
-        violin_music_staff.extend(violin_tuplets)
+        violin_music_staff.extend(hijinks.violin_rhythm())
 
         notes = abjad.iterate(violin_music_staff).leaves(pitched=True)
         for i, note in enumerate(notes):
-            #note.written_pitch = violin_pitches[i]
             note.written_pitch = hijinks.violin_pitches[i]
 
         violin_music_staff[-1:-1] = [abjad.Rest((1, 8))]
 
-        rh_pairs = [(n, 16) for n in (4, 3, 3, 4, 3, 3, 4, 4)]
-        lh_pairs = [(n, 16) for n in (3, 4, 3, 2, 4, 4, 4, 4)]
-
-        rh_proportions = [
-            [2, 2, 2, 1, 1, 1, 1],
-            [1, 1, 4, 4, 4],
-            [4, 4, 2, 2, 1, 1],
-            [4, 1, 1, 1, 1, 4, 4, 2, 1, 1, 1, 1],
-            [4, 2, 2, 2, 2, 1, 1, 1, 1],
-            [4, 4, 1, 1, 4, 1, 1],
-            [4, 12, 12],
-            [1, 1, 2, 2, 4, 4],
-            ]
-
-        lh_proportions = [
-            [4, 3, 3, 3, 1],
-            [4, 4, 3, 3, 2, 2, 2],
-            [2, 2, 2, 4, 4, 4],
-            [-8],
-            [6, 6, 8],
-            [2, 2, 3, 3, 4],
-            [2, 2, 1, 1, 1, 1, 4, 4, 4],
-            [6, 6, 2, 2, 1, 1],
-            ]
-
         piano_rh_music_staff = score['PianoRHMusicStaff']
         rh_tuplets = []
         for rh_proportion, rh_pair, aggregate in zip(
-            rh_proportions, rh_pairs, hijinks.circuit):
+            hijinks.proportions['rh'], hijinks.pairs['rh'], hijinks.circuit
+            ):
             rh_tuplet = tuplet_maker(rh_proportion, rh_pair)
             if isinstance(rh_tuplet, abjad.Tuplet):
                 duration = abjad.inspect(rh_tuplet).get_duration()
@@ -112,7 +73,8 @@ class SegmentMaker(abjad.SegmentMaker):
         piano_lh_music_staff = score['PianoLHMusicStaff']
         lh_tuplets = []
         for lh_proportion, lh_pair, aggregate in zip(
-            lh_proportions, lh_pairs, hijinks.circuit):
+            hijinks.proportions['lh'], hijinks.pairs['lh'], hijinks.circuit
+            ):
             lh_tuplet = tuplet_maker(lh_proportion, lh_pair)
             if isinstance(lh_tuplet, abjad.Tuplet):
                 duration = abjad.inspect(lh_tuplet).get_duration()

@@ -1,3 +1,11 @@
+i_GlobalRests = {
+}
+
+
+i_GlobalSkips = {
+}
+
+
 i_ViolinMusicVoice = {
 }
 

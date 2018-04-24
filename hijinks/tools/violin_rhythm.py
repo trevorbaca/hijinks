@@ -21,4 +21,5 @@ def violin_rhythm():
         abjad.attach(abjad.MultipartBeam(), leaves)
         violin_rhythm.append(tuplet)
 
+    violin_rhythm = abjad.select(violin_rhythm)
     return violin_rhythm

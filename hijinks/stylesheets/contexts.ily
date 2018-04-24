@@ -3,6 +3,92 @@
 
 \layout {
 
+    % GLOBAL SKIPS
+    \context {
+        \name GlobalSkips
+        \type Engraver_group
+        \consists Staff_symbol_engraver
+        \consists Script_engraver
+        \consists Text_engraver
+        \consists Text_spanner_engraver
+
+        \override StaffSymbol.stencil = ##f
+
+        \override TextScript.font-size = 6
+        \override TextScript.outside-staff-priority = 600
+        \override TextScript.staff-padding = 3
+
+        \override TextSpanner.bound-details.right.attach-dir = #LEFT
+        \override TextSpanner.font-size = 6
+        \override TextSpanner.staff-padding = 4
+        }
+
+    % GLOBAL RESTS
+    \context {
+        \name GlobalRests
+        \type Engraver_group
+        \consists Multi_measure_rest_engraver
+
+        \override MultiMeasureRest.transparent = ##t
+
+        \override MultiMeasureRestText.extra-offset = #'(0 . -7)
+        \override MultiMeasureRestText.font-size = 3
+        \override MultiMeasureRestText.outside-staff-priority = 0
+        \override MultiMeasureRestText.padding = 0
+        }
+
+    % PAGE LAYOUT
+    \context {
+        \name PageLayout
+        \type Engraver_group
+        \consists Text_engraver
+        \consists Text_spanner_engraver
+        }
+
+    % GLOBAL CONTEXT
+    \context {
+        \name GlobalContext
+        \type Engraver_group
+        \consists Axis_group_engraver
+        \consists Mark_engraver
+        \consists Metronome_mark_engraver
+        \consists Time_signature_engraver
+        \accepts GlobalSkips
+        \accepts GlobalRests
+        \accepts PageLayout
+
+        \override MetronomeMark.X-extent = #'(0 . 0)
+        \override MetronomeMark.Y-extent = #'(0 . 0)
+        \override MetronomeMark.break-align-symbols = #'(left-edge)
+        \override MetronomeMark.extra-offset = #'(0 . 4)
+        \override MetronomeMark.font-size = 3
+
+        \override RehearsalMark.X-extent = #'(0 . 0)
+        \override RehearsalMark.Y-extent = #'(0 . 0)
+        \override RehearsalMark.break-align-symbols = #'(time-signature)
+        \override RehearsalMark.break-visibility = #end-of-line-invisible
+        \override RehearsalMark.font-name = "Didot"
+        \override RehearsalMark.font-size = 10
+        \override RehearsalMark.outside-staff-priority = 200
+        \override RehearsalMark.self-alignment-X = #center
+
+        %\override TimeSignature.X-extent = #'(0 . 0)
+        \override TimeSignature.X-extent = ##f
+        \override TimeSignature.break-align-symbol = #'left-edge
+        \override TimeSignature.break-visibility = #end-of-line-invisible
+        \override TimeSignature.font-size = 3
+        \override TimeSignature.space-alist.clef = #'(extra-space . 0.5)
+        \override TimeSignature.style = #'numbered
+
+        \override VerticalAxisGroup.default-staff-staff-spacing = #'(
+            (basic-distance . 0)
+            (minimum-distance . 12) % distance below time signature context
+            (padding . 0)
+            (stretchability . 0)
+        )
+        \override VerticalAxisGroup.minimum-Y-extent = #'(-4 . 4)
+    }
+
     % VOICE
     \context {
         \Voice
@@ -18,7 +104,7 @@
         \override Beam.positions = #'(-4 . -4)
     }
 
-    % PIANO
+    % RH STAFF
     \context {
         \Staff
         \name PianoRHMusicStaff
@@ -30,6 +116,7 @@
         \override Stem.direction = #down
     }
 
+    % LH STAFF
     \context {
         \Staff
         \name PianoLHMusicStaff
@@ -40,6 +127,7 @@
         \override Stem.direction = #up
     }
 
+    % PIANO STAFF
     \context {
         \PianoStaff
         \name PianoStaffGroup
@@ -65,9 +153,15 @@
     % SCORE
     \context {
         \Score
+        \accepts GlobalContext
         \accepts MusicContext
         \remove Bar_number_engraver
+        %\remove Mark_engraver
+        %\remove Metronome_mark_engraver
         \remove System_start_delimiter_engraver
+
+        % necessary for uniform overlapping polyrhythms with accidentals
+        \override Accidental.X-extent = ##f
 
         \override BarLine.hair-thickness = 0.5
         \override BarLine.space-alist = #'(

@@ -79,12 +79,25 @@ class ScoreTemplate(baca.ScoreTemplate):
 
     __documentation_section__ = None
 
+    ### INITIALIZER ###
+
+    def __init__(self):
+        super(ScoreTemplate, self).__init__()
+        self.voice_abbreviations.update({
+            'vn': 'ViolinMusicVoice',
+            'rh': 'PianoRHMusicVoice',
+            'lh': 'PianoLHMusicVoice',
+            })
+
     ### SPECIAL METHODS ###
 
     def __call__(self) -> abjad.Score:
         r'''Calls score template.
         '''
+        # GLOBAL CONTEXT
+        global_context = self._make_global_context()
 
+        # VIOLIN
         violin_music_staff = abjad.Staff(
             [abjad.Voice(name='ViolinMusicVoice')],
             lilypond_type='ViolinMusicStaff',
@@ -143,7 +156,7 @@ class ScoreTemplate(baca.ScoreTemplate):
 
         # SCORE
         score = abjad.Score(
-            [music_context],
+            [global_context, music_context],
             name='Score',
             )
         self._assert_lilypond_identifiers(score)

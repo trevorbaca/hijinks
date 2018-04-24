@@ -1,7 +1,7 @@
 import abjad
 
 
-def violin_rhythm():
+def violin_rhythm(include_rest=None):
     r'''Makes violin rhythm.
     '''
 
@@ -20,6 +20,9 @@ def violin_rhythm():
         leaves = abjad.select(tuplet).leaves()
         abjad.attach(abjad.MultipartBeam(), leaves)
         violin_rhythm.append(tuplet)
+
+    if include_rest:
+        violin_rhythm.insert(-1, abjad.Rest('r8'))
 
     violin_rhythm = abjad.select(violin_rhythm)
     return violin_rhythm

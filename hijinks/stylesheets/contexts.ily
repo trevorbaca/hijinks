@@ -82,11 +82,11 @@
 
         \override VerticalAxisGroup.default-staff-staff-spacing = #'(
             (basic-distance . 0)
-            (minimum-distance . 12) % distance below time signature context
+            (minimum-distance . 0) % distance below time signature context
             (padding . 0)
             (stretchability . 0)
         )
-        \override VerticalAxisGroup.minimum-Y-extent = #'(-4 . 4)
+        %\override VerticalAxisGroup.minimum-Y-extent = #'(-4 . 4)
     }
 
     % VOICE

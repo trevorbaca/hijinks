@@ -38,5 +38,6 @@ maker(
 
 maker(
     'vn', 
+    baca.pitches(hijinks.violin_pitches),
     baca.rhythm(hijinks.violin_rhythm()),
     )

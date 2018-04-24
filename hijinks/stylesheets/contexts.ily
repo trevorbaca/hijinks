@@ -221,7 +221,10 @@
 
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
         autoBeaming = ##f
-        proportionalNotationDuration = #(ly:make-moment 1 86)
+
+        % proportional notation duration not required
+        % because of overlapping tuplets with uniform stretching
+
         tupletFullLength = ##t
     }
 }

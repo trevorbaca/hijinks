@@ -1,58 +1,58 @@
 A_GlobalSkips = {
     
     % [A GlobalSkips measure 1]                                          %! SM4
-%@% \once \override TextSpanner.bound-details.left.text =                %! SM27:EXPLICIT_METRONOME_MARK
-%@% \markup {                                                            %! SM27:EXPLICIT_METRONOME_MARK
-%@%     \fontsize                                                        %! SM27:EXPLICIT_METRONOME_MARK
-%@%         #-6                                                          %! SM27:EXPLICIT_METRONOME_MARK
-%@%         \general-align                                               %! SM27:EXPLICIT_METRONOME_MARK
-%@%             #Y                                                       %! SM27:EXPLICIT_METRONOME_MARK
-%@%             #DOWN                                                    %! SM27:EXPLICIT_METRONOME_MARK
-%@%             \note-by-number                                          %! SM27:EXPLICIT_METRONOME_MARK
-%@%                 #3                                                   %! SM27:EXPLICIT_METRONOME_MARK
-%@%                 #0                                                   %! SM27:EXPLICIT_METRONOME_MARK
-%@%                 #1.5                                                 %! SM27:EXPLICIT_METRONOME_MARK
-%@%     \upright                                                         %! SM27:EXPLICIT_METRONOME_MARK
-%@%         {                                                            %! SM27:EXPLICIT_METRONOME_MARK
-%@%             =                                                        %! SM27:EXPLICIT_METRONOME_MARK
-%@%             32                                                       %! SM27:EXPLICIT_METRONOME_MARK
-%@%         }                                                            %! SM27:EXPLICIT_METRONOME_MARK
-%@%     \hspace                                                          %! SM27:EXPLICIT_METRONOME_MARK
-%@%         #1                                                           %! SM27:EXPLICIT_METRONOME_MARK
-%@%     }                                                                %! SM27:EXPLICIT_METRONOME_MARK %! SM29:METRONOME_MARK_SPANNER
+    \once \override TextSpanner.bound-details.left.text =                %! SM27:EXPLICIT_METRONOME_MARK %@%
+    \markup {                                                            %! SM27:EXPLICIT_METRONOME_MARK %@%
+        \fontsize                                                        %! SM27:EXPLICIT_METRONOME_MARK %@%
+            #-6                                                          %! SM27:EXPLICIT_METRONOME_MARK %@%
+            \general-align                                               %! SM27:EXPLICIT_METRONOME_MARK %@%
+                #Y                                                       %! SM27:EXPLICIT_METRONOME_MARK %@%
+                #DOWN                                                    %! SM27:EXPLICIT_METRONOME_MARK %@%
+                \note-by-number                                          %! SM27:EXPLICIT_METRONOME_MARK %@%
+                    #3                                                   %! SM27:EXPLICIT_METRONOME_MARK %@%
+                    #0                                                   %! SM27:EXPLICIT_METRONOME_MARK %@%
+                    #1.5                                                 %! SM27:EXPLICIT_METRONOME_MARK %@%
+        \upright                                                         %! SM27:EXPLICIT_METRONOME_MARK %@%
+            {                                                            %! SM27:EXPLICIT_METRONOME_MARK %@%
+                =                                                        %! SM27:EXPLICIT_METRONOME_MARK %@%
+                32                                                       %! SM27:EXPLICIT_METRONOME_MARK %@%
+            }                                                            %! SM27:EXPLICIT_METRONOME_MARK %@%
+        \hspace                                                          %! SM27:EXPLICIT_METRONOME_MARK %@%
+            #1                                                           %! SM27:EXPLICIT_METRONOME_MARK %@%
+        }                                                                %! SM27:EXPLICIT_METRONOME_MARK %! SM29:METRONOME_MARK_SPANNER %@%
     \once \override TextSpanner.Y-extent = ##f                           %! SM29:METRONOME_MARK_SPANNER
     \once \override TextSpanner.bound-details.left-broken.text = ##f     %! SM29:METRONOME_MARK_SPANNER
     \once \override TextSpanner.bound-details.left.stencil-align-dir-y = #center %! SM29:METRONOME_MARK_SPANNER
-    \once \override TextSpanner.bound-details.left.text =                %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-    \markup {                                                            %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-        \with-color                                                      %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-            #(x11-color 'blue)                                           %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-            {                                                            %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                \fontsize                                                %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                    #-6                                                  %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                    \general-align                                       %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                        #Y                                               %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                        #DOWN                                            %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                        \note-by-number                                  %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                            #3                                           %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                            #0                                           %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                            #1.5                                         %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                \upright                                                 %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                    {                                                    %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                        =                                                %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                        32                                               %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                    }                                                    %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                \hspace                                                  %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-                    #1                                                   %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-            }                                                            %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
-        }                                                                %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR %! SM29:METRONOME_MARK_SPANNER
+%%% \once \override TextSpanner.bound-details.left.text =                %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%% \markup {                                                            %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%     \with-color                                                      %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%         #(x11-color 'blue)                                           %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%         {                                                            %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%             \fontsize                                                %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                 #-6                                                  %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                 \general-align                                       %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                     #Y                                               %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                     #DOWN                                            %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                     \note-by-number                                  %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                         #3                                           %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                         #0                                           %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                         #1.5                                         %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%             \upright                                                 %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                 {                                                    %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                     =                                                %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                     32                                               %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                 }                                                    %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%             \hspace                                                  %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%                 #1                                                   %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%         }                                                            %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR
+%%%     }                                                                %! SM15:EXPLICIT_METRONOME_MARK_WITH_COLOR %! SM29:METRONOME_MARK_SPANNER
     \once \override TextSpanner.bound-details.right-broken.padding = 0   %! SM29:METRONOME_MARK_SPANNER
     \once \override TextSpanner.bound-details.right-broken.text = ##f    %! SM29:METRONOME_MARK_SPANNER
     \once \override TextSpanner.bound-details.right.padding = 0          %! SM29:METRONOME_MARK_SPANNER
     \once \override TextSpanner.bound-details.right.stencil-align-dir-y = #center %! SM29:METRONOME_MARK_SPANNER
     \once \override TextSpanner.dash-period = 0                          %! SM29:METRONOME_MARK_SPANNER
     \time 1/8                                                            %! SM8:EXPLICIT_TIME_SIGNATURE:SM1
-    \once \override Score.TimeSignature.color = #(x11-color 'blue)       %! SM6:EXPLICIT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'blue)       %! SM6:EXPLICIT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     \startTextSpan                                                       %! SM29:METRONOME_MARK_SPANNER
     ^ \markup {
@@ -87,7 +87,7 @@ A_GlobalSkips = {
         }
     
     % [A GlobalSkips measure 2]                                          %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -121,7 +121,7 @@ A_GlobalSkips = {
         }
     
     % [A GlobalSkips measure 3]                                          %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -155,7 +155,7 @@ A_GlobalSkips = {
         }
     
     % [A GlobalSkips measure 4]                                          %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -189,7 +189,7 @@ A_GlobalSkips = {
         }
     
     % [A GlobalSkips measure 5]                                          %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -223,7 +223,7 @@ A_GlobalSkips = {
         }
     
     % [A GlobalSkips measure 6]                                          %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -257,7 +257,7 @@ A_GlobalSkips = {
         }
     
     % [A GlobalSkips measure 7]                                          %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -291,7 +291,7 @@ A_GlobalSkips = {
         }
     
     % [A GlobalSkips measure 8]                                          %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -325,7 +325,7 @@ A_GlobalSkips = {
         }
     
     % [A GlobalSkips measure 9]                                          %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -359,7 +359,7 @@ A_GlobalSkips = {
         }
     
     % [A GlobalSkips measure 10]                                         %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -393,7 +393,7 @@ A_GlobalSkips = {
         }
     
     % [A GlobalSkips measure 11]                                         %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -427,7 +427,7 @@ A_GlobalSkips = {
         }
     
     % [A GlobalSkips measure 12]                                         %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -461,7 +461,7 @@ A_GlobalSkips = {
         }
     
     % [A GlobalSkips measure 13]                                         %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -495,7 +495,7 @@ A_GlobalSkips = {
         }
     
     % [A GlobalSkips measure 14]                                         %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     ^ \markup {
         \column
@@ -529,7 +529,7 @@ A_GlobalSkips = {
         }
     
     % [A GlobalSkips measure 15]                                         %! SM4
-    \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
+%%% \once \override Score.TimeSignature.color = #(x11-color 'DeepPink1)  %! SM6:REDUNDANT_TIME_SIGNATURE_COLOR:SM1
     s1 * 1/8
     \stopTextSpan                                                        %! SM29:METRONOME_MARK_SPANNER
     ^ \markup {
@@ -575,56 +575,56 @@ A_ViolinMusicVoice = {
         \set Staff.instrumentName =                                  %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
         \markup {                                                    %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
             \hcenter-in                                              %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
-                #12                                                  %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
+                #10                                                  %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
                 Vn.                                                  %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
             }                                                        %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
         \set Staff.shortInstrumentName =                             %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
         \markup {                                                    %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
             \hcenter-in                                              %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
-                #12                                                  %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
+                #10                                                  %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
                 Vn.                                                  %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
             }                                                        %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
         \set Staff.instrumentName =                                  %! IC:STMK:-PARTS
         \markup {                                                    %! IC:STMK:-PARTS
             \hcenter-in                                              %! IC:STMK:-PARTS
-                #14                                                  %! IC:STMK:-PARTS
+                #10                                                  %! IC:STMK:-PARTS
                 Violin                                               %! IC:STMK:-PARTS
             }                                                        %! IC:STMK:-PARTS
         \clef "treble"                                               %! SM8:DEFAULT_CLEF:ST3
-        \once \override ViolinMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! SM6:DEFAULT_CLEF_COLOR:ST3
+    %%% \once \override ViolinMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! SM6:DEFAULT_CLEF_COLOR:ST3
     %@% \override ViolinMusicStaff.Clef.color = ##f                  %! SM7:DEFAULT_CLEF_COLOR_CANCELLATION:ST3
         \set ViolinMusicStaff.forceClef = ##t                        %! SM8:DEFAULT_CLEF:SM33:ST3
-        \once \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'blue) %! SM6:EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
+    %%% \once \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'blue) %! SM6:EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
         bf'!4
         ^ \markup {
             \column
                 {
-                    \line                                            %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                        {                                            %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                            \with-color                              %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                                #(x11-color 'DarkViolet)             %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                                (“Violin”)                           %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                        }                                            %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                    \line                                            %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-                        {                                            %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-                            \with-color                              %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-                                #(x11-color 'blue)                   %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-                                [“Vn.”]                              %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-                        }                                            %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+                %%% \line                                            %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+                %%%     {                                            %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+                %%%         \with-color                              %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+                %%%             #(x11-color 'DarkViolet)             %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+                %%%             (“Violin”)                           %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+                %%%     }                                            %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+                %%% \line                                            %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+                %%%     {                                            %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+                %%%         \with-color                              %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+                %%%             #(x11-color 'blue)                   %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+                %%%             [“Vn.”]                              %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+                %%%     }                                            %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
                 }
             }
-        \override ViolinMusicStaff.Clef.color = #(x11-color 'violet) %! SM6:DEFAULT_CLEF_REDRAW_COLOR:ST3
-        \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! SM6:REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
+    %%% \override ViolinMusicStaff.Clef.color = #(x11-color 'violet) %! SM6:DEFAULT_CLEF_REDRAW_COLOR:ST3
+    %%% \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! SM6:REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
         \set ViolinMusicStaff.instrumentName =                       %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
         \markup {                                                    %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
             \hcenter-in                                              %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
-                #12                                                  %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
+                #10                                                  %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
                 Vn.                                                  %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
             }                                                        %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
         \set ViolinMusicStaff.shortInstrumentName =                  %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
         \markup {                                                    %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
             \hcenter-in                                              %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
-                #12                                                  %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
+                #10                                                  %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
                 Vn.                                                  %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
             }                                                        %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
         
@@ -666,19 +666,19 @@ A_ViolinMusicVoice = {
         f'''8
         ]
     }
+    
+    % [A ViolinMusicVoice measure 13]                                %! SM4
+    r8
     \times 4/5 {
         
-        % [A ViolinMusicVoice measure 13]                            %! SM4
+        % [A ViolinMusicVoice measure 14]                            %! SM4
         fs'''!8.
         [
         
         af''!8
         ]
+        
     }
-    
-    % [A ViolinMusicVoice measure 15]                                %! SM4
-    R1 * 1/8
-    
 }
 
 
@@ -689,106 +689,204 @@ A_ViolinMusicStaff = {
 
 
 A_PianoRHMusicVoice = {
-    
-    % [A PianoRHMusicVoice measure 1]                            %! SM4
-    \set PianoStaffGroup.instrumentName =                        %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
-    \markup {                                                    %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
-        \hcenter-in                                              %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
-            #12                                                  %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
-            Pf.                                                  %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
-        }                                                        %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
-    \set PianoStaffGroup.shortInstrumentName =                   %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
-    \markup {                                                    %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
-        \hcenter-in                                              %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
-            #12                                                  %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
-            Pf.                                                  %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
-        }                                                        %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
-    \set PianoStaffGroup.instrumentName =                        %! IC:STMK:-PARTS
-    \markup {                                                    %! IC:STMK:-PARTS
-        \hcenter-in                                              %! IC:STMK:-PARTS
-            #14                                                  %! IC:STMK:-PARTS
-            Piano                                                %! IC:STMK:-PARTS
-        }                                                        %! IC:STMK:-PARTS
-    \clef "treble"                                               %! SM8:DEFAULT_CLEF:ST3
-    \once \override PianoRHMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! SM6:DEFAULT_CLEF_COLOR:ST3
-%@% \override PianoRHMusicStaff.Clef.color = ##f                 %! SM7:DEFAULT_CLEF_COLOR_CANCELLATION:ST3
-    \set PianoRHMusicStaff.forceClef = ##t                       %! SM8:DEFAULT_CLEF:SM33:ST3
-    \once \override PianoStaffGroup.InstrumentName.color = #(x11-color 'blue) %! SM6:EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
-    R1 * 1/8
-    ^ \markup {
-        \column
-            {
-                \line                                            %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                    {                                            %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                        \with-color                              %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                            #(x11-color 'DarkViolet)             %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                            (“Piano”)                            %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                    }                                            %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
-                \line                                            %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-                    {                                            %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-                        \with-color                              %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-                            #(x11-color 'blue)                   %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-                            [“Pf.”]                              %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-                    }                                            %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
-            }
-        }
-    \override PianoRHMusicStaff.Clef.color = #(x11-color 'violet) %! SM6:DEFAULT_CLEF_REDRAW_COLOR:ST3
-    \override PianoStaffGroup.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! SM6:REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
-    \set PianoStaffGroup.instrumentName =                        %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
-    \markup {                                                    %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
-        \hcenter-in                                              %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
-            #12                                                  %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
-            Pf.                                                  %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
-        }                                                        %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
-    \set PianoStaffGroup.shortInstrumentName =                   %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
-    \markup {                                                    %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
-        \hcenter-in                                              %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
-            #12                                                  %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
-            Pf.                                                  %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
-        }                                                        %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
-    
-    % [A PianoRHMusicVoice measure 2]                            %! SM4
-    R1 * 1/8
-    
-    % [A PianoRHMusicVoice measure 3]                            %! SM4
-    R1 * 1/8
-    
-    % [A PianoRHMusicVoice measure 4]                            %! SM4
-    R1 * 1/8
-    
-    % [A PianoRHMusicVoice measure 5]                            %! SM4
-    R1 * 1/8
-    
-    % [A PianoRHMusicVoice measure 6]                            %! SM4
-    R1 * 1/8
-    
-    % [A PianoRHMusicVoice measure 7]                            %! SM4
-    R1 * 1/8
-    
-    % [A PianoRHMusicVoice measure 8]                            %! SM4
-    R1 * 1/8
-    
-    % [A PianoRHMusicVoice measure 9]                            %! SM4
-    R1 * 1/8
-    
-    % [A PianoRHMusicVoice measure 10]                           %! SM4
-    R1 * 1/8
-    
-    % [A PianoRHMusicVoice measure 11]                           %! SM4
-    R1 * 1/8
-    
-    % [A PianoRHMusicVoice measure 12]                           %! SM4
-    R1 * 1/8
+    \times 8/10 {
+        
+        % [A PianoRHMusicVoice measure 1]                        %! SM4
+        \set PianoStaffGroup.instrumentName =                    %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
+        \markup {                                                %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
+            \hcenter-in                                          %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
+                #10                                              %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
+                Pf.                                              %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
+            }                                                    %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
+        \set PianoStaffGroup.shortInstrumentName =               %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
+        \markup {                                                %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
+            \hcenter-in                                          %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
+                #10                                              %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
+                Pf.                                              %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
+            }                                                    %! SM8:EXPLICIT_MARGIN_MARKUP:IC:-PARTS
+        \set PianoStaffGroup.instrumentName =                    %! IC:STMK:-PARTS
+        \markup {                                                %! IC:STMK:-PARTS
+            \hcenter-in                                          %! IC:STMK:-PARTS
+                #10                                              %! IC:STMK:-PARTS
+                Piano                                            %! IC:STMK:-PARTS
+            }                                                    %! IC:STMK:-PARTS
+        \clef "treble"                                           %! SM8:DEFAULT_CLEF:ST3
+    %%% \once \override PianoRHMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! SM6:DEFAULT_CLEF_COLOR:ST3
+    %@% \override PianoRHMusicStaff.Clef.color = ##f             %! SM7:DEFAULT_CLEF_COLOR_CANCELLATION:ST3
+        \set PianoRHMusicStaff.forceClef = ##t                   %! SM8:DEFAULT_CLEF:SM33:ST3
+    %%% \once \override PianoStaffGroup.InstrumentName.color = #(x11-color 'blue) %! SM6:EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
+        f'''16
+        [
+    %%% ^ \markup {                                              %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+    %%%     \with-color                                          %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+    %%%         #(x11-color 'blue)                               %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+    %%%         [“Pf.”]                                          %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+    %%%     }                                                    %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
+    %%% \override PianoRHMusicStaff.Clef.color = #(x11-color 'violet) %! SM6:DEFAULT_CLEF_REDRAW_COLOR:ST3
+    %%% \override PianoStaffGroup.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! SM6:REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
+        \set PianoStaffGroup.instrumentName =                    %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
+        \markup {                                                %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
+            \hcenter-in                                          %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
+                #10                                              %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
+                Pf.                                              %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
+            }                                                    %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
+        \set PianoStaffGroup.shortInstrumentName =               %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
+        \markup {                                                %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
+            \hcenter-in                                          %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
+                #10                                              %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
+                Pf.                                              %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
+            }                                                    %! SM8:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:IC:-PARTS
+        
+        c'''16
+        
+        bf''!16
+        
+        e''32
+        
+        d''32
+        
+        cs''!32
+        
+        ef'!32
+        ]
+    }
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 6/7 {
+        
+        % [A PianoRHMusicVoice measure 3]                        %! SM4
+        cs'''!64
+        [
+        
+        a''64
+        
+        e''16
+        
+        ef''!16
+        
+        f'16
+        ]
+    }
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 6/7 {
+        
+        a''''16
+        [
+        
+        fs''''!16
+        
+        g'''32
+        
+        b''32
+        
+        cs''!64
+        
+        ef'!64
+        ]
+    }
+    \times 8/11 {
+        
+        % [A PianoRHMusicVoice measure 6]                        %! SM4
+        e''''16
+        [
+        
+        cs''''!64
+        
+        a'''64
+        
+        fs'''!64
+        
+        f'''64
+        
+        ef'''!16
+        
+        d'''16
+        
+        c'''32
+        
+        b''64
+        
+        af''!64
+        
+        g''64
+        
+        bf'!64
+        ]
+    }
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 6/8 {
+        
+        % [A PianoRHMusicVoice measure 8]                        %! SM4
+        cs'''!16
+        [
+        
+        bf''!32
+        
+        a''32
+        
+        fs''!32
+        
+        ef''!32
+        
+        d''64
+        
+        c''64
+        
+        g'64
+        
+        f'64
+        ]
+    }
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 6/8 {
+        
+        fs'''!16
+        [
+        
+        g''16
+        
+        f''64
+        
+        cs''!64
+        
+        a'16
+        
+        af'!64
+        
+        ef'!64
+        ]
+    }
+    \times 8/14 {
+        
+        % [A PianoRHMusicVoice measure 11]                       %! SM4
+        g'16
+        [
+        
+        fs'!8.
+        
+        f'8.
+        ]
+    }
     
     % [A PianoRHMusicVoice measure 13]                           %! SM4
-    R1 * 1/8
-    
-    % [A PianoRHMusicVoice measure 14]                           %! SM4
-    R1 * 1/8
-    
-    % [A PianoRHMusicVoice measure 15]                           %! SM4
-    R1 * 1/8
-    
+    r8
+    \times 8/14 {
+        
+        % [A PianoRHMusicVoice measure 14]                       %! SM4
+        a''''32
+        [
+        
+        af'''!32
+        
+        fs'''!16
+        
+        b'16
+        
+        e'8
+        
+        cs'!8
+        ]
+        
+    }
 }
 
 
@@ -799,57 +897,143 @@ A_PianoRHMusicStaff = {
 
 
 A_PianoLHMusicVoice = {
-    
-    % [A PianoLHMusicVoice measure 1]                            %! SM4
-    \clef "bass"                                                 %! SM8:DEFAULT_CLEF:ST3
-    \once \override PianoLHMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! SM6:DEFAULT_CLEF_COLOR:ST3
-%@% \override PianoLHMusicStaff.Clef.color = ##f                 %! SM7:DEFAULT_CLEF_COLOR_CANCELLATION:ST3
-    \set PianoLHMusicStaff.forceClef = ##t                       %! SM8:DEFAULT_CLEF:SM33:ST3
-    R1 * 1/8
-    \override PianoLHMusicStaff.Clef.color = #(x11-color 'violet) %! SM6:DEFAULT_CLEF_REDRAW_COLOR:ST3
-    
-    % [A PianoLHMusicVoice measure 2]                            %! SM4
-    R1 * 1/8
-    
-    % [A PianoLHMusicVoice measure 3]                            %! SM4
-    R1 * 1/8
-    
-    % [A PianoLHMusicVoice measure 4]                            %! SM4
-    R1 * 1/8
-    
-    % [A PianoLHMusicVoice measure 5]                            %! SM4
-    R1 * 1/8
-    
-    % [A PianoLHMusicVoice measure 6]                            %! SM4
-    R1 * 1/8
-    
-    % [A PianoLHMusicVoice measure 7]                            %! SM4
-    R1 * 1/8
-    
-    % [A PianoLHMusicVoice measure 8]                            %! SM4
-    R1 * 1/8
-    
-    % [A PianoLHMusicVoice measure 9]                            %! SM4
-    R1 * 1/8
-    
-    % [A PianoLHMusicVoice measure 10]                           %! SM4
-    R1 * 1/8
-    
-    % [A PianoLHMusicVoice measure 11]                           %! SM4
-    R1 * 1/8
-    
-    % [A PianoLHMusicVoice measure 12]                           %! SM4
-    R1 * 1/8
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 6/7 {
+        
+        % [A PianoLHMusicVoice measure 1]                        %! SM4
+        \clef "bass"                                             %! SM8:DEFAULT_CLEF:ST3
+    %%% \once \override PianoLHMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! SM6:DEFAULT_CLEF_COLOR:ST3
+    %@% \override PianoLHMusicStaff.Clef.color = ##f             %! SM7:DEFAULT_CLEF_COLOR_CANCELLATION:ST3
+        \set PianoLHMusicStaff.forceClef = ##t                   %! SM8:DEFAULT_CLEF:SM33:ST3
+        b,,,16
+        [
+    %%% ^ \markup {                                              %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+    %%%     \with-color                                          %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+    %%%         #(x11-color 'DarkViolet)                         %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+    %%%         (“Piano”)                                        %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+    %%%     }                                                    %! SM11:DEFAULT_INSTRUMENT_ALERT:ST1
+    %%% \override PianoLHMusicStaff.Clef.color = #(x11-color 'violet) %! SM6:DEFAULT_CLEF_REDRAW_COLOR:ST3
+        
+        fs,!32.
+        
+        af,!32.
+        
+        g32.
+        
+        a64
+        ]
+    }
+    \times 8/10 {
+        
+        b,,16
+        [
+        
+        g,16
+        
+        c32.
+        
+        d32.
+        
+        fs!32
+        
+        af!32
+        
+        bf!32
+        ]
+    }
+    \times 6/9 {
+        
+        c,,32
+        [
+        
+        d,,32
+        
+        bf,,!32
+        
+        % [A PianoLHMusicVoice measure 5]                        %! SM4
+        e,16
+        
+        af,!16
+        
+        f16
+        ]
+    }
+    {
+        
+        % [A PianoLHMusicVoice measure 6]                        %! SM4
+        r8
+    }
+    \times 8/10 {
+        
+        % [A PianoLHMusicVoice measure 7]                        %! SM4
+        e16.
+        [
+        
+        af!16.
+        
+        b8
+        ]
+    }
+    \times 8/14 {
+        
+        % [A PianoLHMusicVoice measure 9]                        %! SM4
+        e,16
+        [
+        
+        b,16
+        
+        c16.
+        
+        % [A PianoLHMusicVoice measure 10]                       %! SM4
+        d16.
+        
+        bf!8
+        ]
+    }
+    \times 8/10 {
+        
+        % [A PianoLHMusicVoice measure 11]                       %! SM4
+        c,,32
+        [
+        
+        e,,32
+        
+        b,,64
+        
+        d,64
+        
+        ef,!64
+        
+        bf,!64
+        
+        cs!16
+        
+        af!16
+        
+        a16
+        ]
+    }
     
     % [A PianoLHMusicVoice measure 13]                           %! SM4
-    R1 * 1/8
-    
-    % [A PianoLHMusicVoice measure 14]                           %! SM4
-    R1 * 1/8
-    
-    % [A PianoLHMusicVoice measure 15]                           %! SM4
-    R1 * 1/8
-    
+    r8
+    \times 8/9 {
+        
+        % [A PianoLHMusicVoice measure 14]                       %! SM4
+        d,,16.
+        [
+        
+        g,,16.
+        
+        bf,,!32
+        
+        f,32
+        
+        c64
+        
+        ef!64
+        ]
+        
+    }
 }
 
 

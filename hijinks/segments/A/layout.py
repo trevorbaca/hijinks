@@ -4,19 +4,19 @@ import baca
 breaks = baca.breaks(
     baca.page(
         baca.system(
-            10, 18, 22,
+            4, 20, 22,
             measure=1,
             y_offset=35,
             ),
         baca.system(
-            10, 18, 22,
+            4, 20, 22,
             measure=6,
-            y_offset=90,
+            y_offset=87.5,
             ),
         baca.system(
-            10, 18, 22,
+            4, 20, 22,
             measure=11,
-            y_offset=145,
+            y_offset=147.5,
             ),
         number=1,
         ),

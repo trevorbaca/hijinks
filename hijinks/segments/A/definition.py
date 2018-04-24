@@ -25,19 +25,29 @@ maker(
     'vn',
     baca.suite([
         hijinks.margin_markup('Vn.'),
-        baca.start_markup('Violin', hcenter_in=14),
+        baca.start_markup('Violin', hcenter_in=10),
         ]),
     )
 maker(
     'rh',
     baca.suite([
         hijinks.margin_markup('Pf.', context='PianoStaffGroup'),
-        baca.start_markup('Piano', context='PianoStaffGroup', hcenter_in=14),
+        baca.start_markup('Piano', context='PianoStaffGroup', hcenter_in=10),
         ]),
     )
 
 maker(
     'vn', 
     baca.pitches(hijinks.violin_pitches),
-    baca.rhythm(hijinks.violin_rhythm()),
+    baca.rhythm(hijinks.violin_rhythm(include_rest=True)),
+    )
+
+maker(
+    'rh',
+    hijinks.piano_rhythm('rh'),
+    )
+
+maker(
+    'lh',
+    hijinks.piano_rhythm('lh'),
     )

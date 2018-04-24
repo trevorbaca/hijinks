@@ -54,7 +54,7 @@ metadata = abjad.OrderedDict(
                         'PianoStaffGroup',
                         [
                             abjad.Momento(
-                                context='PianoRHMusicVoice',
+                                context='PianoLHMusicVoice',
                                 prototype='abjad.Instrument',
                                 value='Piano',
                                 ),
@@ -111,8 +111,8 @@ metadata = abjad.OrderedDict(
             'sounds_during_segment',
             abjad.OrderedDict(
                 [
-                    ('PianoLHMusicVoice', False),
-                    ('PianoRHMusicVoice', False),
+                    ('PianoLHMusicVoice', True),
+                    ('PianoRHMusicVoice', True),
                     ('ViolinMusicVoice', True),
                     ]
                 ),

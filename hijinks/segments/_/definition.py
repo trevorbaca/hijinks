@@ -49,8 +49,8 @@ maker(
     baca.markup(pp_sempre_al_fino, direction=abjad.Down),
     baca.pitches(hijinks.violin_pitches),
     baca.rhythm(hijinks.violin_rhythm(include_rest=True)),
-    baca.staccati(selector=baca.notes().filter_duration('<=', (1, 16))),
-    baca.tenuti(selector=baca.notes().filter_duration('>', (1, 16))),
+    baca.staccato(selector=baca.notes().filter_duration('<=', (1, 16))),
+    baca.tenuto(selector=baca.notes().filter_duration('>', (1, 16))),
     )
 
 maker(
@@ -73,8 +73,8 @@ maker(
 
 maker(
     (['rh', 'lh'], (1, -1)),
-    baca.staccati(selector=baca.notes().filter_duration('<=', (1, 64))),
-    baca.tenuti(selector=baca.notes().filter_duration('>', (1, 64))),
+    baca.staccato(selector=baca.notes().filter_duration('<=', (1, 64))),
+    baca.tenuto(selector=baca.notes().filter_duration('>', (1, 64))),
     baca.tuplet_bracket_shorten_pair((0, 0.6), selector=baca.top().tuplet(-1)),
     )
 

@@ -4,8 +4,9 @@ import hijinks
 
 
 def piano_rhythm(staff):
-    r'''Makes piano rhythm for ``staff``.
-    '''
+    """
+    Makes piano rhythm for ``staff``.
+    """
     assert staff in ('rh', 'lh')
     maker = abjad.Tuplet.from_ratio_and_pair
     music = []

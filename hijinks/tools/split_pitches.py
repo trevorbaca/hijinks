@@ -2,16 +2,17 @@ import abjad
 
 
 def split_pitches(pitches, split=-1):
-    r'''Splits `pitches`.
+    """
+    Splits ``pitches``.
 
     >>> import hijinks
 
-    Set `pitches` to (probably) a list of aggregates.
+    Set ``pitches`` to (probably) a list of aggregates.
 
-    Set `split` to a pitch number.
+    Set ``split`` to a pitch number.
 
-    Returns dictionary of `'treble'` and `'bass'` pitches.
-    '''
+    Returns dictionary of ``'treble'`` and ``'bass'`` pitches.
+    """
     for sublist in pitches:
         components = {'treble': [], 'bass': []}
         for n in sublist:

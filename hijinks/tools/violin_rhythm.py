@@ -2,8 +2,9 @@ import abjad
 
 
 def violin_rhythm(include_rest=None):
-    r'''Makes violin rhythm.
-    '''
+    """
+    Makes violin rhythm.
+    """
 
     definitions = [
         ([4, 2, 2, 2], (8, 16)),

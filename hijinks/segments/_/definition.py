@@ -26,17 +26,17 @@ maker(
 
 maker(
     'vn',
-    baca.suite([
+    baca.suite(
         hijinks.margin_markup('Vn.'),
         baca.start_markup('Violin', hcenter_in=10),
-        ]),
+        ),
     )
 maker(
     'rh',
-    baca.suite([
+    baca.suite(
         hijinks.margin_markup('Pf.', context='PianoStaffGroup'),
         baca.start_markup('Piano', context='PianoStaffGroup', hcenter_in=10),
-        ]),
+        ),
     )
 
 pp_sempre_al_fino = abjad.Markup.line([

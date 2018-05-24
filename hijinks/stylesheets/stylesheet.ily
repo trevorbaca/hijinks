@@ -1,7 +1,7 @@
 #(set-default-paper-size "letter")
 #(set-global-staff-size 14)
 
-\include "/Users/trevorbaca/baca/baca/stylesheets/baca.ily"
+\include "/Users/trevorbaca/baca/baca/lilypond/baca.ily"
 \include "contexts.ily"
 
 \paper {

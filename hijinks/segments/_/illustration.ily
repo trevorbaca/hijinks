@@ -1075,7 +1075,7 @@ i_PianoLHMusicVoice = {
         -\tenuto                                                 %! IC
         ]
     }
-    {
+    \scaleDurations #'(1 . 1) {
         
         % [_ PianoLHMusicVoice measure 6]                        %! SM4
         r8

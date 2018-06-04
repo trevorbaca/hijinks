@@ -46,7 +46,7 @@ pp_sempre_al_fino = abjad.Markup.line([
 
 maker(
     'vn', 
-    baca.markup(pp_sempre_al_fino, direction=abjad.Down),
+    baca.markup.markup(pp_sempre_al_fino, direction=abjad.Down),
     baca.pitches(hijinks.violin_pitches),
     baca.rhythm(hijinks.violin_rhythm(include_rest=True)),
     baca.staccato(selector=baca.notes().filter_duration('<=', (1, 16))),
@@ -56,13 +56,13 @@ maker(
 maker(
     'rh',
     hijinks.piano_rhythm('rh'),
-    baca.markup(pp_sempre_al_fino, direction=abjad.Down),
+    baca.markup.markup(pp_sempre_al_fino, direction=abjad.Down),
     )
 
 maker(
     'lh',
     baca.clef('bass'),
-    baca.markup(
+    baca.markup.markup(
         abjad.Markup('ped. ad libitum').italic(),
         direction=abjad.Down,
         selector=baca.note(1),

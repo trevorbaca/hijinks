@@ -613,15 +613,13 @@ i_ViolinMusicVoice = {
                 }
             }
         _ \markup {                                                  %! IC
-            \whiteout                                                %! IC
-                \upright                                             %! IC
-                    \line                                            %! IC
-                        {                                            %! IC
-                            \dynamic                                 %! IC
-                                pp                                   %! IC
-                            \italic                                  %! IC
-                                "sempre al fino"                     %! IC
-                        }                                            %! IC
+            \line                                                    %! IC
+                {                                                    %! IC
+                    \dynamic                                         %! IC
+                        pp                                           %! IC
+                    \italic                                          %! IC
+                        "sempre al fino"                             %! IC
+                }                                                    %! IC
             }                                                        %! IC
         \override ViolinMusicStaff.Clef.color = #(x11-color 'violet) %! SM6:DEFAULT_CLEF_REDRAW_COLOR:ST3
         \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! SM6:REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
@@ -748,15 +746,13 @@ i_PianoRHMusicVoice = {
                 [“Pf.”]                                          %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
             }                                                    %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:IC:-PARTS
         _ \markup {                                              %! IC
-            \whiteout                                            %! IC
-                \upright                                         %! IC
-                    \line                                        %! IC
-                        {                                        %! IC
-                            \dynamic                             %! IC
-                                pp                               %! IC
-                            \italic                              %! IC
-                                "sempre al fino"                 %! IC
-                        }                                        %! IC
+            \line                                                %! IC
+                {                                                %! IC
+                    \dynamic                                     %! IC
+                        pp                                       %! IC
+                    \italic                                      %! IC
+                        "sempre al fino"                         %! IC
+                }                                                %! IC
             }                                                    %! IC
         \override PianoRHMusicStaff.Clef.color = #(x11-color 'violet) %! SM6:DEFAULT_CLEF_REDRAW_COLOR:ST3
         \override PianoStaffGroup.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! SM6:REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:IC:-PARTS
@@ -1011,10 +1007,8 @@ i_PianoLHMusicVoice = {
         fs,!32.
         -\tenuto                                                 %! IC
         _ \markup {                                              %! IC
-            \whiteout                                            %! IC
-                \upright                                         %! IC
-                    \italic                                      %! IC
-                        "ped. ad libitum"                        %! IC
+            \italic                                              %! IC
+                "ped. ad libitum"                                %! IC
             }                                                    %! IC
         
         af,!32.
@@ -1176,23 +1170,21 @@ i_PianoLHMusicVoice = {
         -\staccato                                               %! IC
         ]
         _ \markup {                                              %! SCORE2
-            \whiteout                                            %! SCORE2
-                \upright                                         %! SCORE2
-                    \override                                    %! SCORE2
-                        #'(font-name . "Palatino")               %! SCORE2
-                        \with-color                              %! SCORE2
-                            #black                               %! SCORE2
-                            \right-column                        %! SCORE2
+            \override                                            %! SCORE2
+                #'(font-name . "Palatino")                       %! SCORE2
+                \with-color                                      %! SCORE2
+                    #black                                       %! SCORE2
+                    \right-column                                %! SCORE2
+                        {                                        %! SCORE2
+                            \line                                %! SCORE2
                                 {                                %! SCORE2
-                                    \line                        %! SCORE2
-                                        {                        %! SCORE2
-                                            "Austin, TX."        %! SCORE2
-                                        }                        %! SCORE2
-                                    \line                        %! SCORE2
-                                        {                        %! SCORE2
-                                            "February 2006."     %! SCORE2
-                                        }                        %! SCORE2
+                                    "Austin, TX."                %! SCORE2
                                 }                                %! SCORE2
+                            \line                                %! SCORE2
+                                {                                %! SCORE2
+                                    "February 2006."             %! SCORE2
+                                }                                %! SCORE2
+                        }                                        %! SCORE2
             }                                                    %! SCORE2
         \revert TextScript.padding                               %! OC2
         \revert TupletBracket.shorten-pair                       %! OC2

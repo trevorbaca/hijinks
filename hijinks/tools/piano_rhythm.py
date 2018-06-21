@@ -23,8 +23,7 @@ def piano_rhythm(staff):
         if tuplet.trivial():
             tuplet.hide = True
         leaves = abjad.select(tuplet).leaves()
-        if not isinstance(leaves[0], abjad.Rest):
-            abjad.attach(abjad.Beam(), leaves)
+        abjad.attach(abjad.Beam(), leaves)
         notes = abjad.select(tuplet).leaves(pitched=True)
         for note, pitch_number in zip(notes, aggregate):
             note.written_pitch = pitch_number

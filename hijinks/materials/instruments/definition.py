@@ -5,10 +5,10 @@ import baca
 instruments = abjad.OrderedDict([
     (
         'Piano',
-        abjad.Piano(hide=True),
+        abjad.Piano(),
         ),
     (
         'Violin',
-        abjad.Violin(hide=True),
+        abjad.Violin(),
         ),
     ])

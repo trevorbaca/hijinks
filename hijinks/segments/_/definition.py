@@ -9,7 +9,6 @@ import os
 ###############################################################################
 
 maker = baca.SegmentMaker(
-    do_not_attach_metronome_mark_spanner=True,
     final_markup=(['Austin, TX.'], ['February 2006.']),
     final_markup_extra_offset=(-9.5, -4),
     first_segment=True,
@@ -22,7 +21,7 @@ maker = baca.SegmentMaker(
 
 maker(
     'GlobalSkips',
-    baca.metronome_mark_new('32'),
+    baca.metronome_mark('32'),
     )
 
 maker(

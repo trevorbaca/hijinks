@@ -12,8 +12,7 @@
             % [PageLayout measure 1]                                                     %! SM4
             \autoPageBreaksOff                                                           %! BMM1:BREAK
             \noBreak                                                                     %! BMM2:BREAK
-            \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details      %! IC:BREAK
-            #'((Y-offset . 35) (alignment-distances . (4 20 22)))                        %! IC:BREAK
+            \baca_lbsd #35 #'(4 20 22)                                                   %! IC:BREAK
             \pageBreak                                                                   %! IC:BREAK
             s1 * 1/8
             
@@ -35,8 +34,7 @@
             
             % [PageLayout measure 6]                                                     %! SM4
             \noBreak                                                                     %! BMM2:BREAK
-            \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details      %! IC:BREAK
-            #'((Y-offset . 85) (alignment-distances . (4 20 22)))                        %! IC:BREAK
+            \baca_lbsd #85 #'(4 20 22)                                                   %! IC:BREAK
             \break                                                                       %! IC:BREAK
             s1 * 1/8
             
@@ -58,8 +56,7 @@
             
             % [PageLayout measure 11]                                                    %! SM4
             \noBreak                                                                     %! BMM2:BREAK
-            \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details      %! IC:BREAK
-            #'((Y-offset . 147.5) (alignment-distances . (4 20 22)))                     %! IC:BREAK
+            \baca_lbsd #147.5 #'(4 20 22)                                                %! IC:BREAK
             \break                                                                       %! IC:BREAK
             s1 * 1/8
             

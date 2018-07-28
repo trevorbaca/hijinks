@@ -17,7 +17,7 @@ def piano_rhythm(staff):
             aggregate = reversed(aggregate)
         tuplet = maker(proportion, pair)
         assert isinstance(tuplet, abjad.Tuplet)
-        duration = abjad.inspect(tuplet).get_duration()
+        duration = abjad.inspect(tuplet).duration()
         duration = duration.with_denominator(32)
         tuplet.denominator = duration.numerator
         if tuplet.trivial():

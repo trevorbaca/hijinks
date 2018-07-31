@@ -272,18 +272,10 @@ i_ViolinMusicVoice = {
         % [_ ViolinMusicVoice measure 14]                                      %! SM4
         fs'''!8.
         -\tenuto                                                               %! IC
-        - \abjad_dashed_line_with_arrow                                        %! PIC
-        - \tweak bound-details.left.text \markup \baca-left "“quoted”"         %! PIC
-        - \tweak bound-details.right.text \markup \baca-right "unquoted"       %! PIC
-        - \tweak bound-details.right.padding #0.5                              %! PIC
-        - \tweak bound-details.right.stencil-align-dir-y #center               %! PIC
-        - \tweak staff-padding #7                                              %! PIC
-        \startTextSpan                                                         %! PIC
         [
         
         af''!8
         -\tenuto                                                               %! IC
-        \stopTextSpan                                                          %! PIC
         ]
         
     }

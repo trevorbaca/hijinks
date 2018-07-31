@@ -84,12 +84,3 @@ maker(
         selector=baca.leaf(-1),
         ),
     )
-
-maker(
-    'vn',
-    baca.text_spanner(
-        '“quoted” => unquoted',
-        abjad.tweak(7).staff_padding,
-        selector=baca.leaves()[-2:],
-        ),
-    )

@@ -84,3 +84,11 @@ maker(
         selector=baca.leaf(-1),
         ),
     )
+
+maker(
+    'vn',
+    baca.markup(
+        '“quotes”',
+        selector=baca.leaf(-1),
+        ),
+    )

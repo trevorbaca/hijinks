@@ -37,7 +37,7 @@ class ScoreTemplate(baca.ScoreTemplate):
                 {
                     \context Voice = "ViolinMusicVoice"
                     {
-                        \clef "treble" %! ST3
+                        \clef "treble" %! ST_3
                         s1
                     }
                 }
@@ -47,7 +47,7 @@ class ScoreTemplate(baca.ScoreTemplate):
                     {
                         \context Voice = "PianoRHMusicVoice"
                         {
-                            \clef "treble" %! ST3
+                            \clef "treble" %! ST_3
                             s1
                         }
                     }
@@ -55,7 +55,7 @@ class ScoreTemplate(baca.ScoreTemplate):
                     {
                         \context Voice = "PianoLHMusicVoice"
                         {
-                            \clef "treble" %! ST3
+                            \clef "treble" %! ST_3
                             s1
                         }
                     }

@@ -3,7 +3,7 @@ i_GlobalSkips = {
     % [_ GlobalSkips measure 1]                                                    %! SM_4
     \time 1/8                                                                      %! SM8:EXPLICIT_TIME_SIGNATURE:SM_1
     \baca_time_signature_color "blue"                                              %! SM6:EXPLICIT_TIME_SIGNATURE_COLOR:SM_1
-    s1 * 1/8
+    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
 %@% ^ \markup \baca-dark-cyan-markup (1)                                           %! SM31:MEASURE_NUMBER_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup <0>                                           %! SM32:MEASURE_INDEX_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup ((1))                                         %! SM42:LOCAL_MEASURE_NUMBER_MARKUP
@@ -33,7 +33,7 @@ i_GlobalSkips = {
     \startTextSpan                                                                 %! MMI_3
     
     % [_ GlobalSkips measure 2]                                                    %! SM_4
-    s1 * 1/8
+    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
 %@% ^ \markup \baca-dark-cyan-markup (2)                                           %! SM31:MEASURE_NUMBER_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup <1>                                           %! SM32:MEASURE_INDEX_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup ((2))                                         %! SM42:LOCAL_MEASURE_NUMBER_MARKUP
@@ -41,7 +41,7 @@ i_GlobalSkips = {
 %@% ^ \markup \baca-dark-cyan-markup "[0'01'']"                                    %! SM28:CLOCK_TIME_MARKUP
     
     % [_ GlobalSkips measure 3]                                                    %! SM_4
-    s1 * 1/8
+    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
 %@% ^ \markup \baca-dark-cyan-markup (3)                                           %! SM31:MEASURE_NUMBER_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup <2>                                           %! SM32:MEASURE_INDEX_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup ((3))                                         %! SM42:LOCAL_MEASURE_NUMBER_MARKUP
@@ -49,7 +49,7 @@ i_GlobalSkips = {
 %@% ^ \markup \baca-dark-cyan-markup "[0'03'']"                                    %! SM28:CLOCK_TIME_MARKUP
     
     % [_ GlobalSkips measure 4]                                                    %! SM_4
-    s1 * 1/8
+    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
 %@% ^ \markup \baca-dark-cyan-markup (4)                                           %! SM31:MEASURE_NUMBER_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup <3>                                           %! SM32:MEASURE_INDEX_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup ((4))                                         %! SM42:LOCAL_MEASURE_NUMBER_MARKUP
@@ -57,7 +57,7 @@ i_GlobalSkips = {
 %@% ^ \markup \baca-dark-cyan-markup "[0'05'']"                                    %! SM28:CLOCK_TIME_MARKUP
     
     % [_ GlobalSkips measure 5]                                                    %! SM_4
-    s1 * 1/8
+    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
 %@% ^ \markup \baca-dark-cyan-markup (5)                                           %! SM31:MEASURE_NUMBER_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup <4>                                           %! SM32:MEASURE_INDEX_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup ((5))                                         %! SM42:LOCAL_MEASURE_NUMBER_MARKUP
@@ -65,7 +65,7 @@ i_GlobalSkips = {
 %@% ^ \markup \baca-dark-cyan-markup "[0'07'']"                                    %! SM28:CLOCK_TIME_MARKUP
     
     % [_ GlobalSkips measure 6]                                                    %! SM_4
-    s1 * 1/8
+    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
 %@% ^ \markup \baca-dark-cyan-markup (6)                                           %! SM31:MEASURE_NUMBER_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup <5>                                           %! SM32:MEASURE_INDEX_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup ((6))                                         %! SM42:LOCAL_MEASURE_NUMBER_MARKUP
@@ -73,7 +73,7 @@ i_GlobalSkips = {
 %@% ^ \markup \baca-dark-cyan-markup "[0'09'']"                                    %! SM28:CLOCK_TIME_MARKUP
     
     % [_ GlobalSkips measure 7]                                                    %! SM_4
-    s1 * 1/8
+    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
 %@% ^ \markup \baca-dark-cyan-markup (7)                                           %! SM31:MEASURE_NUMBER_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup <6>                                           %! SM32:MEASURE_INDEX_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup ((7))                                         %! SM42:LOCAL_MEASURE_NUMBER_MARKUP
@@ -81,7 +81,7 @@ i_GlobalSkips = {
 %@% ^ \markup \baca-dark-cyan-markup "[0'11'']"                                    %! SM28:CLOCK_TIME_MARKUP
     
     % [_ GlobalSkips measure 8]                                                    %! SM_4
-    s1 * 1/8
+    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
 %@% ^ \markup \baca-dark-cyan-markup (8)                                           %! SM31:MEASURE_NUMBER_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup <7>                                           %! SM32:MEASURE_INDEX_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup ((8))                                         %! SM42:LOCAL_MEASURE_NUMBER_MARKUP
@@ -89,7 +89,7 @@ i_GlobalSkips = {
 %@% ^ \markup \baca-dark-cyan-markup "[0'13'']"                                    %! SM28:CLOCK_TIME_MARKUP
     
     % [_ GlobalSkips measure 9]                                                    %! SM_4
-    s1 * 1/8
+    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
 %@% ^ \markup \baca-dark-cyan-markup (9)                                           %! SM31:MEASURE_NUMBER_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup <8>                                           %! SM32:MEASURE_INDEX_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup ((9))                                         %! SM42:LOCAL_MEASURE_NUMBER_MARKUP
@@ -97,7 +97,7 @@ i_GlobalSkips = {
 %@% ^ \markup \baca-dark-cyan-markup "[0'15'']"                                    %! SM28:CLOCK_TIME_MARKUP
     
     % [_ GlobalSkips measure 10]                                                   %! SM_4
-    s1 * 1/8
+    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
 %@% ^ \markup \baca-dark-cyan-markup (10)                                          %! SM31:MEASURE_NUMBER_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup <9>                                           %! SM32:MEASURE_INDEX_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup ((10))                                        %! SM42:LOCAL_MEASURE_NUMBER_MARKUP
@@ -105,7 +105,7 @@ i_GlobalSkips = {
 %@% ^ \markup \baca-dark-cyan-markup "[0'16'']"                                    %! SM28:CLOCK_TIME_MARKUP
     
     % [_ GlobalSkips measure 11]                                                   %! SM_4
-    s1 * 1/8
+    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
 %@% ^ \markup \baca-dark-cyan-markup (11)                                          %! SM31:MEASURE_NUMBER_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup <10>                                          %! SM32:MEASURE_INDEX_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup ((11))                                        %! SM42:LOCAL_MEASURE_NUMBER_MARKUP
@@ -113,7 +113,7 @@ i_GlobalSkips = {
 %@% ^ \markup \baca-dark-cyan-markup "[0'18'']"                                    %! SM28:CLOCK_TIME_MARKUP
     
     % [_ GlobalSkips measure 12]                                                   %! SM_4
-    s1 * 1/8
+    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
 %@% ^ \markup \baca-dark-cyan-markup (12)                                          %! SM31:MEASURE_NUMBER_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup <11>                                          %! SM32:MEASURE_INDEX_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup ((12))                                        %! SM42:LOCAL_MEASURE_NUMBER_MARKUP
@@ -121,7 +121,7 @@ i_GlobalSkips = {
 %@% ^ \markup \baca-dark-cyan-markup "[0'20'']"                                    %! SM28:CLOCK_TIME_MARKUP
     
     % [_ GlobalSkips measure 13]                                                   %! SM_4
-    s1 * 1/8
+    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
 %@% ^ \markup \baca-dark-cyan-markup (13)                                          %! SM31:MEASURE_NUMBER_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup <12>                                          %! SM32:MEASURE_INDEX_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup ((13))                                        %! SM42:LOCAL_MEASURE_NUMBER_MARKUP
@@ -129,7 +129,7 @@ i_GlobalSkips = {
 %@% ^ \markup \baca-dark-cyan-markup "[0'22'']"                                    %! SM28:CLOCK_TIME_MARKUP
     
     % [_ GlobalSkips measure 14]                                                   %! SM_4
-    s1 * 1/8
+    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
 %@% ^ \markup \baca-dark-cyan-markup (14)                                          %! SM31:MEASURE_NUMBER_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup <13>                                          %! SM32:MEASURE_INDEX_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup ((14))                                        %! SM42:LOCAL_MEASURE_NUMBER_MARKUP
@@ -137,7 +137,7 @@ i_GlobalSkips = {
 %@% ^ \markup \baca-dark-cyan-markup "[0'24'']"                                    %! SM28:CLOCK_TIME_MARKUP
     
     % [_ GlobalSkips measure 15]                                                   %! SM_4
-    s1 * 1/8
+    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
 %@% ^ \markup \baca-dark-cyan-markup (15)                                          %! SM31:MEASURE_NUMBER_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup <14>                                          %! SM32:MEASURE_INDEX_MARKUP
 %@% ^ \markup \baca-dark-cyan-markup ((15))                                        %! SM42:LOCAL_MEASURE_NUMBER_MARKUP

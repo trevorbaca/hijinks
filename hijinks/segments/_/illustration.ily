@@ -1,151 +1,151 @@
 i_GlobalSkips = {
     
-    % [_ GlobalSkips measure 1]                                                    %! COMMENT_MEASURE_NUMBERS
-    \time 1/8                                                                      %! SET_STATUS_TAG:EXPLICIT_TIME_SIGNATURE:MAKE_GLOBAL_SKIPS_2
-    \baca_time_signature_color "blue"                                              %! ATTACH_COLOR_LITERAL_2:EXPLICIT_TIME_SIGNATURE_COLOR:MAKE_GLOBAL_SKIPS_2
-    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
-%@% ^ \markup \baca-dark-cyan-markup (1)                                           %! LABEL_MEASURE_INDICES_1:MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup <0>                                           %! LABEL_MEASURE_INDICES_2:MEASURE_INDEX_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup ((1))                                         %! LABEL_MEASURE_INDICES_3:LOCAL_MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup [_.1]                                         %! LABEL_STAGE_NUMBERS:STAGE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup "[0'00'']"                                    %! LABEL_CLOCK_TIME:CLOCK_TIME_MARKUP
-%@% - \abjad_invisible_line                                                        %! ATTACH_METRONOME_MARKS_2
-%@% - \tweak bound-details.left.text \markup {                                     %! ATTACH_METRONOME_MARKS_2
-%@%     \concat                                                                    %! ATTACH_METRONOME_MARKS_2
-%@%         {                                                                      %! ATTACH_METRONOME_MARKS_2
-%@%             \abjad-metronome-mark-markup #3 #0 #1 #"32"                        %! ATTACH_METRONOME_MARKS_2
-%@%             \hspace                                                            %! ATTACH_METRONOME_MARKS_2
-%@%                 #0.5                                                           %! ATTACH_METRONOME_MARKS_2
-%@%         }                                                                      %! ATTACH_METRONOME_MARKS_2
-%@%     }                                                                          %! ATTACH_METRONOME_MARKS_2
-%@% \startTextSpan                                                                 %! ATTACH_METRONOME_MARKS_2
-    - \abjad_invisible_line                                                        %! ATTACH_METRONOME_MARKS_3
-    - \tweak bound-details.left.text \markup {                                     %! ATTACH_METRONOME_MARKS_3
-        \concat                                                                    %! ATTACH_METRONOME_MARKS_3
-            {                                                                      %! ATTACH_METRONOME_MARKS_3
-                \with-color                                                        %! ATTACH_METRONOME_MARKS_3
-                    #(x11-color 'blue)                                             %! ATTACH_METRONOME_MARKS_3
-                    \abjad-metronome-mark-markup #3 #0 #1 #"32"                    %! ATTACH_METRONOME_MARKS_3
-                \hspace                                                            %! ATTACH_METRONOME_MARKS_3
-                    #0.5                                                           %! ATTACH_METRONOME_MARKS_3
-            }                                                                      %! ATTACH_METRONOME_MARKS_3
-        }                                                                          %! ATTACH_METRONOME_MARKS_3
-    \startTextSpan                                                                 %! ATTACH_METRONOME_MARKS_3
+    % [_ GlobalSkips measure 1]                                                    %! _comment_measure_numbers
+    \time 1/8                                                                      %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
+    \baca_time_signature_color "blue"                                              %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
+    s1 * 1/8                                                                       %! _make_global_skips(1)
+%@% ^ \markup \baca-dark-cyan-markup (1)                                           %! MEASURE_NUMBER_MARKUP:_label_measure_indices(1)
+%@% ^ \markup \baca-dark-cyan-markup <0>                                           %! MEASURE_INDEX_MARKUP:_label_measure_indices(2)
+%@% ^ \markup \baca-dark-cyan-markup ((1))                                         %! LOCAL_MEASURE_NUMBER_MARKUP:_label_measure_indices(3)
+%@% ^ \markup \baca-dark-cyan-markup [_.1]                                         %! _label_stage_numbers:STAGE_NUMBER_MARKUP
+%@% ^ \markup \baca-dark-cyan-markup "[0'00'']"                                    %! CLOCK_TIME_MARKUP:_label_clock_time
+%@% - \abjad_invisible_line                                                        %! _attach_metronome_marks(2)
+%@% - \tweak bound-details.left.text \markup {                                     %! _attach_metronome_marks(2)
+%@%     \concat                                                                    %! _attach_metronome_marks(2)
+%@%         {                                                                      %! _attach_metronome_marks(2)
+%@%             \abjad-metronome-mark-markup #3 #0 #1 #"32"                        %! _attach_metronome_marks(2)
+%@%             \hspace                                                            %! _attach_metronome_marks(2)
+%@%                 #0.5                                                           %! _attach_metronome_marks(2)
+%@%         }                                                                      %! _attach_metronome_marks(2)
+%@%     }                                                                          %! _attach_metronome_marks(2)
+%@% \startTextSpan                                                                 %! _attach_metronome_marks(2)
+    - \abjad_invisible_line                                                        %! _attach_metronome_marks(3)
+    - \tweak bound-details.left.text \markup {                                     %! _attach_metronome_marks(3)
+        \concat                                                                    %! _attach_metronome_marks(3)
+            {                                                                      %! _attach_metronome_marks(3)
+                \with-color                                                        %! _attach_metronome_marks(3)
+                    #(x11-color 'blue)                                             %! _attach_metronome_marks(3)
+                    \abjad-metronome-mark-markup #3 #0 #1 #"32"                    %! _attach_metronome_marks(3)
+                \hspace                                                            %! _attach_metronome_marks(3)
+                    #0.5                                                           %! _attach_metronome_marks(3)
+            }                                                                      %! _attach_metronome_marks(3)
+        }                                                                          %! _attach_metronome_marks(3)
+    \startTextSpan                                                                 %! _attach_metronome_marks(3)
     
-    % [_ GlobalSkips measure 2]                                                    %! COMMENT_MEASURE_NUMBERS
-    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
-%@% ^ \markup \baca-dark-cyan-markup (2)                                           %! LABEL_MEASURE_INDICES_1:MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup <1>                                           %! LABEL_MEASURE_INDICES_2:MEASURE_INDEX_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup ((2))                                         %! LABEL_MEASURE_INDICES_3:LOCAL_MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup [_.2]                                         %! LABEL_STAGE_NUMBERS:STAGE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup "[0'01'']"                                    %! LABEL_CLOCK_TIME:CLOCK_TIME_MARKUP
+    % [_ GlobalSkips measure 2]                                                    %! _comment_measure_numbers
+    s1 * 1/8                                                                       %! _make_global_skips(1)
+%@% ^ \markup \baca-dark-cyan-markup (2)                                           %! MEASURE_NUMBER_MARKUP:_label_measure_indices(1)
+%@% ^ \markup \baca-dark-cyan-markup <1>                                           %! MEASURE_INDEX_MARKUP:_label_measure_indices(2)
+%@% ^ \markup \baca-dark-cyan-markup ((2))                                         %! LOCAL_MEASURE_NUMBER_MARKUP:_label_measure_indices(3)
+%@% ^ \markup \baca-dark-cyan-markup [_.2]                                         %! _label_stage_numbers:STAGE_NUMBER_MARKUP
+%@% ^ \markup \baca-dark-cyan-markup "[0'01'']"                                    %! CLOCK_TIME_MARKUP:_label_clock_time
     
-    % [_ GlobalSkips measure 3]                                                    %! COMMENT_MEASURE_NUMBERS
-    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
-%@% ^ \markup \baca-dark-cyan-markup (3)                                           %! LABEL_MEASURE_INDICES_1:MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup <2>                                           %! LABEL_MEASURE_INDICES_2:MEASURE_INDEX_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup ((3))                                         %! LABEL_MEASURE_INDICES_3:LOCAL_MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup [_.3]                                         %! LABEL_STAGE_NUMBERS:STAGE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup "[0'03'']"                                    %! LABEL_CLOCK_TIME:CLOCK_TIME_MARKUP
+    % [_ GlobalSkips measure 3]                                                    %! _comment_measure_numbers
+    s1 * 1/8                                                                       %! _make_global_skips(1)
+%@% ^ \markup \baca-dark-cyan-markup (3)                                           %! MEASURE_NUMBER_MARKUP:_label_measure_indices(1)
+%@% ^ \markup \baca-dark-cyan-markup <2>                                           %! MEASURE_INDEX_MARKUP:_label_measure_indices(2)
+%@% ^ \markup \baca-dark-cyan-markup ((3))                                         %! LOCAL_MEASURE_NUMBER_MARKUP:_label_measure_indices(3)
+%@% ^ \markup \baca-dark-cyan-markup [_.3]                                         %! _label_stage_numbers:STAGE_NUMBER_MARKUP
+%@% ^ \markup \baca-dark-cyan-markup "[0'03'']"                                    %! CLOCK_TIME_MARKUP:_label_clock_time
     
-    % [_ GlobalSkips measure 4]                                                    %! COMMENT_MEASURE_NUMBERS
-    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
-%@% ^ \markup \baca-dark-cyan-markup (4)                                           %! LABEL_MEASURE_INDICES_1:MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup <3>                                           %! LABEL_MEASURE_INDICES_2:MEASURE_INDEX_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup ((4))                                         %! LABEL_MEASURE_INDICES_3:LOCAL_MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup [_.4]                                         %! LABEL_STAGE_NUMBERS:STAGE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup "[0'05'']"                                    %! LABEL_CLOCK_TIME:CLOCK_TIME_MARKUP
+    % [_ GlobalSkips measure 4]                                                    %! _comment_measure_numbers
+    s1 * 1/8                                                                       %! _make_global_skips(1)
+%@% ^ \markup \baca-dark-cyan-markup (4)                                           %! MEASURE_NUMBER_MARKUP:_label_measure_indices(1)
+%@% ^ \markup \baca-dark-cyan-markup <3>                                           %! MEASURE_INDEX_MARKUP:_label_measure_indices(2)
+%@% ^ \markup \baca-dark-cyan-markup ((4))                                         %! LOCAL_MEASURE_NUMBER_MARKUP:_label_measure_indices(3)
+%@% ^ \markup \baca-dark-cyan-markup [_.4]                                         %! _label_stage_numbers:STAGE_NUMBER_MARKUP
+%@% ^ \markup \baca-dark-cyan-markup "[0'05'']"                                    %! CLOCK_TIME_MARKUP:_label_clock_time
     
-    % [_ GlobalSkips measure 5]                                                    %! COMMENT_MEASURE_NUMBERS
-    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
-%@% ^ \markup \baca-dark-cyan-markup (5)                                           %! LABEL_MEASURE_INDICES_1:MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup <4>                                           %! LABEL_MEASURE_INDICES_2:MEASURE_INDEX_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup ((5))                                         %! LABEL_MEASURE_INDICES_3:LOCAL_MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup [_.5]                                         %! LABEL_STAGE_NUMBERS:STAGE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup "[0'07'']"                                    %! LABEL_CLOCK_TIME:CLOCK_TIME_MARKUP
+    % [_ GlobalSkips measure 5]                                                    %! _comment_measure_numbers
+    s1 * 1/8                                                                       %! _make_global_skips(1)
+%@% ^ \markup \baca-dark-cyan-markup (5)                                           %! MEASURE_NUMBER_MARKUP:_label_measure_indices(1)
+%@% ^ \markup \baca-dark-cyan-markup <4>                                           %! MEASURE_INDEX_MARKUP:_label_measure_indices(2)
+%@% ^ \markup \baca-dark-cyan-markup ((5))                                         %! LOCAL_MEASURE_NUMBER_MARKUP:_label_measure_indices(3)
+%@% ^ \markup \baca-dark-cyan-markup [_.5]                                         %! _label_stage_numbers:STAGE_NUMBER_MARKUP
+%@% ^ \markup \baca-dark-cyan-markup "[0'07'']"                                    %! CLOCK_TIME_MARKUP:_label_clock_time
     
-    % [_ GlobalSkips measure 6]                                                    %! COMMENT_MEASURE_NUMBERS
-    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
-%@% ^ \markup \baca-dark-cyan-markup (6)                                           %! LABEL_MEASURE_INDICES_1:MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup <5>                                           %! LABEL_MEASURE_INDICES_2:MEASURE_INDEX_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup ((6))                                         %! LABEL_MEASURE_INDICES_3:LOCAL_MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup [_.6]                                         %! LABEL_STAGE_NUMBERS:STAGE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup "[0'09'']"                                    %! LABEL_CLOCK_TIME:CLOCK_TIME_MARKUP
+    % [_ GlobalSkips measure 6]                                                    %! _comment_measure_numbers
+    s1 * 1/8                                                                       %! _make_global_skips(1)
+%@% ^ \markup \baca-dark-cyan-markup (6)                                           %! MEASURE_NUMBER_MARKUP:_label_measure_indices(1)
+%@% ^ \markup \baca-dark-cyan-markup <5>                                           %! MEASURE_INDEX_MARKUP:_label_measure_indices(2)
+%@% ^ \markup \baca-dark-cyan-markup ((6))                                         %! LOCAL_MEASURE_NUMBER_MARKUP:_label_measure_indices(3)
+%@% ^ \markup \baca-dark-cyan-markup [_.6]                                         %! _label_stage_numbers:STAGE_NUMBER_MARKUP
+%@% ^ \markup \baca-dark-cyan-markup "[0'09'']"                                    %! CLOCK_TIME_MARKUP:_label_clock_time
     
-    % [_ GlobalSkips measure 7]                                                    %! COMMENT_MEASURE_NUMBERS
-    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
-%@% ^ \markup \baca-dark-cyan-markup (7)                                           %! LABEL_MEASURE_INDICES_1:MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup <6>                                           %! LABEL_MEASURE_INDICES_2:MEASURE_INDEX_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup ((7))                                         %! LABEL_MEASURE_INDICES_3:LOCAL_MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup [_.7]                                         %! LABEL_STAGE_NUMBERS:STAGE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup "[0'11'']"                                    %! LABEL_CLOCK_TIME:CLOCK_TIME_MARKUP
+    % [_ GlobalSkips measure 7]                                                    %! _comment_measure_numbers
+    s1 * 1/8                                                                       %! _make_global_skips(1)
+%@% ^ \markup \baca-dark-cyan-markup (7)                                           %! MEASURE_NUMBER_MARKUP:_label_measure_indices(1)
+%@% ^ \markup \baca-dark-cyan-markup <6>                                           %! MEASURE_INDEX_MARKUP:_label_measure_indices(2)
+%@% ^ \markup \baca-dark-cyan-markup ((7))                                         %! LOCAL_MEASURE_NUMBER_MARKUP:_label_measure_indices(3)
+%@% ^ \markup \baca-dark-cyan-markup [_.7]                                         %! _label_stage_numbers:STAGE_NUMBER_MARKUP
+%@% ^ \markup \baca-dark-cyan-markup "[0'11'']"                                    %! CLOCK_TIME_MARKUP:_label_clock_time
     
-    % [_ GlobalSkips measure 8]                                                    %! COMMENT_MEASURE_NUMBERS
-    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
-%@% ^ \markup \baca-dark-cyan-markup (8)                                           %! LABEL_MEASURE_INDICES_1:MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup <7>                                           %! LABEL_MEASURE_INDICES_2:MEASURE_INDEX_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup ((8))                                         %! LABEL_MEASURE_INDICES_3:LOCAL_MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup [_.8]                                         %! LABEL_STAGE_NUMBERS:STAGE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup "[0'13'']"                                    %! LABEL_CLOCK_TIME:CLOCK_TIME_MARKUP
+    % [_ GlobalSkips measure 8]                                                    %! _comment_measure_numbers
+    s1 * 1/8                                                                       %! _make_global_skips(1)
+%@% ^ \markup \baca-dark-cyan-markup (8)                                           %! MEASURE_NUMBER_MARKUP:_label_measure_indices(1)
+%@% ^ \markup \baca-dark-cyan-markup <7>                                           %! MEASURE_INDEX_MARKUP:_label_measure_indices(2)
+%@% ^ \markup \baca-dark-cyan-markup ((8))                                         %! LOCAL_MEASURE_NUMBER_MARKUP:_label_measure_indices(3)
+%@% ^ \markup \baca-dark-cyan-markup [_.8]                                         %! _label_stage_numbers:STAGE_NUMBER_MARKUP
+%@% ^ \markup \baca-dark-cyan-markup "[0'13'']"                                    %! CLOCK_TIME_MARKUP:_label_clock_time
     
-    % [_ GlobalSkips measure 9]                                                    %! COMMENT_MEASURE_NUMBERS
-    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
-%@% ^ \markup \baca-dark-cyan-markup (9)                                           %! LABEL_MEASURE_INDICES_1:MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup <8>                                           %! LABEL_MEASURE_INDICES_2:MEASURE_INDEX_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup ((9))                                         %! LABEL_MEASURE_INDICES_3:LOCAL_MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup [_.9]                                         %! LABEL_STAGE_NUMBERS:STAGE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup "[0'15'']"                                    %! LABEL_CLOCK_TIME:CLOCK_TIME_MARKUP
+    % [_ GlobalSkips measure 9]                                                    %! _comment_measure_numbers
+    s1 * 1/8                                                                       %! _make_global_skips(1)
+%@% ^ \markup \baca-dark-cyan-markup (9)                                           %! MEASURE_NUMBER_MARKUP:_label_measure_indices(1)
+%@% ^ \markup \baca-dark-cyan-markup <8>                                           %! MEASURE_INDEX_MARKUP:_label_measure_indices(2)
+%@% ^ \markup \baca-dark-cyan-markup ((9))                                         %! LOCAL_MEASURE_NUMBER_MARKUP:_label_measure_indices(3)
+%@% ^ \markup \baca-dark-cyan-markup [_.9]                                         %! _label_stage_numbers:STAGE_NUMBER_MARKUP
+%@% ^ \markup \baca-dark-cyan-markup "[0'15'']"                                    %! CLOCK_TIME_MARKUP:_label_clock_time
     
-    % [_ GlobalSkips measure 10]                                                   %! COMMENT_MEASURE_NUMBERS
-    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
-%@% ^ \markup \baca-dark-cyan-markup (10)                                          %! LABEL_MEASURE_INDICES_1:MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup <9>                                           %! LABEL_MEASURE_INDICES_2:MEASURE_INDEX_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup ((10))                                        %! LABEL_MEASURE_INDICES_3:LOCAL_MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup [_.10]                                        %! LABEL_STAGE_NUMBERS:STAGE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup "[0'16'']"                                    %! LABEL_CLOCK_TIME:CLOCK_TIME_MARKUP
+    % [_ GlobalSkips measure 10]                                                   %! _comment_measure_numbers
+    s1 * 1/8                                                                       %! _make_global_skips(1)
+%@% ^ \markup \baca-dark-cyan-markup (10)                                          %! MEASURE_NUMBER_MARKUP:_label_measure_indices(1)
+%@% ^ \markup \baca-dark-cyan-markup <9>                                           %! MEASURE_INDEX_MARKUP:_label_measure_indices(2)
+%@% ^ \markup \baca-dark-cyan-markup ((10))                                        %! LOCAL_MEASURE_NUMBER_MARKUP:_label_measure_indices(3)
+%@% ^ \markup \baca-dark-cyan-markup [_.10]                                        %! _label_stage_numbers:STAGE_NUMBER_MARKUP
+%@% ^ \markup \baca-dark-cyan-markup "[0'16'']"                                    %! CLOCK_TIME_MARKUP:_label_clock_time
     
-    % [_ GlobalSkips measure 11]                                                   %! COMMENT_MEASURE_NUMBERS
-    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
-%@% ^ \markup \baca-dark-cyan-markup (11)                                          %! LABEL_MEASURE_INDICES_1:MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup <10>                                          %! LABEL_MEASURE_INDICES_2:MEASURE_INDEX_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup ((11))                                        %! LABEL_MEASURE_INDICES_3:LOCAL_MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup [_.11]                                        %! LABEL_STAGE_NUMBERS:STAGE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup "[0'18'']"                                    %! LABEL_CLOCK_TIME:CLOCK_TIME_MARKUP
+    % [_ GlobalSkips measure 11]                                                   %! _comment_measure_numbers
+    s1 * 1/8                                                                       %! _make_global_skips(1)
+%@% ^ \markup \baca-dark-cyan-markup (11)                                          %! MEASURE_NUMBER_MARKUP:_label_measure_indices(1)
+%@% ^ \markup \baca-dark-cyan-markup <10>                                          %! MEASURE_INDEX_MARKUP:_label_measure_indices(2)
+%@% ^ \markup \baca-dark-cyan-markup ((11))                                        %! LOCAL_MEASURE_NUMBER_MARKUP:_label_measure_indices(3)
+%@% ^ \markup \baca-dark-cyan-markup [_.11]                                        %! _label_stage_numbers:STAGE_NUMBER_MARKUP
+%@% ^ \markup \baca-dark-cyan-markup "[0'18'']"                                    %! CLOCK_TIME_MARKUP:_label_clock_time
     
-    % [_ GlobalSkips measure 12]                                                   %! COMMENT_MEASURE_NUMBERS
-    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
-%@% ^ \markup \baca-dark-cyan-markup (12)                                          %! LABEL_MEASURE_INDICES_1:MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup <11>                                          %! LABEL_MEASURE_INDICES_2:MEASURE_INDEX_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup ((12))                                        %! LABEL_MEASURE_INDICES_3:LOCAL_MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup [_.12]                                        %! LABEL_STAGE_NUMBERS:STAGE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup "[0'20'']"                                    %! LABEL_CLOCK_TIME:CLOCK_TIME_MARKUP
+    % [_ GlobalSkips measure 12]                                                   %! _comment_measure_numbers
+    s1 * 1/8                                                                       %! _make_global_skips(1)
+%@% ^ \markup \baca-dark-cyan-markup (12)                                          %! MEASURE_NUMBER_MARKUP:_label_measure_indices(1)
+%@% ^ \markup \baca-dark-cyan-markup <11>                                          %! MEASURE_INDEX_MARKUP:_label_measure_indices(2)
+%@% ^ \markup \baca-dark-cyan-markup ((12))                                        %! LOCAL_MEASURE_NUMBER_MARKUP:_label_measure_indices(3)
+%@% ^ \markup \baca-dark-cyan-markup [_.12]                                        %! _label_stage_numbers:STAGE_NUMBER_MARKUP
+%@% ^ \markup \baca-dark-cyan-markup "[0'20'']"                                    %! CLOCK_TIME_MARKUP:_label_clock_time
     
-    % [_ GlobalSkips measure 13]                                                   %! COMMENT_MEASURE_NUMBERS
-    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
-%@% ^ \markup \baca-dark-cyan-markup (13)                                          %! LABEL_MEASURE_INDICES_1:MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup <12>                                          %! LABEL_MEASURE_INDICES_2:MEASURE_INDEX_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup ((13))                                        %! LABEL_MEASURE_INDICES_3:LOCAL_MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup [_.13]                                        %! LABEL_STAGE_NUMBERS:STAGE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup "[0'22'']"                                    %! LABEL_CLOCK_TIME:CLOCK_TIME_MARKUP
+    % [_ GlobalSkips measure 13]                                                   %! _comment_measure_numbers
+    s1 * 1/8                                                                       %! _make_global_skips(1)
+%@% ^ \markup \baca-dark-cyan-markup (13)                                          %! MEASURE_NUMBER_MARKUP:_label_measure_indices(1)
+%@% ^ \markup \baca-dark-cyan-markup <12>                                          %! MEASURE_INDEX_MARKUP:_label_measure_indices(2)
+%@% ^ \markup \baca-dark-cyan-markup ((13))                                        %! LOCAL_MEASURE_NUMBER_MARKUP:_label_measure_indices(3)
+%@% ^ \markup \baca-dark-cyan-markup [_.13]                                        %! _label_stage_numbers:STAGE_NUMBER_MARKUP
+%@% ^ \markup \baca-dark-cyan-markup "[0'22'']"                                    %! CLOCK_TIME_MARKUP:_label_clock_time
     
-    % [_ GlobalSkips measure 14]                                                   %! COMMENT_MEASURE_NUMBERS
-    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
-%@% ^ \markup \baca-dark-cyan-markup (14)                                          %! LABEL_MEASURE_INDICES_1:MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup <13>                                          %! LABEL_MEASURE_INDICES_2:MEASURE_INDEX_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup ((14))                                        %! LABEL_MEASURE_INDICES_3:LOCAL_MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup [_.14]                                        %! LABEL_STAGE_NUMBERS:STAGE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup "[0'24'']"                                    %! LABEL_CLOCK_TIME:CLOCK_TIME_MARKUP
+    % [_ GlobalSkips measure 14]                                                   %! _comment_measure_numbers
+    s1 * 1/8                                                                       %! _make_global_skips(1)
+%@% ^ \markup \baca-dark-cyan-markup (14)                                          %! MEASURE_NUMBER_MARKUP:_label_measure_indices(1)
+%@% ^ \markup \baca-dark-cyan-markup <13>                                          %! MEASURE_INDEX_MARKUP:_label_measure_indices(2)
+%@% ^ \markup \baca-dark-cyan-markup ((14))                                        %! LOCAL_MEASURE_NUMBER_MARKUP:_label_measure_indices(3)
+%@% ^ \markup \baca-dark-cyan-markup [_.14]                                        %! _label_stage_numbers:STAGE_NUMBER_MARKUP
+%@% ^ \markup \baca-dark-cyan-markup "[0'24'']"                                    %! CLOCK_TIME_MARKUP:_label_clock_time
     
-    % [_ GlobalSkips measure 15]                                                   %! COMMENT_MEASURE_NUMBERS
-    s1 * 1/8                                                                       %! MAKE_GLOBAL_SKIPS_1
-%@% ^ \markup \baca-dark-cyan-markup (15)                                          %! LABEL_MEASURE_INDICES_1:MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup <14>                                          %! LABEL_MEASURE_INDICES_2:MEASURE_INDEX_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup ((15))                                        %! LABEL_MEASURE_INDICES_3:LOCAL_MEASURE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup [_.15]                                        %! LABEL_STAGE_NUMBERS:STAGE_NUMBER_MARKUP
-%@% ^ \markup \baca-dark-cyan-markup "[0'26'']"                                    %! LABEL_CLOCK_TIME:CLOCK_TIME_MARKUP
-    \stopTextSpan                                                                  %! ATTACH_METRONOME_MARKS_4
-    \baca_bar_line_visible                                                         %! ATTACH_FINAL_BAR_LINE
-    \bar "|."                                                                      %! ATTACH_FINAL_BAR_LINE
+    % [_ GlobalSkips measure 15]                                                   %! _comment_measure_numbers
+    s1 * 1/8                                                                       %! _make_global_skips(1)
+%@% ^ \markup \baca-dark-cyan-markup (15)                                          %! MEASURE_NUMBER_MARKUP:_label_measure_indices(1)
+%@% ^ \markup \baca-dark-cyan-markup <14>                                          %! MEASURE_INDEX_MARKUP:_label_measure_indices(2)
+%@% ^ \markup \baca-dark-cyan-markup ((15))                                        %! LOCAL_MEASURE_NUMBER_MARKUP:_label_measure_indices(3)
+%@% ^ \markup \baca-dark-cyan-markup [_.15]                                        %! _label_stage_numbers:STAGE_NUMBER_MARKUP
+%@% ^ \markup \baca-dark-cyan-markup "[0'26'']"                                    %! CLOCK_TIME_MARKUP:_label_clock_time
+    \stopTextSpan                                                                  %! _attach_metronome_marks(4)
+    \baca_bar_line_visible                                                         %! _attach_final_bar_line
+    \bar "|."                                                                      %! _attach_final_bar_line
     
 }
 
@@ -153,128 +153,108 @@ i_GlobalSkips = {
 i_ViolinMusicVoice = {
     \times 4/5 {
         
-        % [_ ViolinMusicVoice measure 1]                                       %! COMMENT_MEASURE_NUMBERS
-        \set Staff.instrumentName =                                            %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-        \markup {                                                              %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-            \hcenter-in                                                        %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-                #10                                                            %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-                Vn.                                                            %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-            }                                                                  %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-        \set Staff.shortInstrumentName =                                       %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-        \markup {                                                              %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-            \hcenter-in                                                        %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-                #10                                                            %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-                Vn.                                                            %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-            }                                                                  %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-        \set Staff.instrumentName =                                            %! INDICATOR_COMMAND:STMK:-PARTS
-        \markup {                                                              %! INDICATOR_COMMAND:STMK:-PARTS
-            \hcenter-in                                                        %! INDICATOR_COMMAND:STMK:-PARTS
-                #10                                                            %! INDICATOR_COMMAND:STMK:-PARTS
-                Violin                                                         %! INDICATOR_COMMAND:STMK:-PARTS
-            }                                                                  %! INDICATOR_COMMAND:STMK:-PARTS
-        \clef "treble"                                                         %! SET_STATUS_TAG:DEFAULT_CLEF:ST_3
-        \once \override ViolinMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! ATTACH_COLOR_LITERAL_2:DEFAULT_CLEF_COLOR:ST_3
-    %@% \override ViolinMusicStaff.Clef.color = ##f                            %! ATTACH_COLOR_LITERAL_1:DEFAULT_CLEF_COLOR_CANCELLATION:ST_3
-        \set ViolinMusicStaff.forceClef = ##t                                  %! SET_STATUS_TAG:DEFAULT_CLEF:SM33:ST_3
-        \once \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'blue) %! ATTACH_COLOR_LITERAL_2:EXPLICIT_MARGIN_MARKUP_COLOR:INDICATOR_COMMAND:-PARTS
+        % [_ ViolinMusicVoice measure 1]                                       %! _comment_measure_numbers
+        \set Staff.shortInstrumentName =                                       %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:IndicatorCommand:-PARTS
+        \markup {                                                              %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:IndicatorCommand:-PARTS
+            \hcenter-in                                                        %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:IndicatorCommand:-PARTS
+                #10                                                            %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:IndicatorCommand:-PARTS
+                Vn.                                                            %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:IndicatorCommand:-PARTS
+            }                                                                  %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:IndicatorCommand:-PARTS
+        \set Staff.instrumentName =                                            %! IndicatorCommand:baca_start_markup:-PARTS
+        \markup {                                                              %! IndicatorCommand:baca_start_markup:-PARTS
+            \hcenter-in                                                        %! IndicatorCommand:baca_start_markup:-PARTS
+                #10                                                            %! IndicatorCommand:baca_start_markup:-PARTS
+                Violin                                                         %! IndicatorCommand:baca_start_markup:-PARTS
+            }                                                                  %! IndicatorCommand:baca_start_markup:-PARTS
+        \clef "treble"                                                         %! DEFAULT_CLEF:_set_status_tag:ScoreTemplate(3)
+        \once \override ViolinMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! DEFAULT_CLEF_COLOR:_attach_color_literal(2)
+    %@% \override ViolinMusicStaff.Clef.color = ##f                            %! DEFAULT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+        \set ViolinMusicStaff.forceClef = ##t                                  %! DEFAULT_CLEF:_set_status_tag:SM33:ScoreTemplate(3)
+        \once \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'blue) %! EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
         bf'!4
-        -\tenuto                                                               %! INDICATOR_COMMAND
-        ^ \markup {                                                            %! SM11:DEFAULT_INSTRUMENT_ALERT:ST_1
-            \with-color                                                        %! SM11:DEFAULT_INSTRUMENT_ALERT:ST_1
-                #(x11-color 'DarkViolet)                                       %! SM11:DEFAULT_INSTRUMENT_ALERT:ST_1
-                (“Violin”)                                                     %! SM11:DEFAULT_INSTRUMENT_ALERT:ST_1
-            }                                                                  %! SM11:DEFAULT_INSTRUMENT_ALERT:ST_1
-        ^ \markup {                                                            %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:INDICATOR_COMMAND:-PARTS
-            \with-color                                                        %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:INDICATOR_COMMAND:-PARTS
-                #(x11-color 'blue)                                             %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:INDICATOR_COMMAND:-PARTS
-                [“Vn.”]                                                        %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:INDICATOR_COMMAND:-PARTS
-            }                                                                  %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:INDICATOR_COMMAND:-PARTS
-        _ \markup {                                                            %! INDICATOR_COMMAND
-            \line                                                              %! INDICATOR_COMMAND
-                {                                                              %! INDICATOR_COMMAND
-                    \dynamic                                                   %! INDICATOR_COMMAND
-                        pp                                                     %! INDICATOR_COMMAND
-                    \italic                                                    %! INDICATOR_COMMAND
-                        "sempre al fino"                                       %! INDICATOR_COMMAND
-                }                                                              %! INDICATOR_COMMAND
-            }                                                                  %! INDICATOR_COMMAND
-        \override ViolinMusicStaff.Clef.color = #(x11-color 'violet)           %! ATTACH_COLOR_LITERAL_2:DEFAULT_CLEF_REDRAW_COLOR:ST_3
-        \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! ATTACH_COLOR_LITERAL_2:REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:INDICATOR_COMMAND:-PARTS
-        \set ViolinMusicStaff.instrumentName =                                 %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-        \markup {                                                              %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-            \hcenter-in                                                        %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-                #10                                                            %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-                Vn.                                                            %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-            }                                                                  %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-        \set ViolinMusicStaff.shortInstrumentName =                            %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-        \markup {                                                              %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-            \hcenter-in                                                        %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-                #10                                                            %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-                Vn.                                                            %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-            }                                                                  %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
+        -\tenuto                                                               %! IndicatorCommand
+        ^ \markup \baca-default-indicator-markup "(“Violin”)"                  %! DEFAULT_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+        ^ \markup \baca-explicit-indicator-markup "[“Vn.”]"                    %! EXPLICIT_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+        _ \markup {                                                            %! IndicatorCommand
+            \line                                                              %! IndicatorCommand
+                {                                                              %! IndicatorCommand
+                    \dynamic                                                   %! IndicatorCommand
+                        pp                                                     %! IndicatorCommand
+                    \italic                                                    %! IndicatorCommand
+                        "sempre al fino"                                       %! IndicatorCommand
+                }                                                              %! IndicatorCommand
+            }                                                                  %! IndicatorCommand
+        \override ViolinMusicStaff.Clef.color = #(x11-color 'violet)           %! DEFAULT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+        \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+        \set ViolinMusicStaff.shortInstrumentName =                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:SM34:IndicatorCommand:-PARTS
+        \markup {                                                              %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:SM34:IndicatorCommand:-PARTS
+            \hcenter-in                                                        %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:SM34:IndicatorCommand:-PARTS
+                #10                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:SM34:IndicatorCommand:-PARTS
+                Vn.                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:SM34:IndicatorCommand:-PARTS
+            }                                                                  %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:SM34:IndicatorCommand:-PARTS
         
         c'''8
-        -\tenuto                                                               %! INDICATOR_COMMAND
+        -\tenuto                                                               %! IndicatorCommand
         [
         
         d'''8
-        -\tenuto                                                               %! INDICATOR_COMMAND
+        -\tenuto                                                               %! IndicatorCommand
         
         fs'''!8
-        -\tenuto                                                               %! INDICATOR_COMMAND
+        -\tenuto                                                               %! IndicatorCommand
         ]
     }
     \times 4/5 {
         
-        % [_ ViolinMusicVoice measure 5]                                       %! COMMENT_MEASURE_NUMBERS
+        % [_ ViolinMusicVoice measure 5]                                       %! _comment_measure_numbers
         af''!8
-        -\tenuto                                                               %! INDICATOR_COMMAND
+        -\tenuto                                                               %! IndicatorCommand
         [
         
         g''8
-        -\tenuto                                                               %! INDICATOR_COMMAND
+        -\tenuto                                                               %! IndicatorCommand
         ]
         
         f'''4
-        -\tenuto                                                               %! INDICATOR_COMMAND
+        -\tenuto                                                               %! IndicatorCommand
         
         ef'''!16
-        -\staccato                                                             %! INDICATOR_COMMAND
+        -\staccato                                                             %! IndicatorCommand
         [
         
         cs''''!16
-        -\staccato                                                             %! INDICATOR_COMMAND
+        -\staccato                                                             %! IndicatorCommand
         ]
     }
     \times 4/5 {
         
-        % [_ ViolinMusicVoice measure 9]                                       %! COMMENT_MEASURE_NUMBERS
+        % [_ ViolinMusicVoice measure 9]                                       %! _comment_measure_numbers
         a'''4
-        -\tenuto                                                               %! INDICATOR_COMMAND
+        -\tenuto                                                               %! IndicatorCommand
         
         e''''8
-        -\tenuto                                                               %! INDICATOR_COMMAND
+        -\tenuto                                                               %! IndicatorCommand
         [
         
         b''8
-        -\tenuto                                                               %! INDICATOR_COMMAND
+        -\tenuto                                                               %! IndicatorCommand
         
         f'''8
-        -\tenuto                                                               %! INDICATOR_COMMAND
+        -\tenuto                                                               %! IndicatorCommand
         ]
     }
     
-    % [_ ViolinMusicVoice measure 13]                                          %! COMMENT_MEASURE_NUMBERS
+    % [_ ViolinMusicVoice measure 13]                                          %! _comment_measure_numbers
     r8
     \times 4/5 {
         
-        % [_ ViolinMusicVoice measure 14]                                      %! COMMENT_MEASURE_NUMBERS
+        % [_ ViolinMusicVoice measure 14]                                      %! _comment_measure_numbers
         fs'''!8.
-        -\tenuto                                                               %! INDICATOR_COMMAND
+        -\tenuto                                                               %! IndicatorCommand
         [
         
         af''!8
-        -\tenuto                                                               %! INDICATOR_COMMAND
+        -\tenuto                                                               %! IndicatorCommand
         ]
         
     }
@@ -290,266 +270,250 @@ i_ViolinMusicStaff = {
 i_PianoRHMusicVoice = {
     \times 8/10 {
         
-        % [_ PianoRHMusicVoice measure 1]                                  %! COMMENT_MEASURE_NUMBERS
-        \set PianoStaffGroup.instrumentName =                              %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-        \markup {                                                          %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-            \hcenter-in                                                    %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-                #10                                                        %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-                Pf.                                                        %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-            }                                                              %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-        \set PianoStaffGroup.shortInstrumentName =                         %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-        \markup {                                                          %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-            \hcenter-in                                                    %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-                #10                                                        %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-                Pf.                                                        %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-            }                                                              %! SET_STATUS_TAG:EXPLICIT_MARGIN_MARKUP:INDICATOR_COMMAND:-PARTS
-        \set PianoStaffGroup.instrumentName =                              %! INDICATOR_COMMAND:STMK:-PARTS
-        \markup {                                                          %! INDICATOR_COMMAND:STMK:-PARTS
-            \hcenter-in                                                    %! INDICATOR_COMMAND:STMK:-PARTS
-                #10                                                        %! INDICATOR_COMMAND:STMK:-PARTS
-                Piano                                                      %! INDICATOR_COMMAND:STMK:-PARTS
-            }                                                              %! INDICATOR_COMMAND:STMK:-PARTS
-        \clef "treble"                                                     %! SET_STATUS_TAG:DEFAULT_CLEF:ST_3
-        \once \override PianoRHMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! ATTACH_COLOR_LITERAL_2:DEFAULT_CLEF_COLOR:ST_3
-    %@% \override PianoRHMusicStaff.Clef.color = ##f                       %! ATTACH_COLOR_LITERAL_1:DEFAULT_CLEF_COLOR_CANCELLATION:ST_3
-        \set PianoRHMusicStaff.forceClef = ##t                             %! SET_STATUS_TAG:DEFAULT_CLEF:SM33:ST_3
-        \once \override PianoStaffGroup.InstrumentName.color = #(x11-color 'blue) %! ATTACH_COLOR_LITERAL_2:EXPLICIT_MARGIN_MARKUP_COLOR:INDICATOR_COMMAND:-PARTS
+        % [_ PianoRHMusicVoice measure 1]                                  %! _comment_measure_numbers
+        \set PianoStaffGroup.shortInstrumentName =                         %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:IndicatorCommand:-PARTS
+        \markup {                                                          %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:IndicatorCommand:-PARTS
+            \hcenter-in                                                    %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:IndicatorCommand:-PARTS
+                #10                                                        %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:IndicatorCommand:-PARTS
+                Pf.                                                        %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:IndicatorCommand:-PARTS
+            }                                                              %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:IndicatorCommand:-PARTS
+        \set PianoStaffGroup.instrumentName =                              %! IndicatorCommand:baca_start_markup:-PARTS
+        \markup {                                                          %! IndicatorCommand:baca_start_markup:-PARTS
+            \hcenter-in                                                    %! IndicatorCommand:baca_start_markup:-PARTS
+                #10                                                        %! IndicatorCommand:baca_start_markup:-PARTS
+                Piano                                                      %! IndicatorCommand:baca_start_markup:-PARTS
+            }                                                              %! IndicatorCommand:baca_start_markup:-PARTS
+        \clef "treble"                                                     %! DEFAULT_CLEF:_set_status_tag:ScoreTemplate(3)
+        \once \override PianoRHMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! DEFAULT_CLEF_COLOR:_attach_color_literal(2)
+    %@% \override PianoRHMusicStaff.Clef.color = ##f                       %! DEFAULT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+        \set PianoRHMusicStaff.forceClef = ##t                             %! DEFAULT_CLEF:_set_status_tag:SM33:ScoreTemplate(3)
+        \once \override PianoStaffGroup.InstrumentName.color = #(x11-color 'blue) %! EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
         f'''16
-        -\tenuto                                                           %! INDICATOR_COMMAND
-        ^ \markup {                                                        %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:INDICATOR_COMMAND:-PARTS
-            \with-color                                                    %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:INDICATOR_COMMAND:-PARTS
-                #(x11-color 'blue)                                         %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:INDICATOR_COMMAND:-PARTS
-                [“Pf.”]                                                    %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:INDICATOR_COMMAND:-PARTS
-            }                                                              %! SM11:EXPLICIT_MARGIN_MARKUP_ALERT:INDICATOR_COMMAND:-PARTS
-        _ \markup {                                                        %! INDICATOR_COMMAND
-            \line                                                          %! INDICATOR_COMMAND
-                {                                                          %! INDICATOR_COMMAND
-                    \dynamic                                               %! INDICATOR_COMMAND
-                        pp                                                 %! INDICATOR_COMMAND
-                    \italic                                                %! INDICATOR_COMMAND
-                        "sempre al fino"                                   %! INDICATOR_COMMAND
-                }                                                          %! INDICATOR_COMMAND
-            }                                                              %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
+        ^ \markup \baca-explicit-indicator-markup "[“Pf.”]"                %! EXPLICIT_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+        _ \markup {                                                        %! IndicatorCommand
+            \line                                                          %! IndicatorCommand
+                {                                                          %! IndicatorCommand
+                    \dynamic                                               %! IndicatorCommand
+                        pp                                                 %! IndicatorCommand
+                    \italic                                                %! IndicatorCommand
+                        "sempre al fino"                                   %! IndicatorCommand
+                }                                                          %! IndicatorCommand
+            }                                                              %! IndicatorCommand
         [
-        \override PianoRHMusicStaff.Clef.color = #(x11-color 'violet)      %! ATTACH_COLOR_LITERAL_2:DEFAULT_CLEF_REDRAW_COLOR:ST_3
-        \override PianoStaffGroup.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! ATTACH_COLOR_LITERAL_2:REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:INDICATOR_COMMAND:-PARTS
-        \set PianoStaffGroup.instrumentName =                              %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-        \markup {                                                          %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-            \hcenter-in                                                    %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-                #10                                                        %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-                Pf.                                                        %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-            }                                                              %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-        \set PianoStaffGroup.shortInstrumentName =                         %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-        \markup {                                                          %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-            \hcenter-in                                                    %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-                #10                                                        %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-                Pf.                                                        %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
-            }                                                              %! SET_STATUS_TAG:REDRAWN_EXPLICIT_MARGIN_MARKUP:SM34:INDICATOR_COMMAND:-PARTS
+        \override PianoRHMusicStaff.Clef.color = #(x11-color 'violet)      %! DEFAULT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+        \override PianoStaffGroup.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+        \set PianoStaffGroup.shortInstrumentName =                         %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:SM34:IndicatorCommand:-PARTS
+        \markup {                                                          %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:SM34:IndicatorCommand:-PARTS
+            \hcenter-in                                                    %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:SM34:IndicatorCommand:-PARTS
+                #10                                                        %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:SM34:IndicatorCommand:-PARTS
+                Pf.                                                        %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:SM34:IndicatorCommand:-PARTS
+            }                                                              %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:SM34:IndicatorCommand:-PARTS
         
         c'''16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         bf''!16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         e''32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         d''32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         cs''!32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         ef'!32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         ]
     }
     \tweak text #tuplet-number::calc-fraction-text
     \times 6/7 {
         
-        % [_ PianoRHMusicVoice measure 3]                                  %! COMMENT_MEASURE_NUMBERS
+        % [_ PianoRHMusicVoice measure 3]                                  %! _comment_measure_numbers
         cs'''!64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         [
         
         a''64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         e''16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         ef''!16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         f'16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         ]
     }
     \tweak text #tuplet-number::calc-fraction-text
     \times 6/7 {
         
         a''''16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         [
         
         fs''''!16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         g'''32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         b''32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         cs''!64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         ef'!64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         ]
     }
     \times 8/11 {
         
-        % [_ PianoRHMusicVoice measure 6]                                  %! COMMENT_MEASURE_NUMBERS
+        % [_ PianoRHMusicVoice measure 6]                                  %! _comment_measure_numbers
         e''''16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         [
         
         cs''''!64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         a'''64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         fs'''!64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         f'''64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         ef'''!16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         d'''16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         c'''32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         b''64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         af''!64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         g''64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         bf'!64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         ]
     }
     \tweak text #tuplet-number::calc-fraction-text
     \times 6/8 {
         
-        % [_ PianoRHMusicVoice measure 8]                                  %! COMMENT_MEASURE_NUMBERS
+        % [_ PianoRHMusicVoice measure 8]                                  %! _comment_measure_numbers
         cs'''!16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         [
         
         bf''!32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         a''32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         fs''!32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         ef''!32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         d''64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         c''64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         g'64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         f'64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         ]
     }
     \tweak text #tuplet-number::calc-fraction-text
     \times 6/8 {
         
         fs'''!16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         [
         
         g''16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         f''64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         cs''!64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         a'16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         af'!64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         ef'!64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         ]
     }
     \times 8/14 {
         
-        % [_ PianoRHMusicVoice measure 11]                                 %! COMMENT_MEASURE_NUMBERS
+        % [_ PianoRHMusicVoice measure 11]                                 %! _comment_measure_numbers
         g'16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         [
         
         fs'!8.
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         f'8.
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         ]
     }
     
-    % [_ PianoRHMusicVoice measure 13]                                     %! COMMENT_MEASURE_NUMBERS
+    % [_ PianoRHMusicVoice measure 13]                                     %! _comment_measure_numbers
     r8
     \times 8/14 {
         
-        % [_ PianoRHMusicVoice measure 14]                                 %! COMMENT_MEASURE_NUMBERS
-        \override TupletBracket.shorten-pair = #'(0 . 0.6)                 %! OVERRIDE_COMMAND_1
+        % [_ PianoRHMusicVoice measure 14]                                 %! _comment_measure_numbers
+        \override TupletBracket.shorten-pair = #'(0 . 0.6)                 %! OverrideCommand(1)
         a''''32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         [
         
         af'''!32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         fs'''!16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         b'16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         e'8
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         cs'!8
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         ]
-        \revert TupletBracket.shorten-pair                                 %! OVERRIDE_COMMAND_2
+        \revert TupletBracket.shorten-pair                                 %! OverrideCommand(2)
         
     }
 }
@@ -565,186 +529,182 @@ i_PianoLHMusicVoice = {
     \tweak text #tuplet-number::calc-fraction-text
     \times 6/7 {
         
-        % [_ PianoLHMusicVoice measure 1]                                  %! COMMENT_MEASURE_NUMBERS
-        \override TextScript.padding = #2                                  %! OVERRIDE_COMMAND_1
-        \clef "bass"                                                       %! SET_STATUS_TAG:EXPLICIT_CLEF:INDICATOR_COMMAND
-        \once \override PianoLHMusicStaff.Clef.color = #(x11-color 'blue)  %! ATTACH_COLOR_LITERAL_2:EXPLICIT_CLEF_COLOR:INDICATOR_COMMAND
-    %@% \override PianoLHMusicStaff.Clef.color = ##f                       %! ATTACH_COLOR_LITERAL_1:EXPLICIT_CLEF_COLOR_CANCELLATION:INDICATOR_COMMAND
-        \set PianoLHMusicStaff.forceClef = ##t                             %! SET_STATUS_TAG:EXPLICIT_CLEF:SM33:INDICATOR_COMMAND
+        % [_ PianoLHMusicVoice measure 1]                                  %! _comment_measure_numbers
+        \override TextScript.padding = #2                                  %! OverrideCommand(1)
+        \clef "bass"                                                       %! EXPLICIT_CLEF:_set_status_tag:IndicatorCommand
+        \once \override PianoLHMusicStaff.Clef.color = #(x11-color 'blue)  %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+    %@% \override PianoLHMusicStaff.Clef.color = ##f                       %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+        \set PianoLHMusicStaff.forceClef = ##t                             %! EXPLICIT_CLEF:_set_status_tag:SM33:IndicatorCommand
         b,,,16
-        -\tenuto                                                           %! INDICATOR_COMMAND
-        ^ \markup {                                                        %! SM11:DEFAULT_INSTRUMENT_ALERT:ST_1
-            \with-color                                                    %! SM11:DEFAULT_INSTRUMENT_ALERT:ST_1
-                #(x11-color 'DarkViolet)                                   %! SM11:DEFAULT_INSTRUMENT_ALERT:ST_1
-                (“Piano”)                                                  %! SM11:DEFAULT_INSTRUMENT_ALERT:ST_1
-            }                                                              %! SM11:DEFAULT_INSTRUMENT_ALERT:ST_1
+        -\tenuto                                                           %! IndicatorCommand
+        ^ \markup \baca-default-indicator-markup "(“Piano”)"               %! DEFAULT_INSTRUMENT_ALERT:_attach_latent_indicator_alert
         [
-        \override PianoLHMusicStaff.Clef.color = #(x11-color 'DeepSkyBlue2) %! ATTACH_COLOR_LITERAL_2:EXPLICIT_CLEF_REDRAW_COLOR:INDICATOR_COMMAND
+        \override PianoLHMusicStaff.Clef.color = #(x11-color 'DeepSkyBlue2) %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
         
         fs,!32.
-        -\tenuto                                                           %! INDICATOR_COMMAND
-        _ \markup {                                                        %! INDICATOR_COMMAND
-            \italic                                                        %! INDICATOR_COMMAND
-                "ped. ad libitum"                                          %! INDICATOR_COMMAND
-            }                                                              %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
+        _ \markup {                                                        %! IndicatorCommand
+            \italic                                                        %! IndicatorCommand
+                "ped. ad libitum"                                          %! IndicatorCommand
+            }                                                              %! IndicatorCommand
         
         af,!32.
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         g32.
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         a64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         ]
     }
     \times 8/10 {
         
         b,,16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         [
         
         g,16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         c32.
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         d32.
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         fs!32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         af!32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         bf!32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         ]
     }
     \times 6/9 {
         
         c,,32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         [
         
         d,,32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         bf,,!32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
-        % [_ PianoLHMusicVoice measure 5]                                  %! COMMENT_MEASURE_NUMBERS
+        % [_ PianoLHMusicVoice measure 5]                                  %! _comment_measure_numbers
         e,16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         af,!16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         f16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         ]
     }
     \scaleDurations #'(1 . 1) {
         
-        % [_ PianoLHMusicVoice measure 6]                                  %! COMMENT_MEASURE_NUMBERS
+        % [_ PianoLHMusicVoice measure 6]                                  %! _comment_measure_numbers
         r8
     }
     \times 8/10 {
         
-        % [_ PianoLHMusicVoice measure 7]                                  %! COMMENT_MEASURE_NUMBERS
+        % [_ PianoLHMusicVoice measure 7]                                  %! _comment_measure_numbers
         e16.
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         [
         
         af!16.
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         b8
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         ]
     }
     \times 8/14 {
         
-        % [_ PianoLHMusicVoice measure 9]                                  %! COMMENT_MEASURE_NUMBERS
+        % [_ PianoLHMusicVoice measure 9]                                  %! _comment_measure_numbers
         e,16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         [
         
         b,16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         c16.
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
-        % [_ PianoLHMusicVoice measure 10]                                 %! COMMENT_MEASURE_NUMBERS
+        % [_ PianoLHMusicVoice measure 10]                                 %! _comment_measure_numbers
         d16.
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         bf!8
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         ]
     }
     \times 8/10 {
         
-        % [_ PianoLHMusicVoice measure 11]                                 %! COMMENT_MEASURE_NUMBERS
+        % [_ PianoLHMusicVoice measure 11]                                 %! _comment_measure_numbers
         c,,32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         [
         
         e,,32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         b,,64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         d,64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         ef,!64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         bf,!64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
         cs!16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         af!16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         a16
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         ]
     }
     
-    % [_ PianoLHMusicVoice measure 13]                                     %! COMMENT_MEASURE_NUMBERS
+    % [_ PianoLHMusicVoice measure 13]                                     %! _comment_measure_numbers
     r8
     \times 8/9 {
         
-        % [_ PianoLHMusicVoice measure 14]                                 %! COMMENT_MEASURE_NUMBERS
-        \override TupletBracket.shorten-pair = #'(0 . 0.6)                 %! OVERRIDE_COMMAND_1
+        % [_ PianoLHMusicVoice measure 14]                                 %! _comment_measure_numbers
+        \override TupletBracket.shorten-pair = #'(0 . 0.6)                 %! OverrideCommand(1)
         d,,16.
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         [
         
         g,,16.
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         bf,,!32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         f,32
-        -\tenuto                                                           %! INDICATOR_COMMAND
+        -\tenuto                                                           %! IndicatorCommand
         
         c64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         
-        \override Score.SpanBar #'transparent = ##f                        %! INDICATOR_COMMAND
+        \override Score.SpanBar #'transparent = ##f                        %! IndicatorCommand
         \once \override TextScript.extra-offset = #'(-9.5 . -4)
         ef!64
-        -\staccato                                                         %! INDICATOR_COMMAND
+        -\staccato                                                         %! IndicatorCommand
         _ \markup {                                                        %! SCORE_2
             \override                                                      %! SCORE_2
                 #'(font-name . "Palatino")                                 %! SCORE_2
@@ -763,8 +723,8 @@ i_PianoLHMusicVoice = {
                         }                                                  %! SCORE_2
             }                                                              %! SCORE_2
         ]
-        \revert TextScript.padding                                         %! OVERRIDE_COMMAND_2
-        \revert TupletBracket.shorten-pair                                 %! OVERRIDE_COMMAND_2
+        \revert TextScript.padding                                         %! OverrideCommand(2)
+        \revert TupletBracket.shorten-pair                                 %! OverrideCommand(2)
         
     }
 }

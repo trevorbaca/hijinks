@@ -9,72 +9,72 @@
         \context PageLayout = "PageLayout"
         {   %*% PageLayout
             
-            % [PageLayout measure 1]                                                     %! COMMENT_MEASURE_NUMBERS
+            % [PageLayout measure 1]                                                     %! _comment_measure_numbers
             \autoPageBreaksOff                                                           %! BMM1:BREAK
             \noBreak                                                                     %! BMM2:BREAK
-            \baca_lbsd #35 #'(4 20 22)                                                   %! INDICATOR_COMMAND:BREAK
-            \pageBreak                                                                   %! INDICATOR_COMMAND:BREAK
-            s1 * 1/8                                                                     %! MAKE_GLOBAL_SKIPS_1
+            \baca_lbsd #35 #'(4 20 22)                                                   %! IndicatorCommand:BREAK
+            \pageBreak                                                                   %! IndicatorCommand:BREAK
+            s1 * 1/8                                                                     %! _make_global_skips(1)
             
-            % [PageLayout measure 2]                                                     %! COMMENT_MEASURE_NUMBERS
+            % [PageLayout measure 2]                                                     %! _comment_measure_numbers
             \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8                                                                     %! MAKE_GLOBAL_SKIPS_1
+            s1 * 1/8                                                                     %! _make_global_skips(1)
             
-            % [PageLayout measure 3]                                                     %! COMMENT_MEASURE_NUMBERS
+            % [PageLayout measure 3]                                                     %! _comment_measure_numbers
             \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8                                                                     %! MAKE_GLOBAL_SKIPS_1
+            s1 * 1/8                                                                     %! _make_global_skips(1)
             
-            % [PageLayout measure 4]                                                     %! COMMENT_MEASURE_NUMBERS
+            % [PageLayout measure 4]                                                     %! _comment_measure_numbers
             \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8                                                                     %! MAKE_GLOBAL_SKIPS_1
+            s1 * 1/8                                                                     %! _make_global_skips(1)
             
-            % [PageLayout measure 5]                                                     %! COMMENT_MEASURE_NUMBERS
+            % [PageLayout measure 5]                                                     %! _comment_measure_numbers
             \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8                                                                     %! MAKE_GLOBAL_SKIPS_1
+            s1 * 1/8                                                                     %! _make_global_skips(1)
             
-            % [PageLayout measure 6]                                                     %! COMMENT_MEASURE_NUMBERS
+            % [PageLayout measure 6]                                                     %! _comment_measure_numbers
             \noBreak                                                                     %! BMM2:BREAK
-            \baca_lbsd #85 #'(4 20 22)                                                   %! INDICATOR_COMMAND:BREAK
-            \break                                                                       %! INDICATOR_COMMAND:BREAK
-            s1 * 1/8                                                                     %! MAKE_GLOBAL_SKIPS_1
+            \baca_lbsd #85 #'(4 20 22)                                                   %! IndicatorCommand:BREAK
+            \break                                                                       %! IndicatorCommand:BREAK
+            s1 * 1/8                                                                     %! _make_global_skips(1)
             
-            % [PageLayout measure 7]                                                     %! COMMENT_MEASURE_NUMBERS
+            % [PageLayout measure 7]                                                     %! _comment_measure_numbers
             \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8                                                                     %! MAKE_GLOBAL_SKIPS_1
+            s1 * 1/8                                                                     %! _make_global_skips(1)
             
-            % [PageLayout measure 8]                                                     %! COMMENT_MEASURE_NUMBERS
+            % [PageLayout measure 8]                                                     %! _comment_measure_numbers
             \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8                                                                     %! MAKE_GLOBAL_SKIPS_1
+            s1 * 1/8                                                                     %! _make_global_skips(1)
             
-            % [PageLayout measure 9]                                                     %! COMMENT_MEASURE_NUMBERS
+            % [PageLayout measure 9]                                                     %! _comment_measure_numbers
             \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8                                                                     %! MAKE_GLOBAL_SKIPS_1
+            s1 * 1/8                                                                     %! _make_global_skips(1)
             
-            % [PageLayout measure 10]                                                    %! COMMENT_MEASURE_NUMBERS
+            % [PageLayout measure 10]                                                    %! _comment_measure_numbers
             \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8                                                                     %! MAKE_GLOBAL_SKIPS_1
+            s1 * 1/8                                                                     %! _make_global_skips(1)
             
-            % [PageLayout measure 11]                                                    %! COMMENT_MEASURE_NUMBERS
+            % [PageLayout measure 11]                                                    %! _comment_measure_numbers
             \noBreak                                                                     %! BMM2:BREAK
-            \baca_lbsd #147.5 #'(4 20 22)                                                %! INDICATOR_COMMAND:BREAK
-            \break                                                                       %! INDICATOR_COMMAND:BREAK
-            s1 * 1/8                                                                     %! MAKE_GLOBAL_SKIPS_1
+            \baca_lbsd #147.5 #'(4 20 22)                                                %! IndicatorCommand:BREAK
+            \break                                                                       %! IndicatorCommand:BREAK
+            s1 * 1/8                                                                     %! _make_global_skips(1)
             
-            % [PageLayout measure 12]                                                    %! COMMENT_MEASURE_NUMBERS
+            % [PageLayout measure 12]                                                    %! _comment_measure_numbers
             \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8                                                                     %! MAKE_GLOBAL_SKIPS_1
+            s1 * 1/8                                                                     %! _make_global_skips(1)
             
-            % [PageLayout measure 13]                                                    %! COMMENT_MEASURE_NUMBERS
+            % [PageLayout measure 13]                                                    %! _comment_measure_numbers
             \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8                                                                     %! MAKE_GLOBAL_SKIPS_1
+            s1 * 1/8                                                                     %! _make_global_skips(1)
             
-            % [PageLayout measure 14]                                                    %! COMMENT_MEASURE_NUMBERS
+            % [PageLayout measure 14]                                                    %! _comment_measure_numbers
             \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8                                                                     %! MAKE_GLOBAL_SKIPS_1
+            s1 * 1/8                                                                     %! _make_global_skips(1)
             
-            % [PageLayout measure 15]                                                    %! COMMENT_MEASURE_NUMBERS
+            % [PageLayout measure 15]                                                    %! _comment_measure_numbers
             \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8                                                                     %! MAKE_GLOBAL_SKIPS_1
+            s1 * 1/8                                                                     %! _make_global_skips(1)
             
         }   %*% PageLayout
     >>

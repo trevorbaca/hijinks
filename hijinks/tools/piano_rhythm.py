@@ -15,7 +15,7 @@ def piano_rhythm(staff):
         ):
         if staff == 'rh':
             aggregate = reversed(aggregate)
-        tuplet = maker(proportion, pair)
+        tuplet = maker(proportion, pair, tag='piano_rhythm')
         assert isinstance(tuplet, abjad.Tuplet)
         duration = abjad.inspect(tuplet).duration()
         duration = duration.with_denominator(32)
@@ -23,7 +23,7 @@ def piano_rhythm(staff):
         if tuplet.trivial():
             tuplet.hide = True
         leaves = abjad.select(tuplet).leaves()
-        abjad.attach(abjad.Beam(), leaves)
+        abjad.attach(abjad.Beam(), leaves, tag='piano_rhythm')
         notes = abjad.select(tuplet).leaves(pitched=True)
         for note, pitch_number in zip(notes, aggregate):
             note.written_pitch = pitch_number

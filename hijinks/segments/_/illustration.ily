@@ -151,7 +151,7 @@ i_GlobalSkips = {
 
 
 i_ViolinMusicVoice = {
-    \times 4/5 {
+    \times 4/5 {                                                                                   %! violin_rhythm
         
         % [_ ViolinMusicVoice measure 1]                                                           %! _comment_measure_numbers
         \set Staff.shortInstrumentName =                                                           %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:IndicatorCommand:-PARTS
@@ -171,8 +171,8 @@ i_ViolinMusicVoice = {
     %@% \override ViolinMusicStaff.Clef.color = ##f                                                %! DEFAULT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
         \set ViolinMusicStaff.forceClef = ##t                                                      %! DEFAULT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):attach_defaults
         \once \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'blue)                 %! EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-        bf'!4
-        -\tenuto                                                                                   %! IndicatorCommand
+        bf'!4                                                                                      %! violin_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         ^ \markup \baca-default-indicator-markup "(“Violin”)"                                      %! DEFAULT_INSTRUMENT_ALERT:_attach_latent_indicator_alert
         ^ \markup \baca-explicit-indicator-markup "[“Vn.”]"                                        %! EXPLICIT_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
         _ \markup {                                                                                %! IndicatorCommand
@@ -193,71 +193,71 @@ i_ViolinMusicVoice = {
                 Vn.                                                                                %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):IndicatorCommand:-PARTS
             }                                                                                      %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):IndicatorCommand:-PARTS
         
-        c'''8
-        -\tenuto                                                                                   %! IndicatorCommand
-        [
+        c'''8                                                                                      %! violin_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        [                                                                                          %! violin_rhythm
         
-        d'''8
-        -\tenuto                                                                                   %! IndicatorCommand
+        d'''8                                                                                      %! violin_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        fs'''!8
-        -\tenuto                                                                                   %! IndicatorCommand
-        ]
-    }
-    \times 4/5 {
+        fs'''!8                                                                                    %! violin_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        ]                                                                                          %! violin_rhythm
+    }                                                                                              %! violin_rhythm
+    \times 4/5 {                                                                                   %! violin_rhythm
         
         % [_ ViolinMusicVoice measure 5]                                                           %! _comment_measure_numbers
-        af''!8
-        -\tenuto                                                                                   %! IndicatorCommand
-        [
+        af''!8                                                                                     %! violin_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        [                                                                                          %! violin_rhythm
         
-        g''8
-        -\tenuto                                                                                   %! IndicatorCommand
-        ]
+        g''8                                                                                       %! violin_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        ]                                                                                          %! violin_rhythm
         
-        f'''4
-        -\tenuto                                                                                   %! IndicatorCommand
+        f'''4                                                                                      %! violin_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        ef'''!16
-        -\staccato                                                                                 %! IndicatorCommand
-        [
+        ef'''!16                                                                                   %! violin_rhythm
+        - \staccato                                                                                %! IndicatorCommand
+        [                                                                                          %! violin_rhythm
         
-        cs''''!16
-        -\staccato                                                                                 %! IndicatorCommand
-        ]
-    }
-    \times 4/5 {
+        cs''''!16                                                                                  %! violin_rhythm
+        - \staccato                                                                                %! IndicatorCommand
+        ]                                                                                          %! violin_rhythm
+    }                                                                                              %! violin_rhythm
+    \times 4/5 {                                                                                   %! violin_rhythm
         
         % [_ ViolinMusicVoice measure 9]                                                           %! _comment_measure_numbers
-        a'''4
-        -\tenuto                                                                                   %! IndicatorCommand
+        a'''4                                                                                      %! violin_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        e''''8
-        -\tenuto                                                                                   %! IndicatorCommand
-        [
+        e''''8                                                                                     %! violin_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        [                                                                                          %! violin_rhythm
         
-        b''8
-        -\tenuto                                                                                   %! IndicatorCommand
+        b''8                                                                                       %! violin_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        f'''8
-        -\tenuto                                                                                   %! IndicatorCommand
-        ]
-    }
+        f'''8                                                                                      %! violin_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        ]                                                                                          %! violin_rhythm
+    }                                                                                              %! violin_rhythm
     
     % [_ ViolinMusicVoice measure 13]                                                              %! _comment_measure_numbers
-    r8
-    \times 4/5 {
+    r8                                                                                             %! violin_rhythm
+    \times 4/5 {                                                                                   %! violin_rhythm
         
         % [_ ViolinMusicVoice measure 14]                                                          %! _comment_measure_numbers
-        fs'''!8.
-        -\tenuto                                                                                   %! IndicatorCommand
-        [
+        fs'''!8.                                                                                   %! violin_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        [                                                                                          %! violin_rhythm
         
-        af''!8
-        -\tenuto                                                                                   %! IndicatorCommand
-        ]
+        af''!8                                                                                     %! violin_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        ]                                                                                          %! violin_rhythm
         
-    }
+    }                                                                                              %! violin_rhythm
 }
 
 
@@ -268,7 +268,7 @@ i_ViolinMusicStaff = {
 
 
 i_PianoRHMusicVoice = {
-    \times 8/10 {
+    \times 8/10 {                                                                                  %! piano_rhythm
         
         % [_ PianoRHMusicVoice measure 1]                                                          %! _comment_measure_numbers
         \set PianoStaffGroup.shortInstrumentName =                                                 %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:IndicatorCommand:-PARTS
@@ -288,8 +288,8 @@ i_PianoRHMusicVoice = {
     %@% \override PianoRHMusicStaff.Clef.color = ##f                                               %! DEFAULT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
         \set PianoRHMusicStaff.forceClef = ##t                                                     %! DEFAULT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):attach_defaults
         \once \override PianoStaffGroup.InstrumentName.color = #(x11-color 'blue)                  %! EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-        f'''16
-        -\tenuto                                                                                   %! IndicatorCommand
+        f'''16                                                                                     %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         ^ \markup \baca-explicit-indicator-markup "[“Pf.”]"                                        %! EXPLICIT_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
         _ \markup {                                                                                %! IndicatorCommand
             \line                                                                                  %! IndicatorCommand
@@ -300,7 +300,7 @@ i_PianoRHMusicVoice = {
                         "sempre al fino"                                                           %! IndicatorCommand
                 }                                                                                  %! IndicatorCommand
             }                                                                                      %! IndicatorCommand
-        [
+        [                                                                                          %! piano_rhythm
         \override PianoRHMusicStaff.Clef.color = #(x11-color 'violet)                              %! DEFAULT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
         \override PianoStaffGroup.InstrumentName.color = #(x11-color 'DeepSkyBlue2)                %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
         \set PianoStaffGroup.shortInstrumentName =                                                 %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):IndicatorCommand:-PARTS
@@ -310,212 +310,212 @@ i_PianoRHMusicVoice = {
                 Pf.                                                                                %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):IndicatorCommand:-PARTS
             }                                                                                      %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):IndicatorCommand:-PARTS
         
-        c'''16
-        -\tenuto                                                                                   %! IndicatorCommand
+        c'''16                                                                                     %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        bf''!16
-        -\tenuto                                                                                   %! IndicatorCommand
+        bf''!16                                                                                    %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        e''32
-        -\tenuto                                                                                   %! IndicatorCommand
+        e''32                                                                                      %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        d''32
-        -\tenuto                                                                                   %! IndicatorCommand
+        d''32                                                                                      %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        cs''!32
-        -\tenuto                                                                                   %! IndicatorCommand
+        cs''!32                                                                                    %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        ef'!32
-        -\tenuto                                                                                   %! IndicatorCommand
-        ]
-    }
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7 {
+        ef'!32                                                                                     %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        ]                                                                                          %! piano_rhythm
+    }                                                                                              %! piano_rhythm
+    \tweak text #tuplet-number::calc-fraction-text                                                 %! piano_rhythm
+    \times 6/7 {                                                                                   %! piano_rhythm
         
         % [_ PianoRHMusicVoice measure 3]                                                          %! _comment_measure_numbers
-        cs'''!64
-        -\staccato                                                                                 %! IndicatorCommand
-        [
+        cs'''!64                                                                                   %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
+        [                                                                                          %! piano_rhythm
         
-        a''64
-        -\staccato                                                                                 %! IndicatorCommand
+        a''64                                                                                      %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        e''16
-        -\tenuto                                                                                   %! IndicatorCommand
+        e''16                                                                                      %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        ef''!16
-        -\tenuto                                                                                   %! IndicatorCommand
+        ef''!16                                                                                    %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        f'16
-        -\tenuto                                                                                   %! IndicatorCommand
-        ]
-    }
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7 {
+        f'16                                                                                       %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        ]                                                                                          %! piano_rhythm
+    }                                                                                              %! piano_rhythm
+    \tweak text #tuplet-number::calc-fraction-text                                                 %! piano_rhythm
+    \times 6/7 {                                                                                   %! piano_rhythm
         
-        a''''16
-        -\tenuto                                                                                   %! IndicatorCommand
-        [
+        a''''16                                                                                    %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        [                                                                                          %! piano_rhythm
         
-        fs''''!16
-        -\tenuto                                                                                   %! IndicatorCommand
+        fs''''!16                                                                                  %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        g'''32
-        -\tenuto                                                                                   %! IndicatorCommand
+        g'''32                                                                                     %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        b''32
-        -\tenuto                                                                                   %! IndicatorCommand
+        b''32                                                                                      %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        cs''!64
-        -\staccato                                                                                 %! IndicatorCommand
+        cs''!64                                                                                    %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        ef'!64
-        -\staccato                                                                                 %! IndicatorCommand
-        ]
-    }
-    \times 8/11 {
+        ef'!64                                                                                     %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
+        ]                                                                                          %! piano_rhythm
+    }                                                                                              %! piano_rhythm
+    \times 8/11 {                                                                                  %! piano_rhythm
         
         % [_ PianoRHMusicVoice measure 6]                                                          %! _comment_measure_numbers
-        e''''16
-        -\tenuto                                                                                   %! IndicatorCommand
-        [
+        e''''16                                                                                    %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        [                                                                                          %! piano_rhythm
         
-        cs''''!64
-        -\staccato                                                                                 %! IndicatorCommand
+        cs''''!64                                                                                  %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        a'''64
-        -\staccato                                                                                 %! IndicatorCommand
+        a'''64                                                                                     %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        fs'''!64
-        -\staccato                                                                                 %! IndicatorCommand
+        fs'''!64                                                                                   %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        f'''64
-        -\staccato                                                                                 %! IndicatorCommand
+        f'''64                                                                                     %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        ef'''!16
-        -\tenuto                                                                                   %! IndicatorCommand
+        ef'''!16                                                                                   %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        d'''16
-        -\tenuto                                                                                   %! IndicatorCommand
+        d'''16                                                                                     %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        c'''32
-        -\tenuto                                                                                   %! IndicatorCommand
+        c'''32                                                                                     %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        b''64
-        -\staccato                                                                                 %! IndicatorCommand
+        b''64                                                                                      %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        af''!64
-        -\staccato                                                                                 %! IndicatorCommand
+        af''!64                                                                                    %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        g''64
-        -\staccato                                                                                 %! IndicatorCommand
+        g''64                                                                                      %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        bf'!64
-        -\staccato                                                                                 %! IndicatorCommand
-        ]
-    }
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 6/8 {
+        bf'!64                                                                                     %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
+        ]                                                                                          %! piano_rhythm
+    }                                                                                              %! piano_rhythm
+    \tweak text #tuplet-number::calc-fraction-text                                                 %! piano_rhythm
+    \times 6/8 {                                                                                   %! piano_rhythm
         
         % [_ PianoRHMusicVoice measure 8]                                                          %! _comment_measure_numbers
-        cs'''!16
-        -\tenuto                                                                                   %! IndicatorCommand
-        [
+        cs'''!16                                                                                   %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        [                                                                                          %! piano_rhythm
         
-        bf''!32
-        -\tenuto                                                                                   %! IndicatorCommand
+        bf''!32                                                                                    %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        a''32
-        -\tenuto                                                                                   %! IndicatorCommand
+        a''32                                                                                      %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        fs''!32
-        -\tenuto                                                                                   %! IndicatorCommand
+        fs''!32                                                                                    %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        ef''!32
-        -\tenuto                                                                                   %! IndicatorCommand
+        ef''!32                                                                                    %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        d''64
-        -\staccato                                                                                 %! IndicatorCommand
+        d''64                                                                                      %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        c''64
-        -\staccato                                                                                 %! IndicatorCommand
+        c''64                                                                                      %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        g'64
-        -\staccato                                                                                 %! IndicatorCommand
+        g'64                                                                                       %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        f'64
-        -\staccato                                                                                 %! IndicatorCommand
-        ]
-    }
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 6/8 {
+        f'64                                                                                       %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
+        ]                                                                                          %! piano_rhythm
+    }                                                                                              %! piano_rhythm
+    \tweak text #tuplet-number::calc-fraction-text                                                 %! piano_rhythm
+    \times 6/8 {                                                                                   %! piano_rhythm
         
-        fs'''!16
-        -\tenuto                                                                                   %! IndicatorCommand
-        [
+        fs'''!16                                                                                   %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        [                                                                                          %! piano_rhythm
         
-        g''16
-        -\tenuto                                                                                   %! IndicatorCommand
+        g''16                                                                                      %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        f''64
-        -\staccato                                                                                 %! IndicatorCommand
+        f''64                                                                                      %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        cs''!64
-        -\staccato                                                                                 %! IndicatorCommand
+        cs''!64                                                                                    %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        a'16
-        -\tenuto                                                                                   %! IndicatorCommand
+        a'16                                                                                       %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        af'!64
-        -\staccato                                                                                 %! IndicatorCommand
+        af'!64                                                                                     %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        ef'!64
-        -\staccato                                                                                 %! IndicatorCommand
-        ]
-    }
-    \times 8/14 {
+        ef'!64                                                                                     %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
+        ]                                                                                          %! piano_rhythm
+    }                                                                                              %! piano_rhythm
+    \times 8/14 {                                                                                  %! piano_rhythm
         
         % [_ PianoRHMusicVoice measure 11]                                                         %! _comment_measure_numbers
-        g'16
-        -\tenuto                                                                                   %! IndicatorCommand
-        [
+        g'16                                                                                       %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        [                                                                                          %! piano_rhythm
         
-        fs'!8.
-        -\tenuto                                                                                   %! IndicatorCommand
+        fs'!8.                                                                                     %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        f'8.
-        -\tenuto                                                                                   %! IndicatorCommand
-        ]
-    }
+        f'8.                                                                                       %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        ]                                                                                          %! piano_rhythm
+    }                                                                                              %! piano_rhythm
     
     % [_ PianoRHMusicVoice measure 13]                                                             %! _comment_measure_numbers
     r8
-    \times 8/14 {
+    \times 8/14 {                                                                                  %! piano_rhythm
         
         % [_ PianoRHMusicVoice measure 14]                                                         %! _comment_measure_numbers
         \override TupletBracket.shorten-pair = #'(0 . 0.6)                                         %! OverrideCommand(1)
-        a''''32
-        -\tenuto                                                                                   %! IndicatorCommand
-        [
+        a''''32                                                                                    %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        [                                                                                          %! piano_rhythm
         
-        af'''!32
-        -\tenuto                                                                                   %! IndicatorCommand
+        af'''!32                                                                                   %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        fs'''!16
-        -\tenuto                                                                                   %! IndicatorCommand
+        fs'''!16                                                                                   %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        b'16
-        -\tenuto                                                                                   %! IndicatorCommand
+        b'16                                                                                       %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        e'8
-        -\tenuto                                                                                   %! IndicatorCommand
+        e'8                                                                                        %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        cs'!8
-        -\tenuto                                                                                   %! IndicatorCommand
-        ]
+        cs'!8                                                                                      %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        ]                                                                                          %! piano_rhythm
         \revert TupletBracket.shorten-pair                                                         %! OverrideCommand(2)
         
-    }
+    }                                                                                              %! piano_rhythm
 }
 
 
@@ -526,8 +526,8 @@ i_PianoRHMusicStaff = {
 
 
 i_PianoLHMusicVoice = {
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7 {
+    \tweak text #tuplet-number::calc-fraction-text                                                 %! piano_rhythm
+    \times 6/7 {                                                                                   %! piano_rhythm
         
         % [_ PianoLHMusicVoice measure 1]                                                          %! _comment_measure_numbers
         \override TextScript.padding = #2                                                          %! OverrideCommand(1)
@@ -535,176 +535,176 @@ i_PianoLHMusicVoice = {
         \once \override PianoLHMusicStaff.Clef.color = #(x11-color 'blue)                          %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
     %@% \override PianoLHMusicStaff.Clef.color = ##f                                               %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
         \set PianoLHMusicStaff.forceClef = ##t                                                     %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):IndicatorCommand
-        b,,,16
-        -\tenuto                                                                                   %! IndicatorCommand
+        b,,,16                                                                                     %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         ^ \markup \baca-default-indicator-markup "(“Piano”)"                                       %! DEFAULT_INSTRUMENT_ALERT:_attach_latent_indicator_alert
-        [
+        [                                                                                          %! piano_rhythm
         \override PianoLHMusicStaff.Clef.color = #(x11-color 'DeepSkyBlue2)                        %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
         
-        fs,!32.
-        -\tenuto                                                                                   %! IndicatorCommand
+        fs,!32.                                                                                    %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         _ \markup {                                                                                %! IndicatorCommand
             \italic                                                                                %! IndicatorCommand
                 "ped. ad libitum"                                                                  %! IndicatorCommand
             }                                                                                      %! IndicatorCommand
         
-        af,!32.
-        -\tenuto                                                                                   %! IndicatorCommand
+        af,!32.                                                                                    %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        g32.
-        -\tenuto                                                                                   %! IndicatorCommand
+        g32.                                                                                       %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        a64
-        -\staccato                                                                                 %! IndicatorCommand
-        ]
-    }
-    \times 8/10 {
+        a64                                                                                        %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
+        ]                                                                                          %! piano_rhythm
+    }                                                                                              %! piano_rhythm
+    \times 8/10 {                                                                                  %! piano_rhythm
         
-        b,,16
-        -\tenuto                                                                                   %! IndicatorCommand
-        [
+        b,,16                                                                                      %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        [                                                                                          %! piano_rhythm
         
-        g,16
-        -\tenuto                                                                                   %! IndicatorCommand
+        g,16                                                                                       %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        c32.
-        -\tenuto                                                                                   %! IndicatorCommand
+        c32.                                                                                       %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        d32.
-        -\tenuto                                                                                   %! IndicatorCommand
+        d32.                                                                                       %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        fs!32
-        -\tenuto                                                                                   %! IndicatorCommand
+        fs!32                                                                                      %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        af!32
-        -\tenuto                                                                                   %! IndicatorCommand
+        af!32                                                                                      %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        bf!32
-        -\tenuto                                                                                   %! IndicatorCommand
-        ]
-    }
-    \times 6/9 {
+        bf!32                                                                                      %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        ]                                                                                          %! piano_rhythm
+    }                                                                                              %! piano_rhythm
+    \times 6/9 {                                                                                   %! piano_rhythm
         
-        c,,32
-        -\tenuto                                                                                   %! IndicatorCommand
-        [
+        c,,32                                                                                      %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        [                                                                                          %! piano_rhythm
         
-        d,,32
-        -\tenuto                                                                                   %! IndicatorCommand
+        d,,32                                                                                      %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        bf,,!32
-        -\tenuto                                                                                   %! IndicatorCommand
+        bf,,!32                                                                                    %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
         % [_ PianoLHMusicVoice measure 5]                                                          %! _comment_measure_numbers
-        e,16
-        -\tenuto                                                                                   %! IndicatorCommand
+        e,16                                                                                       %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        af,!16
-        -\tenuto                                                                                   %! IndicatorCommand
+        af,!16                                                                                     %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        f16
-        -\tenuto                                                                                   %! IndicatorCommand
-        ]
-    }
-    \scaleDurations #'(1 . 1) {
+        f16                                                                                        %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        ]                                                                                          %! piano_rhythm
+    }                                                                                              %! piano_rhythm
+    \scaleDurations #'(1 . 1) {                                                                    %! piano_rhythm
         
         % [_ PianoLHMusicVoice measure 6]                                                          %! _comment_measure_numbers
-        r8
-    }
-    \times 8/10 {
+        r8                                                                                         %! piano_rhythm
+    }                                                                                              %! piano_rhythm
+    \times 8/10 {                                                                                  %! piano_rhythm
         
         % [_ PianoLHMusicVoice measure 7]                                                          %! _comment_measure_numbers
-        e16.
-        -\tenuto                                                                                   %! IndicatorCommand
-        [
+        e16.                                                                                       %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        [                                                                                          %! piano_rhythm
         
-        af!16.
-        -\tenuto                                                                                   %! IndicatorCommand
+        af!16.                                                                                     %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        b8
-        -\tenuto                                                                                   %! IndicatorCommand
-        ]
-    }
-    \times 8/14 {
+        b8                                                                                         %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        ]                                                                                          %! piano_rhythm
+    }                                                                                              %! piano_rhythm
+    \times 8/14 {                                                                                  %! piano_rhythm
         
         % [_ PianoLHMusicVoice measure 9]                                                          %! _comment_measure_numbers
-        e,16
-        -\tenuto                                                                                   %! IndicatorCommand
-        [
+        e,16                                                                                       %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        [                                                                                          %! piano_rhythm
         
-        b,16
-        -\tenuto                                                                                   %! IndicatorCommand
+        b,16                                                                                       %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        c16.
-        -\tenuto                                                                                   %! IndicatorCommand
+        c16.                                                                                       %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
         % [_ PianoLHMusicVoice measure 10]                                                         %! _comment_measure_numbers
-        d16.
-        -\tenuto                                                                                   %! IndicatorCommand
+        d16.                                                                                       %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        bf!8
-        -\tenuto                                                                                   %! IndicatorCommand
-        ]
-    }
-    \times 8/10 {
+        bf!8                                                                                       %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        ]                                                                                          %! piano_rhythm
+    }                                                                                              %! piano_rhythm
+    \times 8/10 {                                                                                  %! piano_rhythm
         
         % [_ PianoLHMusicVoice measure 11]                                                         %! _comment_measure_numbers
-        c,,32
-        -\tenuto                                                                                   %! IndicatorCommand
-        [
+        c,,32                                                                                      %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        [                                                                                          %! piano_rhythm
         
-        e,,32
-        -\tenuto                                                                                   %! IndicatorCommand
+        e,,32                                                                                      %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        b,,64
-        -\staccato                                                                                 %! IndicatorCommand
+        b,,64                                                                                      %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        d,64
-        -\staccato                                                                                 %! IndicatorCommand
+        d,64                                                                                       %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        ef,!64
-        -\staccato                                                                                 %! IndicatorCommand
+        ef,!64                                                                                     %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        bf,!64
-        -\staccato                                                                                 %! IndicatorCommand
+        bf,!64                                                                                     %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
-        cs!16
-        -\tenuto                                                                                   %! IndicatorCommand
+        cs!16                                                                                      %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        af!16
-        -\tenuto                                                                                   %! IndicatorCommand
+        af!16                                                                                      %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        a16
-        -\tenuto                                                                                   %! IndicatorCommand
-        ]
-    }
+        a16                                                                                        %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        ]                                                                                          %! piano_rhythm
+    }                                                                                              %! piano_rhythm
     
     % [_ PianoLHMusicVoice measure 13]                                                             %! _comment_measure_numbers
     r8
-    \times 8/9 {
+    \times 8/9 {                                                                                   %! piano_rhythm
         
         % [_ PianoLHMusicVoice measure 14]                                                         %! _comment_measure_numbers
         \override TupletBracket.shorten-pair = #'(0 . 0.6)                                         %! OverrideCommand(1)
-        d,,16.
-        -\tenuto                                                                                   %! IndicatorCommand
-        [
+        d,,16.                                                                                     %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
+        [                                                                                          %! piano_rhythm
         
-        g,,16.
-        -\tenuto                                                                                   %! IndicatorCommand
+        g,,16.                                                                                     %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        bf,,!32
-        -\tenuto                                                                                   %! IndicatorCommand
+        bf,,!32                                                                                    %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        f,32
-        -\tenuto                                                                                   %! IndicatorCommand
+        f,32                                                                                       %! piano_rhythm
+        - \tenuto                                                                                  %! IndicatorCommand
         
-        c64
-        -\staccato                                                                                 %! IndicatorCommand
+        c64                                                                                        %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         
         \override Score.SpanBar #'transparent = ##f                                                %! IndicatorCommand
         \once \override TextScript.extra-offset = #'(-9.5 . -4)
-        ef!64
-        -\staccato                                                                                 %! IndicatorCommand
+        ef!64                                                                                      %! piano_rhythm
+        - \staccato                                                                                %! IndicatorCommand
         _ \markup {                                                                                %! SCORE_2
             \override                                                                              %! SCORE_2
                 #'(font-name . "Palatino")                                                         %! SCORE_2
@@ -722,11 +722,11 @@ i_PianoLHMusicVoice = {
                                 }                                                                  %! SCORE_2
                         }                                                                          %! SCORE_2
             }                                                                                      %! SCORE_2
-        ]
+        ]                                                                                          %! piano_rhythm
         \revert TextScript.padding                                                                 %! OverrideCommand(2)
         \revert TupletBracket.shorten-pair                                                         %! OverrideCommand(2)
         
-    }
+    }                                                                                              %! piano_rhythm
 }
 
 

@@ -17,13 +17,13 @@ def violin_rhythm(include_rest=None):
 
     violin_rhythm = []
     for definition in definitions:
-        tuplet = maker(*definition)
+        tuplet = maker(*definition, tag='violin_rhythm')
         leaves = abjad.select(tuplet).leaves()
-        abjad.attach(abjad.Beam(), leaves)
+        abjad.attach(abjad.Beam(), leaves, tag='violin_rhythm')
         violin_rhythm.append(tuplet)
 
     if include_rest:
-        violin_rhythm.insert(-1, abjad.Rest('r8'))
+        violin_rhythm.insert(-1, abjad.Rest('r8', tag='violin_rhythm'))
 
     violin_rhythm = abjad.select(violin_rhythm)
     return violin_rhythm

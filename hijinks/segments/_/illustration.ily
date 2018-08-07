@@ -262,7 +262,7 @@ i_ViolinMusicVoice = {
 
 
 i_ViolinMusicStaff = {
-    \context Voice = "ViolinMusicVoice"
+    \context Voice = "ViolinMusicVoice"                                                            %! ScoreTemplate
     \i_ViolinMusicVoice                                                                            %! extern
 }
 
@@ -520,7 +520,7 @@ i_PianoRHMusicVoice = {
 
 
 i_PianoRHMusicStaff = {
-    \context Voice = "PianoRHMusicVoice"
+    \context Voice = "PianoRHMusicVoice"                                                           %! ScoreTemplate
     \i_PianoRHMusicVoice                                                                           %! extern
 }
 
@@ -731,6 +731,6 @@ i_PianoLHMusicVoice = {
 
 
 i_PianoLHMusicStaff = {
-    \context Voice = "PianoLHMusicVoice"
+    \context Voice = "PianoLHMusicVoice"                                                           %! ScoreTemplate
     \i_PianoLHMusicVoice                                                                           %! extern
 }

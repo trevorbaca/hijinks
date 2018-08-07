@@ -2,12 +2,12 @@
 % measure_count = 15
 
 
-\context Score = "Score"
-<<
-    \context GlobalContext = "GlobalContext"
-    <<
-        \context PageLayout = "PageLayout"
-        {   %*% PageLayout
+\context Score = "Score"                                                                 %! SingleStaffScoreTemplate
+<<                                                                                       %! SingleStaffScoreTemplate
+    \context GlobalContext = "GlobalContext"                                             %! _make_global_context
+    <<                                                                                   %! _make_global_context
+        \context PageLayout = "PageLayout"                                               %! _make_global_context
+        {   %*% PageLayout                                                               %! _make_global_context
             
             % [PageLayout measure 1]                                                     %! _comment_measure_numbers
             \autoPageBreaksOff                                                           %! BreakMeasureMap(1):BREAK
@@ -76,6 +76,6 @@
             \noBreak                                                                     %! BreakMeasureMap(2):BREAK
             s1 * 1/8                                                                     %! _make_global_skips(1)
             
-        }   %*% PageLayout
-    >>
->>
+        }   %*% PageLayout                                                               %! _make_global_context
+    >>                                                                                   %! _make_global_context
+>>                                                                                       %! SingleStaffScoreTemplate

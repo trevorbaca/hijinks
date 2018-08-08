@@ -493,7 +493,7 @@ i_PianoRHMusicVoice = {
     \times 8/14 {                                                                                  %! piano_rhythm
         
         % [_ PianoRHMusicVoice measure 14]                                                         %! _comment_measure_numbers
-        \override TupletBracket.shorten-pair = #'(0 . 0.6)                                         %! OverrideCommand(1)
+        \override TupletBracket.shorten-pair = #'(0 . 0.6)                                         %! baca_tuplet_bracket_shorten_pair:OverrideCommand(1)
         a''''32                                                                                    %! piano_rhythm
         - \tenuto                                                                                  %! IndicatorCommand
         [                                                                                          %! piano_rhythm
@@ -513,7 +513,7 @@ i_PianoRHMusicVoice = {
         cs'!8                                                                                      %! piano_rhythm
         - \tenuto                                                                                  %! IndicatorCommand
         ]                                                                                          %! piano_rhythm
-        \revert TupletBracket.shorten-pair                                                         %! OverrideCommand(2)
+        \revert TupletBracket.shorten-pair                                                         %! baca_tuplet_bracket_shorten_pair:OverrideCommand(2)
         
     }                                                                                              %! piano_rhythm
 }
@@ -530,7 +530,7 @@ i_PianoLHMusicVoice = {
     \times 6/7 {                                                                                   %! piano_rhythm
         
         % [_ PianoLHMusicVoice measure 1]                                                          %! _comment_measure_numbers
-        \override TextScript.padding = #2                                                          %! OverrideCommand(1)
+        \override TextScript.padding = #2                                                          %! text_script_padding:OverrideCommand(1)
         \clef "bass"                                                                               %! EXPLICIT_CLEF:_set_status_tag:IndicatorCommand
         \once \override PianoLHMusicStaff.Clef.color = #(x11-color 'blue)                          %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
     %@% \override PianoLHMusicStaff.Clef.color = ##f                                               %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
@@ -684,7 +684,7 @@ i_PianoLHMusicVoice = {
     \times 8/9 {                                                                                   %! piano_rhythm
         
         % [_ PianoLHMusicVoice measure 14]                                                         %! _comment_measure_numbers
-        \override TupletBracket.shorten-pair = #'(0 . 0.6)                                         %! OverrideCommand(1)
+        \override TupletBracket.shorten-pair = #'(0 . 0.6)                                         %! baca_tuplet_bracket_shorten_pair:OverrideCommand(1)
         d,,16.                                                                                     %! piano_rhythm
         - \tenuto                                                                                  %! IndicatorCommand
         [                                                                                          %! piano_rhythm
@@ -723,8 +723,8 @@ i_PianoLHMusicVoice = {
                         }                                                                          %! SCORE_2
             }                                                                                      %! SCORE_2
         ]                                                                                          %! piano_rhythm
-        \revert TextScript.padding                                                                 %! OverrideCommand(2)
-        \revert TupletBracket.shorten-pair                                                         %! OverrideCommand(2)
+        \revert TextScript.padding                                                                 %! text_script_padding:OverrideCommand(2)
+        \revert TupletBracket.shorten-pair                                                         %! baca_tuplet_bracket_shorten_pair:OverrideCommand(2)
         
     }                                                                                              %! piano_rhythm
 }

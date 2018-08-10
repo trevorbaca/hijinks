@@ -12,8 +12,8 @@
             % [PageLayout measure 1]                                                     %! _comment_measure_numbers
             \autoPageBreaksOff                                                           %! BreakMeasureMap(1):BREAK
             \noBreak                                                                     %! BreakMeasureMap(2):BREAK
-            \baca_lbsd #35 #'(4 20 22)                                                   %! IndicatorCommand:BREAK
-            \pageBreak                                                                   %! IndicatorCommand:BREAK
+            \baca_lbsd #35 #'(4 20 22)                                                   %! BREAK:IndicatorCommand
+            \pageBreak                                                                   %! BREAK:IndicatorCommand
             s1 * 1/8                                                                     %! _make_global_skips(1)
 
             % [PageLayout measure 2]                                                     %! _comment_measure_numbers
@@ -34,8 +34,8 @@
 
             % [PageLayout measure 6]                                                     %! _comment_measure_numbers
             \noBreak                                                                     %! BreakMeasureMap(2):BREAK
-            \baca_lbsd #85 #'(4 20 22)                                                   %! IndicatorCommand:BREAK
-            \break                                                                       %! IndicatorCommand:BREAK
+            \baca_lbsd #85 #'(4 20 22)                                                   %! BREAK:IndicatorCommand
+            \break                                                                       %! BREAK:IndicatorCommand
             s1 * 1/8                                                                     %! _make_global_skips(1)
 
             % [PageLayout measure 7]                                                     %! _comment_measure_numbers
@@ -56,8 +56,8 @@
 
             % [PageLayout measure 11]                                                    %! _comment_measure_numbers
             \noBreak                                                                     %! BreakMeasureMap(2):BREAK
-            \baca_lbsd #147.5 #'(4 20 22)                                                %! IndicatorCommand:BREAK
-            \break                                                                       %! IndicatorCommand:BREAK
+            \baca_lbsd #147.5 #'(4 20 22)                                                %! BREAK:IndicatorCommand
+            \break                                                                       %! BREAK:IndicatorCommand
             s1 * 1/8                                                                     %! _make_global_skips(1)
 
             % [PageLayout measure 12]                                                    %! _comment_measure_numbers

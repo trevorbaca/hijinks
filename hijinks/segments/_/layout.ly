@@ -12,7 +12,7 @@
             % [PageLayout measure 1]                                                     %! _comment_measure_numbers
             \autoPageBreaksOff                                                           %! BreakMeasureMap(1):BREAK
             \noBreak                                                                     %! BreakMeasureMap(2):BREAK
-            \baca_lbsd #35 #'(4 20 22)                                                   %! BREAK:IndicatorCommand
+            \baca-lbsd #35 #'(4 20 22)                                                   %! BREAK:IndicatorCommand
             \pageBreak                                                                   %! BREAK:IndicatorCommand
             s1 * 1/8                                                                     %! _make_global_skips(1)
 
@@ -34,7 +34,7 @@
 
             % [PageLayout measure 6]                                                     %! _comment_measure_numbers
             \noBreak                                                                     %! BreakMeasureMap(2):BREAK
-            \baca_lbsd #85 #'(4 20 22)                                                   %! BREAK:IndicatorCommand
+            \baca-lbsd #85 #'(4 20 22)                                                   %! BREAK:IndicatorCommand
             \break                                                                       %! BREAK:IndicatorCommand
             s1 * 1/8                                                                     %! _make_global_skips(1)
 
@@ -56,7 +56,7 @@
 
             % [PageLayout measure 11]                                                    %! _comment_measure_numbers
             \noBreak                                                                     %! BreakMeasureMap(2):BREAK
-            \baca_lbsd #147.5 #'(4 20 22)                                                %! BREAK:IndicatorCommand
+            \baca-lbsd #147.5 #'(4 20 22)                                                %! BREAK:IndicatorCommand
             \break                                                                       %! BREAK:IndicatorCommand
             s1 * 1/8                                                                     %! _make_global_skips(1)
 

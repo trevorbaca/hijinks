@@ -135,6 +135,7 @@ i_GlobalSkips = {                                                              %
 
 
 i_ViolinMusicVoice = {                                                         %! extern
+
     \times 4/5 {                                                               %! violin_rhythm
 
         % [_ ViolinMusicVoice measure 1]                                       %! _comment_measure_numbers
@@ -187,7 +188,9 @@ i_ViolinMusicVoice = {                                                         %
         fs'''!8                                                                %! violin_rhythm
         - \tenuto                                                              %! IndicatorCommand
         ]                                                                      %! violin_rhythm
+
     }                                                                          %! violin_rhythm
+
     \times 4/5 {                                                               %! violin_rhythm
 
         % [_ ViolinMusicVoice measure 5]                                       %! _comment_measure_numbers
@@ -209,7 +212,9 @@ i_ViolinMusicVoice = {                                                         %
         cs''''!16                                                              %! violin_rhythm
         - \staccato                                                            %! IndicatorCommand
         ]                                                                      %! violin_rhythm
+
     }                                                                          %! violin_rhythm
+
     \times 4/5 {                                                               %! violin_rhythm
 
         % [_ ViolinMusicVoice measure 9]                                       %! _comment_measure_numbers
@@ -226,10 +231,12 @@ i_ViolinMusicVoice = {                                                         %
         f'''8                                                                  %! violin_rhythm
         - \tenuto                                                              %! IndicatorCommand
         ]                                                                      %! violin_rhythm
+
     }                                                                          %! violin_rhythm
 
     % [_ ViolinMusicVoice measure 13]                                          %! _comment_measure_numbers
     r8                                                                         %! violin_rhythm
+
     \times 4/5 {                                                               %! violin_rhythm
 
         % [_ ViolinMusicVoice measure 14]                                      %! _comment_measure_numbers
@@ -242,16 +249,20 @@ i_ViolinMusicVoice = {                                                         %
         ]                                                                      %! violin_rhythm
 
     }                                                                          %! violin_rhythm
+
 }                                                                              %! extern
 
 
 i_ViolinMusicStaff = {                                                         %! extern
+
     \context Voice = "ViolinMusicVoice"                                        %! ScoreTemplate
     \i_ViolinMusicVoice                                                        %! extern
+
 }                                                                              %! extern
 
 
 i_PianoRHMusicVoice = {                                                        %! extern
+
     \times 8/10 {                                                              %! piano_rhythm
 
         % [_ PianoRHMusicVoice measure 1]                                      %! _comment_measure_numbers
@@ -312,7 +323,9 @@ i_PianoRHMusicVoice = {                                                        %
         ef'!32                                                                 %! piano_rhythm
         - \tenuto                                                              %! IndicatorCommand
         ]                                                                      %! piano_rhythm
+
     }                                                                          %! piano_rhythm
+
     \tweak text #tuplet-number::calc-fraction-text                             %! piano_rhythm
     \times 6/7 {                                                               %! piano_rhythm
 
@@ -333,7 +346,9 @@ i_PianoRHMusicVoice = {                                                        %
         f'16                                                                   %! piano_rhythm
         - \tenuto                                                              %! IndicatorCommand
         ]                                                                      %! piano_rhythm
+
     }                                                                          %! piano_rhythm
+
     \tweak text #tuplet-number::calc-fraction-text                             %! piano_rhythm
     \times 6/7 {                                                               %! piano_rhythm
 
@@ -356,7 +371,9 @@ i_PianoRHMusicVoice = {                                                        %
         ef'!64                                                                 %! piano_rhythm
         - \staccato                                                            %! IndicatorCommand
         ]                                                                      %! piano_rhythm
+
     }                                                                          %! piano_rhythm
+
     \times 8/11 {                                                              %! piano_rhythm
 
         % [_ PianoRHMusicVoice measure 6]                                      %! _comment_measure_numbers
@@ -397,7 +414,9 @@ i_PianoRHMusicVoice = {                                                        %
         bf'!64                                                                 %! piano_rhythm
         - \staccato                                                            %! IndicatorCommand
         ]                                                                      %! piano_rhythm
+
     }                                                                          %! piano_rhythm
+
     \tweak text #tuplet-number::calc-fraction-text                             %! piano_rhythm
     \times 6/8 {                                                               %! piano_rhythm
 
@@ -430,7 +449,9 @@ i_PianoRHMusicVoice = {                                                        %
         f'64                                                                   %! piano_rhythm
         - \staccato                                                            %! IndicatorCommand
         ]                                                                      %! piano_rhythm
+
     }                                                                          %! piano_rhythm
+
     \tweak text #tuplet-number::calc-fraction-text                             %! piano_rhythm
     \times 6/8 {                                                               %! piano_rhythm
 
@@ -456,7 +477,9 @@ i_PianoRHMusicVoice = {                                                        %
         ef'!64                                                                 %! piano_rhythm
         - \staccato                                                            %! IndicatorCommand
         ]                                                                      %! piano_rhythm
+
     }                                                                          %! piano_rhythm
+
     \times 8/14 {                                                              %! piano_rhythm
 
         % [_ PianoRHMusicVoice measure 11]                                     %! _comment_measure_numbers
@@ -470,10 +493,12 @@ i_PianoRHMusicVoice = {                                                        %
         f'8.                                                                   %! piano_rhythm
         - \tenuto                                                              %! IndicatorCommand
         ]                                                                      %! piano_rhythm
+
     }                                                                          %! piano_rhythm
 
     % [_ PianoRHMusicVoice measure 13]                                         %! _comment_measure_numbers
     r8
+
     \times 8/14 {                                                              %! piano_rhythm
 
         % [_ PianoRHMusicVoice measure 14]                                     %! _comment_measure_numbers
@@ -500,16 +525,20 @@ i_PianoRHMusicVoice = {                                                        %
         \revert TupletBracket.shorten-pair                                     %! baca_tuplet_bracket_shorten_pair:OverrideCommand(2)
 
     }                                                                          %! piano_rhythm
+
 }                                                                              %! extern
 
 
 i_PianoRHMusicStaff = {                                                        %! extern
+
     \context Voice = "PianoRHMusicVoice"                                       %! ScoreTemplate
     \i_PianoRHMusicVoice                                                       %! extern
+
 }                                                                              %! extern
 
 
 i_PianoLHMusicVoice = {                                                        %! extern
+
     \tweak text #tuplet-number::calc-fraction-text                             %! piano_rhythm
     \times 6/7 {                                                               %! piano_rhythm
 
@@ -541,7 +570,9 @@ i_PianoLHMusicVoice = {                                                        %
         a64                                                                    %! piano_rhythm
         - \staccato                                                            %! IndicatorCommand
         ]                                                                      %! piano_rhythm
+
     }                                                                          %! piano_rhythm
+
     \times 8/10 {                                                              %! piano_rhythm
 
         b,,16                                                                  %! piano_rhythm
@@ -566,7 +597,9 @@ i_PianoLHMusicVoice = {                                                        %
         bf!32                                                                  %! piano_rhythm
         - \tenuto                                                              %! IndicatorCommand
         ]                                                                      %! piano_rhythm
+
     }                                                                          %! piano_rhythm
+
     \times 6/9 {                                                               %! piano_rhythm
 
         c,,32                                                                  %! piano_rhythm
@@ -589,12 +622,16 @@ i_PianoLHMusicVoice = {                                                        %
         f16                                                                    %! piano_rhythm
         - \tenuto                                                              %! IndicatorCommand
         ]                                                                      %! piano_rhythm
+
     }                                                                          %! piano_rhythm
+
     \scaleDurations #'(1 . 1) {                                                %! piano_rhythm
 
         % [_ PianoLHMusicVoice measure 6]                                      %! _comment_measure_numbers
         r8                                                                     %! piano_rhythm
+
     }                                                                          %! piano_rhythm
+
     \times 8/10 {                                                              %! piano_rhythm
 
         % [_ PianoLHMusicVoice measure 7]                                      %! _comment_measure_numbers
@@ -608,7 +645,9 @@ i_PianoLHMusicVoice = {                                                        %
         b8                                                                     %! piano_rhythm
         - \tenuto                                                              %! IndicatorCommand
         ]                                                                      %! piano_rhythm
+
     }                                                                          %! piano_rhythm
+
     \times 8/14 {                                                              %! piano_rhythm
 
         % [_ PianoLHMusicVoice measure 9]                                      %! _comment_measure_numbers
@@ -629,7 +668,9 @@ i_PianoLHMusicVoice = {                                                        %
         bf!8                                                                   %! piano_rhythm
         - \tenuto                                                              %! IndicatorCommand
         ]                                                                      %! piano_rhythm
+
     }                                                                          %! piano_rhythm
+
     \times 8/10 {                                                              %! piano_rhythm
 
         % [_ PianoLHMusicVoice measure 11]                                     %! _comment_measure_numbers
@@ -661,10 +702,12 @@ i_PianoLHMusicVoice = {                                                        %
         a16                                                                    %! piano_rhythm
         - \tenuto                                                              %! IndicatorCommand
         ]                                                                      %! piano_rhythm
+
     }                                                                          %! piano_rhythm
 
     % [_ PianoLHMusicVoice measure 13]                                         %! _comment_measure_numbers
     r8
+
     \times 8/9 {                                                               %! piano_rhythm
 
         % [_ PianoLHMusicVoice measure 14]                                     %! _comment_measure_numbers
@@ -711,10 +754,13 @@ i_PianoLHMusicVoice = {                                                        %
         \revert TupletBracket.shorten-pair                                     %! baca_tuplet_bracket_shorten_pair:OverrideCommand(2)
 
     }                                                                          %! piano_rhythm
+
 }                                                                              %! extern
 
 
 i_PianoLHMusicStaff = {                                                        %! extern
+
     \context Voice = "PianoLHMusicVoice"                                       %! ScoreTemplate
     \i_PianoLHMusicVoice                                                       %! extern
+
 }                                                                              %! extern

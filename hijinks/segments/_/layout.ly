@@ -2,10 +2,13 @@
 % measure_count = 15
 
 
+
 \context Score = "Score"                                                                 %! SingleStaffScoreTemplate
 <<                                                                                       %! SingleStaffScoreTemplate
+
     \context GlobalContext = "GlobalContext"                                             %! _make_global_context
     <<                                                                                   %! _make_global_context
+
         \context PageLayout = "PageLayout"                                               %! _make_global_context
         {   %*% PageLayout                                                               %! _make_global_context
 
@@ -77,5 +80,7 @@
             s1 * 1/8                                                                     %! _make_global_skips(1)
 
         }   %*% PageLayout                                                               %! _make_global_context
+
     >>                                                                                   %! _make_global_context
+
 >>                                                                                       %! SingleStaffScoreTemplate

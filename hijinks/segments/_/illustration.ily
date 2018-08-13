@@ -139,12 +139,12 @@ i_ViolinMusicVoice = {                                                         %
     \times 4/5 {                                                               %! violin_rhythm
 
         % [_ ViolinMusicVoice measure 1]                                       %! _comment_measure_numbers
-        \set Staff.shortInstrumentName =                                       %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:-PARTS:IndicatorCommand
-        \markup {                                                              %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:-PARTS:IndicatorCommand
-            \hcenter-in                                                        %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:-PARTS:IndicatorCommand
-                #10                                                            %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:-PARTS:IndicatorCommand
-                Vn.                                                            %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:-PARTS:IndicatorCommand
-            }                                                                  %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:-PARTS:IndicatorCommand
+        \set Staff.shortInstrumentName =                                       %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca_margin_markup:-PARTS:IndicatorCommand
+        \markup {                                                              %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca_margin_markup:-PARTS:IndicatorCommand
+            \hcenter-in                                                        %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca_margin_markup:-PARTS:IndicatorCommand
+                #10                                                            %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca_margin_markup:-PARTS:IndicatorCommand
+                Vn.                                                            %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca_margin_markup:-PARTS:IndicatorCommand
+            }                                                                  %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca_margin_markup:-PARTS:IndicatorCommand
         \set Staff.instrumentName =                                            %! baca_start_markup:-PARTS:IndicatorCommand
         \markup {                                                              %! baca_start_markup:-PARTS:IndicatorCommand
             \hcenter-in                                                        %! baca_start_markup:-PARTS:IndicatorCommand
@@ -157,7 +157,7 @@ i_ViolinMusicVoice = {                                                         %
         \set ViolinMusicStaff.forceClef = ##t                                  %! DEFAULT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):attach_defaults
         \once \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'blue) %! EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
         bf'!4                                                                  %! violin_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         ^ \baca-default-indicator-markup "(“Violin”)"                          %! DEFAULT_INSTRUMENT_ALERT:_attach_latent_indicator_alert
         ^ \baca-explicit-indicator-markup "[“Vn.”]"                            %! EXPLICIT_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
         _ \markup {                                                            %! baca_markup:IndicatorCommand
@@ -171,22 +171,22 @@ i_ViolinMusicVoice = {                                                         %
             }                                                                  %! baca_markup:IndicatorCommand
         \override ViolinMusicStaff.Clef.color = #(x11-color 'violet)           %! DEFAULT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
         \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-        \set ViolinMusicStaff.shortInstrumentName =                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:IndicatorCommand
-        \markup {                                                              %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:IndicatorCommand
-            \hcenter-in                                                        %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:IndicatorCommand
-                #10                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:IndicatorCommand
-                Vn.                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:IndicatorCommand
-            }                                                                  %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:IndicatorCommand
+        \set ViolinMusicStaff.shortInstrumentName =                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca_margin_markup:-PARTS:IndicatorCommand
+        \markup {                                                              %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca_margin_markup:-PARTS:IndicatorCommand
+            \hcenter-in                                                        %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca_margin_markup:-PARTS:IndicatorCommand
+                #10                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca_margin_markup:-PARTS:IndicatorCommand
+                Vn.                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca_margin_markup:-PARTS:IndicatorCommand
+            }                                                                  %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca_margin_markup:-PARTS:IndicatorCommand
 
         c'''8                                                                  %! violin_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         [                                                                      %! violin_rhythm
 
         d'''8                                                                  %! violin_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         fs'''!8                                                                %! violin_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         ]                                                                      %! violin_rhythm
 
     }                                                                          %! violin_rhythm
@@ -195,22 +195,22 @@ i_ViolinMusicVoice = {                                                         %
 
         % [_ ViolinMusicVoice measure 5]                                       %! _comment_measure_numbers
         af''!8                                                                 %! violin_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         [                                                                      %! violin_rhythm
 
         g''8                                                                   %! violin_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         ]                                                                      %! violin_rhythm
 
         f'''4                                                                  %! violin_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         ef'''!16                                                               %! violin_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
         [                                                                      %! violin_rhythm
 
         cs''''!16                                                              %! violin_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
         ]                                                                      %! violin_rhythm
 
     }                                                                          %! violin_rhythm
@@ -219,17 +219,17 @@ i_ViolinMusicVoice = {                                                         %
 
         % [_ ViolinMusicVoice measure 9]                                       %! _comment_measure_numbers
         a'''4                                                                  %! violin_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         e''''8                                                                 %! violin_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         [                                                                      %! violin_rhythm
 
         b''8                                                                   %! violin_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         f'''8                                                                  %! violin_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         ]                                                                      %! violin_rhythm
 
     }                                                                          %! violin_rhythm
@@ -241,11 +241,11 @@ i_ViolinMusicVoice = {                                                         %
 
         % [_ ViolinMusicVoice measure 14]                                      %! _comment_measure_numbers
         fs'''!8.                                                               %! violin_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         [                                                                      %! violin_rhythm
 
         af''!8                                                                 %! violin_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         ]                                                                      %! violin_rhythm
 
     }                                                                          %! violin_rhythm
@@ -266,12 +266,12 @@ i_PianoRHMusicVoice = {                                                        %
     \times 8/10 {                                                              %! piano_rhythm
 
         % [_ PianoRHMusicVoice measure 1]                                      %! _comment_measure_numbers
-        \set PianoStaffGroup.shortInstrumentName =                             %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:-PARTS:IndicatorCommand
-        \markup {                                                              %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:-PARTS:IndicatorCommand
-            \hcenter-in                                                        %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:-PARTS:IndicatorCommand
-                #10                                                            %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:-PARTS:IndicatorCommand
-                Pf.                                                            %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:-PARTS:IndicatorCommand
-            }                                                                  %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:-PARTS:IndicatorCommand
+        \set PianoStaffGroup.shortInstrumentName =                             %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca_margin_markup:-PARTS:IndicatorCommand
+        \markup {                                                              %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca_margin_markup:-PARTS:IndicatorCommand
+            \hcenter-in                                                        %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca_margin_markup:-PARTS:IndicatorCommand
+                #10                                                            %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca_margin_markup:-PARTS:IndicatorCommand
+                Pf.                                                            %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca_margin_markup:-PARTS:IndicatorCommand
+            }                                                                  %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca_margin_markup:-PARTS:IndicatorCommand
         \set PianoStaffGroup.instrumentName =                                  %! baca_start_markup:-PARTS:IndicatorCommand
         \markup {                                                              %! baca_start_markup:-PARTS:IndicatorCommand
             \hcenter-in                                                        %! baca_start_markup:-PARTS:IndicatorCommand
@@ -284,7 +284,7 @@ i_PianoRHMusicVoice = {                                                        %
         \set PianoRHMusicStaff.forceClef = ##t                                 %! DEFAULT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):attach_defaults
         \once \override PianoStaffGroup.InstrumentName.color = #(x11-color 'blue) %! EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
         f'''16                                                                 %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         ^ \baca-explicit-indicator-markup "[“Pf.”]"                            %! EXPLICIT_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
         _ \markup {                                                            %! baca_markup:IndicatorCommand
             \line                                                              %! baca_markup:IndicatorCommand
@@ -298,30 +298,30 @@ i_PianoRHMusicVoice = {                                                        %
         [                                                                      %! piano_rhythm
         \override PianoRHMusicStaff.Clef.color = #(x11-color 'violet)          %! DEFAULT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
         \override PianoStaffGroup.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-        \set PianoStaffGroup.shortInstrumentName =                             %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:IndicatorCommand
-        \markup {                                                              %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:IndicatorCommand
-            \hcenter-in                                                        %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:IndicatorCommand
-                #10                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:IndicatorCommand
-                Pf.                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:IndicatorCommand
-            }                                                                  %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:IndicatorCommand
+        \set PianoStaffGroup.shortInstrumentName =                             %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca_margin_markup:-PARTS:IndicatorCommand
+        \markup {                                                              %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca_margin_markup:-PARTS:IndicatorCommand
+            \hcenter-in                                                        %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca_margin_markup:-PARTS:IndicatorCommand
+                #10                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca_margin_markup:-PARTS:IndicatorCommand
+                Pf.                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca_margin_markup:-PARTS:IndicatorCommand
+            }                                                                  %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca_margin_markup:-PARTS:IndicatorCommand
 
         c'''16                                                                 %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         bf''!16                                                                %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         e''32                                                                  %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         d''32                                                                  %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         cs''!32                                                                %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         ef'!32                                                                 %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         ]                                                                      %! piano_rhythm
 
     }                                                                          %! piano_rhythm
@@ -331,20 +331,20 @@ i_PianoRHMusicVoice = {                                                        %
 
         % [_ PianoRHMusicVoice measure 3]                                      %! _comment_measure_numbers
         cs'''!64                                                               %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
         [                                                                      %! piano_rhythm
 
         a''64                                                                  %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         e''16                                                                  %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         ef''!16                                                                %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         f'16                                                                   %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         ]                                                                      %! piano_rhythm
 
     }                                                                          %! piano_rhythm
@@ -353,23 +353,23 @@ i_PianoRHMusicVoice = {                                                        %
     \times 6/7 {                                                               %! piano_rhythm
 
         a''''16                                                                %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         [                                                                      %! piano_rhythm
 
         fs''''!16                                                              %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         g'''32                                                                 %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         b''32                                                                  %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         cs''!64                                                                %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         ef'!64                                                                 %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
         ]                                                                      %! piano_rhythm
 
     }                                                                          %! piano_rhythm
@@ -378,41 +378,41 @@ i_PianoRHMusicVoice = {                                                        %
 
         % [_ PianoRHMusicVoice measure 6]                                      %! _comment_measure_numbers
         e''''16                                                                %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         [                                                                      %! piano_rhythm
 
         cs''''!64                                                              %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         a'''64                                                                 %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         fs'''!64                                                               %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         f'''64                                                                 %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         ef'''!16                                                               %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         d'''16                                                                 %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         c'''32                                                                 %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         b''64                                                                  %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         af''!64                                                                %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         g''64                                                                  %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         bf'!64                                                                 %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
         ]                                                                      %! piano_rhythm
 
     }                                                                          %! piano_rhythm
@@ -422,32 +422,32 @@ i_PianoRHMusicVoice = {                                                        %
 
         % [_ PianoRHMusicVoice measure 8]                                      %! _comment_measure_numbers
         cs'''!16                                                               %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         [                                                                      %! piano_rhythm
 
         bf''!32                                                                %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         a''32                                                                  %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         fs''!32                                                                %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         ef''!32                                                                %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         d''64                                                                  %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         c''64                                                                  %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         g'64                                                                   %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         f'64                                                                   %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
         ]                                                                      %! piano_rhythm
 
     }                                                                          %! piano_rhythm
@@ -456,26 +456,26 @@ i_PianoRHMusicVoice = {                                                        %
     \times 6/8 {                                                               %! piano_rhythm
 
         fs'''!16                                                               %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         [                                                                      %! piano_rhythm
 
         g''16                                                                  %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         f''64                                                                  %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         cs''!64                                                                %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         a'16                                                                   %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         af'!64                                                                 %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         ef'!64                                                                 %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
         ]                                                                      %! piano_rhythm
 
     }                                                                          %! piano_rhythm
@@ -484,14 +484,14 @@ i_PianoRHMusicVoice = {                                                        %
 
         % [_ PianoRHMusicVoice measure 11]                                     %! _comment_measure_numbers
         g'16                                                                   %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         [                                                                      %! piano_rhythm
 
         fs'!8.                                                                 %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         f'8.                                                                   %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         ]                                                                      %! piano_rhythm
 
     }                                                                          %! piano_rhythm
@@ -504,23 +504,23 @@ i_PianoRHMusicVoice = {                                                        %
         % [_ PianoRHMusicVoice measure 14]                                     %! _comment_measure_numbers
         \override TupletBracket.shorten-pair = #'(0 . 0.6)                     %! baca_tuplet_bracket_shorten_pair:OverrideCommand(1)
         a''''32                                                                %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         [                                                                      %! piano_rhythm
 
         af'''!32                                                               %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         fs'''!16                                                               %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         b'16                                                                   %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         e'8                                                                    %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         cs'!8                                                                  %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         ]                                                                      %! piano_rhythm
         \revert TupletBracket.shorten-pair                                     %! baca_tuplet_bracket_shorten_pair:OverrideCommand(2)
 
@@ -544,31 +544,31 @@ i_PianoLHMusicVoice = {                                                        %
 
         % [_ PianoLHMusicVoice measure 1]                                      %! _comment_measure_numbers
         \override TextScript.padding = #2                                      %! text_script_padding:OverrideCommand(1)
-        \clef "bass"                                                           %! EXPLICIT_CLEF:_set_status_tag:IndicatorCommand
+        \clef "bass"                                                           %! EXPLICIT_CLEF:_set_status_tag:baca_clef:IndicatorCommand
         \once \override PianoLHMusicStaff.Clef.color = #(x11-color 'blue)      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
     %@% \override PianoLHMusicStaff.Clef.color = ##f                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-        \set PianoLHMusicStaff.forceClef = ##t                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):IndicatorCommand
+        \set PianoLHMusicStaff.forceClef = ##t                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca_clef:IndicatorCommand
         b,,,16                                                                 %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         ^ \baca-default-indicator-markup "(“Piano”)"                           %! DEFAULT_INSTRUMENT_ALERT:_attach_latent_indicator_alert
         [                                                                      %! piano_rhythm
         \override PianoLHMusicStaff.Clef.color = #(x11-color 'DeepSkyBlue2)    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
         fs,!32.                                                                %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         _ \markup {                                                            %! baca_markup:IndicatorCommand
             \italic                                                            %! baca_markup:IndicatorCommand
                 "ped. ad libitum"                                              %! baca_markup:IndicatorCommand
             }                                                                  %! baca_markup:IndicatorCommand
 
         af,!32.                                                                %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         g32.                                                                   %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         a64                                                                    %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
         ]                                                                      %! piano_rhythm
 
     }                                                                          %! piano_rhythm
@@ -576,26 +576,26 @@ i_PianoLHMusicVoice = {                                                        %
     \times 8/10 {                                                              %! piano_rhythm
 
         b,,16                                                                  %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         [                                                                      %! piano_rhythm
 
         g,16                                                                   %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         c32.                                                                   %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         d32.                                                                   %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         fs!32                                                                  %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         af!32                                                                  %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         bf!32                                                                  %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         ]                                                                      %! piano_rhythm
 
     }                                                                          %! piano_rhythm
@@ -603,24 +603,24 @@ i_PianoLHMusicVoice = {                                                        %
     \times 6/9 {                                                               %! piano_rhythm
 
         c,,32                                                                  %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         [                                                                      %! piano_rhythm
 
         d,,32                                                                  %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         bf,,!32                                                                %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         % [_ PianoLHMusicVoice measure 5]                                      %! _comment_measure_numbers
         e,16                                                                   %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         af,!16                                                                 %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         f16                                                                    %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         ]                                                                      %! piano_rhythm
 
     }                                                                          %! piano_rhythm
@@ -636,14 +636,14 @@ i_PianoLHMusicVoice = {                                                        %
 
         % [_ PianoLHMusicVoice measure 7]                                      %! _comment_measure_numbers
         e16.                                                                   %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         [                                                                      %! piano_rhythm
 
         af!16.                                                                 %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         b8                                                                     %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         ]                                                                      %! piano_rhythm
 
     }                                                                          %! piano_rhythm
@@ -652,21 +652,21 @@ i_PianoLHMusicVoice = {                                                        %
 
         % [_ PianoLHMusicVoice measure 9]                                      %! _comment_measure_numbers
         e,16                                                                   %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         [                                                                      %! piano_rhythm
 
         b,16                                                                   %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         c16.                                                                   %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         % [_ PianoLHMusicVoice measure 10]                                     %! _comment_measure_numbers
         d16.                                                                   %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         bf!8                                                                   %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         ]                                                                      %! piano_rhythm
 
     }                                                                          %! piano_rhythm
@@ -675,32 +675,32 @@ i_PianoLHMusicVoice = {                                                        %
 
         % [_ PianoLHMusicVoice measure 11]                                     %! _comment_measure_numbers
         c,,32                                                                  %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         [                                                                      %! piano_rhythm
 
         e,,32                                                                  %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         b,,64                                                                  %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         d,64                                                                   %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         ef,!64                                                                 %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         bf,!64                                                                 %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
         cs!16                                                                  %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         af!16                                                                  %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         a16                                                                    %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         ]                                                                      %! piano_rhythm
 
     }                                                                          %! piano_rhythm
@@ -713,25 +713,25 @@ i_PianoLHMusicVoice = {                                                        %
         % [_ PianoLHMusicVoice measure 14]                                     %! _comment_measure_numbers
         \override TupletBracket.shorten-pair = #'(0 . 0.6)                     %! baca_tuplet_bracket_shorten_pair:OverrideCommand(1)
         d,,16.                                                                 %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
         [                                                                      %! piano_rhythm
 
         g,,16.                                                                 %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         bf,,!32                                                                %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         f,32                                                                   %! piano_rhythm
-        - \tenuto                                                              %! IndicatorCommand
+        - \tenuto                                                              %! baca_tenuto:IndicatorCommand
 
         c64                                                                    %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
 
-        \override Score.SpanBar #'transparent = ##f                            %! IndicatorCommand
+        \override Score.SpanBar #'transparent = ##f                            %! baca_literal:IndicatorCommand
         \once \override TextScript.extra-offset = #'(-9.5 . -4)
         ef!64                                                                  %! piano_rhythm
-        - \staccato                                                            %! IndicatorCommand
+        - \staccato                                                            %! baca_staccato:IndicatorCommand
         _ \markup {                                                            %! SCORE_2
             \override                                                          %! SCORE_2
                 #'(font-name . "Palatino")                                     %! SCORE_2

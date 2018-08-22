@@ -10,13 +10,13 @@ metadata = abjad.OrderedDict(
                 'GlobalContext',
                 'GlobalSkips',
                 'MusicContext',
-                'ViolinMusicStaff',
-                'ViolinMusicVoice',
-                'PianoStaffGroup',
-                'PianoRHMusicStaff',
-                'PianoRHMusicVoice',
-                'PianoLHMusicStaff',
-                'PianoLHMusicVoice',
+                'Violin_Music_Staff',
+                'Violin_Music_Voice',
+                'Piano_Staff_Group',
+                'Piano_RH_Music_Staff',
+                'Piano_RH_Music_Voice',
+                'Piano_LH_Music_Staff',
+                'Piano_LH_Music_Voice',
                 ],
             ),
         (
@@ -31,35 +31,35 @@ metadata = abjad.OrderedDict(
             abjad.OrderedDict(
                 [
                     (
-                        'PianoLHMusicStaff',
+                        'Piano_LH_Music_Staff',
                         [
                             abjad.Momento(
-                                context='PianoLHMusicVoice',
+                                context='Piano_LH_Music_Voice',
                                 prototype='abjad.Clef',
                                 value='bass',
                                 ),
                             ],
                         ),
                     (
-                        'PianoRHMusicStaff',
+                        'Piano_RH_Music_Staff',
                         [
                             abjad.Momento(
-                                context='PianoRHMusicVoice',
+                                context='Piano_RH_Music_Voice',
                                 prototype='abjad.Clef',
                                 value='treble',
                                 ),
                             ],
                         ),
                     (
-                        'PianoStaffGroup',
+                        'Piano_Staff_Group',
                         [
                             abjad.Momento(
-                                context='PianoLHMusicVoice',
+                                context='Piano_LH_Music_Voice',
                                 manifest='instruments',
                                 value='Piano',
                                 ),
                             abjad.Momento(
-                                context='PianoRHMusicVoice',
+                                context='Piano_RH_Music_Voice',
                                 edition=abjad.Tag('-PARTS'),
                                 manifest='margin_markups',
                                 value='Pf.',
@@ -82,21 +82,21 @@ metadata = abjad.OrderedDict(
                             ],
                         ),
                     (
-                        'ViolinMusicStaff',
+                        'Violin_Music_Staff',
                         [
                             abjad.Momento(
-                                context='ViolinMusicVoice',
+                                context='Violin_Music_Voice',
                                 edition=abjad.Tag('-PARTS'),
                                 manifest='margin_markups',
                                 value='Vn.',
                                 ),
                             abjad.Momento(
-                                context='ViolinMusicVoice',
+                                context='Violin_Music_Voice',
                                 manifest='instruments',
                                 value='Violin',
                                 ),
                             abjad.Momento(
-                                context='ViolinMusicVoice',
+                                context='Violin_Music_Voice',
                                 prototype='abjad.Clef',
                                 value='treble',
                                 ),
@@ -111,9 +111,9 @@ metadata = abjad.OrderedDict(
             'sounds_during_segment',
             abjad.OrderedDict(
                 [
-                    ('PianoLHMusicVoice', True),
-                    ('PianoRHMusicVoice', True),
-                    ('ViolinMusicVoice', True),
+                    ('Piano_LH_Music_Voice', True),
+                    ('Piano_RH_Music_Voice', True),
+                    ('Violin_Music_Voice', True),
                     ]
                 ),
             ),

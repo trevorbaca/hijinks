@@ -27,17 +27,17 @@
             \context MusicContext = "MusicContext"                             %! ScoreTemplate
             <<                                                                 %! ScoreTemplate
 
-                \context ViolinMusicStaff = "ViolinMusicStaff"                 %! ScoreTemplate
-                \i_ViolinMusicStaff                                            %! extern
+                \context ViolinMusicStaff = "Violin_Music_Staff"               %! ScoreTemplate
+                \i_Violin_Music_Staff                                          %! extern
 
-                \context PianoStaffGroup = "PianoStaffGroup"                   %! ScoreTemplate
+                \context PianoStaffGroup = "Piano_Staff_Group"                 %! ScoreTemplate
                 <<                                                             %! ScoreTemplate
 
-                    \context PianoRHMusicStaff = "PianoRHMusicStaff"           %! ScoreTemplate
-                    \i_PianoRHMusicStaff                                       %! extern
+                    \context PianoRHMusicStaff = "Piano_RH_Music_Staff"        %! ScoreTemplate
+                    \i_Piano_RH_Music_Staff                                    %! extern
 
-                    \context PianoLHMusicStaff = "PianoLHMusicStaff"           %! ScoreTemplate
-                    \i_PianoLHMusicStaff                                       %! extern
+                    \context PianoLHMusicStaff = "Piano_LH_Music_Staff"        %! ScoreTemplate
+                    \i_Piano_LH_Music_Staff                                    %! extern
 
                 >>                                                             %! ScoreTemplate
 

@@ -285,6 +285,7 @@ i_Piano_RH_Music_Voice = {                                                     %
         \once \override PianoStaffGroup.InstrumentName.color = #(x11-color 'blue) %! EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
         f'''16                                                                 %! piano_rhythm
         - \tenuto                                                              %! baca_tenuto:IndicatorCommand
+        ^ \baca-default-indicator-markup "(“Piano”)"                           %! DEFAULT_INSTRUMENT_ALERT:_attach_latent_indicator_alert
         ^ \baca-explicit-indicator-markup "[“Pf.”]"                            %! EXPLICIT_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
         _ \markup {                                                            %! baca_markup:IndicatorCommand
             \line                                                              %! baca_markup:IndicatorCommand
@@ -550,7 +551,6 @@ i_Piano_LH_Music_Voice = {                                                     %
         \set PianoLHMusicStaff.forceClef = ##t                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca_clef:IndicatorCommand
         b,,,16                                                                 %! piano_rhythm
         - \tenuto                                                              %! baca_tenuto:IndicatorCommand
-        ^ \baca-default-indicator-markup "(“Piano”)"                           %! DEFAULT_INSTRUMENT_ALERT:_attach_latent_indicator_alert
         [                                                                      %! piano_rhythm
         \override PianoLHMusicStaff.Clef.color = #(x11-color 'DeepSkyBlue2)    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 

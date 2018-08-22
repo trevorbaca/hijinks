@@ -22,16 +22,16 @@ class ScoreTemplate(baca.ScoreTemplate):
         >>> abjad.f(lilypond_file[abjad.Score], strict=79)
         \context Score = "Score"                                                       %! ScoreTemplate
         <<                                                                             %! ScoreTemplate
-            \context GlobalContext = "GlobalContext"                                   %! _make_global_context
+            \context GlobalContext = "Global_Context"                                  %! _make_global_context
             <<                                                                         %! _make_global_context
-                \context GlobalRests = "GlobalRests"                                   %! _make_global_context
+                \context GlobalRests = "Global_Rests"                                  %! _make_global_context
                 {                                                                      %! _make_global_context
                 }                                                                      %! _make_global_context
-                \context GlobalSkips = "GlobalSkips"                                   %! _make_global_context
+                \context GlobalSkips = "Global_Skips"                                  %! _make_global_context
                 {                                                                      %! _make_global_context
                 }                                                                      %! _make_global_context
             >>                                                                         %! _make_global_context
-            \context MusicContext = "MusicContext"                                     %! ScoreTemplate
+            \context MusicContext = "Music_Context"                                    %! ScoreTemplate
             <<                                                                         %! ScoreTemplate
                 \context ViolinMusicStaff = "Violin_Music_Staff"                       %! ScoreTemplate
                 {                                                                      %! ScoreTemplate
@@ -159,7 +159,7 @@ class ScoreTemplate(baca.ScoreTemplate):
             [violin_music_staff, piano_staff_group],
             lilypond_type='MusicContext',
             is_simultaneous=True,
-            name='MusicContext',
+            name='Music_Context',
             tag=tag,
             )
 

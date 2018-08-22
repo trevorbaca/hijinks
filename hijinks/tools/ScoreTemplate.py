@@ -33,27 +33,27 @@ class ScoreTemplate(baca.ScoreTemplate):
             >>                                                                         %! _make_global_context
             \context MusicContext = "MusicContext"                                     %! ScoreTemplate
             <<                                                                         %! ScoreTemplate
-                \context ViolinMusicStaff = "ViolinMusicStaff"                         %! ScoreTemplate
+                \context ViolinMusicStaff = "Violin_Music_Staff"                       %! ScoreTemplate
                 {                                                                      %! ScoreTemplate
-                    \context Voice = "ViolinMusicVoice"                                %! ScoreTemplate
+                    \context Voice = "Violin_Music_Voice"                              %! ScoreTemplate
                     {                                                                  %! ScoreTemplate
                         \clef "treble"                                                 %! attach_defaults
                         s1                                                             %! ScoreTemplate.__illustrate__
                     }                                                                  %! ScoreTemplate
                 }                                                                      %! ScoreTemplate
-                \context PianoStaffGroup = "PianoStaffGroup"                           %! ScoreTemplate
+                \context PianoStaffGroup = "Piano_Staff_Group"                         %! ScoreTemplate
                 <<                                                                     %! ScoreTemplate
-                    \context PianoRHMusicStaff = "PianoRHMusicStaff"                   %! ScoreTemplate
+                    \context PianoRHMusicStaff = "Piano_RH_Music_Staff"                %! ScoreTemplate
                     {                                                                  %! ScoreTemplate
-                        \context Voice = "PianoRHMusicVoice"                           %! ScoreTemplate
+                        \context Voice = "Piano_RH_Music_Voice"                        %! ScoreTemplate
                         {                                                              %! ScoreTemplate
                             \clef "treble"                                             %! attach_defaults
                             s1                                                         %! ScoreTemplate.__illustrate__
                         }                                                              %! ScoreTemplate
                     }                                                                  %! ScoreTemplate
-                    \context PianoLHMusicStaff = "PianoLHMusicStaff"                   %! ScoreTemplate
+                    \context PianoLHMusicStaff = "Piano_LH_Music_Staff"                %! ScoreTemplate
                     {                                                                  %! ScoreTemplate
-                        \context Voice = "PianoLHMusicVoice"                           %! ScoreTemplate
+                        \context Voice = "Piano_LH_Music_Voice"                        %! ScoreTemplate
                         {                                                              %! ScoreTemplate
                             \clef "treble"                                             %! attach_defaults
                             s1                                                         %! ScoreTemplate.__illustrate__
@@ -74,9 +74,9 @@ class ScoreTemplate(baca.ScoreTemplate):
     def __init__(self):
         super(ScoreTemplate, self).__init__()
         self.voice_abbreviations.update({
-            'vn': 'ViolinMusicVoice',
-            'rh': 'PianoRHMusicVoice',
-            'lh': 'PianoLHMusicVoice',
+            'vn': 'Violin_Music_Voice',
+            'rh': 'Piano_RH_Music_Voice',
+            'lh': 'Piano_LH_Music_Voice',
             })
 
     ### SPECIAL METHODS ###
@@ -90,10 +90,14 @@ class ScoreTemplate(baca.ScoreTemplate):
         global_context = self._make_global_context()
 
         # VIOLIN
+        violin_music_voice = abjad.Voice(
+            name='Violin_Music_Voice',
+            tag=tag,
+            )
         violin_music_staff = abjad.Staff(
-            [abjad.Voice(name='ViolinMusicVoice', tag=tag)],
+            [violin_music_voice],
             lilypond_type='ViolinMusicStaff',
-            name='ViolinMusicStaff',
+            name='Violin_Music_Staff',
             tag=tag,
             )
         abjad.annotate(
@@ -108,22 +112,30 @@ class ScoreTemplate(baca.ScoreTemplate):
             )
 
         # PIANO
+        piano_rh_music_voice = abjad.Voice(
+            name='Piano_RH_Music_Voice',
+            tag=tag,
+            )
         piano_rh_music_staff = abjad.Staff(
-            [abjad.Voice(name='PianoRHMusicVoice', tag=tag)],
+            [piano_rh_music_voice],
             lilypond_type='PianoRHMusicStaff',
-            name='PianoRHMusicStaff',
+            name='Piano_RH_Music_Staff',
+            tag=tag,
+            )
+        piano_lh_music_voice = abjad.Voice(
+            name='Piano_LH_Music_Voice',
             tag=tag,
             )
         piano_lh_music_staff = abjad.Staff(
-            [abjad.Voice(name='PianoLHMusicVoice', tag=tag)],
+            [piano_lh_music_voice],
             lilypond_type='PianoLHMusicStaff',
-            name='PianoLHMusicStaff',
+            name='Piano_LH_Music_Staff',
             tag=tag,
             )
         piano_staff_group = abjad.StaffGroup(
             [piano_rh_music_staff, piano_lh_music_staff],
             lilypond_type='PianoStaffGroup',
-            name='PianoStaffGroup',
+            name='Piano_Staff_Group',
             tag=tag,
             )
         abjad.annotate(

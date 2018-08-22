@@ -54,15 +54,15 @@ metadata = abjad.OrderedDict(
                         'Piano_Staff_Group',
                         [
                             abjad.Momento(
-                                context='Piano_LH_Music_Voice',
-                                manifest='instruments',
-                                value='Piano',
-                                ),
-                            abjad.Momento(
                                 context='Piano_RH_Music_Voice',
                                 edition=abjad.Tag('-PARTS'),
                                 manifest='margin_markups',
                                 value='Pf.',
+                                ),
+                            abjad.Momento(
+                                context='Piano_RH_Music_Voice',
+                                manifest='instruments',
+                                value='Piano',
                                 ),
                             ],
                         ),

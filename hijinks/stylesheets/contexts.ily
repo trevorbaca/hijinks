@@ -7,20 +7,13 @@
     \context {
         \name GlobalSkips
         \type Engraver_group
-        \consists Staff_symbol_engraver
         \consists Script_engraver
         \consists Text_engraver
-        \consists Text_spanner_engraver
-
-        \override StaffSymbol.stencil = ##f
+        \consists \alternateTextSpannerEngraver
 
         \override TextScript.font-size = 6
-        \override TextScript.outside-staff-priority = 600
-        \override TextScript.staff-padding = 3
 
-        \override TextSpanner.bound-details.right.attach-dir = #LEFT
         \override TextSpanner.font-size = 6
-        \override TextSpanner.staff-padding = 4
         }
 
     % GLOBAL RESTS
@@ -42,7 +35,9 @@
         \name PageLayout
         \type Engraver_group
         \consists Text_engraver
-        \consists Text_spanner_engraver
+        \consists \alternateTextSpannerEngraver
+        
+        \override TextSpanner.font-size = 6
         }
 
     % GLOBAL CONTEXT
@@ -50,8 +45,6 @@
         \name GlobalContext
         \type Engraver_group
         \consists Axis_group_engraver
-        \consists Mark_engraver
-        \consists Metronome_mark_engraver
         % prevents LilyPond cyclic chain in pure-Y-offset callbacks warning:
         \consists Staff_collecting_engraver
         \consists Time_signature_engraver
@@ -59,36 +52,13 @@
         \accepts GlobalRests
         \accepts PageLayout
 
-        \override MetronomeMark.X-extent = #'(0 . 0)
-        \override MetronomeMark.Y-extent = #'(0 . 0)
-        \override MetronomeMark.break-align-symbols = #'(left-edge)
-        \override MetronomeMark.extra-offset = #'(0 . 4)
-        \override MetronomeMark.font-size = 3
-
-        \override RehearsalMark.X-extent = #'(0 . 0)
-        \override RehearsalMark.Y-extent = #'(0 . 0)
-        \override RehearsalMark.break-align-symbols = #'(time-signature)
-        \override RehearsalMark.break-visibility = #end-of-line-invisible
-        \override RehearsalMark.font-name = "Didot"
-        \override RehearsalMark.font-size = 10
-        \override RehearsalMark.outside-staff-priority = 200
-        \override RehearsalMark.self-alignment-X = #center
-
-        %\override TimeSignature.X-extent = #'(0 . 0)
+        % prevents StaffSymbol from starting too early after cut-away measures:
         \override TimeSignature.X-extent = ##f
         \override TimeSignature.break-align-symbol = #'left-edge
         \override TimeSignature.break-visibility = #end-of-line-invisible
         \override TimeSignature.font-size = 3
         \override TimeSignature.space-alist.clef = #'(extra-space . 0.5)
         \override TimeSignature.style = #'numbered
-
-        \override VerticalAxisGroup.default-staff-staff-spacing = #'(
-            (basic-distance . 0)
-            (minimum-distance . 0) % distance below time signature context
-            (padding . 0)
-            (stretchability . 0)
-        )
-        %\override VerticalAxisGroup.minimum-Y-extent = #'(-4 . 4)
     }
 
     % VOICE
@@ -188,7 +158,7 @@
         \override Glissando.breakable = ##t
         \override Glissando.thickness = 3
 
-        \override MetronomeMark.padding = 4
+        \override Hairpin.to-barline = ##f
 
         \override NoteCollision.merge-differently-dotted = ##t
 

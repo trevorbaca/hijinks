@@ -19,7 +19,7 @@ def violin_rhythm(include_rest=None):
     for definition in definitions:
         tuplet = maker(*definition, tag='violin_rhythm')
         leaves = abjad.select(tuplet).leaves()
-        abjad.attach(abjad.Beam(), leaves, tag='violin_rhythm')
+        abjad.beam(leaves, tag='violin_rhythm')
         violin_rhythm.append(tuplet)
 
     if include_rest:

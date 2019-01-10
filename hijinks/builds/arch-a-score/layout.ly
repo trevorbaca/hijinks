@@ -1,84 +1,89 @@
-% time_signatures = ['1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8']
+% page_count = 1
 % measure_count = 15
+% time_signatures = [
+% '1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8',
+%  '1/8', '1/8', '1/8', '1/8'
+%  ]
 
 
-\context Score = "Score"
-<<
-    \context GlobalContext = "GlobalContext"
-    <<
-        \context PageLayout = "PageLayout"
-        {   %*% PageLayout
-            
-            % [PageLayout measure 1]                                                     %! SM4
-            \autoPageBreaksOff                                                           %! BMM1:BREAK
-            \noBreak                                                                     %! BMM2:BREAK
-            \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details      %! IC:BREAK
-            #'((Y-offset . 40) (alignment-distances . (4 20 22)))                        %! IC:BREAK
-            \pageBreak                                                                   %! IC:BREAK
-            s1 * 1/8
-            
-            % [PageLayout measure 2]                                                     %! SM4
-            \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8
-            
-            % [PageLayout measure 3]                                                     %! SM4
-            \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8
-            
-            % [PageLayout measure 4]                                                     %! SM4
-            \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8
-            
-            % [PageLayout measure 5]                                                     %! SM4
-            \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8
-            
-            % [PageLayout measure 6]                                                     %! SM4
-            \noBreak                                                                     %! BMM2:BREAK
-            \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details      %! IC:BREAK
-            #'((Y-offset . 100) (alignment-distances . (4 20 22)))                       %! IC:BREAK
-            \break                                                                       %! IC:BREAK
-            s1 * 1/8
-            
-            % [PageLayout measure 7]                                                     %! SM4
-            \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8
-            
-            % [PageLayout measure 8]                                                     %! SM4
-            \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8
-            
-            % [PageLayout measure 9]                                                     %! SM4
-            \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8
-            
-            % [PageLayout measure 10]                                                    %! SM4
-            \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8
-            
-            % [PageLayout measure 11]                                                    %! SM4
-            \noBreak                                                                     %! BMM2:BREAK
-            \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details      %! IC:BREAK
-            #'((Y-offset . 167.5) (alignment-distances . (4 20 22)))                     %! IC:BREAK
-            \break                                                                       %! IC:BREAK
-            s1 * 1/8
-            
-            % [PageLayout measure 12]                                                    %! SM4
-            \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8
-            
-            % [PageLayout measure 13]                                                    %! SM4
-            \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8
-            
-            % [PageLayout measure 14]                                                    %! SM4
-            \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8
-            
-            % [PageLayout measure 15]                                                    %! SM4
-            \noBreak                                                                     %! BMM2:BREAK
-            s1 * 1/8
-            
-        }   %*% PageLayout
-    >>
->>
+\context Score = "Score"                                                       %! SingleStaffScoreTemplate
+<<                                                                             %! SingleStaffScoreTemplate
+
+    \context GlobalContext = "Global_Context"                                  %! _make_global_context
+    <<                                                                         %! _make_global_context
+
+        \context PageLayout = "Page_Layout"                                    %! _make_global_context
+        {   %*% Page_Layout                                                    %! _make_global_context
+
+            % [Page_Layout measure 1]                                          %! _comment_measure_numbers
+            \autoPageBreaksOff                                                 %! BreakMeasureMap(1):BREAK
+            \noBreak                                                           %! BreakMeasureMap(2):BREAK
+            \baca-lbsd #40 #'(4 20 22)                                         %! BREAK:IndicatorCommand
+            \pageBreak                                                         %! BREAK:IndicatorCommand
+            s1 * 1/8                                                           %! _make_global_skips(1)
+
+            % [Page_Layout measure 2]                                          %! _comment_measure_numbers
+            \noBreak                                                           %! BreakMeasureMap(2):BREAK
+            s1 * 1/8                                                           %! _make_global_skips(1)
+
+            % [Page_Layout measure 3]                                          %! _comment_measure_numbers
+            \noBreak                                                           %! BreakMeasureMap(2):BREAK
+            s1 * 1/8                                                           %! _make_global_skips(1)
+
+            % [Page_Layout measure 4]                                          %! _comment_measure_numbers
+            \noBreak                                                           %! BreakMeasureMap(2):BREAK
+            s1 * 1/8                                                           %! _make_global_skips(1)
+
+            % [Page_Layout measure 5]                                          %! _comment_measure_numbers
+            \noBreak                                                           %! BreakMeasureMap(2):BREAK
+            s1 * 1/8                                                           %! _make_global_skips(1)
+
+            % [Page_Layout measure 6]                                          %! _comment_measure_numbers
+            \noBreak                                                           %! BreakMeasureMap(2):BREAK
+            \baca-lbsd #100 #'(4 20 22)                                        %! BREAK:IndicatorCommand
+            \break                                                             %! BREAK:IndicatorCommand
+            s1 * 1/8                                                           %! _make_global_skips(1)
+
+            % [Page_Layout measure 7]                                          %! _comment_measure_numbers
+            \noBreak                                                           %! BreakMeasureMap(2):BREAK
+            s1 * 1/8                                                           %! _make_global_skips(1)
+
+            % [Page_Layout measure 8]                                          %! _comment_measure_numbers
+            \noBreak                                                           %! BreakMeasureMap(2):BREAK
+            s1 * 1/8                                                           %! _make_global_skips(1)
+
+            % [Page_Layout measure 9]                                          %! _comment_measure_numbers
+            \noBreak                                                           %! BreakMeasureMap(2):BREAK
+            s1 * 1/8                                                           %! _make_global_skips(1)
+
+            % [Page_Layout measure 10]                                         %! _comment_measure_numbers
+            \noBreak                                                           %! BreakMeasureMap(2):BREAK
+            s1 * 1/8                                                           %! _make_global_skips(1)
+
+            % [Page_Layout measure 11]                                         %! _comment_measure_numbers
+            \noBreak                                                           %! BreakMeasureMap(2):BREAK
+            \baca-lbsd #167.5 #'(4 20 22)                                      %! BREAK:IndicatorCommand
+            \break                                                             %! BREAK:IndicatorCommand
+            s1 * 1/8                                                           %! _make_global_skips(1)
+
+            % [Page_Layout measure 12]                                         %! _comment_measure_numbers
+            \noBreak                                                           %! BreakMeasureMap(2):BREAK
+            s1 * 1/8                                                           %! _make_global_skips(1)
+
+            % [Page_Layout measure 13]                                         %! _comment_measure_numbers
+            \noBreak                                                           %! BreakMeasureMap(2):BREAK
+            s1 * 1/8                                                           %! _make_global_skips(1)
+
+            % [Page_Layout measure 14]                                         %! _comment_measure_numbers
+            \noBreak                                                           %! BreakMeasureMap(2):BREAK
+            s1 * 1/8                                                           %! _make_global_skips(1)
+
+            % [Page_Layout measure 15]                                         %! _comment_measure_numbers
+            \noBreak                                                           %! BreakMeasureMap(2):BREAK
+            s1 * 1/8                                                           %! _make_global_skips(1)
+
+        }   %*% Page_Layout                                                    %! _make_global_context
+
+    >>                                                                         %! _make_global_context
+
+>>                                                                             %! SingleStaffScoreTemplate

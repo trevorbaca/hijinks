@@ -244,10 +244,10 @@ i_Violin_Music_Voice = {                                                       %
                 #10                                                            %! baca_start_markup:-PARTS:IndicatorCommand
                 Violin                                                         %! baca_start_markup:-PARTS:IndicatorCommand
             }                                                                  %! baca_start_markup:-PARTS:IndicatorCommand
-        \clef "treble"                                                         %! DEFAULT_CLEF:_set_status_tag:attach_defaults
+        \clef "treble"                                                         %! DEFAULT_CLEF:_set_status_tag:abjad.ScoreTemplate.attach_defaults
         \once \override ViolinMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! DEFAULT_CLEF_COLOR:_attach_color_literal(2)
     %@% \override ViolinMusicStaff.Clef.color = ##f                            %! DEFAULT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-        \set ViolinMusicStaff.forceClef = ##t                                  %! DEFAULT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):attach_defaults
+        \set ViolinMusicStaff.forceClef = ##t                                  %! DEFAULT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):abjad.ScoreTemplate.attach_defaults
         \once \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'blue) %! EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
         bf'!4                                                                  %! violin_rhythm
         - \tenuto                                                              %! baca_tenuto:IndicatorCommand
@@ -371,10 +371,10 @@ i_Piano_RH_Music_Voice = {                                                     %
                 #10                                                            %! baca_start_markup:-PARTS:IndicatorCommand
                 Piano                                                          %! baca_start_markup:-PARTS:IndicatorCommand
             }                                                                  %! baca_start_markup:-PARTS:IndicatorCommand
-        \clef "treble"                                                         %! DEFAULT_CLEF:_set_status_tag:attach_defaults
+        \clef "treble"                                                         %! DEFAULT_CLEF:_set_status_tag:abjad.ScoreTemplate.attach_defaults
         \once \override PianoRHMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! DEFAULT_CLEF_COLOR:_attach_color_literal(2)
     %@% \override PianoRHMusicStaff.Clef.color = ##f                           %! DEFAULT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-        \set PianoRHMusicStaff.forceClef = ##t                                 %! DEFAULT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):attach_defaults
+        \set PianoRHMusicStaff.forceClef = ##t                                 %! DEFAULT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):abjad.ScoreTemplate.attach_defaults
         \once \override PianoStaffGroup.InstrumentName.color = #(x11-color 'blue) %! EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
         f'''16                                                                 %! piano_rhythm
         - \tenuto                                                              %! baca_tenuto:IndicatorCommand

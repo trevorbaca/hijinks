@@ -6,14 +6,14 @@
 %  ]
 
 
-\context Score = "Score"                                                       %! SingleStaffScoreTemplate
-<<                                                                             %! SingleStaffScoreTemplate
+\context Score = "Score"                                                       %! baca.SingleStaffScoreTemplate.__call__
+<<                                                                             %! baca.SingleStaffScoreTemplate.__call__
 
-    \context GlobalContext = "Global_Context"                                  %! _make_global_context
-    <<                                                                         %! _make_global_context
+    \context GlobalContext = "Global_Context"                                  %! abjad.ScoreTemplate._make_global_context
+    <<                                                                         %! abjad.ScoreTemplate._make_global_context
 
-        \context PageLayout = "Page_Layout"                                    %! _make_global_context
-        {   %*% Page_Layout                                                    %! _make_global_context
+        \context PageLayout = "Page_Layout"                                    %! abjad.ScoreTemplate._make_global_context
+        {   %*% Page_Layout                                                    %! abjad.ScoreTemplate._make_global_context
 
             % [Page_Layout measure 1]                                          %! _comment_measure_numbers
             \autoPageBreaksOff                                                 %! BreakMeasureMap(1):BREAK
@@ -82,8 +82,8 @@
             \noBreak                                                           %! BreakMeasureMap(2):BREAK
             s1 * 1/8                                                           %! _make_global_skips(1)
 
-        }   %*% Page_Layout                                                    %! _make_global_context
+        }   %*% Page_Layout                                                    %! abjad.ScoreTemplate._make_global_context
 
-    >>                                                                         %! _make_global_context
+    >>                                                                         %! abjad.ScoreTemplate._make_global_context
 
->>                                                                             %! SingleStaffScoreTemplate
+>>                                                                             %! baca.SingleStaffScoreTemplate.__call__

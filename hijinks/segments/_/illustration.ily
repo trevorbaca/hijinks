@@ -348,7 +348,7 @@ i_Violin_Music_Voice = {                                                       %
 
 i_Violin_Music_Staff = {                                                       %! abjad.Path.extern
 
-    \context Voice = "Violin_Music_Voice"                                      %! ScoreTemplate
+    \context Voice = "Violin_Music_Voice"                                      %! hijinks.ScoreTemplate.__call__
     \i_Violin_Music_Voice                                                      %! abjad.Path.extern
 
 }                                                                              %! abjad.Path.extern
@@ -625,7 +625,7 @@ i_Piano_RH_Music_Voice = {                                                     %
 
 i_Piano_RH_Music_Staff = {                                                     %! abjad.Path.extern
 
-    \context Voice = "Piano_RH_Music_Voice"                                    %! ScoreTemplate
+    \context Voice = "Piano_RH_Music_Voice"                                    %! hijinks.ScoreTemplate.__call__
     \i_Piano_RH_Music_Voice                                                    %! abjad.Path.extern
 
 }                                                                              %! abjad.Path.extern
@@ -853,7 +853,7 @@ i_Piano_LH_Music_Voice = {                                                     %
 
 i_Piano_LH_Music_Staff = {                                                     %! abjad.Path.extern
 
-    \context Voice = "Piano_LH_Music_Voice"                                    %! ScoreTemplate
+    \context Voice = "Piano_LH_Music_Voice"                                    %! hijinks.ScoreTemplate.__call__
     \i_Piano_LH_Music_Voice                                                    %! abjad.Path.extern
 
 }                                                                              %! abjad.Path.extern

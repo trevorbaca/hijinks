@@ -20,8 +20,8 @@ class ScoreTemplate(baca.ScoreTemplate):
         >>> abjad.show(lilypond_file) # doctest: +SKIP
 
         >>> abjad.f(lilypond_file[abjad.Score], strict=79)
-        \context Score = "Score"                                                       %! ScoreTemplate
-        <<                                                                             %! ScoreTemplate
+        \context Score = "Score"                                                       %! hijinks.ScoreTemplate.__call__
+        <<                                                                             %! hijinks.ScoreTemplate.__call__
             \context GlobalContext = "Global_Context"                                  %! abjad.ScoreTemplate._make_global_context
             <<                                                                         %! abjad.ScoreTemplate._make_global_context
                 \context GlobalRests = "Global_Rests"                                  %! abjad.ScoreTemplate._make_global_context
@@ -31,37 +31,37 @@ class ScoreTemplate(baca.ScoreTemplate):
                 {                                                                      %! abjad.ScoreTemplate._make_global_context
                 }                                                                      %! abjad.ScoreTemplate._make_global_context
             >>                                                                         %! abjad.ScoreTemplate._make_global_context
-            \context MusicContext = "Music_Context"                                    %! ScoreTemplate
-            <<                                                                         %! ScoreTemplate
-                \context ViolinMusicStaff = "Violin_Music_Staff"                       %! ScoreTemplate
-                {                                                                      %! ScoreTemplate
-                    \context Voice = "Violin_Music_Voice"                              %! ScoreTemplate
-                    {                                                                  %! ScoreTemplate
+            \context MusicContext = "Music_Context"                                    %! hijinks.ScoreTemplate.__call__
+            <<                                                                         %! hijinks.ScoreTemplate.__call__
+                \context ViolinMusicStaff = "Violin_Music_Staff"                       %! hijinks.ScoreTemplate.__call__
+                {                                                                      %! hijinks.ScoreTemplate.__call__
+                    \context Voice = "Violin_Music_Voice"                              %! hijinks.ScoreTemplate.__call__
+                    {                                                                  %! hijinks.ScoreTemplate.__call__
                         \clef "treble"                                                 %! abjad.ScoreTemplate.attach_defaults
                         s1                                                             %! abjad.ScoreTemplate.__illustrate__
-                    }                                                                  %! ScoreTemplate
-                }                                                                      %! ScoreTemplate
-                \context PianoStaffGroup = "Piano_Staff_Group"                         %! ScoreTemplate
-                <<                                                                     %! ScoreTemplate
-                    \context PianoRHMusicStaff = "Piano_RH_Music_Staff"                %! ScoreTemplate
-                    {                                                                  %! ScoreTemplate
-                        \context Voice = "Piano_RH_Music_Voice"                        %! ScoreTemplate
-                        {                                                              %! ScoreTemplate
+                    }                                                                  %! hijinks.ScoreTemplate.__call__
+                }                                                                      %! hijinks.ScoreTemplate.__call__
+                \context PianoStaffGroup = "Piano_Staff_Group"                         %! hijinks.ScoreTemplate.__call__
+                <<                                                                     %! hijinks.ScoreTemplate.__call__
+                    \context PianoRHMusicStaff = "Piano_RH_Music_Staff"                %! hijinks.ScoreTemplate.__call__
+                    {                                                                  %! hijinks.ScoreTemplate.__call__
+                        \context Voice = "Piano_RH_Music_Voice"                        %! hijinks.ScoreTemplate.__call__
+                        {                                                              %! hijinks.ScoreTemplate.__call__
                             \clef "treble"                                             %! abjad.ScoreTemplate.attach_defaults
                             s1                                                         %! abjad.ScoreTemplate.__illustrate__
-                        }                                                              %! ScoreTemplate
-                    }                                                                  %! ScoreTemplate
-                    \context PianoLHMusicStaff = "Piano_LH_Music_Staff"                %! ScoreTemplate
-                    {                                                                  %! ScoreTemplate
-                        \context Voice = "Piano_LH_Music_Voice"                        %! ScoreTemplate
-                        {                                                              %! ScoreTemplate
+                        }                                                              %! hijinks.ScoreTemplate.__call__
+                    }                                                                  %! hijinks.ScoreTemplate.__call__
+                    \context PianoLHMusicStaff = "Piano_LH_Music_Staff"                %! hijinks.ScoreTemplate.__call__
+                    {                                                                  %! hijinks.ScoreTemplate.__call__
+                        \context Voice = "Piano_LH_Music_Voice"                        %! hijinks.ScoreTemplate.__call__
+                        {                                                              %! hijinks.ScoreTemplate.__call__
                             \clef "treble"                                             %! abjad.ScoreTemplate.attach_defaults
                             s1                                                         %! abjad.ScoreTemplate.__illustrate__
-                        }                                                              %! ScoreTemplate
-                    }                                                                  %! ScoreTemplate
-                >>                                                                     %! ScoreTemplate
-            >>                                                                         %! ScoreTemplate
-        >>                                                                             %! ScoreTemplate
+                        }                                                              %! hijinks.ScoreTemplate.__call__
+                    }                                                                  %! hijinks.ScoreTemplate.__call__
+                >>                                                                     %! hijinks.ScoreTemplate.__call__
+            >>                                                                         %! hijinks.ScoreTemplate.__call__
+        >>                                                                             %! hijinks.ScoreTemplate.__call__
 
     """
 
@@ -85,7 +85,7 @@ class ScoreTemplate(baca.ScoreTemplate):
         """
         Calls score template.
         """
-        tag = 'ScoreTemplate'
+        tag = 'hijinks.ScoreTemplate.__call__'
         # GLOBAL CONTEXT
         global_context = self._make_global_context()
 

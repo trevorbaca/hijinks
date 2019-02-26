@@ -1,4 +1,4 @@
-i_Global_Skips = {                                                             %! extern
+i_Global_Skips = {                                                             %! abjad.Path.extern
 
     % [_ Global_Skips measure 1]                                               %! _comment_measure_numbers
     \time 1/8                                                                  %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
@@ -224,10 +224,10 @@ i_Global_Skips = {                                                             %
     \baca-bar-line-visible                                                     %! _attach_final_bar_line
     \bar "|."                                                                  %! _attach_final_bar_line
 
-}                                                                              %! extern
+}                                                                              %! abjad.Path.extern
 
 
-i_Violin_Music_Voice = {                                                       %! extern
+i_Violin_Music_Voice = {                                                       %! abjad.Path.extern
 
     \times 4/5 {                                                               %! violin_rhythm
 
@@ -343,18 +343,18 @@ i_Violin_Music_Voice = {                                                       %
 
     }                                                                          %! violin_rhythm
 
-}                                                                              %! extern
+}                                                                              %! abjad.Path.extern
 
 
-i_Violin_Music_Staff = {                                                       %! extern
+i_Violin_Music_Staff = {                                                       %! abjad.Path.extern
 
     \context Voice = "Violin_Music_Voice"                                      %! ScoreTemplate
-    \i_Violin_Music_Voice                                                      %! extern
+    \i_Violin_Music_Voice                                                      %! abjad.Path.extern
 
-}                                                                              %! extern
+}                                                                              %! abjad.Path.extern
 
 
-i_Piano_RH_Music_Voice = {                                                     %! extern
+i_Piano_RH_Music_Voice = {                                                     %! abjad.Path.extern
 
     \times 8/10 {                                                              %! piano_rhythm
 
@@ -620,18 +620,18 @@ i_Piano_RH_Music_Voice = {                                                     %
 
     }                                                                          %! piano_rhythm
 
-}                                                                              %! extern
+}                                                                              %! abjad.Path.extern
 
 
-i_Piano_RH_Music_Staff = {                                                     %! extern
+i_Piano_RH_Music_Staff = {                                                     %! abjad.Path.extern
 
     \context Voice = "Piano_RH_Music_Voice"                                    %! ScoreTemplate
-    \i_Piano_RH_Music_Voice                                                    %! extern
+    \i_Piano_RH_Music_Voice                                                    %! abjad.Path.extern
 
-}                                                                              %! extern
+}                                                                              %! abjad.Path.extern
 
 
-i_Piano_LH_Music_Voice = {                                                     %! extern
+i_Piano_LH_Music_Voice = {                                                     %! abjad.Path.extern
 
     \tweak text #tuplet-number::calc-fraction-text                             %! piano_rhythm
     \times 6/7 {                                                               %! piano_rhythm
@@ -848,12 +848,12 @@ i_Piano_LH_Music_Voice = {                                                     %
 
     }                                                                          %! piano_rhythm
 
-}                                                                              %! extern
+}                                                                              %! abjad.Path.extern
 
 
-i_Piano_LH_Music_Staff = {                                                     %! extern
+i_Piano_LH_Music_Staff = {                                                     %! abjad.Path.extern
 
     \context Voice = "Piano_LH_Music_Voice"                                    %! ScoreTemplate
-    \i_Piano_LH_Music_Voice                                                    %! extern
+    \i_Piano_LH_Music_Voice                                                    %! abjad.Path.extern
 
-}                                                                              %! extern
+}                                                                              %! abjad.Path.extern

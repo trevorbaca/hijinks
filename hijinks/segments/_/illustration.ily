@@ -227,6 +227,56 @@ i_Global_Skips = {                                                             %
 }                                                                              %! abjad.Path.extern
 
 
+i_Global_Rests = {                                                             %! abjad.Path.extern
+
+    % [_ Global_Rests measure 1]                                               %! _comment_measure_numbers
+    R1 * 1/8                                                                   %! _make_global_rests(1)
+
+    % [_ Global_Rests measure 2]                                               %! _comment_measure_numbers
+    R1 * 1/8                                                                   %! _make_global_rests(1)
+
+    % [_ Global_Rests measure 3]                                               %! _comment_measure_numbers
+    R1 * 1/8                                                                   %! _make_global_rests(1)
+
+    % [_ Global_Rests measure 4]                                               %! _comment_measure_numbers
+    R1 * 1/8                                                                   %! _make_global_rests(1)
+
+    % [_ Global_Rests measure 5]                                               %! _comment_measure_numbers
+    R1 * 1/8                                                                   %! _make_global_rests(1)
+
+    % [_ Global_Rests measure 6]                                               %! _comment_measure_numbers
+    R1 * 1/8                                                                   %! _make_global_rests(1)
+
+    % [_ Global_Rests measure 7]                                               %! _comment_measure_numbers
+    R1 * 1/8                                                                   %! _make_global_rests(1)
+
+    % [_ Global_Rests measure 8]                                               %! _comment_measure_numbers
+    R1 * 1/8                                                                   %! _make_global_rests(1)
+
+    % [_ Global_Rests measure 9]                                               %! _comment_measure_numbers
+    R1 * 1/8                                                                   %! _make_global_rests(1)
+
+    % [_ Global_Rests measure 10]                                              %! _comment_measure_numbers
+    R1 * 1/8                                                                   %! _make_global_rests(1)
+
+    % [_ Global_Rests measure 11]                                              %! _comment_measure_numbers
+    R1 * 1/8                                                                   %! _make_global_rests(1)
+
+    % [_ Global_Rests measure 12]                                              %! _comment_measure_numbers
+    R1 * 1/8                                                                   %! _make_global_rests(1)
+
+    % [_ Global_Rests measure 13]                                              %! _comment_measure_numbers
+    R1 * 1/8                                                                   %! _make_global_rests(1)
+
+    % [_ Global_Rests measure 14]                                              %! _comment_measure_numbers
+    R1 * 1/8                                                                   %! _make_global_rests(1)
+
+    % [_ Global_Rests measure 15]                                              %! _comment_measure_numbers
+    R1 * 1/8                                                                   %! _make_global_rests(1)
+
+}                                                                              %! abjad.Path.extern
+
+
 i_Violin_Music_Voice = {                                                       %! abjad.Path.extern
 
     \times 4/5 {                                                               %! violin_rhythm
@@ -346,12 +396,15 @@ i_Violin_Music_Voice = {                                                       %
 }                                                                              %! abjad.Path.extern
 
 
-i_Violin_Music_Staff = {                                                       %! abjad.Path.extern
+i_Violin_Music_Staff = <<                                                      %! abjad.Path.extern
+
+    \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context
+    \i_Global_Rests                                                            %! abjad.Path.extern
 
     \context Voice = "Violin_Music_Voice"                                      %! hijinks.ScoreTemplate.__call__
     \i_Violin_Music_Voice                                                      %! abjad.Path.extern
 
-}                                                                              %! abjad.Path.extern
+>>                                                                             %! abjad.Path.extern
 
 
 i_Piano_RH_Music_Voice = {                                                     %! abjad.Path.extern

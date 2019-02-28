@@ -82,6 +82,13 @@
             \noBreak                                                           %! BreakMeasureMap(2):BREAK
             s1 * 1/8                                                           %! _make_global_skips(1)
 
+            % [Page_Layout measure 16]                                         %! PHANTOM:_style_phantom_measures(1):_comment_measure_numbers
+            \noBreak                                                           %! PHANTOM:_style_phantom_measures(1):BreakMeasureMap(2):BREAK
+            \baca-time-signature-transparent                                   %! PHANTOM:_style_phantom_measures(2)
+            s1 * 1/4                                                           %! PHANTOM:_make_global_skips(3)
+            \once \override Score.BarLine.transparent = ##t                    %! PHANTOM:_style_phantom_measures(3)
+            \once \override Score.SpanBar.transparent = ##t                    %! PHANTOM:_style_phantom_measures(3)
+
         }   %*% Page_Layout                                                    %! abjad.ScoreTemplate._make_global_context
 
     >>                                                                         %! abjad.ScoreTemplate._make_global_context

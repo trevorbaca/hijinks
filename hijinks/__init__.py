@@ -8,5 +8,11 @@ if not (
 del distutils
 del platform
 from hijinks.tools import *
-from hijinks.materials import *
+from hijinks.materials.circuit.definition import circuit
+from hijinks.materials.instruments.definition import instruments
+from hijinks.materials.margin_markups.definition import margin_markups
+from hijinks.materials.metronome_marks.definition import metronome_marks
+from hijinks.materials.pairs.definition import pairs
+from hijinks.materials.proportions.definition import proportions
+from hijinks.materials.violin_pitches.definition import violin_pitches
 from hijinks import segments

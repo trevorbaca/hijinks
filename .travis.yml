@@ -75,6 +75,8 @@ install:
     - prime-parser-tables
     
 script:
+    - black --target-version=py36 --line-length=79 --check --diff \
+        --exclude '__metadata__.py|__persist__.py|segments|layout.py' $PACKAGE
     - mypy --ignore-missing-imports $PACKAGE
     - coverage run -a `which baca-doctest` $PACKAGE
     - coverage run -a `which py.test` -rf $PACKAGE

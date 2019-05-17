@@ -3,7 +3,7 @@ import baca
 import typing
 
 
-#aggregate = pitch.CC[0][175 - 1]
+# aggregate = pitch.CC[0][175 - 1]
 aggregate = [10, 19, 20, 23, 24, 26, 27, 29, 30, 33, 37, 40]
 assert aggregate == [10, 19, 20, 23, 24, 26, 27, 29, 30, 33, 37, 40]
 
@@ -25,10 +25,7 @@ order_3 = baca.sequence(order_3).flatten()
 order_3 = [_ % 12 for _ in order_3]
 assert order_3 == [4, 11, 3, 1, 9, 0, 2, 10, 7, 5, 6, 8]
 
-aggregate_ = abjad.PitchSet(
-    items=aggregate,
-    item_class=abjad.NumberedPitch,
-    )
+aggregate_ = abjad.PitchSet(items=aggregate, item_class=abjad.NumberedPitch)
 
 violin_pitches: typing.List[abjad.NumberedPitch] = []
 orders = (order_1, order_2, order_3)

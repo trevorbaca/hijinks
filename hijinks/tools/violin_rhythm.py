@@ -1,29 +1,28 @@
 import abjad
+import typing
 
 
-def violin_rhythm(include_rest=None):
+def violin_rhythm(include_rest: bool = None) -> abjad.Selection:
     """
     Makes violin rhythm.
     """
-
+    tag = "hijinks.violin_rhythm"
     definitions = [
-        ([4, 2, 2, 2], (8, 16)),
-        ([2, 2, 4, 1, 1], (8, 16)),
-        ([4, 2, 2, 2], (8, 16)),
-        ([3, 2], (4, 16)),
+        ((4, 2, 2, 2), (8, 16)),
+        ((2, 2, 4, 1, 1), (8, 16)),
+        ((4, 2, 2, 2), (8, 16)),
+        ((3, 2), (4, 16)),
     ]
-
     maker = abjad.Tuplet.from_ratio_and_pair
-
-    violin_rhythm = []
+    components: typing.List[abjad.Component] = []
     for definition in definitions:
-        tuplet = maker(*definition, tag="violin_rhythm")
+        ratio, pair = definition
+        assert isinstance(ratio, tuple)
+        tuplet = maker(ratio, pair, tag=tag)
         leaves = abjad.select(tuplet).leaves()
-        abjad.beam(leaves, tag="violin_rhythm")
-        violin_rhythm.append(tuplet)
-
+        abjad.beam(leaves, tag=tag)
+        components.append(tuplet)
     if include_rest:
-        violin_rhythm.insert(-1, abjad.Rest("r8", tag="violin_rhythm"))
-
-    violin_rhythm = abjad.select(violin_rhythm)
-    return violin_rhythm
+        components.insert(-1, abjad.Rest("r8", tag=tag))
+    selection = abjad.select(components)
+    return selection

@@ -256,7 +256,7 @@ i_Global_Rests = {                                                             %
 
 i_Violin_Music_Voice = {                                                       %! abjad.Path.extern
 
-    \times 4/5 {                                                               %! violin_rhythm
+    \times 4/5 {                                                               %! hijinks.violin_rhythm
 
         % [_ Violin_Music_Voice measure 1]                                     %! _comment_measure_numbers
         \set Staff.shortInstrumentName =                                       %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup:-PARTS:IndicatorCommand
@@ -276,7 +276,7 @@ i_Violin_Music_Voice = {                                                       %
     %@% \override ViolinMusicStaff.Clef.color = ##f                            %! DEFAULT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
         \set ViolinMusicStaff.forceClef = ##t                                  %! DEFAULT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):abjad.ScoreTemplate.attach_defaults
         \once \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'blue) %! EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-        bf'!4                                                                  %! violin_rhythm
+        bf'!4                                                                  %! hijinks.violin_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
         ^ \baca-default-indicator-markup "(“Violin”)"                          %! DEFAULT_INSTRUMENT_ALERT:_attach_latent_indicator_alert
         ^ \baca-explicit-indicator-markup "[“Vn.”]"                            %! EXPLICIT_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
@@ -298,77 +298,77 @@ i_Violin_Music_Voice = {                                                       %
                 Vn.                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
             }                                                                  %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
 
-        c'''8                                                                  %! violin_rhythm
+        c'''8                                                                  %! hijinks.violin_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        [                                                                      %! violin_rhythm
+        [                                                                      %! hijinks.violin_rhythm
 
-        d'''8                                                                  %! violin_rhythm
+        d'''8                                                                  %! hijinks.violin_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        fs'''!8                                                                %! violin_rhythm
+        fs'''!8                                                                %! hijinks.violin_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        ]                                                                      %! violin_rhythm
+        ]                                                                      %! hijinks.violin_rhythm
 
-    }                                                                          %! violin_rhythm
+    }                                                                          %! hijinks.violin_rhythm
 
-    \times 4/5 {                                                               %! violin_rhythm
+    \times 4/5 {                                                               %! hijinks.violin_rhythm
 
         % [_ Violin_Music_Voice measure 5]                                     %! _comment_measure_numbers
-        af''!8                                                                 %! violin_rhythm
+        af''!8                                                                 %! hijinks.violin_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        [                                                                      %! violin_rhythm
+        [                                                                      %! hijinks.violin_rhythm
 
-        g''8                                                                   %! violin_rhythm
+        g''8                                                                   %! hijinks.violin_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        ]                                                                      %! violin_rhythm
+        ]                                                                      %! hijinks.violin_rhythm
 
-        f'''4                                                                  %! violin_rhythm
+        f'''4                                                                  %! hijinks.violin_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        ef'''!16                                                               %! violin_rhythm
+        ef'''!16                                                               %! hijinks.violin_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
-        [                                                                      %! violin_rhythm
+        [                                                                      %! hijinks.violin_rhythm
 
-        cs''''!16                                                              %! violin_rhythm
+        cs''''!16                                                              %! hijinks.violin_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
-        ]                                                                      %! violin_rhythm
+        ]                                                                      %! hijinks.violin_rhythm
 
-    }                                                                          %! violin_rhythm
+    }                                                                          %! hijinks.violin_rhythm
 
-    \times 4/5 {                                                               %! violin_rhythm
+    \times 4/5 {                                                               %! hijinks.violin_rhythm
 
         % [_ Violin_Music_Voice measure 9]                                     %! _comment_measure_numbers
-        a'''4                                                                  %! violin_rhythm
+        a'''4                                                                  %! hijinks.violin_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        e''''8                                                                 %! violin_rhythm
+        e''''8                                                                 %! hijinks.violin_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        [                                                                      %! violin_rhythm
+        [                                                                      %! hijinks.violin_rhythm
 
-        b''8                                                                   %! violin_rhythm
+        b''8                                                                   %! hijinks.violin_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        f'''8                                                                  %! violin_rhythm
+        f'''8                                                                  %! hijinks.violin_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        ]                                                                      %! violin_rhythm
+        ]                                                                      %! hijinks.violin_rhythm
 
-    }                                                                          %! violin_rhythm
+    }                                                                          %! hijinks.violin_rhythm
 
     % [_ Violin_Music_Voice measure 13]                                        %! _comment_measure_numbers
-    r8                                                                         %! violin_rhythm
+    r8                                                                         %! hijinks.violin_rhythm
 
-    \times 4/5 {                                                               %! violin_rhythm
+    \times 4/5 {                                                               %! hijinks.violin_rhythm
 
         % [_ Violin_Music_Voice measure 14]                                    %! _comment_measure_numbers
-        fs'''!8.                                                               %! violin_rhythm
+        fs'''!8.                                                               %! hijinks.violin_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        [                                                                      %! violin_rhythm
+        [                                                                      %! hijinks.violin_rhythm
 
-        af''!8                                                                 %! violin_rhythm
+        af''!8                                                                 %! hijinks.violin_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        ]                                                                      %! violin_rhythm
+        ]                                                                      %! hijinks.violin_rhythm
 
-    }                                                                          %! violin_rhythm
+    }                                                                          %! hijinks.violin_rhythm
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -412,7 +412,7 @@ i_Violin_Music_Staff = <<                                                      %
 
 i_Piano_RH_Music_Voice = {                                                     %! abjad.Path.extern
 
-    \times 8/10 {                                                              %! piano_rhythm
+    \times 8/10 {                                                              %! hijinks.piano_rhythm
 
         % [_ Piano_RH_Music_Voice measure 1]                                   %! _comment_measure_numbers
         \set PianoStaffGroup.shortInstrumentName =                             %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup:-PARTS:IndicatorCommand
@@ -432,7 +432,7 @@ i_Piano_RH_Music_Voice = {                                                     %
     %@% \override PianoRHMusicStaff.Clef.color = ##f                           %! DEFAULT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
         \set PianoRHMusicStaff.forceClef = ##t                                 %! DEFAULT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):abjad.ScoreTemplate.attach_defaults
         \once \override PianoStaffGroup.InstrumentName.color = #(x11-color 'blue) %! EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-        f'''16                                                                 %! piano_rhythm
+        f'''16                                                                 %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
         ^ \baca-default-indicator-markup "(“Piano”)"                           %! DEFAULT_INSTRUMENT_ALERT:_attach_latent_indicator_alert
         ^ \baca-explicit-indicator-markup "[“Pf.”]"                            %! EXPLICIT_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
@@ -445,7 +445,7 @@ i_Piano_RH_Music_Voice = {                                                     %
                         "sempre al fino"                                       %! baca.markup:IndicatorCommand
                 }                                                              %! baca.markup:IndicatorCommand
             }                                                                  %! baca.markup:IndicatorCommand
-        [                                                                      %! piano_rhythm
+        [                                                                      %! hijinks.piano_rhythm
         \override PianoRHMusicStaff.Clef.color = #(x11-color 'violet)          %! DEFAULT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
         \override PianoStaffGroup.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
         \set PianoStaffGroup.shortInstrumentName =                             %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
@@ -455,226 +455,226 @@ i_Piano_RH_Music_Voice = {                                                     %
                 Pf.                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
             }                                                                  %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
 
-        c'''16                                                                 %! piano_rhythm
+        c'''16                                                                 %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        bf''!16                                                                %! piano_rhythm
+        bf''!16                                                                %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        e''32                                                                  %! piano_rhythm
+        e''32                                                                  %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        d''32                                                                  %! piano_rhythm
+        d''32                                                                  %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        cs''!32                                                                %! piano_rhythm
+        cs''!32                                                                %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        ef'!32                                                                 %! piano_rhythm
+        ef'!32                                                                 %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        ]                                                                      %! piano_rhythm
+        ]                                                                      %! hijinks.piano_rhythm
 
-    }                                                                          %! piano_rhythm
+    }                                                                          %! hijinks.piano_rhythm
 
-    \tweak text #tuplet-number::calc-fraction-text                             %! piano_rhythm
-    \times 6/7 {                                                               %! piano_rhythm
+    \tweak text #tuplet-number::calc-fraction-text                             %! hijinks.piano_rhythm
+    \times 6/7 {                                                               %! hijinks.piano_rhythm
 
         % [_ Piano_RH_Music_Voice measure 3]                                   %! _comment_measure_numbers
-        cs'''!64                                                               %! piano_rhythm
+        cs'''!64                                                               %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
-        [                                                                      %! piano_rhythm
+        [                                                                      %! hijinks.piano_rhythm
 
-        a''64                                                                  %! piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
-
-        e''16                                                                  %! piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-
-        ef''!16                                                                %! piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-
-        f'16                                                                   %! piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        ]                                                                      %! piano_rhythm
-
-    }                                                                          %! piano_rhythm
-
-    \tweak text #tuplet-number::calc-fraction-text                             %! piano_rhythm
-    \times 6/7 {                                                               %! piano_rhythm
-
-        a''''16                                                                %! piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        [                                                                      %! piano_rhythm
-
-        fs''''!16                                                              %! piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-
-        g'''32                                                                 %! piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-
-        b''32                                                                  %! piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-
-        cs''!64                                                                %! piano_rhythm
+        a''64                                                                  %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
 
-        ef'!64                                                                 %! piano_rhythm
+        e''16                                                                  %! hijinks.piano_rhythm
+        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+
+        ef''!16                                                                %! hijinks.piano_rhythm
+        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+
+        f'16                                                                   %! hijinks.piano_rhythm
+        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        ]                                                                      %! hijinks.piano_rhythm
+
+    }                                                                          %! hijinks.piano_rhythm
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! hijinks.piano_rhythm
+    \times 6/7 {                                                               %! hijinks.piano_rhythm
+
+        a''''16                                                                %! hijinks.piano_rhythm
+        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        [                                                                      %! hijinks.piano_rhythm
+
+        fs''''!16                                                              %! hijinks.piano_rhythm
+        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+
+        g'''32                                                                 %! hijinks.piano_rhythm
+        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+
+        b''32                                                                  %! hijinks.piano_rhythm
+        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+
+        cs''!64                                                                %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
-        ]                                                                      %! piano_rhythm
 
-    }                                                                          %! piano_rhythm
+        ef'!64                                                                 %! hijinks.piano_rhythm
+        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        ]                                                                      %! hijinks.piano_rhythm
 
-    \times 8/11 {                                                              %! piano_rhythm
+    }                                                                          %! hijinks.piano_rhythm
+
+    \times 8/11 {                                                              %! hijinks.piano_rhythm
 
         % [_ Piano_RH_Music_Voice measure 6]                                   %! _comment_measure_numbers
-        e''''16                                                                %! piano_rhythm
+        e''''16                                                                %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        [                                                                      %! piano_rhythm
+        [                                                                      %! hijinks.piano_rhythm
 
-        cs''''!64                                                              %! piano_rhythm
+        cs''''!64                                                              %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
 
-        a'''64                                                                 %! piano_rhythm
+        a'''64                                                                 %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
 
-        fs'''!64                                                               %! piano_rhythm
+        fs'''!64                                                               %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
 
-        f'''64                                                                 %! piano_rhythm
+        f'''64                                                                 %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
 
-        ef'''!16                                                               %! piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-
-        d'''16                                                                 %! piano_rhythm
+        ef'''!16                                                               %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        c'''32                                                                 %! piano_rhythm
+        d'''16                                                                 %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        b''64                                                                  %! piano_rhythm
+        c'''32                                                                 %! hijinks.piano_rhythm
+        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+
+        b''64                                                                  %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
 
-        af''!64                                                                %! piano_rhythm
+        af''!64                                                                %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
 
-        g''64                                                                  %! piano_rhythm
+        g''64                                                                  %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
 
-        bf'!64                                                                 %! piano_rhythm
+        bf'!64                                                                 %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
-        ]                                                                      %! piano_rhythm
+        ]                                                                      %! hijinks.piano_rhythm
 
-    }                                                                          %! piano_rhythm
+    }                                                                          %! hijinks.piano_rhythm
 
-    \tweak text #tuplet-number::calc-fraction-text                             %! piano_rhythm
-    \times 6/8 {                                                               %! piano_rhythm
+    \tweak text #tuplet-number::calc-fraction-text                             %! hijinks.piano_rhythm
+    \times 6/8 {                                                               %! hijinks.piano_rhythm
 
         % [_ Piano_RH_Music_Voice measure 8]                                   %! _comment_measure_numbers
-        cs'''!16                                                               %! piano_rhythm
+        cs'''!16                                                               %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        [                                                                      %! piano_rhythm
+        [                                                                      %! hijinks.piano_rhythm
 
-        bf''!32                                                                %! piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-
-        a''32                                                                  %! piano_rhythm
+        bf''!32                                                                %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        fs''!32                                                                %! piano_rhythm
+        a''32                                                                  %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        ef''!32                                                                %! piano_rhythm
+        fs''!32                                                                %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        d''64                                                                  %! piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
-
-        c''64                                                                  %! piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
-
-        g'64                                                                   %! piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
-
-        f'64                                                                   %! piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
-        ]                                                                      %! piano_rhythm
-
-    }                                                                          %! piano_rhythm
-
-    \tweak text #tuplet-number::calc-fraction-text                             %! piano_rhythm
-    \times 6/8 {                                                               %! piano_rhythm
-
-        fs'''!16                                                               %! piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        [                                                                      %! piano_rhythm
-
-        g''16                                                                  %! piano_rhythm
+        ef''!32                                                                %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        f''64                                                                  %! piano_rhythm
+        d''64                                                                  %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
 
-        cs''!64                                                                %! piano_rhythm
+        c''64                                                                  %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
 
-        a'16                                                                   %! piano_rhythm
+        g'64                                                                   %! hijinks.piano_rhythm
+        - \staccato                                                            %! baca.staccato:IndicatorCommand
+
+        f'64                                                                   %! hijinks.piano_rhythm
+        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        ]                                                                      %! hijinks.piano_rhythm
+
+    }                                                                          %! hijinks.piano_rhythm
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! hijinks.piano_rhythm
+    \times 6/8 {                                                               %! hijinks.piano_rhythm
+
+        fs'''!16                                                               %! hijinks.piano_rhythm
+        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        [                                                                      %! hijinks.piano_rhythm
+
+        g''16                                                                  %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        af'!64                                                                 %! piano_rhythm
+        f''64                                                                  %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
 
-        ef'!64                                                                 %! piano_rhythm
+        cs''!64                                                                %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
-        ]                                                                      %! piano_rhythm
 
-    }                                                                          %! piano_rhythm
+        a'16                                                                   %! hijinks.piano_rhythm
+        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-    \times 8/14 {                                                              %! piano_rhythm
+        af'!64                                                                 %! hijinks.piano_rhythm
+        - \staccato                                                            %! baca.staccato:IndicatorCommand
+
+        ef'!64                                                                 %! hijinks.piano_rhythm
+        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        ]                                                                      %! hijinks.piano_rhythm
+
+    }                                                                          %! hijinks.piano_rhythm
+
+    \times 8/14 {                                                              %! hijinks.piano_rhythm
 
         % [_ Piano_RH_Music_Voice measure 11]                                  %! _comment_measure_numbers
-        g'16                                                                   %! piano_rhythm
+        g'16                                                                   %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        [                                                                      %! piano_rhythm
+        [                                                                      %! hijinks.piano_rhythm
 
-        fs'!8.                                                                 %! piano_rhythm
+        fs'!8.                                                                 %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        f'8.                                                                   %! piano_rhythm
+        f'8.                                                                   %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        ]                                                                      %! piano_rhythm
+        ]                                                                      %! hijinks.piano_rhythm
 
-    }                                                                          %! piano_rhythm
+    }                                                                          %! hijinks.piano_rhythm
 
     % [_ Piano_RH_Music_Voice measure 13]                                      %! _comment_measure_numbers
     r8
 
-    \times 8/14 {                                                              %! piano_rhythm
+    \times 8/14 {                                                              %! hijinks.piano_rhythm
 
         % [_ Piano_RH_Music_Voice measure 14]                                  %! _comment_measure_numbers
         \override TupletBracket.shorten-pair = #'(0 . 0.6)                     %! baca.tuplet_bracket_shorten_pair:OverrideCommand(1)
-        a''''32                                                                %! piano_rhythm
+        a''''32                                                                %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        [                                                                      %! piano_rhythm
+        [                                                                      %! hijinks.piano_rhythm
 
-        af'''!32                                                               %! piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-
-        fs'''!16                                                               %! piano_rhythm
+        af'''!32                                                               %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        b'16                                                                   %! piano_rhythm
+        fs'''!16                                                               %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        e'8                                                                    %! piano_rhythm
+        b'16                                                                   %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        cs'!8                                                                  %! piano_rhythm
+        e'8                                                                    %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        ]                                                                      %! piano_rhythm
+
+        cs'!8                                                                  %! hijinks.piano_rhythm
+        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        ]                                                                      %! hijinks.piano_rhythm
         \revert TupletBracket.shorten-pair                                     %! baca.tuplet_bracket_shorten_pair:OverrideCommand(2)
 
-    }                                                                          %! piano_rhythm
+    }                                                                          %! hijinks.piano_rhythm
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -715,8 +715,8 @@ i_Piano_RH_Music_Staff = {                                                     %
 
 i_Piano_LH_Music_Voice = {                                                     %! abjad.Path.extern
 
-    \tweak text #tuplet-number::calc-fraction-text                             %! piano_rhythm
-    \times 6/7 {                                                               %! piano_rhythm
+    \tweak text #tuplet-number::calc-fraction-text                             %! hijinks.piano_rhythm
+    \times 6/7 {                                                               %! hijinks.piano_rhythm
 
         % [_ Piano_LH_Music_Voice measure 1]                                   %! _comment_measure_numbers
         \override TextScript.padding = #2                                      %! text.script_padding:OverrideCommand(1)
@@ -724,193 +724,193 @@ i_Piano_LH_Music_Voice = {                                                     %
         \once \override PianoLHMusicStaff.Clef.color = #(x11-color 'blue)      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
     %@% \override PianoLHMusicStaff.Clef.color = ##f                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
         \set PianoLHMusicStaff.forceClef = ##t                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
-        b,,,16                                                                 %! piano_rhythm
+        b,,,16                                                                 %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        [                                                                      %! piano_rhythm
+        [                                                                      %! hijinks.piano_rhythm
         \override PianoLHMusicStaff.Clef.color = #(x11-color 'DeepSkyBlue2)    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
-        fs,!32.                                                                %! piano_rhythm
+        fs,!32.                                                                %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
         _ \markup {                                                            %! baca.markup:IndicatorCommand
             \italic                                                            %! baca.markup:IndicatorCommand
                 "ped. ad libitum"                                              %! baca.markup:IndicatorCommand
             }                                                                  %! baca.markup:IndicatorCommand
 
-        af,!32.                                                                %! piano_rhythm
+        af,!32.                                                                %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        g32.                                                                   %! piano_rhythm
+        g32.                                                                   %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        a64                                                                    %! piano_rhythm
+        a64                                                                    %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
-        ]                                                                      %! piano_rhythm
+        ]                                                                      %! hijinks.piano_rhythm
 
-    }                                                                          %! piano_rhythm
+    }                                                                          %! hijinks.piano_rhythm
 
-    \times 8/10 {                                                              %! piano_rhythm
+    \times 8/10 {                                                              %! hijinks.piano_rhythm
 
-        b,,16                                                                  %! piano_rhythm
+        b,,16                                                                  %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        [                                                                      %! piano_rhythm
+        [                                                                      %! hijinks.piano_rhythm
 
-        g,16                                                                   %! piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-
-        c32.                                                                   %! piano_rhythm
+        g,16                                                                   %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        d32.                                                                   %! piano_rhythm
+        c32.                                                                   %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        fs!32                                                                  %! piano_rhythm
+        d32.                                                                   %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        af!32                                                                  %! piano_rhythm
+        fs!32                                                                  %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        bf!32                                                                  %! piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        ]                                                                      %! piano_rhythm
-
-    }                                                                          %! piano_rhythm
-
-    \times 6/9 {                                                               %! piano_rhythm
-
-        c,,32                                                                  %! piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        [                                                                      %! piano_rhythm
-
-        d,,32                                                                  %! piano_rhythm
+        af!32                                                                  %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        bf,,!32                                                                %! piano_rhythm
+        bf!32                                                                  %! hijinks.piano_rhythm
+        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        ]                                                                      %! hijinks.piano_rhythm
+
+    }                                                                          %! hijinks.piano_rhythm
+
+    \times 6/9 {                                                               %! hijinks.piano_rhythm
+
+        c,,32                                                                  %! hijinks.piano_rhythm
+        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        [                                                                      %! hijinks.piano_rhythm
+
+        d,,32                                                                  %! hijinks.piano_rhythm
+        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+
+        bf,,!32                                                                %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
         % [_ Piano_LH_Music_Voice measure 5]                                   %! _comment_measure_numbers
-        e,16                                                                   %! piano_rhythm
+        e,16                                                                   %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        af,!16                                                                 %! piano_rhythm
+        af,!16                                                                 %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        f16                                                                    %! piano_rhythm
+        f16                                                                    %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        ]                                                                      %! piano_rhythm
+        ]                                                                      %! hijinks.piano_rhythm
 
-    }                                                                          %! piano_rhythm
+    }                                                                          %! hijinks.piano_rhythm
 
-    \scaleDurations #'(1 . 1) {                                                %! piano_rhythm
+    \scaleDurations #'(1 . 1) {                                                %! hijinks.piano_rhythm
 
         % [_ Piano_LH_Music_Voice measure 6]                                   %! _comment_measure_numbers
-        r8                                                                     %! piano_rhythm
+        r8                                                                     %! hijinks.piano_rhythm
 
-    }                                                                          %! piano_rhythm
+    }                                                                          %! hijinks.piano_rhythm
 
-    \times 8/10 {                                                              %! piano_rhythm
+    \times 8/10 {                                                              %! hijinks.piano_rhythm
 
         % [_ Piano_LH_Music_Voice measure 7]                                   %! _comment_measure_numbers
-        e16.                                                                   %! piano_rhythm
+        e16.                                                                   %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        [                                                                      %! piano_rhythm
+        [                                                                      %! hijinks.piano_rhythm
 
-        af!16.                                                                 %! piano_rhythm
+        af!16.                                                                 %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        b8                                                                     %! piano_rhythm
+        b8                                                                     %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        ]                                                                      %! piano_rhythm
+        ]                                                                      %! hijinks.piano_rhythm
 
-    }                                                                          %! piano_rhythm
+    }                                                                          %! hijinks.piano_rhythm
 
-    \times 8/14 {                                                              %! piano_rhythm
+    \times 8/14 {                                                              %! hijinks.piano_rhythm
 
         % [_ Piano_LH_Music_Voice measure 9]                                   %! _comment_measure_numbers
-        e,16                                                                   %! piano_rhythm
+        e,16                                                                   %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        [                                                                      %! piano_rhythm
+        [                                                                      %! hijinks.piano_rhythm
 
-        b,16                                                                   %! piano_rhythm
+        b,16                                                                   %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        c16.                                                                   %! piano_rhythm
+        c16.                                                                   %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
         % [_ Piano_LH_Music_Voice measure 10]                                  %! _comment_measure_numbers
-        d16.                                                                   %! piano_rhythm
+        d16.                                                                   %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        bf!8                                                                   %! piano_rhythm
+        bf!8                                                                   %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        ]                                                                      %! piano_rhythm
+        ]                                                                      %! hijinks.piano_rhythm
 
-    }                                                                          %! piano_rhythm
+    }                                                                          %! hijinks.piano_rhythm
 
-    \times 8/10 {                                                              %! piano_rhythm
+    \times 8/10 {                                                              %! hijinks.piano_rhythm
 
         % [_ Piano_LH_Music_Voice measure 11]                                  %! _comment_measure_numbers
-        c,,32                                                                  %! piano_rhythm
+        c,,32                                                                  %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        [                                                                      %! piano_rhythm
+        [                                                                      %! hijinks.piano_rhythm
 
-        e,,32                                                                  %! piano_rhythm
+        e,,32                                                                  %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        b,,64                                                                  %! piano_rhythm
+        b,,64                                                                  %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
 
-        d,64                                                                   %! piano_rhythm
+        d,64                                                                   %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
 
-        ef,!64                                                                 %! piano_rhythm
+        ef,!64                                                                 %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
 
-        bf,!64                                                                 %! piano_rhythm
+        bf,!64                                                                 %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
 
-        cs!16                                                                  %! piano_rhythm
+        cs!16                                                                  %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        af!16                                                                  %! piano_rhythm
+        af!16                                                                  %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        a16                                                                    %! piano_rhythm
+        a16                                                                    %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        ]                                                                      %! piano_rhythm
+        ]                                                                      %! hijinks.piano_rhythm
 
-    }                                                                          %! piano_rhythm
+    }                                                                          %! hijinks.piano_rhythm
 
     % [_ Piano_LH_Music_Voice measure 13]                                      %! _comment_measure_numbers
     r8
 
-    \times 8/9 {                                                               %! piano_rhythm
+    \times 8/9 {                                                               %! hijinks.piano_rhythm
 
         % [_ Piano_LH_Music_Voice measure 14]                                  %! _comment_measure_numbers
         \override TupletBracket.shorten-pair = #'(0 . 0.6)                     %! baca.tuplet_bracket_shorten_pair:OverrideCommand(1)
-        d,,16.                                                                 %! piano_rhythm
+        d,,16.                                                                 %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        [                                                                      %! piano_rhythm
+        [                                                                      %! hijinks.piano_rhythm
 
-        g,,16.                                                                 %! piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-
-        bf,,!32                                                                %! piano_rhythm
+        g,,16.                                                                 %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        f,32                                                                   %! piano_rhythm
+        bf,,!32                                                                %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
 
-        c64                                                                    %! piano_rhythm
+        f,32                                                                   %! hijinks.piano_rhythm
+        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+
+        c64                                                                    %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
 
         \override Score.SpanBar #'transparent = ##f                            %! baca.literal:IndicatorCommand
-        ef!64                                                                  %! piano_rhythm
+        ef!64                                                                  %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
-        ]                                                                      %! piano_rhythm
+        ]                                                                      %! hijinks.piano_rhythm
         \revert TextScript.padding                                             %! text.script_padding:OverrideCommand(2)
         \revert TupletBracket.shorten-pair                                     %! baca.tuplet_bracket_shorten_pair:OverrideCommand(2)
 
-    }                                                                          %! piano_rhythm
+    }                                                                          %! hijinks.piano_rhythm
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 

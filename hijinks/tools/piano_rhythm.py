@@ -32,4 +32,4 @@ def piano_rhythm(staff) -> baca.RhythmCommand:
         music.append(tuplet)
     music.insert(-1, abjad.Rest("r8"))
     selection = abjad.select(music)
-    return baca.rhythm(selection)
+    return baca.music(selection)

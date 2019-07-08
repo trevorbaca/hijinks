@@ -47,7 +47,7 @@ maker(
     'vn', 
     baca.markup(pp_sempre_al_fino, direction=abjad.Down),
     baca.pitches(hijinks.violin_pitches),
-    baca.rhythm(hijinks.violin_rhythm(include_rest=True)),
+    baca.skeleton(hijinks.violin_rhythm(include_rest=True)),
     baca.staccato(selector=baca.notes().filter_duration('<=', (1, 16))),
     baca.tenuto(selector=baca.notes().filter_duration('>', (1, 16))),
     )

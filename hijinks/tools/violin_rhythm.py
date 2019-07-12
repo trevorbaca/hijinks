@@ -2,7 +2,7 @@ import abjad
 import typing
 
 
-def violin_rhythm(include_rest: bool = None) -> abjad.Selection:
+def violin_rhythm() -> abjad.Selection:
     """
     Makes violin rhythm.
     """
@@ -22,7 +22,6 @@ def violin_rhythm(include_rest: bool = None) -> abjad.Selection:
         leaves = abjad.select(tuplet).leaves()
         abjad.beam(leaves, tag=tag)
         components.append(tuplet)
-    if include_rest:
-        components.insert(-1, abjad.Rest("r8", tag=tag))
+    components.insert(-1, abjad.Rest("r8", tag=tag))
     selection = abjad.select(components)
     return selection

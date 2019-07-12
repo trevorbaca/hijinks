@@ -17,7 +17,7 @@ def piano_rhythm(staff) -> baca.RhythmCommand:
     ):
         if staff == "rh":
             aggregate = list(reversed(aggregate))
-        tuplet = maker(proportion, pair, tag=tag)
+        tuplet = maker(proportion, pair)
         assert isinstance(tuplet, abjad.Tuplet)
         duration = abjad.inspect(tuplet).duration()
         duration = duration.with_denominator(32)
@@ -25,6 +25,7 @@ def piano_rhythm(staff) -> baca.RhythmCommand:
         if tuplet.trivial():
             tuplet.hide = True
         leaves = abjad.select(tuplet).leaves()
+        # TODO: teach baca.music() to tag indicators
         abjad.beam(leaves, tag=tag)
         notes = abjad.select(tuplet).leaves(pitched=True)
         for note, pitch_number in zip(notes, aggregate):
@@ -32,4 +33,4 @@ def piano_rhythm(staff) -> baca.RhythmCommand:
         music.append(tuplet)
     music.insert(-1, abjad.Rest("r8"))
     selection = abjad.select(music)
-    return baca.music(selection)
+    return baca.music(selection, tag=tag)

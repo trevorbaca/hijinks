@@ -647,7 +647,7 @@ i_Piano_RH_Music_Voice = {                                                     %
     }                                                                          %! hijinks.piano_rhythm
 
     % [_ Piano_RH_Music_Voice measure 13]                                      %! _comment_measure_numbers
-    r8
+    r8                                                                         %! hijinks.piano_rhythm
 
     \times 8/14 {                                                              %! hijinks.piano_rhythm
 
@@ -881,7 +881,7 @@ i_Piano_LH_Music_Voice = {                                                     %
     }                                                                          %! hijinks.piano_rhythm
 
     % [_ Piano_LH_Music_Voice measure 13]                                      %! _comment_measure_numbers
-    r8
+    r8                                                                         %! hijinks.piano_rhythm
 
     \times 8/9 {                                                               %! hijinks.piano_rhythm
 

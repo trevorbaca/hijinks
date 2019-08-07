@@ -153,7 +153,7 @@ class ScoreTemplate(baca.ScoreTemplate):
         music_context = abjad.Context(
             [violin_music_staff, piano_staff_group],
             lilypond_type="MusicContext",
-            is_simultaneous=True,
+            simultaneous=True,
             name="Music_Context",
             tag=tag,
         )

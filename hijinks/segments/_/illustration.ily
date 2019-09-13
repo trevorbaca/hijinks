@@ -720,6 +720,8 @@ i_Piano_LH_Music_Voice = {                                                     %
 
         % [_ Piano_LH_Music_Voice measure 1]                                   %! _comment_measure_numbers
         \override TextScript.padding = #2                                      %! text.script_padding:OverrideCommand(1)
+    %%% \once \override PianoLHMusicStaff.Clef.X-extent = ##f                  %! MEASURE_1:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    %%% \once \override PianoLHMusicStaff.Clef.extra-offset = #'(-2.75 . 0)    %! MEASURE_1:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
         \clef "bass"                                                           %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
         \once \override PianoLHMusicStaff.Clef.color = #(x11-color 'blue)      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
     %@% \override PianoLHMusicStaff.Clef.color = ##f                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)

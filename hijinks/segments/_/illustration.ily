@@ -652,7 +652,7 @@ i_Piano_RH_Music_Voice = {                                                     %
     \times 8/14 {                                                              %! hijinks.piano_rhythm
 
         % [_ Piano_RH_Music_Voice measure 14]                                  %! baca.SegmentMaker._comment_measure_numbers()
-        \override TupletBracket.shorten-pair = #'(0 . 0.6)                     %! baca.tuplet_bracket_shorten_pair:OverrideCommand(1)
+        \override TupletBracket.shorten-pair = #'(0 . 0.6)                     %! baca.tuplet_bracket_shorten_pair():OverrideCommand(1)
         a''''32                                                                %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
         [                                                                      %! hijinks.piano_rhythm
@@ -672,7 +672,7 @@ i_Piano_RH_Music_Voice = {                                                     %
         cs'!8                                                                  %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
         ]                                                                      %! hijinks.piano_rhythm
-        \revert TupletBracket.shorten-pair                                     %! baca.tuplet_bracket_shorten_pair:OverrideCommand(2)
+        \revert TupletBracket.shorten-pair                                     %! baca.tuplet_bracket_shorten_pair():OverrideCommand(2)
 
     }                                                                          %! hijinks.piano_rhythm
 
@@ -719,9 +719,9 @@ i_Piano_LH_Music_Voice = {                                                     %
     \times 6/7 {                                                               %! hijinks.piano_rhythm
 
         % [_ Piano_LH_Music_Voice measure 1]                                   %! baca.SegmentMaker._comment_measure_numbers()
-        \override TextScript.padding = #2                                      %! text.script_padding:OverrideCommand(1)
-    %%% \once \override PianoLHMusicStaff.Clef.X-extent = ##f                  %! MEASURE_1:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
-    %%% \once \override PianoLHMusicStaff.Clef.extra-offset = #'(-2.75 . 0)    %! MEASURE_1:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+        \override TextScript.padding = #2                                      %! baca.text_script_padding():OverrideCommand(1)
+    %%% \once \override PianoLHMusicStaff.Clef.X-extent = ##f                  %! MEASURE_1:SHIFTED_CLEF:baca.clef_shift():baca.clef_x_extent_false():OverrideCommand(1)
+    %%% \once \override PianoLHMusicStaff.Clef.extra-offset = #'(-2.75 . 0)    %! MEASURE_1:SHIFTED_CLEF:baca.clef_extra_offset():baca.clef_shift():OverrideCommand(1)
         \clef "bass"                                                           %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
         \once \override PianoLHMusicStaff.Clef.color = #(x11-color 'blue)      %! EXPLICIT_CLEF_COLOR:baca.SegmentMaker._attach_color_literal(2)
     %@% \override PianoLHMusicStaff.Clef.color = ##f                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
@@ -888,7 +888,7 @@ i_Piano_LH_Music_Voice = {                                                     %
     \times 8/9 {                                                               %! hijinks.piano_rhythm
 
         % [_ Piano_LH_Music_Voice measure 14]                                  %! baca.SegmentMaker._comment_measure_numbers()
-        \override TupletBracket.shorten-pair = #'(0 . 0.6)                     %! baca.tuplet_bracket_shorten_pair:OverrideCommand(1)
+        \override TupletBracket.shorten-pair = #'(0 . 0.6)                     %! baca.tuplet_bracket_shorten_pair():OverrideCommand(1)
         d,,16.                                                                 %! hijinks.piano_rhythm
         - \tenuto                                                              %! baca.tenuto:IndicatorCommand
         [                                                                      %! hijinks.piano_rhythm
@@ -909,8 +909,8 @@ i_Piano_LH_Music_Voice = {                                                     %
         ef!64                                                                  %! hijinks.piano_rhythm
         - \staccato                                                            %! baca.staccato:IndicatorCommand
         ]                                                                      %! hijinks.piano_rhythm
-        \revert TextScript.padding                                             %! text.script_padding:OverrideCommand(2)
-        \revert TupletBracket.shorten-pair                                     %! baca.tuplet_bracket_shorten_pair:OverrideCommand(2)
+        \revert TextScript.padding                                             %! baca.text_script_padding():OverrideCommand(2)
+        \revert TupletBracket.shorten-pair                                     %! baca.tuplet_bracket_shorten_pair():OverrideCommand(2)
 
     }                                                                          %! hijinks.piano_rhythm
 

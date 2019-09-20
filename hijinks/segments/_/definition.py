@@ -9,6 +9,7 @@ import os
 ###############################################################################
 
 maker = baca.SegmentMaker(
+    check_all_are_pitched=True,
     final_markup=(['Austin, TX.'], ['February 2006.']),
     final_markup_extra_offset=(-9.5, -4),
     first_segment=True,

@@ -259,54 +259,54 @@ i_Violin_Music_Voice = {                                                       %
     \times 4/5 {                                                               %! hijinks.violin_rhythm
 
         % [_ Violin_Music_Voice measure 1]                                     %! baca.SegmentMaker._comment_measure_numbers()
-        \set Staff.shortInstrumentName =                                       %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup:-PARTS:IndicatorCommand
-        \markup {                                                              %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup:-PARTS:IndicatorCommand
-            \hcenter-in                                                        %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup:-PARTS:IndicatorCommand
-                #10                                                            %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup:-PARTS:IndicatorCommand
-                Vn.                                                            %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup:-PARTS:IndicatorCommand
-            }                                                                  %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup:-PARTS:IndicatorCommand
-        \set Staff.instrumentName =                                            %! baca.start_markup:baca_start_markup:-PARTS:IndicatorCommand
-        \markup {                                                              %! baca.start_markup:baca_start_markup:-PARTS:IndicatorCommand
-            \hcenter-in                                                        %! baca.start_markup:baca_start_markup:-PARTS:IndicatorCommand
-                #10                                                            %! baca.start_markup:baca_start_markup:-PARTS:IndicatorCommand
-                Violin                                                         %! baca.start_markup:baca_start_markup:-PARTS:IndicatorCommand
-            }                                                                  %! baca.start_markup:baca_start_markup:-PARTS:IndicatorCommand
+        \set Staff.shortInstrumentName =                                       %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup():-PARTS:IndicatorCommand
+        \markup {                                                              %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup():-PARTS:IndicatorCommand
+            \hcenter-in                                                        %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup():-PARTS:IndicatorCommand
+                #10                                                            %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup():-PARTS:IndicatorCommand
+                Vn.                                                            %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup():-PARTS:IndicatorCommand
+            }                                                                  %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup():-PARTS:IndicatorCommand
+        \set Staff.instrumentName =                                            %! baca.start_markup():baca_start_markup:-PARTS:IndicatorCommand
+        \markup {                                                              %! baca.start_markup():baca_start_markup:-PARTS:IndicatorCommand
+            \hcenter-in                                                        %! baca.start_markup():baca_start_markup:-PARTS:IndicatorCommand
+                #10                                                            %! baca.start_markup():baca_start_markup:-PARTS:IndicatorCommand
+                Violin                                                         %! baca.start_markup():baca_start_markup:-PARTS:IndicatorCommand
+            }                                                                  %! baca.start_markup():baca_start_markup:-PARTS:IndicatorCommand
         \clef "treble"                                                         %! DEFAULT_CLEF:_set_status_tag:abjad.ScoreTemplate.attach_defaults
         \once \override ViolinMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! DEFAULT_CLEF_COLOR:baca.SegmentMaker._attach_color_literal(2)
     %@% \override ViolinMusicStaff.Clef.color = ##f                            %! DEFAULT_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
         \set ViolinMusicStaff.forceClef = ##t                                  %! DEFAULT_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):abjad.ScoreTemplate.attach_defaults
         \once \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'blue) %! EXPLICIT_MARGIN_MARKUP_COLOR:baca.SegmentMaker._attach_color_literal(2)
         bf'!4                                                                  %! hijinks.violin_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         ^ \baca-default-indicator-markup "(“Violin”)"                          %! DEFAULT_INSTRUMENT_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
         ^ \baca-explicit-indicator-markup "[“Vn.”]"                            %! EXPLICIT_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
-        _ \markup {                                                            %! baca.markup:IndicatorCommand
-            \line                                                              %! baca.markup:IndicatorCommand
-                {                                                              %! baca.markup:IndicatorCommand
-                    \dynamic                                                   %! baca.markup:IndicatorCommand
-                        pp                                                     %! baca.markup:IndicatorCommand
-                    \italic                                                    %! baca.markup:IndicatorCommand
-                        "sempre al fino"                                       %! baca.markup:IndicatorCommand
-                }                                                              %! baca.markup:IndicatorCommand
-            }                                                                  %! baca.markup:IndicatorCommand
+        _ \markup {                                                            %! baca.markup():IndicatorCommand
+            \line                                                              %! baca.markup():IndicatorCommand
+                {                                                              %! baca.markup():IndicatorCommand
+                    \dynamic                                                   %! baca.markup():IndicatorCommand
+                        pp                                                     %! baca.markup():IndicatorCommand
+                    \italic                                                    %! baca.markup():IndicatorCommand
+                        "sempre al fino"                                       %! baca.markup():IndicatorCommand
+                }                                                              %! baca.markup():IndicatorCommand
+            }                                                                  %! baca.markup():IndicatorCommand
         \override ViolinMusicStaff.Clef.color = #(x11-color 'violet)           %! DEFAULT_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
         \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:baca.SegmentMaker._attach_color_literal(2)
-        \set ViolinMusicStaff.shortInstrumentName =                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
-        \markup {                                                              %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
-            \hcenter-in                                                        %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
-                #10                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
-                Vn.                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
-            }                                                                  %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
+        \set ViolinMusicStaff.shortInstrumentName =                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup():-PARTS:IndicatorCommand
+        \markup {                                                              %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup():-PARTS:IndicatorCommand
+            \hcenter-in                                                        %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup():-PARTS:IndicatorCommand
+                #10                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup():-PARTS:IndicatorCommand
+                Vn.                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup():-PARTS:IndicatorCommand
+            }                                                                  %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup():-PARTS:IndicatorCommand
 
         c'''8                                                                  %! hijinks.violin_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         [                                                                      %! hijinks.violin_rhythm
 
         d'''8                                                                  %! hijinks.violin_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         fs'''!8                                                                %! hijinks.violin_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         ]                                                                      %! hijinks.violin_rhythm
 
     }                                                                          %! hijinks.violin_rhythm
@@ -315,22 +315,22 @@ i_Violin_Music_Voice = {                                                       %
 
         % [_ Violin_Music_Voice measure 5]                                     %! baca.SegmentMaker._comment_measure_numbers()
         af''!8                                                                 %! hijinks.violin_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         [                                                                      %! hijinks.violin_rhythm
 
         g''8                                                                   %! hijinks.violin_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         ]                                                                      %! hijinks.violin_rhythm
 
         f'''4                                                                  %! hijinks.violin_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         ef'''!16                                                               %! hijinks.violin_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
         [                                                                      %! hijinks.violin_rhythm
 
         cs''''!16                                                              %! hijinks.violin_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
         ]                                                                      %! hijinks.violin_rhythm
 
     }                                                                          %! hijinks.violin_rhythm
@@ -339,17 +339,17 @@ i_Violin_Music_Voice = {                                                       %
 
         % [_ Violin_Music_Voice measure 9]                                     %! baca.SegmentMaker._comment_measure_numbers()
         a'''4                                                                  %! hijinks.violin_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         e''''8                                                                 %! hijinks.violin_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         [                                                                      %! hijinks.violin_rhythm
 
         b''8                                                                   %! hijinks.violin_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         f'''8                                                                  %! hijinks.violin_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         ]                                                                      %! hijinks.violin_rhythm
 
     }                                                                          %! hijinks.violin_rhythm
@@ -361,11 +361,11 @@ i_Violin_Music_Voice = {                                                       %
 
         % [_ Violin_Music_Voice measure 14]                                    %! baca.SegmentMaker._comment_measure_numbers()
         fs'''!8.                                                               %! hijinks.violin_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         [                                                                      %! hijinks.violin_rhythm
 
         af''!8                                                                 %! hijinks.violin_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         ]                                                                      %! hijinks.violin_rhythm
 
     }                                                                          %! hijinks.violin_rhythm
@@ -415,63 +415,63 @@ i_Piano_RH_Music_Voice = {                                                     %
     \times 8/10 {                                                              %! hijinks.piano_rhythm
 
         % [_ Piano_RH_Music_Voice measure 1]                                   %! baca.SegmentMaker._comment_measure_numbers()
-        \set PianoStaffGroup.shortInstrumentName =                             %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup:-PARTS:IndicatorCommand
-        \markup {                                                              %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup:-PARTS:IndicatorCommand
-            \hcenter-in                                                        %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup:-PARTS:IndicatorCommand
-                #10                                                            %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup:-PARTS:IndicatorCommand
-                Pf.                                                            %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup:-PARTS:IndicatorCommand
-            }                                                                  %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup:-PARTS:IndicatorCommand
-        \set PianoStaffGroup.instrumentName =                                  %! baca.start_markup:baca_start_markup:-PARTS:IndicatorCommand
-        \markup {                                                              %! baca.start_markup:baca_start_markup:-PARTS:IndicatorCommand
-            \hcenter-in                                                        %! baca.start_markup:baca_start_markup:-PARTS:IndicatorCommand
-                #10                                                            %! baca.start_markup:baca_start_markup:-PARTS:IndicatorCommand
-                Piano                                                          %! baca.start_markup:baca_start_markup:-PARTS:IndicatorCommand
-            }                                                                  %! baca.start_markup:baca_start_markup:-PARTS:IndicatorCommand
+        \set PianoStaffGroup.shortInstrumentName =                             %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup():-PARTS:IndicatorCommand
+        \markup {                                                              %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup():-PARTS:IndicatorCommand
+            \hcenter-in                                                        %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup():-PARTS:IndicatorCommand
+                #10                                                            %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup():-PARTS:IndicatorCommand
+                Pf.                                                            %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup():-PARTS:IndicatorCommand
+            }                                                                  %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.margin_markup():-PARTS:IndicatorCommand
+        \set PianoStaffGroup.instrumentName =                                  %! baca.start_markup():baca_start_markup:-PARTS:IndicatorCommand
+        \markup {                                                              %! baca.start_markup():baca_start_markup:-PARTS:IndicatorCommand
+            \hcenter-in                                                        %! baca.start_markup():baca_start_markup:-PARTS:IndicatorCommand
+                #10                                                            %! baca.start_markup():baca_start_markup:-PARTS:IndicatorCommand
+                Piano                                                          %! baca.start_markup():baca_start_markup:-PARTS:IndicatorCommand
+            }                                                                  %! baca.start_markup():baca_start_markup:-PARTS:IndicatorCommand
         \clef "treble"                                                         %! DEFAULT_CLEF:_set_status_tag:abjad.ScoreTemplate.attach_defaults
         \once \override PianoRHMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! DEFAULT_CLEF_COLOR:baca.SegmentMaker._attach_color_literal(2)
     %@% \override PianoRHMusicStaff.Clef.color = ##f                           %! DEFAULT_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
         \set PianoRHMusicStaff.forceClef = ##t                                 %! DEFAULT_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):abjad.ScoreTemplate.attach_defaults
         \once \override PianoStaffGroup.InstrumentName.color = #(x11-color 'blue) %! EXPLICIT_MARGIN_MARKUP_COLOR:baca.SegmentMaker._attach_color_literal(2)
         f'''16                                                                 %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         ^ \baca-default-indicator-markup "(“Piano”)"                           %! DEFAULT_INSTRUMENT_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
         ^ \baca-explicit-indicator-markup "[“Pf.”]"                            %! EXPLICIT_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
-        _ \markup {                                                            %! baca.markup:IndicatorCommand
-            \line                                                              %! baca.markup:IndicatorCommand
-                {                                                              %! baca.markup:IndicatorCommand
-                    \dynamic                                                   %! baca.markup:IndicatorCommand
-                        pp                                                     %! baca.markup:IndicatorCommand
-                    \italic                                                    %! baca.markup:IndicatorCommand
-                        "sempre al fino"                                       %! baca.markup:IndicatorCommand
-                }                                                              %! baca.markup:IndicatorCommand
-            }                                                                  %! baca.markup:IndicatorCommand
+        _ \markup {                                                            %! baca.markup():IndicatorCommand
+            \line                                                              %! baca.markup():IndicatorCommand
+                {                                                              %! baca.markup():IndicatorCommand
+                    \dynamic                                                   %! baca.markup():IndicatorCommand
+                        pp                                                     %! baca.markup():IndicatorCommand
+                    \italic                                                    %! baca.markup():IndicatorCommand
+                        "sempre al fino"                                       %! baca.markup():IndicatorCommand
+                }                                                              %! baca.markup():IndicatorCommand
+            }                                                                  %! baca.markup():IndicatorCommand
         [                                                                      %! hijinks.piano_rhythm
         \override PianoRHMusicStaff.Clef.color = #(x11-color 'violet)          %! DEFAULT_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
         \override PianoStaffGroup.InstrumentName.color = #(x11-color 'DeepSkyBlue2) %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:baca.SegmentMaker._attach_color_literal(2)
-        \set PianoStaffGroup.shortInstrumentName =                             %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
-        \markup {                                                              %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
-            \hcenter-in                                                        %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
-                #10                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
-                Pf.                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
-            }                                                                  %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
+        \set PianoStaffGroup.shortInstrumentName =                             %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup():-PARTS:IndicatorCommand
+        \markup {                                                              %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup():-PARTS:IndicatorCommand
+            \hcenter-in                                                        %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup():-PARTS:IndicatorCommand
+                #10                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup():-PARTS:IndicatorCommand
+                Pf.                                                            %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup():-PARTS:IndicatorCommand
+            }                                                                  %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):baca.margin_markup():-PARTS:IndicatorCommand
 
         c'''16                                                                 %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         bf''!16                                                                %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         e''32                                                                  %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         d''32                                                                  %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         cs''!32                                                                %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         ef'!32                                                                 %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         ]                                                                      %! hijinks.piano_rhythm
 
     }                                                                          %! hijinks.piano_rhythm
@@ -481,20 +481,20 @@ i_Piano_RH_Music_Voice = {                                                     %
 
         % [_ Piano_RH_Music_Voice measure 3]                                   %! baca.SegmentMaker._comment_measure_numbers()
         cs'''!64                                                               %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
         [                                                                      %! hijinks.piano_rhythm
 
         a''64                                                                  %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         e''16                                                                  %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         ef''!16                                                                %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         f'16                                                                   %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         ]                                                                      %! hijinks.piano_rhythm
 
     }                                                                          %! hijinks.piano_rhythm
@@ -503,23 +503,23 @@ i_Piano_RH_Music_Voice = {                                                     %
     \times 6/7 {                                                               %! hijinks.piano_rhythm
 
         a''''16                                                                %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         [                                                                      %! hijinks.piano_rhythm
 
         fs''''!16                                                              %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         g'''32                                                                 %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         b''32                                                                  %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         cs''!64                                                                %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         ef'!64                                                                 %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
         ]                                                                      %! hijinks.piano_rhythm
 
     }                                                                          %! hijinks.piano_rhythm
@@ -528,41 +528,41 @@ i_Piano_RH_Music_Voice = {                                                     %
 
         % [_ Piano_RH_Music_Voice measure 6]                                   %! baca.SegmentMaker._comment_measure_numbers()
         e''''16                                                                %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         [                                                                      %! hijinks.piano_rhythm
 
         cs''''!64                                                              %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         a'''64                                                                 %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         fs'''!64                                                               %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         f'''64                                                                 %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         ef'''!16                                                               %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         d'''16                                                                 %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         c'''32                                                                 %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         b''64                                                                  %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         af''!64                                                                %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         g''64                                                                  %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         bf'!64                                                                 %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
         ]                                                                      %! hijinks.piano_rhythm
 
     }                                                                          %! hijinks.piano_rhythm
@@ -572,32 +572,32 @@ i_Piano_RH_Music_Voice = {                                                     %
 
         % [_ Piano_RH_Music_Voice measure 8]                                   %! baca.SegmentMaker._comment_measure_numbers()
         cs'''!16                                                               %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         [                                                                      %! hijinks.piano_rhythm
 
         bf''!32                                                                %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         a''32                                                                  %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         fs''!32                                                                %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         ef''!32                                                                %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         d''64                                                                  %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         c''64                                                                  %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         g'64                                                                   %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         f'64                                                                   %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
         ]                                                                      %! hijinks.piano_rhythm
 
     }                                                                          %! hijinks.piano_rhythm
@@ -606,26 +606,26 @@ i_Piano_RH_Music_Voice = {                                                     %
     \times 6/8 {                                                               %! hijinks.piano_rhythm
 
         fs'''!16                                                               %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         [                                                                      %! hijinks.piano_rhythm
 
         g''16                                                                  %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         f''64                                                                  %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         cs''!64                                                                %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         a'16                                                                   %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         af'!64                                                                 %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         ef'!64                                                                 %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
         ]                                                                      %! hijinks.piano_rhythm
 
     }                                                                          %! hijinks.piano_rhythm
@@ -634,14 +634,14 @@ i_Piano_RH_Music_Voice = {                                                     %
 
         % [_ Piano_RH_Music_Voice measure 11]                                  %! baca.SegmentMaker._comment_measure_numbers()
         g'16                                                                   %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         [                                                                      %! hijinks.piano_rhythm
 
         fs'!8.                                                                 %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         f'8.                                                                   %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         ]                                                                      %! hijinks.piano_rhythm
 
     }                                                                          %! hijinks.piano_rhythm
@@ -654,23 +654,23 @@ i_Piano_RH_Music_Voice = {                                                     %
         % [_ Piano_RH_Music_Voice measure 14]                                  %! baca.SegmentMaker._comment_measure_numbers()
         \override TupletBracket.shorten-pair = #'(0 . 0.6)                     %! baca.tuplet_bracket_shorten_pair():OverrideCommand(1)
         a''''32                                                                %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         [                                                                      %! hijinks.piano_rhythm
 
         af'''!32                                                               %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         fs'''!16                                                               %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         b'16                                                                   %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         e'8                                                                    %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         cs'!8                                                                  %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         ]                                                                      %! hijinks.piano_rhythm
         \revert TupletBracket.shorten-pair                                     %! baca.tuplet_bracket_shorten_pair():OverrideCommand(2)
 
@@ -722,30 +722,30 @@ i_Piano_LH_Music_Voice = {                                                     %
         \override TextScript.padding = #2                                      %! baca.text_script_padding():OverrideCommand(1)
     %%% \once \override PianoLHMusicStaff.Clef.X-extent = ##f                  %! MEASURE_1:SHIFTED_CLEF:baca.clef_shift():baca.clef_x_extent_false():OverrideCommand(1)
     %%% \once \override PianoLHMusicStaff.Clef.extra-offset = #'(-2.75 . 0)    %! MEASURE_1:SHIFTED_CLEF:baca.clef_extra_offset():baca.clef_shift():OverrideCommand(1)
-        \clef "bass"                                                           %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+        \clef "bass"                                                           %! EXPLICIT_CLEF:_set_status_tag:baca.clef():IndicatorCommand
         \once \override PianoLHMusicStaff.Clef.color = #(x11-color 'blue)      %! EXPLICIT_CLEF_COLOR:baca.SegmentMaker._attach_color_literal(2)
     %@% \override PianoLHMusicStaff.Clef.color = ##f                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
-        \set PianoLHMusicStaff.forceClef = ##t                                 %! EXPLICIT_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+        \set PianoLHMusicStaff.forceClef = ##t                                 %! EXPLICIT_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.clef():IndicatorCommand
         b,,,16                                                                 %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         [                                                                      %! hijinks.piano_rhythm
         \override PianoLHMusicStaff.Clef.color = #(x11-color 'DeepSkyBlue2)    %! EXPLICIT_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
         fs,!32.                                                                %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
-        _ \markup {                                                            %! baca.markup:IndicatorCommand
-            \italic                                                            %! baca.markup:IndicatorCommand
-                "ped. ad libitum"                                              %! baca.markup:IndicatorCommand
-            }                                                                  %! baca.markup:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
+        _ \markup {                                                            %! baca.markup():IndicatorCommand
+            \italic                                                            %! baca.markup():IndicatorCommand
+                "ped. ad libitum"                                              %! baca.markup():IndicatorCommand
+            }                                                                  %! baca.markup():IndicatorCommand
 
         af,!32.                                                                %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         g32.                                                                   %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         a64                                                                    %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
         ]                                                                      %! hijinks.piano_rhythm
 
     }                                                                          %! hijinks.piano_rhythm
@@ -753,26 +753,26 @@ i_Piano_LH_Music_Voice = {                                                     %
     \times 8/10 {                                                              %! hijinks.piano_rhythm
 
         b,,16                                                                  %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         [                                                                      %! hijinks.piano_rhythm
 
         g,16                                                                   %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         c32.                                                                   %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         d32.                                                                   %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         fs!32                                                                  %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         af!32                                                                  %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         bf!32                                                                  %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         ]                                                                      %! hijinks.piano_rhythm
 
     }                                                                          %! hijinks.piano_rhythm
@@ -780,24 +780,24 @@ i_Piano_LH_Music_Voice = {                                                     %
     \times 6/9 {                                                               %! hijinks.piano_rhythm
 
         c,,32                                                                  %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         [                                                                      %! hijinks.piano_rhythm
 
         d,,32                                                                  %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         bf,,!32                                                                %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         % [_ Piano_LH_Music_Voice measure 5]                                   %! baca.SegmentMaker._comment_measure_numbers()
         e,16                                                                   %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         af,!16                                                                 %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         f16                                                                    %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         ]                                                                      %! hijinks.piano_rhythm
 
     }                                                                          %! hijinks.piano_rhythm
@@ -813,14 +813,14 @@ i_Piano_LH_Music_Voice = {                                                     %
 
         % [_ Piano_LH_Music_Voice measure 7]                                   %! baca.SegmentMaker._comment_measure_numbers()
         e16.                                                                   %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         [                                                                      %! hijinks.piano_rhythm
 
         af!16.                                                                 %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         b8                                                                     %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         ]                                                                      %! hijinks.piano_rhythm
 
     }                                                                          %! hijinks.piano_rhythm
@@ -829,21 +829,21 @@ i_Piano_LH_Music_Voice = {                                                     %
 
         % [_ Piano_LH_Music_Voice measure 9]                                   %! baca.SegmentMaker._comment_measure_numbers()
         e,16                                                                   %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         [                                                                      %! hijinks.piano_rhythm
 
         b,16                                                                   %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         c16.                                                                   %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         % [_ Piano_LH_Music_Voice measure 10]                                  %! baca.SegmentMaker._comment_measure_numbers()
         d16.                                                                   %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         bf!8                                                                   %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         ]                                                                      %! hijinks.piano_rhythm
 
     }                                                                          %! hijinks.piano_rhythm
@@ -852,32 +852,32 @@ i_Piano_LH_Music_Voice = {                                                     %
 
         % [_ Piano_LH_Music_Voice measure 11]                                  %! baca.SegmentMaker._comment_measure_numbers()
         c,,32                                                                  %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         [                                                                      %! hijinks.piano_rhythm
 
         e,,32                                                                  %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         b,,64                                                                  %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         d,64                                                                   %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         ef,!64                                                                 %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         bf,!64                                                                 %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
         cs!16                                                                  %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         af!16                                                                  %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         a16                                                                    %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         ]                                                                      %! hijinks.piano_rhythm
 
     }                                                                          %! hijinks.piano_rhythm
@@ -890,24 +890,24 @@ i_Piano_LH_Music_Voice = {                                                     %
         % [_ Piano_LH_Music_Voice measure 14]                                  %! baca.SegmentMaker._comment_measure_numbers()
         \override TupletBracket.shorten-pair = #'(0 . 0.6)                     %! baca.tuplet_bracket_shorten_pair():OverrideCommand(1)
         d,,16.                                                                 %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
         [                                                                      %! hijinks.piano_rhythm
 
         g,,16.                                                                 %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         bf,,!32                                                                %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         f,32                                                                   %! hijinks.piano_rhythm
-        - \tenuto                                                              %! baca.tenuto:IndicatorCommand
+        - \tenuto                                                              %! baca.tenuto():IndicatorCommand
 
         c64                                                                    %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
 
-        \override Score.SpanBar #'transparent = ##f                            %! baca.literal:IndicatorCommand
+        \override Score.SpanBar #'transparent = ##f                            %! baca.literal():IndicatorCommand
         ef!64                                                                  %! hijinks.piano_rhythm
-        - \staccato                                                            %! baca.staccato:IndicatorCommand
+        - \staccato                                                            %! baca.staccato():IndicatorCommand
         ]                                                                      %! hijinks.piano_rhythm
         \revert TextScript.padding                                             %! baca.text_script_padding():OverrideCommand(2)
         \revert TupletBracket.shorten-pair                                     %! baca.tuplet_bracket_shorten_pair():OverrideCommand(2)

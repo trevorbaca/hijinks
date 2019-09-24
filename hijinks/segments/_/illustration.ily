@@ -406,7 +406,7 @@ i_Violin_Music_Staff = <<                                                      %
     \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context()
     \i_Global_Rests                                                            %! abjad.Path.extern()
 
-    \context Voice = "Violin_Music_Voice"                                      %! hijinks.ScoreTemplate.__call__
+    \context Voice = "Violin_Music_Voice"                                      %! hijinks.ScoreTemplate.__call__()
     \i_Violin_Music_Voice                                                      %! abjad.Path.extern()
 
 >>                                                                             %! abjad.Path.extern()
@@ -711,7 +711,7 @@ i_Piano_RH_Music_Voice = {                                                     %
 
 i_Piano_RH_Music_Staff = {                                                     %! abjad.Path.extern()
 
-    \context Voice = "Piano_RH_Music_Voice"                                    %! hijinks.ScoreTemplate.__call__
+    \context Voice = "Piano_RH_Music_Voice"                                    %! hijinks.ScoreTemplate.__call__()
     \i_Piano_RH_Music_Voice                                                    %! abjad.Path.extern()
 
 }                                                                              %! abjad.Path.extern()
@@ -969,7 +969,7 @@ i_Piano_LH_Music_Voice = {                                                     %
 
 i_Piano_LH_Music_Staff = {                                                     %! abjad.Path.extern()
 
-    \context Voice = "Piano_LH_Music_Voice"                                    %! hijinks.ScoreTemplate.__call__
+    \context Voice = "Piano_LH_Music_Voice"                                    %! hijinks.ScoreTemplate.__call__()
     \i_Piano_LH_Music_Voice                                                    %! abjad.Path.extern()
 
 }                                                                              %! abjad.Path.extern()

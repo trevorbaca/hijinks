@@ -13,8 +13,8 @@
             \include "layout.ly"                                               %! baca.SegmentMaker._make_lilypond_file()
         }                                                                      %! baca.SegmentMaker._make_lilypond_file()
 
-        \context Score = "Score"                                               %! hijinks.ScoreTemplate.__call__
-        <<                                                                     %! hijinks.ScoreTemplate.__call__
+        \context Score = "Score"                                               %! hijinks.ScoreTemplate.__call__()
+        <<                                                                     %! hijinks.ScoreTemplate.__call__()
 
             \context GlobalContext = "Global_Context"                          %! abjad.ScoreTemplate._make_global_context()
             <<                                                                 %! abjad.ScoreTemplate._make_global_context()
@@ -24,26 +24,26 @@
 
             >>                                                                 %! abjad.ScoreTemplate._make_global_context()
 
-            \context MusicContext = "Music_Context"                            %! hijinks.ScoreTemplate.__call__
-            <<                                                                 %! hijinks.ScoreTemplate.__call__
+            \context MusicContext = "Music_Context"                            %! hijinks.ScoreTemplate.__call__()
+            <<                                                                 %! hijinks.ScoreTemplate.__call__()
 
-                \context ViolinMusicStaff = "Violin_Music_Staff"               %! hijinks.ScoreTemplate.__call__
+                \context ViolinMusicStaff = "Violin_Music_Staff"               %! hijinks.ScoreTemplate.__call__()
                 \i_Violin_Music_Staff                                          %! abjad.Path.extern()
 
-                \context PianoStaffGroup = "Piano_Staff_Group"                 %! hijinks.ScoreTemplate.__call__
-                <<                                                             %! hijinks.ScoreTemplate.__call__
+                \context PianoStaffGroup = "Piano_Staff_Group"                 %! hijinks.ScoreTemplate.__call__()
+                <<                                                             %! hijinks.ScoreTemplate.__call__()
 
-                    \context PianoRHMusicStaff = "Piano_RH_Music_Staff"        %! hijinks.ScoreTemplate.__call__
+                    \context PianoRHMusicStaff = "Piano_RH_Music_Staff"        %! hijinks.ScoreTemplate.__call__()
                     \i_Piano_RH_Music_Staff                                    %! abjad.Path.extern()
 
-                    \context PianoLHMusicStaff = "Piano_LH_Music_Staff"        %! hijinks.ScoreTemplate.__call__
+                    \context PianoLHMusicStaff = "Piano_LH_Music_Staff"        %! hijinks.ScoreTemplate.__call__()
                     \i_Piano_LH_Music_Staff                                    %! abjad.Path.extern()
 
-                >>                                                             %! hijinks.ScoreTemplate.__call__
+                >>                                                             %! hijinks.ScoreTemplate.__call__()
 
-            >>                                                                 %! hijinks.ScoreTemplate.__call__
+            >>                                                                 %! hijinks.ScoreTemplate.__call__()
 
-        >>                                                                     %! hijinks.ScoreTemplate.__call__
+        >>                                                                     %! hijinks.ScoreTemplate.__call__()
 
     >>                                                                         %! baca.SegmentMaker._make_lilypond_file()
     

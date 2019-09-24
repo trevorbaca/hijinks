@@ -6,7 +6,7 @@ def violin_rhythm() -> abjad.Selection:
     """
     Makes violin rhythm.
     """
-    tag = "hijinks.violin_rhythm"
+    tag = abjad.Tag("hijinks.violin_rhythm")
     definitions = [
         ((4, 2, 2, 2), (8, 16)),
         ((2, 2, 4, 1, 1), (8, 16)),

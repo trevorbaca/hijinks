@@ -9,7 +9,7 @@ def piano_rhythm(staff) -> baca.RhythmCommand:
     Makes piano rhythm for ``staff``.
     """
     assert staff in ("rh", "lh")
-    tag = abjad.Tag("hijinks.piano_rhythm")
+    tag = abjad.Tag("hijinks.piano_rhythm()")
     maker = abjad.Tuplet.from_ratio_and_pair
     music: typing.List[abjad.Component] = []
     for proportion, pair, aggregate in zip(

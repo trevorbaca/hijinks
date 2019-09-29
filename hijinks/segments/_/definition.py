@@ -10,8 +10,6 @@ import os
 
 maker = baca.SegmentMaker(
     check_all_are_pitched=True,
-    final_markup=(["Austin, TX."], ["February 2006."]),
-    final_markup_extra_offset=(-9.5, -4),
     first_segment=True,
     final_segment=True,
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
@@ -83,5 +81,17 @@ maker(
     baca.literal(
         r"\override Score.SpanBar #'transparent = ##f",
         selector=baca.leaf(-1),
+    ),
+)
+
+maker(
+    ("lh", -1),
+    baca.chunk(
+        baca.mark(r"\hijinks-colophon-markup"),
+        baca.rehearsal_mark_down(),
+        baca.rehearsal_mark_extra_offset((-12, 6)),
+        baca.rehearsal_mark_padding(0),
+        baca.rehearsal_mark_self_alignment_x(abjad.Right),
+        selector=baca.leaves().rleak()[-1],
     ),
 )

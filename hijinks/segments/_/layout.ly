@@ -81,8 +81,6 @@
             % [Page_Layout measure 15]                                         %! baca.SegmentMaker._comment_measure_numbers()
             \noBreak                                                           %! BREAK:BreakMeasureMap(2)
             s1 * 1/8                                                           %! baca.SegmentMaker._make_global_skips(1)
-            \baca-bar-line-visible                                             %! baca.SegmentMaker._attach_final_bar_line()
-            \bar "|"                                                           %! baca.SegmentMaker._attach_final_bar_line()
 
             % [Page_Layout measure 16]                                         %! baca.SegmentMaker._comment_measure_numbers():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
             \noBreak                                                           %! BREAK:BreakMeasureMap(2):baca.SegmentMaker._style_phantom_measures(1):PHANTOM

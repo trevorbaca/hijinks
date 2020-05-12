@@ -16,4 +16,3 @@ from hijinks.materials.metronome_marks.definition import metronome_marks
 from hijinks.materials.pairs.definition import pairs
 from hijinks.materials.proportions.definition import proportions
 from hijinks.materials.violin_pitches.definition import violin_pitches
-from hijinks import segments

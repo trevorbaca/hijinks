@@ -8,6 +8,7 @@ if not (
     raise ImportError("Requires Python 3.7.")
 del distutils
 del platform
+from .ScoreTemplate import ScoreTemplate
 from hijinks.tools import *
 from hijinks.materials.circuit.definition import circuit
 from hijinks.materials.instruments.definition import instruments

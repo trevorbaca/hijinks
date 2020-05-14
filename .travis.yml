@@ -48,8 +48,6 @@ before_install:
     # clone & install baca test:
     - TEST=/tmp/test
     - git clone https://github.com/trevorbaca/test.git $TEST
-    #- export MYPYPATH=$MYPYPATH:$BACA
-    #- export PATH=$PATH:$BACA/scr
     
     # symlink to baca test
     - unlink $PACKAGE/test.py

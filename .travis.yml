@@ -66,9 +66,6 @@ before_install:
     - echo $PATH
     - ls
     - ls /tmp
-    - ls ~
-    - ls ~/build
-    - ls ~/build/trevorbaca
     - pwd
     - which baca-doctest
     - which mypy

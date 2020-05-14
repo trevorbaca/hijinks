@@ -83,7 +83,7 @@ script:
     - black $BLACK_OPTS --exclude $BLACK_EXCLUDE $PACKAGE
     - mypy --ignore-missing-imports $PACKAGE
     - coverage run -a `which baca-doctest` $PACKAGE
-    - coverage run -a `which py.test` -rf $PACKAGE
+    - coverage run -a `which py.test` -rf $PACKAGE/test.py
 
 after_success:
     - pip install --quiet coveralls

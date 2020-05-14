@@ -48,7 +48,7 @@ before_install:
     # clone & install baca test:
     - TEST=/tmp/test
     - git clone https://github.com/trevorbaca/test.git $TEST
-    - pip install -e $TEST
+    - pip install $TEST
     #- export MYPYPATH=$MYPYPATH:$BACA
     #- export PATH=$PATH:$BACA/scr
     

@@ -61,10 +61,12 @@ before_install:
     - export PATH=$PATH:$IDE/ide/scr
 
     # log setup:
+    - echo $PACKAGE
     - echo $MYPYPATH
     - echo $PATH
     - ls
     - ls /tmp
+    - ls ~
     - pwd
     - which baca-doctest
     - which mypy

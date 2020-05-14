@@ -53,7 +53,7 @@ before_install:
     
     # symlink to baca test
     - unlink $PACKAGE/test_segments.py
-    - symlink -s $TEST/test_segments.py $PACKAGE/test_segments.py
+    - ln -s $TEST/test_segments.py $PACKAGE/test_segments.py
 
     # clone & install ide:
     - IDE=/tmp/ide

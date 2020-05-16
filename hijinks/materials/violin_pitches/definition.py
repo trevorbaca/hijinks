@@ -1,7 +1,7 @@
-import abjad
-import baca
 import typing
 
+import abjad
+import baca
 
 # aggregate = pitch.CC[0][175 - 1]
 aggregate = [10, 19, 20, 23, 24, 26, 27, 29, 30, 33, 37, 40]

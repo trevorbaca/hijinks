@@ -1,10 +1,8 @@
+import typing
+
 import abjad
 import baca
-import typing
-from hijinks.materials import margin_markups
-from hijinks.materials import proportions
-from hijinks.materials import pairs
-from hijinks.materials import circuit
+from hijinks.materials import circuit, margin_markups, pairs, proportions
 
 
 def margin_markup(

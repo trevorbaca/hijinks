@@ -13,7 +13,7 @@ maker = baca.SegmentMaker(
     first_segment=True,
     final_segment=True,
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
-    time_signatures=15*[(1, 8)],
+    time_signatures=15 * [(1, 8)],
     validate_measure_count=15,
 )
 
@@ -41,10 +41,10 @@ maker(
 pp_sempre_al_fino = abjad.Markup.line([
     abjad.Markup("pp").dynamic(),
     abjad.Markup("sempre al fino").italic(),
-    ])
+])
 
 maker(
-    "vn", 
+    "vn",
     baca.markup(pp_sempre_al_fino, direction=abjad.Down),
     baca.pitches(hijinks.violin_pitches),
     baca.skeleton(hijinks.violin_rhythm(), tag=None),

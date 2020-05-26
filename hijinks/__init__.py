@@ -1,16 +1,18 @@
 import distutils.version
 import platform
 
-from hijinks.materials import (
+from hijinks.tools import (
     circuit,
     instruments,
+    margin_markup,
     margin_markups,
     metronome_marks,
     pairs,
+    piano_rhythm,
     proportions,
     violin_pitches,
+    violin_rhythm,
 )
-from hijinks.tools import margin_markup, piano_rhythm, violin_rhythm
 
 from .ScoreTemplate import ScoreTemplate
 

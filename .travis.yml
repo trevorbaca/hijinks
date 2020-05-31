@@ -26,7 +26,7 @@ before_install:
     - git clone -b trevor/dev https://github.com/Abjad/abjad.git $ABJAD
     - pip install -e $ABJAD
     - export MYPYPATH=$ABJAD
-    - export PATH=$PATH:$ABJAD/abjad/scr
+    # - export PATH=$PATH:$ABJAD/abjad/scr
 
     # clone & install rmakers:
     - RMAKERS=/tmp/abjad-ext-rmakers
@@ -39,7 +39,6 @@ before_install:
     - git clone https://github.com/trevorbaca/baca.git $BACA
     - pip install -e $BACA
     - export MYPYPATH=$MYPYPATH:$BACA
-    # - export PATH=$PATH:$BACA/scr
 
     # symlink to mypy configfile
     - ln -s $BACA/dotfiles/mypy.ini ~/.mypy.ini
@@ -65,13 +64,6 @@ before_install:
     - echo $PATH
     - echo $PYTHONPATH
     - echo $TRAVIS_BUILD_DIR
-
-    # log script paths
-    # - which baca-doctest
-    # - which black-check
-    # - which flake8-check
-    # - which isort-check
-    # - which prime-parser-tables
 
     # log present working directory
     - pwd

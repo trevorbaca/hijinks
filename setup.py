@@ -7,7 +7,6 @@ install_requires = [
     "flake8",
     "isort",
     "mypy",
-    "pip",
     "pytest",
     "roman",
 ]

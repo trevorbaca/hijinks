@@ -68,12 +68,12 @@ before_install:
     - export PATH=$PATH:$IDE/ide/scr
 
     # log versions
-    - black --version
-    - flake8 --version
-    - isort --version
-    - mypy --version
-    - pip --version
-    - pytest --version
+    # - black --version
+    # - flake8 --version
+    # - isort --version
+    # - mypy --version
+    # - pip --version
+    # - pytest --version
 
     # log environment variables
     - echo $MYPYPATH

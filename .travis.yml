@@ -69,7 +69,7 @@ before_install:
 
 install:
     - pip install -e .
-    - prime-parser-tables
+    - $abjad/scr/devel/prime-parser-tables
 
     # log versions
     - black --version

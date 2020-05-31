@@ -14,9 +14,6 @@ before_install:
     # alias package
     - PACKAGE=`pwd`/hijinks
 
-    # upgrade pip:
-    # - pip install --upgrade pip
-
     # install lilypond:
     - LILYPOND=/tmp/lilypond
     - LILYPOND_URL=http://lilypond.org/download/binaries/linux-64/
@@ -42,7 +39,7 @@ before_install:
     - git clone https://github.com/trevorbaca/baca.git $BACA
     - pip install -e $BACA
     - export MYPYPATH=$MYPYPATH:$BACA
-    - export PATH=$PATH:$BACA/scr
+    # - export PATH=$PATH:$BACA/scr
 
     # symlink to mypy configfile
     - ln -s $BACA/dotfiles/mypy.ini ~/.mypy.ini
@@ -62,26 +59,19 @@ before_install:
     - export MYPYPATH=$MYPYPATH:$IDE
     - export PATH=$PATH:$IDE/ide/scr
 
-    # log versions
-    # - black --version
-    # - flake8 --version
-    # - isort --version
-    # - mypy --version
-    # - pip --version
-    # - pytest --version
-
     # log environment variables
     - echo $MYPYPATH
     - echo $PACKAGE
     - echo $PATH
+    - echo $PYTHONPATH
     - echo $TRAVIS_BUILD_DIR
 
     # log script paths
-    - which baca-doctest
-    - which black-check
-    - which flake8-check
-    - which isort-check
-    - which prime-parser-tables
+    # - which baca-doctest
+    # - which black-check
+    # - which flake8-check
+    # - which isort-check
+    # - which prime-parser-tables
 
     # log present working directory
     - pwd
@@ -96,15 +86,14 @@ install:
     - flake8 --version
     - isort --version
     - mypy --version
-    - pip --version
     - pytest --version
 
 script:
-    - black-check $PACKAGE
-    - flake8-check $PACKAGE
-    - isort-check $PACKAGE
+    - $BACA/scr/black-check $PACKAGE
+    - $BACA/scr/flake8-check $PACKAGE
+    - $BACA/scr/isort-check $PACKAGE
     - mypy $PACKAGE
-    - baca-doctest $PACKAGE
+    - $BACA/scr/baca-doctest $PACKAGE
     - py.test -rf $PACKAGE/test.py
 
 notifications:

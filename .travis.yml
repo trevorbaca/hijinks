@@ -11,8 +11,9 @@ python:
     - 3.8
 
 before_install:
-    # alias package
-    - PACKAGE=`pwd`/hijinks
+    # define variables
+    - name=hijinks
+    - contents=$TRAVIS_BUILD_DIR/$name
 
     # install lilypond:
     - LILYPOND=/tmp/lilypond
@@ -47,8 +48,8 @@ before_install:
     - git clone https://github.com/trevorbaca/test.git $TEST
     
     # symlink to baca test
-    - unlink $PACKAGE/test.py
-    - ln -s $TEST/test_segments.py $PACKAGE/test.py
+    - unlink $contents/test.py
+    - ln -s $TEST/test_segments.py $contents/test.py
 
     # clone & install ide:
     - IDE=/tmp/ide
@@ -59,7 +60,6 @@ before_install:
 
     # log environment variables
     - echo $MYPYPATH
-    - echo $PACKAGE
     - echo $PATH
     - echo $PYTHONPATH
     - echo $TRAVIS_BUILD_DIR
@@ -80,12 +80,12 @@ install:
     - pytest --version
 
 script:
-    - $BACA/scr/black-check $PACKAGE
-    - $BACA/scr/flake8-check $PACKAGE
-    - $BACA/scr/isort-check $PACKAGE
-    - mypy $PACKAGE
-    - $BACA/scr/baca-doctest $PACKAGE
-    - py.test -rf $PACKAGE/test.py
+    - $BACA/scr/black-check $contents
+    - $BACA/scr/flake8-check $contents
+    - $BACA/scr/isort-check $contents
+    - mypy $contents
+    - $BACA/scr/baca-doctest $contents
+    - py.test -rf $contents/test.py
 
 notifications:
     email: false

@@ -70,7 +70,7 @@ before_install:
 
 install:
     - pip install -e .
-    - prime-parser-tables
+    # - prime-parser-tables
 
     # log versions
     - black --version

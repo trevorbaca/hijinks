@@ -56,7 +56,7 @@ before_install:
     - git clone https://github.com/Abjad/ide.git $ide
     - pip install $ide
     - export MYPYPATH=$MYPYPATH:$ide
-    - export PATH=$PATH:$ide/ide/scr
+    # - export PATH=$PATH:$ide/ide/scr
 
     # log environment variables
     - echo $MYPYPATH
@@ -70,7 +70,6 @@ before_install:
 
 install:
     - pip install -e .
-    # - prime-parser-tables
 
     # log versions
     - black --version

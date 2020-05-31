@@ -16,47 +16,47 @@ before_install:
     - contents=$TRAVIS_BUILD_DIR/$name
 
     # install lilypond:
-    - LILYPOND=/tmp/lilypond
-    - LILYPOND_URL=http://lilypond.org/download/binaries/linux-64/
-    - LILYPOND_SOURCE=lilypond-2.19.84-1.linux-64.sh
-    - wget -q -O $LILYPOND $LILYPOND_URL/$LILYPOND_SOURCE
-    - sh $LILYPOND --batch
+    - lilypond=/tmp/lilypond
+    - lilypond_url=http://lilypond.org/download/binaries/linux-64/
+    - lilypond_source=lilypond-2.19.84-1.linux-64.sh
+    - wget -q -O $lilypond $lilypond_url/$lilypond_source
+    - sh $lilypond --batch
 
     # clone & install abjad dev branch:
-    - ABJAD=/tmp/abjad
-    - git clone -b trevor/dev https://github.com/Abjad/abjad.git $ABJAD
-    - pip install $ABJAD
-    - export MYPYPATH=$ABJAD
+    - abjad=/tmp/abjad
+    - git clone -b trevor/dev https://github.com/Abjad/abjad.git $abjad
+    - pip install $abjad
+    - export MYPYPATH=$abjad
 
     # clone & install rmakers:
-    - RMAKERS=/tmp/abjad-ext-rmakers
-    - git clone https://github.com/Abjad/abjad-ext-rmakers.git $RMAKERS
-    - pip install $RMAKERS
-    - export MYPYPATH=$MYPYPATH:$RMAKERS
+    - rmakers=/tmp/abjad-ext-rmakers
+    - git clone https://github.com/Abjad/abjad-ext-rmakers.git $rmakers
+    - pip install $rmakers
+    - export MYPYPATH=$MYPYPATH:$rmakers
 
     # clone & install baca:
-    - BACA=/tmp/baca
-    - git clone https://github.com/trevorbaca/baca.git $BACA
-    - pip install $BACA
-    - export MYPYPATH=$MYPYPATH:$BACA
+    - baca=/tmp/baca
+    - git clone https://github.com/trevorbaca/baca.git $baca
+    - pip install $baca
+    - export MYPYPATH=$MYPYPATH:$baca
 
     # symlink to mypy configfile
-    - ln -s $BACA/dotfiles/mypy.ini ~/.mypy.ini
+    - ln -s $baca/dotfiles/mypy.ini ~/.mypy.ini
 
     # clone & install baca test:
-    - TEST=/tmp/test
-    - git clone https://github.com/trevorbaca/test.git $TEST
+    - test=/tmp/test
+    - git clone https://github.com/trevorbaca/test.git $test
     
     # symlink to baca test
     - unlink $contents/test.py
-    - ln -s $TEST/test_segments.py $contents/test.py
+    - ln -s $test/test_segments.py $contents/test.py
 
     # clone & install ide:
-    - IDE=/tmp/ide
-    - git clone https://github.com/Abjad/ide.git $IDE
-    - pip install $IDE
-    - export MYPYPATH=$MYPYPATH:$IDE
-    - export PATH=$PATH:$IDE/ide/scr
+    - ide=/tmp/ide
+    - git clone https://github.com/Abjad/ide.git $ide
+    - pip install $ide
+    - export MYPYPATH=$MYPYPATH:$ide
+    - export PATH=$PATH:$ide/ide/scr
 
     # log environment variables
     - echo $MYPYPATH
@@ -80,11 +80,11 @@ install:
     - pytest --version
 
 script:
-    - $BACA/scr/black-check $contents
-    - $BACA/scr/flake8-check $contents
-    - $BACA/scr/isort-check $contents
+    - $baca/scr/black-check $contents
+    - $baca/scr/flake8-check $contents
+    - $baca/scr/isort-check $contents
     - mypy $contents
-    - $BACA/scr/baca-doctest $contents
+    - $baca/scr/baca-doctest $contents
     - py.test -rf $contents/test.py
 
 notifications:

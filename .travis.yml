@@ -11,9 +11,8 @@ python:
     - 3.8
 
 before_install:
-    # define variables
+    # alias package:
     - name=hijinks
-    - contents=$TRAVIS_BUILD_DIR/$name
 
     # install lilypond:
     - lilypond=/tmp/lilypond
@@ -26,36 +25,31 @@ before_install:
     - abjad=/tmp/abjad
     - git clone -b trevor/dev https://github.com/Abjad/abjad.git $abjad
     - pip install $abjad
-    - export MYPYPATH=$abjad
 
     # clone & install rmakers:
     - rmakers=/tmp/abjad-ext-rmakers
     - git clone https://github.com/Abjad/abjad-ext-rmakers.git $rmakers
     - pip install $rmakers
-    - export MYPYPATH=$MYPYPATH:$rmakers
 
     # clone & install baca:
     - baca=/tmp/baca
     - git clone https://github.com/trevorbaca/baca.git $baca
     - pip install $baca
-    - export MYPYPATH=$MYPYPATH:$baca
-
-    # symlink to mypy configfile
-    - ln -s $baca/dotfiles/mypy.ini ~/.mypy.ini
 
     # clone & install baca test:
     - test=/tmp/test
     - git clone https://github.com/trevorbaca/test.git $test
-    
-    # symlink to baca test
-    - unlink $contents/test.py
-    - ln -s $test/test_segments.py $contents/test.py
+    - unlink $TRAVIS_BUILD_DIR/$name/test.py
+    - ln -s $test/test_segments.py $TRAVIS_BUILD_DIR/$name/test.py
 
     # clone & install ide:
     - ide=/tmp/ide
     - git clone https://github.com/Abjad/ide.git $ide
     - pip install $ide
-    - export MYPYPATH=$MYPYPATH:$ide
+
+    # configure mypy:
+    - export MYPYPATH=$abjad:$rmakers:$baca:$ide
+    - ln -s $baca/dotfiles/mypy.ini ~/.mypy.ini
 
     # log environment variables
     - echo $MYPYPATH
@@ -63,12 +57,11 @@ before_install:
     - echo $PYTHONPATH
     - echo $TRAVIS_BUILD_DIR
 
-    # log present working directory
-    - pwd
-    - ls
-
 install:
+    # install package
     - pip install -e .
+
+    # prime abjad parser tables
     - $abjad/scr/devel/prime-parser-tables
 
     # log versions
@@ -79,12 +72,12 @@ install:
     - pytest --version
 
 script:
-    - $baca/scr/black-check $contents
-    - $baca/scr/flake8-check $contents
-    - $baca/scr/isort-check $contents
-    - mypy $contents
-    - $baca/scr/baca-doctest $contents
-    - py.test -rf $contents/test.py
+    - $baca/scr/black-check $TRAVIS_BUILD_DIR/$name
+    - $baca/scr/flake8-check $TRAVIS_BUILD_DIR/$name
+    - $baca/scr/isort-check $TRAVIS_BUILD_DIR/$name
+    - mypy $TRAVIS_BUILD_DIR/$name
+    - $baca/scr/baca-doctest $TRAVIS_BUILD_DIR/$name
+    - py.test -rf $TRAVIS_BUILD_DIR/$name/test.py
 
 notifications:
     email: false

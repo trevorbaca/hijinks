@@ -24,20 +24,22 @@ before_install:
     # clone & install abjad dev branch:
     - ABJAD=/tmp/abjad
     - git clone -b trevor/dev https://github.com/Abjad/abjad.git $ABJAD
-    - pip install -e $ABJAD
+    # - pip install -e $ABJAD
+    - pip install $ABJAD
     - export MYPYPATH=$ABJAD
-    # - export PATH=$PATH:$ABJAD/abjad/scr
 
     # clone & install rmakers:
     - RMAKERS=/tmp/abjad-ext-rmakers
     - git clone https://github.com/Abjad/abjad-ext-rmakers.git $RMAKERS
-    - pip install -e $RMAKERS
+    #- pip install -e $RMAKERS
+    - pip install $RMAKERS
     - export MYPYPATH=$MYPYPATH:$RMAKERS
 
     # clone & install baca:
     - BACA=/tmp/baca
     - git clone https://github.com/trevorbaca/baca.git $BACA
-    - pip install -e $BACA
+    #- pip install -e $BACA
+    - pip install $BACA
     - export MYPYPATH=$MYPYPATH:$BACA
 
     # symlink to mypy configfile
@@ -54,7 +56,8 @@ before_install:
     # clone & install ide:
     - IDE=/tmp/ide
     - git clone https://github.com/Abjad/ide.git $IDE
-    - pip install -e $IDE
+    #- pip install -e $IDE
+    - pip install $IDE
     - export MYPYPATH=$MYPYPATH:$IDE
     - export PATH=$PATH:$IDE/ide/scr
 

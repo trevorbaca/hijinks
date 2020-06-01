@@ -8,7 +8,6 @@ install_requires = [
     "isort",
     "mypy",
     "pytest",
-    "roman",
 ]
 
 keywords = [

@@ -10,7 +10,7 @@ language: python
 #    - 3.7
 #    - 3.8
 
-import: trevorbaca/baca:dotfiles/score.yml@master
+import: trevorbaca/baca:dotfiles/score.yml
 
 git:
     depth: false

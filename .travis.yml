@@ -3,6 +3,5 @@ version: ~> 1.0
 env:
     global:
         - name=hijinks
-        - do_not_symlink_test_py=false
 
 import: trevorbaca/baca:dotfiles/score.yml

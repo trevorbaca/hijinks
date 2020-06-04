@@ -3,12 +3,12 @@ import: trevorbaca/baca:dotfiles/score.yml
 before_install:
     - name=hijinks
 
-    # install lilypond:
-    - lilypond=/tmp/lilypond
-    - lilypond_url=http://lilypond.org/download/binaries/linux-64/
-    - lilypond_source=lilypond-2.19.84-1.linux-64.sh
-    - wget -q -O $lilypond $lilypond_url/$lilypond_source
-    - sh $lilypond --batch
+#    # install lilypond:
+#    - lilypond=/tmp/lilypond
+#    - lilypond_url=http://lilypond.org/download/binaries/linux-64/
+#    - lilypond_source=lilypond-2.19.84-1.linux-64.sh
+#    - wget -q -O $lilypond $lilypond_url/$lilypond_source
+#    - sh $lilypond --batch
 
     # clone & install abjad dev branch:
     - git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad

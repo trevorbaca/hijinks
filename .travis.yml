@@ -1,7 +1,11 @@
 import: trevorbaca/baca:dotfiles/score.yml
 
+env:
+    global:
+        - name=hijinks
+
 before_install:
-    - name=hijinks
+#    - name=hijinks
 
 #    # install lilypond:
 #    - lilypond=/tmp/lilypond

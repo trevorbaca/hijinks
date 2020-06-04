@@ -1,21 +1,4 @@
-# version: ~> 1.0
-#
-# os: linux
-#
-# dist: xenial
-#
-#language: python
-#
-# python:
-#    - 3.7
-#    - 3.8
-
 import: trevorbaca/baca:dotfiles/score.yml
-
-git:
-    depth: false
-
-# import: trevorbaca/baca:/baca/dotfiles/score.yml@main
 
 before_install:
     - name=hijinks

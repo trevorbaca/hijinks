@@ -1,7 +1,3 @@
 version: ~> 1.0
 
-env:
-    global:
-        - name=hijinks
-
 import: trevorbaca/baca:dotfiles/score.yml

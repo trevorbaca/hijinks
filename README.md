@@ -2,8 +2,8 @@ Red Shift Hijinks
 =================
 
 [![Build Status](
-    https://travis-ci.org/trevorbaca/hijinks.svg)](
-    https://travis-ci.org/trevorbaca/hijinks)
+    https://api.travis-ci.org/trevorbaca/hijinks.svg)](
+    https://api.travis-ci.org/trevorbaca/hijinks)
 <!---
 [![Code style: black](
     https://img.shields.io/badge/code%20style-black-000000.svg)](

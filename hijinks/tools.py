@@ -133,7 +133,7 @@ def piano_rhythm(staff) -> baca.RhythmCommand:
     """
     assert staff in ("rh", "lh")
     tag = abjad.Tag("hijinks.piano_rhythm()")
-    maker = abjad.Tuplet.from_ratio_and_pair
+    maker = abjad.makers.tuplet_from_ratio_and_pair
     music: typing.List[abjad.Component] = []
     for proportion, pair, aggregate in zip(
         proportions[staff], pairs[staff], circuit
@@ -170,7 +170,7 @@ def violin_rhythm() -> abjad.Selection:
         ((4, 2, 2, 2), (8, 16)),
         ((3, 2), (4, 16)),
     ]
-    maker = abjad.Tuplet.from_ratio_and_pair
+    maker = abjad.makers.tuplet_from_ratio_and_pair
     components: typing.List[abjad.Component] = []
     for definition in definitions:
         ratio, pair = definition

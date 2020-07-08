@@ -1,5 +1,3 @@
-import os
-
 import abjad
 import baca
 import hijinks
@@ -12,7 +10,7 @@ maker = baca.SegmentMaker(
     check_all_are_pitched=True,
     first_segment=True,
     final_segment=True,
-    segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
+    segment_directory=abjad.Path(__file__).resolve().parent,
     time_signatures=15 * [(1, 8)],
     validate_measure_count=15,
 )

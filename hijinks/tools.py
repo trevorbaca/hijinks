@@ -142,7 +142,7 @@ def piano_rhythm(staff) -> baca.RhythmCommand:
             aggregate = list(reversed(aggregate))
         tuplet = maker(proportion, pair)
         assert isinstance(tuplet, abjad.Tuplet)
-        duration = abjad.inspect(tuplet).duration()
+        duration = abjad.inspectx.duration(tuplet)
         duration = duration.with_denominator(32)
         tuplet.denominator = duration.numerator
         if tuplet.trivial():

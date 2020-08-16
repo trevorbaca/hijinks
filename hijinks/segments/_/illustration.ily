@@ -259,12 +259,7 @@ i_Violin_Music_Voice = {                                                       %
 
         % [_ Violin_Music_Voice measure 1]                                     %! baca.SegmentMaker._comment_measure_numbers()
         \set Staff.shortInstrumentName = \markup \hcenter-in #10 Vn.           %! baca.margin_markup():-PARTS:baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_MARGIN_MARKUP
-        \set Staff.instrumentName =                                            %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
-        \markup {                                                              %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
-            \hcenter-in                                                        %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
-                #10                                                            %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
-                Violin                                                         %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
-            }                                                                  %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
+        \set Staff.instrumentName = \markup \hcenter-in #10 "Violin"           %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
         \clef "treble"                                                         %! abjad.ScoreTemplate.attach_defaults(3):baca.SegmentMaker._set_status_tag():DEFAULT_CLEF
         \once \override ViolinMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! baca.SegmentMaker._attach_color_literal(2):DEFAULT_CLEF_COLOR
     %@% \override ViolinMusicStaff.Clef.color = ##f                            %! baca.SegmentMaker._attach_color_literal(1):DEFAULT_CLEF_COLOR_CANCELLATION
@@ -416,12 +411,7 @@ i_Piano_RH_Music_Voice = {                                                     %
 
         % [_ Piano_RH_Music_Voice measure 1]                                   %! baca.SegmentMaker._comment_measure_numbers()
         \set PianoStaffGroup.shortInstrumentName = \markup \hcenter-in #10 Pf. %! baca.margin_markup():-PARTS:baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_MARGIN_MARKUP
-        \set PianoStaffGroup.instrumentName =                                  %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
-        \markup {                                                              %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
-            \hcenter-in                                                        %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
-                #10                                                            %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
-                Piano                                                          %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
-            }                                                                  %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
+        \set PianoStaffGroup.instrumentName = \markup \hcenter-in #10 "Piano"  %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
         \clef "treble"                                                         %! abjad.ScoreTemplate.attach_defaults(3):baca.SegmentMaker._set_status_tag():DEFAULT_CLEF
         \once \override PianoRHMusicStaff.Clef.color = #(x11-color 'DarkViolet) %! baca.SegmentMaker._attach_color_literal(2):DEFAULT_CLEF_COLOR
     %@% \override PianoRHMusicStaff.Clef.color = ##f                           %! baca.SegmentMaker._attach_color_literal(1):DEFAULT_CLEF_COLOR_CANCELLATION

@@ -12,7 +12,8 @@ instruments = abjad.OrderedDict(
 
 def _make_margin_markup(markup, context="Staff"):
     return abjad.MarginMarkup(
-        context=context, markup=baca.markups.instrument(markup, hcenter_in=10)
+        context=context,
+        markup=rf"\markup \hcenter-in #10 {markup}",
     )
 
 

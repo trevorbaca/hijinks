@@ -12,3 +12,8 @@ hijinks-colophon-markup = \markup {
         \line { Oct. 2006. }
         }
     }
+
+%%% DIRECTIVES %%%
+
+hijinks-pp-sempre-al-fino = \markup {
+  \line { \dynamic pp \italic "sempre al fino" } }

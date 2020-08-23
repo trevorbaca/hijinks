@@ -39,7 +39,7 @@ maker(
 maker(
     "vn",
     baca.markup(
-        r"\hijinks-pp-sempre-al-fino",
+        r"\hijinks-pp-sempre-al-fino-markup",
         direction=abjad.Down,
         literal=True,
     ),
@@ -53,7 +53,7 @@ maker(
     "rh",
     hijinks.piano_rhythm("rh"),
     baca.markup(
-        r"\hijinks-pp-sempre-al-fino",
+        r"\hijinks-pp-sempre-al-fino-markup",
         direction=abjad.Down,
         literal=True,
     ),
@@ -63,8 +63,9 @@ maker(
     "lh",
     baca.clef("bass"),
     baca.markup(
-        abjad.Markup(r'\markup \italic "ped. ad libitum"', literal=True),
+        r"\hijinks-ped-ad-libitum-markup",
         direction=abjad.Down,
+        literal=True,
         selector=baca.note(1),
     ),
     baca.text_script_padding(2),

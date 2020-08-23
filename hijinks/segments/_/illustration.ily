@@ -269,7 +269,7 @@ i_Violin_Music_Voice = {                                                       %
         - \tenuto                                                              %! baca.tenuto():baca.IndicatorCommand._call()
         ^ \baca-default-indicator-markup "(“Violin”)"                          %! DEFAULT_INSTRUMENT_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
         ^ \baca-explicit-indicator-markup "[“Vn.”]"                            %! EXPLICIT_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
-        _ \hijinks-pp-sempre-al-fino                                           %! baca.markup():baca.IndicatorCommand._call()
+        _ \hijinks-pp-sempre-al-fino-markup                                    %! baca.markup():baca.IndicatorCommand._call()
         - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         - \baca-text-spanner-left-text "baca.skeleton()"                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         - \tweak bound-details.right.padding #2.75                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
@@ -413,7 +413,7 @@ i_Piano_RH_Music_Voice = {                                                     %
         - \tenuto                                                              %! baca.tenuto():baca.IndicatorCommand._call()
         ^ \baca-default-indicator-markup "(“Piano”)"                           %! DEFAULT_INSTRUMENT_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
         ^ \baca-explicit-indicator-markup "[“Pf.”]"                            %! EXPLICIT_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
-        _ \hijinks-pp-sempre-al-fino                                           %! baca.markup():baca.IndicatorCommand._call()
+        _ \hijinks-pp-sempre-al-fino-markup                                    %! baca.markup():baca.IndicatorCommand._call()
         [                                                                      %! hijinks.piano_rhythm()
         - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         - \baca-text-spanner-left-text "baca.music()"                          %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -714,7 +714,7 @@ i_Piano_LH_Music_Voice = {                                                     %
 
         fs,!32.                                                                %! hijinks.piano_rhythm()
         - \tenuto                                                              %! baca.tenuto():baca.IndicatorCommand._call()
-        _ \markup \italic "ped. ad libitum"                                    %! baca.markup():baca.IndicatorCommand._call()
+        _ \hijinks-ped-ad-libitum-markup                                       %! baca.markup():baca.IndicatorCommand._call()
 
         af,!32.                                                                %! hijinks.piano_rhythm()
         - \tenuto                                                              %! baca.tenuto():baca.IndicatorCommand._call()

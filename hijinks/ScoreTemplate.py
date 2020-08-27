@@ -60,23 +60,17 @@ class ScoreTemplate(baca.ScoreTemplate):
             "default_instrument",
             hijinks.instruments["Violin"],
         )
-        abjad.annotate(
-            violin_music_staff, "default_clef", abjad.Clef("treble")
-        )
+        abjad.annotate(violin_music_staff, "default_clef", abjad.Clef("treble"))
 
         # PIANO
-        piano_rh_music_voice = abjad.Voice(
-            name="Piano_RH_Music_Voice", tag=tag
-        )
+        piano_rh_music_voice = abjad.Voice(name="Piano_RH_Music_Voice", tag=tag)
         piano_rh_music_staff = abjad.Staff(
             [piano_rh_music_voice],
             lilypond_type="PianoRHMusicStaff",
             name="Piano_RH_Music_Staff",
             tag=tag,
         )
-        piano_lh_music_voice = abjad.Voice(
-            name="Piano_LH_Music_Voice", tag=tag
-        )
+        piano_lh_music_voice = abjad.Voice(name="Piano_LH_Music_Voice", tag=tag)
         piano_lh_music_staff = abjad.Staff(
             [piano_lh_music_voice],
             lilypond_type="PianoLHMusicStaff",
@@ -94,12 +88,8 @@ class ScoreTemplate(baca.ScoreTemplate):
             "default_instrument",
             hijinks.instruments["Piano"],
         )
-        abjad.annotate(
-            piano_rh_music_staff, "default_clef", abjad.Clef("treble")
-        )
-        abjad.annotate(
-            piano_lh_music_staff, "default_clef", abjad.Clef("treble")
-        )
+        abjad.annotate(piano_rh_music_staff, "default_clef", abjad.Clef("treble"))
+        abjad.annotate(piano_lh_music_staff, "default_clef", abjad.Clef("treble"))
 
         # MUSIC CONTEXT
         music_context = abjad.Context(
@@ -111,9 +101,7 @@ class ScoreTemplate(baca.ScoreTemplate):
         )
 
         # SCORE
-        score = abjad.Score(
-            [global_context, music_context], name="Score", tag=tag
-        )
+        score = abjad.Score([global_context, music_context], name="Score", tag=tag)
         self._assert_lilypond_identifiers(score)
         self._assert_unique_context_names(score)
         self._assert_matching_custom_context_names(score)

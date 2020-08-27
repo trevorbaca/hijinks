@@ -5,9 +5,7 @@ import baca
 
 # instruments & margin markup
 
-instruments = abjad.OrderedDict(
-    [("Piano", abjad.Piano()), ("Violin", abjad.Violin())]
-)
+instruments = abjad.OrderedDict([("Piano", abjad.Piano()), ("Violin", abjad.Violin())])
 
 
 def _make_margin_markup(markup, context="Staff"):
@@ -136,9 +134,7 @@ def piano_rhythm(staff) -> baca.RhythmCommand:
     tag = abjad.Tag("hijinks.piano_rhythm()")
     maker = abjad.makers.tuplet_from_ratio_and_pair
     music: typing.List[abjad.Component] = []
-    for proportion, pair, aggregate in zip(
-        proportions[staff], pairs[staff], circuit
-    ):
+    for proportion, pair, aggregate in zip(proportions[staff], pairs[staff], circuit):
         if staff == "rh":
             aggregate = list(reversed(aggregate))
         tuplet = maker(proportion, pair)

@@ -1,6 +1,5 @@
 import abjad
 
-
 metadata = abjad.OrderedDict(
     [
         ("catalog_number", "AWN-000-RSH"),

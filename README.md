@@ -1,14 +1,11 @@
 Red Shift Hijinks
 =================
 
-[![Build Status](
-    https://api.travis-ci.org/trevorbaca/hijinks.svg)](
-    https://api.travis-ci.org/trevorbaca/hijinks)
-<!---
+![Build Status](
+    https://github.com/trevorbaca/hijinks/actions/workflows/test.yml/badge.svg)
 [![Code style: black](
     https://img.shields.io/badge/code%20style-black-000000.svg)](
     https://github.com/ambv/black)
--->
 
 Red Shift Hijinks (2006) for violin & piano.
 

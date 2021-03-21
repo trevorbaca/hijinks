@@ -2,6 +2,7 @@ import distutils.version
 import platform
 
 from hijinks.tools import (
+    ScoreTemplate,
     circuit,
     instruments,
     margin_markup,
@@ -13,8 +14,6 @@ from hijinks.tools import (
     violin_pitches,
     violin_rhythm,
 )
-
-from .ScoreTemplate import ScoreTemplate
 
 __all__ = [
     "ScoreTemplate",

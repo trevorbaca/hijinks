@@ -1,7 +1,7 @@
 import distutils.version
 import platform
 
-from hijinks.tools import (
+from .library import (
     ScoreTemplate,
     circuit,
     instruments,

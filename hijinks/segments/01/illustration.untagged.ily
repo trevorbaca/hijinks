@@ -117,7 +117,8 @@ a_Global_Rests = {
 
 a_Violin_Music_Voice = {
 
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [01 Violin_Music_Voice measure 1]
         \set Staff.shortInstrumentName = \markup \hcenter-in #10 Vn.
@@ -154,7 +155,8 @@ a_Violin_Music_Voice = {
 
     }
 
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [01 Violin_Music_Voice measure 5]
         af''!8
@@ -178,7 +180,8 @@ a_Violin_Music_Voice = {
 
     }
 
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [01 Violin_Music_Voice measure 9]
         a'''4
@@ -200,7 +203,8 @@ a_Violin_Music_Voice = {
     % [01 Violin_Music_Voice measure 13]
     r8
 
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [01 Violin_Music_Voice measure 14]
         fs'''!8.
@@ -257,7 +261,8 @@ a_Violin_Music_Staff = <<
 
 a_Piano_RH_Music_Voice = {
 
-    \times 8/10 {
+    \times 8/10
+    {
 
         % [01 Piano_RH_Music_Voice measure 1]
         \set PianoStaffGroup.shortInstrumentName = \markup \hcenter-in #10 Pf.
@@ -304,7 +309,8 @@ a_Piano_RH_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7 {
+    \times 6/7
+    {
 
         % [01 Piano_RH_Music_Voice measure 3]
         cs'''!64
@@ -327,7 +333,8 @@ a_Piano_RH_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7 {
+    \times 6/7
+    {
 
         a''''16
         - \tenuto
@@ -351,7 +358,8 @@ a_Piano_RH_Music_Voice = {
 
     }
 
-    \times 8/11 {
+    \times 8/11
+    {
 
         % [01 Piano_RH_Music_Voice measure 6]
         e''''16
@@ -395,7 +403,8 @@ a_Piano_RH_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/8 {
+    \times 6/8
+    {
 
         % [01 Piano_RH_Music_Voice measure 8]
         cs'''!16
@@ -430,7 +439,8 @@ a_Piano_RH_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/8 {
+    \times 6/8
+    {
 
         fs'''!16
         - \tenuto
@@ -457,7 +467,8 @@ a_Piano_RH_Music_Voice = {
 
     }
 
-    \times 8/14 {
+    \times 8/14
+    {
 
         % [01 Piano_RH_Music_Voice measure 11]
         g'16
@@ -476,7 +487,8 @@ a_Piano_RH_Music_Voice = {
     % [01 Piano_RH_Music_Voice measure 13]
     r8
 
-    \times 8/14 {
+    \times 8/14
+    {
 
         % [01 Piano_RH_Music_Voice measure 14]
         \override TupletBracket.shorten-pair = #'(0 . 0.6)
@@ -545,7 +557,8 @@ a_Piano_RH_Music_Staff = {
 a_Piano_LH_Music_Voice = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7 {
+    \times 6/7
+    {
 
         % [01 Piano_LH_Music_Voice measure 1]
         \override TextScript.padding = 2
@@ -581,7 +594,8 @@ a_Piano_LH_Music_Voice = {
 
     }
 
-    \times 8/10 {
+    \times 8/10
+    {
 
         b,,16
         - \tenuto
@@ -608,7 +622,8 @@ a_Piano_LH_Music_Voice = {
 
     }
 
-    \times 6/9 {
+    \times 6/9
+    {
 
         c,,32
         - \tenuto
@@ -633,14 +648,16 @@ a_Piano_LH_Music_Voice = {
 
     }
 
-    \scaleDurations #'(1 . 1) {
+    \scaleDurations #'(1 . 1)
+    {
 
         % [01 Piano_LH_Music_Voice measure 6]
         r8
 
     }
 
-    \times 8/10 {
+    \times 8/10
+    {
 
         % [01 Piano_LH_Music_Voice measure 7]
         e16.
@@ -656,7 +673,8 @@ a_Piano_LH_Music_Voice = {
 
     }
 
-    \times 8/14 {
+    \times 8/14
+    {
 
         % [01 Piano_LH_Music_Voice measure 9]
         e,16
@@ -679,7 +697,8 @@ a_Piano_LH_Music_Voice = {
 
     }
 
-    \times 8/10 {
+    \times 8/10
+    {
 
         % [01 Piano_LH_Music_Voice measure 11]
         c,,32
@@ -716,7 +735,8 @@ a_Piano_LH_Music_Voice = {
     % [01 Piano_LH_Music_Voice measure 13]
     r8
 
-    \times 8/9 {
+    \times 8/9
+    {
 
         % [01 Piano_LH_Music_Voice measure 14]
         \override TupletBracket.shorten-pair = #'(0 . 0.6)

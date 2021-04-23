@@ -77,7 +77,10 @@ maker(
     (["rh", "lh"], (1, -1)),
     baca.staccato(selector=baca.notes().filter_duration("<=", (1, 64))),
     baca.tenuto(selector=baca.notes().filter_duration(">", (1, 64))),
-    baca.tuplet_bracket_shorten_pair((0, 0.6), selector=baca.top().tuplet(-1)),
+    baca.tuplet_bracket_shorten_pair(
+        (0, 0.6),
+        selector=lambda _: baca.Selection(_).top().tuplet(-1),
+    ),
 )
 
 maker(

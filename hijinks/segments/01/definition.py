@@ -95,7 +95,7 @@ maker(
     "lh",
     baca.literal(
         r"\override Score.SpanBar #'transparent = ##f",
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
     ),
 )
 

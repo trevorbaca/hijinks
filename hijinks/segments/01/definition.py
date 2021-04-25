@@ -46,8 +46,12 @@ maker(
     ),
     baca.pitches(hijinks.violin_pitches),
     baca.skeleton(hijinks.violin_rhythm(), tag=None),
-    baca.staccato(selector=baca.notes().filter_duration("<=", (1, 16))),
-    baca.tenuto(selector=baca.notes().filter_duration(">", (1, 16))),
+    baca.staccato(
+        selector=lambda _: baca.Selection(_).notes().filter_duration("<=", (1, 16)),
+    ),
+    baca.tenuto(
+        selector=lambda _: baca.Selection(_).notes().filter_duration(">", (1, 16)),
+    ),
 )
 
 maker(
@@ -67,7 +71,7 @@ maker(
         r"\hijinks-ped-ad-libitum-markup",
         direction=abjad.Down,
         literal=True,
-        selector=baca.note(1),
+        selector=baca.selectors.note(1),
     ),
     baca.text_script_padding(2),
     hijinks.piano_rhythm("lh"),
@@ -75,8 +79,12 @@ maker(
 
 maker(
     (["rh", "lh"], (1, -1)),
-    baca.staccato(selector=baca.notes().filter_duration("<=", (1, 64))),
-    baca.tenuto(selector=baca.notes().filter_duration(">", (1, 64))),
+    baca.staccato(
+        selector=lambda _: baca.Selection(_).notes().filter_duration("<=", (1, 64)),
+    ),
+    baca.tenuto(
+        selector=lambda _: baca.Selection(_).notes().filter_duration(">", (1, 64)),
+    ),
     baca.tuplet_bracket_shorten_pair(
         (0, 0.6),
         selector=lambda _: baca.Selection(_).top().tuplet(-1),

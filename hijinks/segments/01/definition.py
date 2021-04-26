@@ -19,7 +19,7 @@ maker = baca.SegmentMaker(
 maker(
     "Global_Skips",
     baca.metronome_mark("32"),
-    baca.bar_line("|.", baca.skip(-1)),
+    baca.bar_line("|.", baca.selectors.skip(-1)),
 )
 
 maker(

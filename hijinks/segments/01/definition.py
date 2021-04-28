@@ -107,6 +107,6 @@ maker(
         baca.rehearsal_mark_extra_offset((-12, 6)),
         baca.rehearsal_mark_padding(0),
         baca.rehearsal_mark_self_alignment_x(abjad.Right),
-        selector=baca.leaves().rleak()[-1],
+        selector=baca.selectors.rleaf(-1),
     ),
 )

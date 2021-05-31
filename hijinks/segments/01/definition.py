@@ -18,8 +18,7 @@ maker = baca.SegmentMaker(
 
 maker(
     "Global_Skips",
-    # baca.metronome_mark("32"),
-    baca.metronome_mark("34"),
+    baca.metronome_mark("32"),
     baca.bar_line("|.", baca.selectors.skip(-1)),
 )
 
@@ -74,7 +73,7 @@ maker(
         literal=True,
         selector=baca.selectors.note(1),
     ),
-    baca.text_script_padding(2),
+    # baca.text_script_padding(2),
     hijinks.piano_rhythm("lh"),
 )
 

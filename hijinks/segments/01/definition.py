@@ -73,7 +73,7 @@ maker(
         literal=True,
         selector=baca.selectors.note(1),
     ),
-    # baca.text_script_padding(2),
+    baca.text_script_padding(2),
     hijinks.piano_rhythm("lh"),
 )
 

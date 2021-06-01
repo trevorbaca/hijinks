@@ -102,7 +102,7 @@ maker(
 maker(
     ("lh", -1),
     baca.chunk(
-        baca.mark(r"\hijinks-colophon-markup"),
+        # baca.mark(r"\hijinks-colophon-markup"),
         baca.rehearsal_mark_down(),
         baca.rehearsal_mark_extra_offset((-12, 6)),
         baca.rehearsal_mark_padding(0),

@@ -13,7 +13,6 @@ maker = baca.SegmentMaker(
     final_segment=True,
     segment_directory=baca.Path(__file__).resolve().parent,
     time_signatures=15 * [(1, 8)],
-    validate_measure_count=15,
 )
 
 maker(

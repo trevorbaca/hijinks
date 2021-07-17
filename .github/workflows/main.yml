@@ -60,7 +60,9 @@ jobs:
         pip install /tmp/baca
 
     - name: Install this score
-      run: pip install -e .
+      run: |
+        # pip install -e .
+        pip install .
 
     - name: Prime parser tables
       run: |

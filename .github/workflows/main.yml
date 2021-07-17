@@ -102,8 +102,9 @@ jobs:
 
     - name: Make segments
       run: |
-        export BACA=/tmp/baca
-        export PATH=$BACA/scr:/home/runner/bin:$PATH
+        #export BACA=/tmp/baca
+        #export PATH=$BACA/scr:/home/runner/bin:$PATH
+        export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
         package_name=$(basename "$GITHUB_WORKSPACE")
         wrapper_directory="$GITHUB_WORKSPACE"
         echo Wrapper directory is "$wrapper_directory"

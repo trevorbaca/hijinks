@@ -70,11 +70,11 @@ jobs:
     - name: Install this score
       run: pip install --use-feature=in-tree-build .
 
-    - name: Set scores directory for path management
-      run: |
-        CFG=~/.abjad/abjad.cfg
-        echo composer_scores_directory = $(dirname $GITHUB_WORKSPACE) > $CFG
-        cat ~/.abjad/abjad.cfg
+#    - name: Set scores directory for path management
+#      run: |
+#        CFG=~/.abjad/abjad.cfg
+#        echo composer_scores_directory = $(dirname $GITHUB_WORKSPACE) > $CFG
+#        cat ~/.abjad/abjad.cfg
 
     - name: Run black, flake8, isort
       run: |
@@ -105,11 +105,11 @@ jobs:
         export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
         package_name=$(basename "$GITHUB_WORKSPACE")
         wrapper_directory="$GITHUB_WORKSPACE"
-        echo Wrapper directory is "$wrapper_directory"
+        echo Wrapper directory "$wrapper_directory" ...
         contents_directory="$wrapper_directory"/"$package_name"
-        echo Contents directory is "$contents_directory"
+        echo Contents directory "$contents_directory" ...
         segments_directory="$contents_directory"/segments
-        echo Segments directory is "$segments_directory"
+        echo Segments directory "$segments_directory" ...
         if [ ! -d "$segments_directory"/01 ]; then
             echo Score contains no segments ...
             exit 0
@@ -130,7 +130,7 @@ jobs:
             rm "$illustration_ily"
             current_directory=$(pwd)
             cd "$segment_directory"
-            make-segment-pdf --do-not-open
+            make-segment-pdf
             cd "$current_directory"
             if [ -f "$illustration_ly" ]; then
                 echo Found "$illustration_ly" ...

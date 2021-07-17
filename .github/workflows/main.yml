@@ -32,9 +32,12 @@ jobs:
       run: |
         python --version
         python -m pip install --upgrade pip
-        echo HOME: $HOME
-        echo GITHUB_WORKSPACE: $GITHUB_WORKSPACE
-        echo PATH: $PATH
+        echo HOME:
+        echo $HOME
+        echo GITHUB_WORKSPACE:
+        echo $GITHUB_WORKSPACE
+        echo PATH:
+        echo $PATH
 
     - name: Install LilyPond
       run: |
@@ -47,12 +50,16 @@ jobs:
     - name: Install trevor/dev branch of Abjad
       run: |
         git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
-        pip install /tmp/abjad
+        pip install --use-feature=in-tree-build /tmp/abjad
+        import="import abjad; from abjad.parsers."
+        python -c "${import}.parser import LilyPondParser; LilyPondParser()"
+        python -c "${import}.reduced import ReducedLyParser; ReducedLyParser()"
+        python -c "${import}.scheme import SchemeParser; SchemeParser()"
 
     - name: Install rmakers
       run: |
         git clone https://github.com/Abjad/abjad-ext-rmakers.git /tmp/abjad-ext-rmakers
-        pip install /tmp/abjad-ext-rmakers
+        pip install --use-feature=in-tree-buidl /tmp/abjad-ext-rmakers
 
     - name: Install Bača
       run: |
@@ -64,16 +71,17 @@ jobs:
 
     - name: Set scores directory for path management
       run: |
-        python -c "import abjad"
         CFG=~/.abjad/abjad.cfg
         echo composer_scores_directory = $(dirname $GITHUB_WORKSPACE) > $CFG
         cat ~/.abjad/abjad.cfg
 
     - name: Run black, flake8, isort
       run: |
+        echo black version:
         black --version
-        flake8 --version
         make black-check
+        echo flake8 version:
+        flake8 --version
         make flake8
         make isort-check
 

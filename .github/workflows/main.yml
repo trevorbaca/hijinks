@@ -63,7 +63,11 @@ jobs:
       run: pip install -e .
 
     - name: Prime parser tables
-      run: /tmp/abjad/scr/prime-parser-tables
+      run: |
+        # /tmp/abjad/scr/prime-parser-tables
+        python -c "import abjad; from abjad.parsers.parser import LilyPondParser; LilyPondParser()"
+        python -c "import abjad; from abjad.parsers.reduced import ReducedLyParser; ReducedLyParser()"
+        python -c "import abjad; from abjad.parsers.scheme import SchemeParser; SchemeParser()"
 
     - name: Set scores directory for path management
       run: |

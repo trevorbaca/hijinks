@@ -102,8 +102,6 @@ jobs:
 
     - name: Make segments
       run: |
-        #export BACA=/tmp/baca
-        #export PATH=$BACA/scr:/home/runner/bin:$PATH
         export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
         package_name=$(basename "$GITHUB_WORKSPACE")
         wrapper_directory="$GITHUB_WORKSPACE"
@@ -116,8 +114,7 @@ jobs:
             echo Score contains no segments ...
             exit 0
         fi
-        segment_directories=$(ls -d "$segments_directory"/[0-9]*)
-        for segment_directory in $segment_directories; do
+        for segment_directory in $(ls -d "$segments_directory"/[0-9]*); do
             echo Segment directory "$segment_directory" ...
             illustration_ly="$segment_directory/illustration.ly"
             illustration_old_ly="$segment_directory/illustration.old.ly"

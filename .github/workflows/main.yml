@@ -32,9 +32,9 @@ jobs:
       run: |
         python --version
         python -m pip install --upgrade pip
-        echo $HOME
-        echo $GITHUB_WORKSPACE
-        echo $PATH
+        echo HOME: $HOME
+        echo GITHUB_WORKSPACE: $GITHUB_WORKSPACE
+        echo PATH: $PATH
 
     - name: Install LilyPond
       run: |
@@ -44,7 +44,7 @@ jobs:
         wget -q -O $lilypond $lilypond_url/$lilypond_source
         sh $lilypond --batch
 
-    - name: Install Abjad
+    - name: Install trevor/dev branch of Abjad
       run: |
         git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
         pip install /tmp/abjad
@@ -57,10 +57,10 @@ jobs:
     - name: Install Bača
       run: |
         git clone https://github.com/trevorbaca/baca.git /tmp/baca
-        pip install /tmp/baca
+        pip install --use-feature=in-tree-build /tmp/baca
 
     - name: Install this score
-      run: pip install .
+      run: pip install --use-feature=in-tree-build .
 
     - name: Set scores directory for path management
       run: |
@@ -69,15 +69,10 @@ jobs:
         echo composer_scores_directory = $(dirname $GITHUB_WORKSPACE) > $CFG
         cat ~/.abjad/abjad.cfg
 
-    - name: Log versions
+    - name: Run black, flake8, isort
       run: |
         black --version
         flake8 --version
-        isort --version
-        pytest --version
-
-    - name: Run black, flake8, isort
-      run: |
         make black-check
         make flake8
         make isort-check
@@ -92,32 +87,9 @@ jobs:
         export PATH=/home/runner/bin:${PATH}
         NAME=$(basename $GITHUB_WORKSPACE)
         if [ -e $GITHUB_WORKSPACE/$NAME/test.py ]; then
+            pytest --version
             py.test -rf $GITHUB_WORKSPACE/$NAME/test.py
         fi
-
-    - name: Check definition files
-      run: |
-        NAME=$(basename $GITHUB_WORKSPACE)
-        segment_directory=$GITHUB_WORKSPACE/$NAME/segments
-        if [ ! -d $segment_directory ]; then
-            exit 0
-        fi
-        cd $segment_directory
-        export PATH=/tmp/baca/scr:${PATH}
-        RC=0
-        for path in $(find . -name definition.py | sort); do
-            echo -n "Checking $path ... "
-            SECONDS=0
-            python $path 1>/dev/null 2>&1
-            if [ $? -eq 0 ]; then
-                echo OK "($SECONDS sec.)"
-            else
-                RC=1
-                echo FAIL "($SECONDS sec.)"
-            fi
-        done
-        echo
-        exit $RC
 
     - name: Make segments
       run: |
@@ -150,17 +122,9 @@ jobs:
             fi
             rm "$illustration_ily"
             current_directory=$(pwd)
-            echo Current directory was "$current_directory" ...
             cd "$segment_directory"
-            echo Current directory is now $(pwd) ...
-            ls
-            echo Calling make-segment-pdf ...
-            # $BACA/scr/make-segment-pdf --do-not-open
-            which make-segment-pdf
             make-segment-pdf --do-not-open
-            echo Done with make-segment-pdf
             cd "$current_directory"
-            echo Current directory is now "$current_directory" ...
             if [ -f "$illustration_ly" ]; then
                 echo Found "$illustration_ly" ...
             else

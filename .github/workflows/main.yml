@@ -57,8 +57,7 @@ jobs:
     - name: Install Bača
       run: |
         git clone https://github.com/trevorbaca/baca.git /tmp/baca
-        # -e to make sure baca/boilerplate directory is copied
-        pip install -e /tmp/baca
+        pip install /tmp/baca
 
     - name: Install this score
       run: pip install -e .

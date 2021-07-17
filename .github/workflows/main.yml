@@ -47,7 +47,6 @@ jobs:
     - name: Install Abjad
       run: |
         git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
-        #pip install -e /tmp/abjad
         pip install /tmp/abjad
 
     - name: Install rmakers
@@ -65,10 +64,9 @@ jobs:
 
     - name: Prime parser tables
       run: |
-        # /tmp/abjad/scr/prime-parser-tables
-        python -c "import abjad; from abjad.parsers.parser import LilyPondParser; LilyPondParser()"
-        python -c "import abjad; from abjad.parsers.reduced import ReducedLyParser; ReducedLyParser()"
-        python -c "import abjad; from abjad.parsers.scheme import SchemeParser; SchemeParser()"
+        #python -c "import abjad; from abjad.parsers.parser import LilyPondParser; LilyPondParser()"
+        #python -c "import abjad; from abjad.parsers.reduced import ReducedLyParser; ReducedLyParser()"
+        #python -c "import abjad; from abjad.parsers.scheme import SchemeParser; SchemeParser()"
 
     - name: Set scores directory for path management
       run: |

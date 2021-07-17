@@ -47,7 +47,7 @@ jobs:
         wget -q -O $lilypond $lilypond_url/$lilypond_source
         sh $lilypond --batch
 
-    - name: Install trevor/dev branch of Abjad
+    - name: Install trevor/dev Abjad branch
       run: |
         git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
         pip install --use-feature=in-tree-build /tmp/abjad

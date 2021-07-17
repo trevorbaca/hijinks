@@ -64,7 +64,7 @@ jobs:
 
     - name: Prime parser tables
       run: |
-        #python -c "import abjad; from abjad.parsers.parser import LilyPondParser; LilyPondParser()"
+        python -c "import abjad; from abjad.parsers.parser import LilyPondParser; LilyPondParser()"
         #python -c "import abjad; from abjad.parsers.reduced import ReducedLyParser; ReducedLyParser()"
         #python -c "import abjad; from abjad.parsers.scheme import SchemeParser; SchemeParser()"
 

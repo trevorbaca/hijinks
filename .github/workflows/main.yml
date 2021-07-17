@@ -51,7 +51,7 @@ jobs:
       run: |
         git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
         pip install --use-feature=in-tree-build /tmp/abjad
-        import="import abjad; from abjad.parsers."
+        import="import abjad; from abjad.parsers"
         python -c "${import}.parser import LilyPondParser; LilyPondParser()"
         python -c "${import}.reduced import ReducedLyParser; ReducedLyParser()"
         python -c "${import}.scheme import SchemeParser; SchemeParser()"

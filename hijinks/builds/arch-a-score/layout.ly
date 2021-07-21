@@ -1,89 +1,194 @@
 % page_count = 1
-% measure_count = 15
+% measure_count = 15 + 1
 % time_signatures = [
 % '1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8', '1/8',
 %  '1/8', '1/8', '1/8', '1/8'
 %  ]
 
 
-\context Score = "Score"                                                       %! SingleStaffScoreTemplate
-<<                                                                             %! SingleStaffScoreTemplate
+%! baca.SingleStaffScoreTemplate.__call__()
+\context Score = "Score"
+%! baca.SingleStaffScoreTemplate.__call__()
+<<
 
-    \context GlobalContext = "Global_Context"                                  %! _make_global_context
-    <<                                                                         %! _make_global_context
+    %! abjad.ScoreTemplate._make_global_context()
+    \context GlobalContext = "Global_Context"
+    %! abjad.ScoreTemplate._make_global_context()
+    <<
 
-        \context PageLayout = "Page_Layout"                                    %! _make_global_context
-        {   %*% Page_Layout                                                    %! _make_global_context
+        %! abjad.ScoreTemplate._make_global_context()
+        \context PageLayout = "Page_Layout"
+        %! abjad.ScoreTemplate._make_global_context()
+        {   %*% Page_Layout
 
-            % [Page_Layout measure 1]                                          %! _comment_measure_numbers
-            \autoPageBreaksOff                                                 %! BreakMeasureMap(1):BREAK
-            \noBreak                                                           %! BreakMeasureMap(2):BREAK
-            \baca-lbsd #40 #'(4 20 22)                                         %! BREAK:IndicatorCommand
-            \pageBreak                                                         %! BREAK:IndicatorCommand
-            s1 * 1/8                                                           %! _make_global_skips(1)
+            %! baca.SegmentMaker._comment_measure_numbers()
+            % [Page_Layout measure 1]
+            %! BREAK
+            %! baca.BreakMeasureMap.__call__(1)
+            \autoPageBreaksOff
+            %! BREAK
+            %! baca.BreakMeasureMap.__call__(2)
+            \noBreak
+            %! BREAK
+            %! baca.IndicatorCommand._call()
+            \baca-lbsd #40 #'(4 20 22)
+            %! BREAK
+            %! baca.IndicatorCommand._call()
+            \pageBreak
+            %! baca.SegmentMaker._make_global_skips(1)
+            s1 * 1/8
 
-            % [Page_Layout measure 2]                                          %! _comment_measure_numbers
-            \noBreak                                                           %! BreakMeasureMap(2):BREAK
-            s1 * 1/8                                                           %! _make_global_skips(1)
+            %! baca.SegmentMaker._comment_measure_numbers()
+            % [Page_Layout measure 2]
+            %! BREAK
+            %! baca.BreakMeasureMap.__call__(2)
+            \noBreak
+            %! baca.SegmentMaker._make_global_skips(1)
+            s1 * 1/8
 
-            % [Page_Layout measure 3]                                          %! _comment_measure_numbers
-            \noBreak                                                           %! BreakMeasureMap(2):BREAK
-            s1 * 1/8                                                           %! _make_global_skips(1)
+            %! baca.SegmentMaker._comment_measure_numbers()
+            % [Page_Layout measure 3]
+            %! BREAK
+            %! baca.BreakMeasureMap.__call__(2)
+            \noBreak
+            %! baca.SegmentMaker._make_global_skips(1)
+            s1 * 1/8
 
-            % [Page_Layout measure 4]                                          %! _comment_measure_numbers
-            \noBreak                                                           %! BreakMeasureMap(2):BREAK
-            s1 * 1/8                                                           %! _make_global_skips(1)
+            %! baca.SegmentMaker._comment_measure_numbers()
+            % [Page_Layout measure 4]
+            %! BREAK
+            %! baca.BreakMeasureMap.__call__(2)
+            \noBreak
+            %! baca.SegmentMaker._make_global_skips(1)
+            s1 * 1/8
 
-            % [Page_Layout measure 5]                                          %! _comment_measure_numbers
-            \noBreak                                                           %! BreakMeasureMap(2):BREAK
-            s1 * 1/8                                                           %! _make_global_skips(1)
+            %! baca.SegmentMaker._comment_measure_numbers()
+            % [Page_Layout measure 5]
+            %! BREAK
+            %! baca.BreakMeasureMap.__call__(2)
+            \noBreak
+            %! baca.SegmentMaker._make_global_skips(1)
+            s1 * 1/8
 
-            % [Page_Layout measure 6]                                          %! _comment_measure_numbers
-            \noBreak                                                           %! BreakMeasureMap(2):BREAK
-            \baca-lbsd #100 #'(4 20 22)                                        %! BREAK:IndicatorCommand
-            \break                                                             %! BREAK:IndicatorCommand
-            s1 * 1/8                                                           %! _make_global_skips(1)
+            %! baca.SegmentMaker._comment_measure_numbers()
+            % [Page_Layout measure 6]
+            %! BREAK
+            %! baca.BreakMeasureMap.__call__(2)
+            \noBreak
+            %! BREAK
+            %! baca.IndicatorCommand._call()
+            \baca-lbsd #100 #'(4 20 22)
+            %! BREAK
+            %! baca.IndicatorCommand._call()
+            \break
+            %! baca.SegmentMaker._make_global_skips(1)
+            s1 * 1/8
 
-            % [Page_Layout measure 7]                                          %! _comment_measure_numbers
-            \noBreak                                                           %! BreakMeasureMap(2):BREAK
-            s1 * 1/8                                                           %! _make_global_skips(1)
+            %! baca.SegmentMaker._comment_measure_numbers()
+            % [Page_Layout measure 7]
+            %! BREAK
+            %! baca.BreakMeasureMap.__call__(2)
+            \noBreak
+            %! baca.SegmentMaker._make_global_skips(1)
+            s1 * 1/8
 
-            % [Page_Layout measure 8]                                          %! _comment_measure_numbers
-            \noBreak                                                           %! BreakMeasureMap(2):BREAK
-            s1 * 1/8                                                           %! _make_global_skips(1)
+            %! baca.SegmentMaker._comment_measure_numbers()
+            % [Page_Layout measure 8]
+            %! BREAK
+            %! baca.BreakMeasureMap.__call__(2)
+            \noBreak
+            %! baca.SegmentMaker._make_global_skips(1)
+            s1 * 1/8
 
-            % [Page_Layout measure 9]                                          %! _comment_measure_numbers
-            \noBreak                                                           %! BreakMeasureMap(2):BREAK
-            s1 * 1/8                                                           %! _make_global_skips(1)
+            %! baca.SegmentMaker._comment_measure_numbers()
+            % [Page_Layout measure 9]
+            %! BREAK
+            %! baca.BreakMeasureMap.__call__(2)
+            \noBreak
+            %! baca.SegmentMaker._make_global_skips(1)
+            s1 * 1/8
 
-            % [Page_Layout measure 10]                                         %! _comment_measure_numbers
-            \noBreak                                                           %! BreakMeasureMap(2):BREAK
-            s1 * 1/8                                                           %! _make_global_skips(1)
+            %! baca.SegmentMaker._comment_measure_numbers()
+            % [Page_Layout measure 10]
+            %! BREAK
+            %! baca.BreakMeasureMap.__call__(2)
+            \noBreak
+            %! baca.SegmentMaker._make_global_skips(1)
+            s1 * 1/8
 
-            % [Page_Layout measure 11]                                         %! _comment_measure_numbers
-            \noBreak                                                           %! BreakMeasureMap(2):BREAK
-            \baca-lbsd #167.5 #'(4 20 22)                                      %! BREAK:IndicatorCommand
-            \break                                                             %! BREAK:IndicatorCommand
-            s1 * 1/8                                                           %! _make_global_skips(1)
+            %! baca.SegmentMaker._comment_measure_numbers()
+            % [Page_Layout measure 11]
+            %! BREAK
+            %! baca.BreakMeasureMap.__call__(2)
+            \noBreak
+            %! BREAK
+            %! baca.IndicatorCommand._call()
+            \baca-lbsd #167.5 #'(4 20 22)
+            %! BREAK
+            %! baca.IndicatorCommand._call()
+            \break
+            %! baca.SegmentMaker._make_global_skips(1)
+            s1 * 1/8
 
-            % [Page_Layout measure 12]                                         %! _comment_measure_numbers
-            \noBreak                                                           %! BreakMeasureMap(2):BREAK
-            s1 * 1/8                                                           %! _make_global_skips(1)
+            %! baca.SegmentMaker._comment_measure_numbers()
+            % [Page_Layout measure 12]
+            %! BREAK
+            %! baca.BreakMeasureMap.__call__(2)
+            \noBreak
+            %! baca.SegmentMaker._make_global_skips(1)
+            s1 * 1/8
 
-            % [Page_Layout measure 13]                                         %! _comment_measure_numbers
-            \noBreak                                                           %! BreakMeasureMap(2):BREAK
-            s1 * 1/8                                                           %! _make_global_skips(1)
+            %! baca.SegmentMaker._comment_measure_numbers()
+            % [Page_Layout measure 13]
+            %! BREAK
+            %! baca.BreakMeasureMap.__call__(2)
+            \noBreak
+            %! baca.SegmentMaker._make_global_skips(1)
+            s1 * 1/8
 
-            % [Page_Layout measure 14]                                         %! _comment_measure_numbers
-            \noBreak                                                           %! BreakMeasureMap(2):BREAK
-            s1 * 1/8                                                           %! _make_global_skips(1)
+            %! baca.SegmentMaker._comment_measure_numbers()
+            % [Page_Layout measure 14]
+            %! BREAK
+            %! baca.BreakMeasureMap.__call__(2)
+            \noBreak
+            %! baca.SegmentMaker._make_global_skips(1)
+            s1 * 1/8
 
-            % [Page_Layout measure 15]                                         %! _comment_measure_numbers
-            \noBreak                                                           %! BreakMeasureMap(2):BREAK
-            s1 * 1/8                                                           %! _make_global_skips(1)
+            %! baca.SegmentMaker._comment_measure_numbers()
+            % [Page_Layout measure 15]
+            %! BREAK
+            %! baca.BreakMeasureMap.__call__(2)
+            \noBreak
+            %! baca.SegmentMaker._make_global_skips(1)
+            s1 * 1/8
 
-        }   %*% Page_Layout                                                    %! _make_global_context
+            %! baca.SegmentMaker._comment_measure_numbers()
+            %! baca.SegmentMaker._style_phantom_measures(1)
+            %! PHANTOM
+            % [Page_Layout measure 16]
+            %! BREAK
+            %! baca.BreakMeasureMap.__call__(2)
+            %! baca.SegmentMaker._style_phantom_measures(1)
+            %! PHANTOM
+            \noBreak
+            %! baca.SegmentMaker._style_phantom_measures(2)
+            %! PHANTOM
+            \baca-time-signature-transparent
+            %! baca.SegmentMaker._make_global_skips(3)
+            %! PHANTOM
+            s1 * 1/4
+            %! baca.SegmentMaker._style_phantom_measures(3)
+            %! PHANTOM
+            \once \override Score.BarLine.transparent = ##t
+            %! baca.SegmentMaker._style_phantom_measures(3)
+            %! PHANTOM
+            \once \override Score.SpanBar.transparent = ##t
 
-    >>                                                                         %! _make_global_context
+        %! abjad.ScoreTemplate._make_global_context()
+        }   %*% Page_Layout
 
->>                                                                             %! SingleStaffScoreTemplate
+    %! abjad.ScoreTemplate._make_global_context()
+    >>
+
+%! baca.SingleStaffScoreTemplate.__call__()
+>>

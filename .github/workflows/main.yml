@@ -38,6 +38,8 @@ jobs:
         echo $GITHUB_WORKSPACE
         echo PATH:
         echo $PATH
+        echo PYTHONPATH:
+        echo $PYTHONPATH
 
     - name: Install LilyPond
       run: |

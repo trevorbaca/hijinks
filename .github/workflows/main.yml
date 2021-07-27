@@ -50,9 +50,7 @@ jobs:
     - name: Install trevor/dev Abjad branch
       run: |
         git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
-        pip list
         pip install --use-feature=in-tree-build /tmp/abjad
-        pip list
         echo Priming Abjad parser tables ...
         import="import abjad; from abjad.parsers"
         python -c "${import}.parser import LilyPondParser; LilyPondParser()"
@@ -72,8 +70,10 @@ jobs:
     # -e for doctest to process "import <score>" statements
     - name: Install this score ("editable")
       run: |
-        pip list
         pip install --use-feature=in-tree-build -e .
+
+    - name: List installed packages
+      run: |
         pip list
 
     - name: Run black, flake8, isort

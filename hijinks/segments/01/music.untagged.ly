@@ -1,7 +1,7 @@
 \version "2.23.1"
 \language "english"
 \include "../../stylesheet.ily"
-\include "illustration.ily"
+\include "music.ily"
 
 \score
 {

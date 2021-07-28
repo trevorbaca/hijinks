@@ -3,7 +3,7 @@ import pathlib
 import abjad
 import baca
 
-import hijinks
+from hijinks import library as hijinks
 
 ###############################################################################
 ##################################### [_] #####################################

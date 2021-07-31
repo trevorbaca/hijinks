@@ -11,6 +11,9 @@ maker = baca.SegmentMaker(
     check_all_are_pitched=True,
     first_segment=True,
     final_segment=True,
+    instruments=hijinks.instruments,
+    margin_markups=hijinks.margin_markups,
+    metronome_marks=hijinks.metronome_marks,
     score_template=hijinks.ScoreTemplate(),
     time_signatures=15 * [(1, 8)],
 )

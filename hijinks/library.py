@@ -1,5 +1,3 @@
-import typing
-
 import abjad
 import baca
 
@@ -24,11 +22,11 @@ margin_markups = abjad.OrderedDict(
 
 
 def margin_markup(
-    key: str,
-    alert: baca.IndicatorCommand = None,
-    context: str = "Staff",
-    selector: abjad.Expression = baca.selectors.leaf(0),
-) -> baca.CommandTyping:
+    key,
+    alert=None,
+    context="Staff",
+    selector=baca.selectors.leaf(0),
+):
     """
     Makes tagged margin markup indicator command.
     """
@@ -94,7 +92,7 @@ assert order_3 == [4, 11, 3, 1, 9, 0, 2, 10, 7, 5, 6, 8]
 
 aggregate_ = abjad.PitchSet(items=aggregate, item_class=abjad.NumberedPitch)
 
-violin_pitches: typing.List[abjad.NumberedPitch] = []
+violin_pitches = []
 orders = (order_1, order_2, order_3)
 for order in orders:
     pitches_ = aggregate_.register(order)
@@ -136,7 +134,7 @@ def piano_rhythm(staff) -> baca.RhythmCommand:
     assert staff in ("rh", "lh")
     tag = abjad.Tag("hijinks.piano_rhythm()")
     maker = abjad.makers.tuplet_from_ratio_and_pair
-    music: typing.List[abjad.Component] = []
+    music = []
     for proportion, pair, aggregate in zip(proportions[staff], pairs[staff], circuit):
         if staff == "rh":
             aggregate = list(reversed(aggregate))
@@ -171,7 +169,7 @@ def violin_rhythm() -> abjad.Selection:
         ((3, 2), (4, 16)),
     ]
     maker = abjad.makers.tuplet_from_ratio_and_pair
-    components: typing.List[abjad.Component] = []
+    components = []
     for definition in definitions:
         ratio, pair = definition
         assert isinstance(ratio, tuple)

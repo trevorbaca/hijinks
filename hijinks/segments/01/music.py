@@ -9,7 +9,6 @@ from hijinks import library as hijinks
 
 maker = baca.SegmentMaker(
     check_all_are_pitched=True,
-    first_segment=True,
     final_segment=True,
     instruments=hijinks.instruments,
     margin_markups=hijinks.margin_markups,

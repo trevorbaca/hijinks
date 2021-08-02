@@ -13,7 +13,7 @@
     <<
 
         \context PageLayout = "Page_Layout"
-        {   %*% a_Page_Layout
+        {   %*% segment.01.Page.Layout
 
             % [Page_Layout measure 1]
             \autoPageBreaksOff
@@ -89,7 +89,7 @@
             \once \override Score.BarLine.transparent = ##t
             \once \override Score.SpanBar.transparent = ##t
 
-        }   %*% a_Page_Layout
+        }   %*% segment.01.Page.Layout
 
     >>
 

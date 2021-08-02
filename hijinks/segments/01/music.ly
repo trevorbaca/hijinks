@@ -19,7 +19,7 @@
             <<
 
                 \context GlobalSkips = "Global_Skips"
-                \a_Global_Skips
+                { \segment.01.Global.Skips }
 
             >>
 
@@ -27,16 +27,16 @@
             <<
 
                 \context ViolinMusicStaff = "Violin_Music_Staff"
-                \a_Violin_Music_Staff
+                { \segment.01.Violin.Music.Staff }
 
                 \context PianoStaffGroup = "Piano_Staff_Group"
                 <<
 
                     \context PianoRHMusicStaff = "Piano_RH_Music_Staff"
-                    \a_Piano_RH_Music_Staff
+                    { \segment.01.Piano.RH.Music.Staff }
 
                     \context PianoLHMusicStaff = "Piano_LH_Music_Staff"
-                    \a_Piano_LH_Music_Staff
+                    { \segment.01.Piano.LH.Music.Staff }
 
                 >>
 

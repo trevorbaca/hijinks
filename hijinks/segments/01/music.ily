@@ -1,4 +1,4 @@
-a_Global_Skips = {
+segment.01.Global.Skips = {
 
     % [Global_Skips measure 1]
     \time 1/8
@@ -62,7 +62,7 @@ a_Global_Skips = {
 }
 
 
-a_Global_Rests = {
+segment.01.Global.Rests = {
 
     % [Global_Rests measure 1]
     R1 * 1/8
@@ -115,7 +115,7 @@ a_Global_Rests = {
 }
 
 
-a_Violin_Music_Voice = {
+segment.01.Violin.Music.Voice = {
 
     \times 4/5
     {
@@ -248,18 +248,18 @@ a_Violin_Music_Voice = {
 }
 
 
-a_Violin_Music_Staff = <<
+segment.01.Violin.Music.Staff = <<
 
     \context GlobalRests = "Global_Rests"
-    \a_Global_Rests
+    { \segment.01.Global.Rests }
 
     \context Voice = "Violin_Music_Voice"
-    \a_Violin_Music_Voice
+    { \segment.01.Violin.Music.Voice }
 
 >>
 
 
-a_Piano_RH_Music_Voice = {
+segment.01.Piano.RH.Music.Voice = {
 
     \times 8/10
     {
@@ -546,15 +546,15 @@ a_Piano_RH_Music_Voice = {
 }
 
 
-a_Piano_RH_Music_Staff = {
+segment.01.Piano.RH.Music.Staff = {
 
     \context Voice = "Piano_RH_Music_Voice"
-    \a_Piano_RH_Music_Voice
+    { \segment.01.Piano.RH.Music.Voice }
 
 }
 
 
-a_Piano_LH_Music_Voice = {
+segment.01.Piano.LH.Music.Voice = {
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 6/7
@@ -801,9 +801,9 @@ a_Piano_LH_Music_Voice = {
 }
 
 
-a_Piano_LH_Music_Staff = {
+segment.01.Piano.LH.Music.Staff = {
 
     \context Voice = "Piano_LH_Music_Voice"
-    \a_Piano_LH_Music_Voice
+    { \segment.01.Piano.LH.Music.Voice }
 
 }

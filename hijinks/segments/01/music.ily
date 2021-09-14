@@ -917,13 +917,6 @@ segment.01.Violin.Music.Voice = {
             %! INVISIBLE_MUSIC_COMMAND
             %! baca.SegmentMaker._style_phantom_measures(5)
             %@% \abjad-invisible-music
-            %! baca.SegmentMaker._color_not_yet_pitched()
-            %! NOT_YET_PITCHED_COLORING
-            %! HIDDEN
-            %! NOTE
-            %! baca.SegmentMaker._style_phantom_measures(5)
-            %! PHANTOM
-            \baca-not-yet-pitched-coloring
             %! baca.SegmentMaker._make_multimeasure_rest_container(1)
             %! PHANTOM
             %! HIDDEN
@@ -1590,13 +1583,6 @@ segment.01.Piano.RH.Music.Voice = {
             %! INVISIBLE_MUSIC_COMMAND
             %! baca.SegmentMaker._style_phantom_measures(5)
             %@% \abjad-invisible-music
-            %! baca.SegmentMaker._color_not_yet_pitched()
-            %! NOT_YET_PITCHED_COLORING
-            %! HIDDEN
-            %! NOTE
-            %! baca.SegmentMaker._style_phantom_measures(5)
-            %! PHANTOM
-            \baca-not-yet-pitched-coloring
             %! baca.SegmentMaker._make_multimeasure_rest_container(1)
             %! PHANTOM
             %! HIDDEN
@@ -2184,13 +2170,6 @@ segment.01.Piano.LH.Music.Voice = {
             %! baca.SegmentMaker._style_phantom_measures(5)
             %! PHANTOM
             \once \override Score.RehearsalMark.self-alignment-X = #right
-            %! baca.SegmentMaker._color_not_yet_pitched()
-            %! NOT_YET_PITCHED_COLORING
-            %! HIDDEN
-            %! NOTE
-            %! baca.SegmentMaker._style_phantom_measures(5)
-            %! PHANTOM
-            \baca-not-yet-pitched-coloring
             %! baca.mark()
             %! baca.IndicatorCommand._call()
             %! baca.SegmentMaker._style_phantom_measures(5)

@@ -7,7 +7,7 @@ segment.01.Global.Skips = {
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_TIME_SIGNATURE
     \time 1/8
-    %! baca.SegmentMaker._attach_color_literal(2)
+    %! baca.SegmentMaker.attach_color_literal(2)
     %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #'blue
     %! baca.SegmentMaker._make_global_skips(1)
@@ -666,18 +666,18 @@ segment.01.Violin.Music.Voice = {
         %! baca.SegmentMaker._set_status_tag()
         %! DEFAULT_CLEF
         \clef "treble"
-        %! baca.SegmentMaker._attach_color_literal(2)
+        %! baca.SegmentMaker.attach_color_literal(2)
         %! DEFAULT_CLEF_COLOR
         \once \override ViolinMusicStaff.Clef.color = #(x11-color 'DarkViolet)
-        %! baca.SegmentMaker._attach_color_literal(1)
+        %! baca.SegmentMaker.attach_color_literal(1)
         %! DEFAULT_CLEF_COLOR_CANCELLATION
         %@% \override ViolinMusicStaff.Clef.color = ##f
         %! abjad.ScoreTemplate.attach_defaults(3)
-        %! baca.SegmentMaker._treat_persistent_wrapper(2)
+        %! baca.SegmentMaker.treat_persistent_wrapper(2)
         %! baca.SegmentMaker._set_status_tag()
         %! DEFAULT_CLEF
         \set ViolinMusicStaff.forceClef = ##t
-        %! baca.SegmentMaker._attach_color_literal(2)
+        %! baca.SegmentMaker.attach_color_literal(2)
         %! EXPLICIT_MARGIN_MARKUP_COLOR
         \once \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'blue)
         %! hijinks.violin_rhythm()
@@ -729,16 +729,16 @@ segment.01.Violin.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         \bacaStartTextSpanRhythmAnnotation
-        %! baca.SegmentMaker._attach_color_literal(2)
+        %! baca.SegmentMaker.attach_color_literal(2)
         %! DEFAULT_CLEF_REDRAW_COLOR
         \override ViolinMusicStaff.Clef.color = #(x11-color 'violet)
-        %! baca.SegmentMaker._attach_color_literal(2)
+        %! baca.SegmentMaker.attach_color_literal(2)
         %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR
         \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
         %! baca.margin_markup()
         %! -PARTS
         %! baca.IndicatorCommand._call()
-        %! baca.SegmentMaker._treat_persistent_wrapper(3)
+        %! baca.SegmentMaker.treat_persistent_wrapper(3)
         %! baca.SegmentMaker._set_status_tag()
         %! REDRAWN_EXPLICIT_MARGIN_MARKUP
         \set ViolinMusicStaff.shortInstrumentName = \markup \hcenter-in #10 Vn.
@@ -1030,18 +1030,18 @@ segment.01.Piano.RH.Music.Voice = {
         %! baca.SegmentMaker._set_status_tag()
         %! DEFAULT_CLEF
         \clef "treble"
-        %! baca.SegmentMaker._attach_color_literal(2)
+        %! baca.SegmentMaker.attach_color_literal(2)
         %! DEFAULT_CLEF_COLOR
         \once \override PianoRHMusicStaff.Clef.color = #(x11-color 'DarkViolet)
-        %! baca.SegmentMaker._attach_color_literal(1)
+        %! baca.SegmentMaker.attach_color_literal(1)
         %! DEFAULT_CLEF_COLOR_CANCELLATION
         %@% \override PianoRHMusicStaff.Clef.color = ##f
         %! abjad.ScoreTemplate.attach_defaults(3)
-        %! baca.SegmentMaker._treat_persistent_wrapper(2)
+        %! baca.SegmentMaker.treat_persistent_wrapper(2)
         %! baca.SegmentMaker._set_status_tag()
         %! DEFAULT_CLEF
         \set PianoRHMusicStaff.forceClef = ##t
-        %! baca.SegmentMaker._attach_color_literal(2)
+        %! baca.SegmentMaker.attach_color_literal(2)
         %! EXPLICIT_MARGIN_MARKUP_COLOR
         \once \override PianoStaffGroup.InstrumentName.color = #(x11-color 'blue)
         %! hijinks.piano_rhythm()
@@ -1095,16 +1095,16 @@ segment.01.Piano.RH.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         \bacaStartTextSpanRhythmAnnotation
-        %! baca.SegmentMaker._attach_color_literal(2)
+        %! baca.SegmentMaker.attach_color_literal(2)
         %! DEFAULT_CLEF_REDRAW_COLOR
         \override PianoRHMusicStaff.Clef.color = #(x11-color 'violet)
-        %! baca.SegmentMaker._attach_color_literal(2)
+        %! baca.SegmentMaker.attach_color_literal(2)
         %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR
         \override PianoStaffGroup.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
         %! baca.margin_markup()
         %! -PARTS
         %! baca.IndicatorCommand._call()
-        %! baca.SegmentMaker._treat_persistent_wrapper(3)
+        %! baca.SegmentMaker.treat_persistent_wrapper(3)
         %! baca.SegmentMaker._set_status_tag()
         %! REDRAWN_EXPLICIT_MARGIN_MARKUP
         \set PianoStaffGroup.shortInstrumentName = \markup \hcenter-in #10 Pf.
@@ -1698,15 +1698,15 @@ segment.01.Piano.LH.Music.Voice = {
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_CLEF
         \clef "bass"
-        %! baca.SegmentMaker._attach_color_literal(2)
+        %! baca.SegmentMaker.attach_color_literal(2)
         %! EXPLICIT_CLEF_COLOR
         \once \override PianoLHMusicStaff.Clef.color = #(x11-color 'blue)
-        %! baca.SegmentMaker._attach_color_literal(1)
+        %! baca.SegmentMaker.attach_color_literal(1)
         %! EXPLICIT_CLEF_COLOR_CANCELLATION
         %@% \override PianoLHMusicStaff.Clef.color = ##f
         %! baca.clef()
         %! baca.IndicatorCommand._call()
-        %! baca.SegmentMaker._treat_persistent_wrapper(2)
+        %! baca.SegmentMaker.treat_persistent_wrapper(2)
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_CLEF
         \set PianoLHMusicStaff.forceClef = ##t
@@ -1752,7 +1752,7 @@ segment.01.Piano.LH.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         \bacaStartTextSpanRhythmAnnotation
-        %! baca.SegmentMaker._attach_color_literal(2)
+        %! baca.SegmentMaker.attach_color_literal(2)
         %! EXPLICIT_CLEF_REDRAW_COLOR
         \override PianoLHMusicStaff.Clef.color = #(x11-color 'DeepSkyBlue2)
 

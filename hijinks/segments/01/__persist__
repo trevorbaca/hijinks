@@ -22,82 +22,65 @@ abjad.OrderedDict(
         ),
         (
             "persistent_indicators",
-            abjad.OrderedDict(
-                [
-                    (
-                        "Piano_LH_Music_Staff",
-                        [
-                            baca.Memento(
-                                context="Piano_LH_Music_Voice",
-                                prototype="abjad.Clef",
-                                value="bass",
-                            ),
-                        ],
+            {
+                "Piano_LH_Music_Staff": [
+                    baca.Memento(
+                        context="Piano_LH_Music_Voice",
+                        prototype="abjad.Clef",
+                        value="bass",
                     ),
-                    (
-                        "Piano_RH_Music_Staff",
-                        [
-                            baca.Memento(
-                                context="Piano_RH_Music_Voice",
-                                prototype="abjad.Clef",
-                                value="treble",
-                            ),
-                        ],
+                ],
+                "Piano_RH_Music_Staff": [
+                    baca.Memento(
+                        context="Piano_RH_Music_Voice",
+                        prototype="abjad.Clef",
+                        value="treble",
                     ),
-                    (
-                        "Piano_Staff_Group",
-                        [
-                            baca.Memento(
-                                context="Piano_RH_Music_Voice",
-                                edition=abjad.Tag("-PARTS"),
-                                manifest="margin_markups",
-                                value="Pf.",
-                            ),
-                            baca.Memento(
-                                context="Piano_RH_Music_Voice",
-                                manifest="instruments",
-                                value="Piano",
-                            ),
-                        ],
+                ],
+                "Piano_Staff_Group": [
+                    baca.Memento(
+                        context="Piano_RH_Music_Voice",
+                        edition=abjad.Tag("-PARTS"),
+                        manifest="margin_markups",
+                        value="Pf.",
                     ),
-                    (
-                        "Score",
-                        [
-                            baca.Memento(
-                                context="Global_Skips",
-                                manifest="metronome_marks",
-                                value="32",
-                            ),
-                            baca.Memento(
-                                context="Global_Skips",
-                                prototype="abjad.TimeSignature",
-                                value="1/8",
-                            ),
-                        ],
+                    baca.Memento(
+                        context="Piano_RH_Music_Voice",
+                        manifest="instruments",
+                        value="Piano",
                     ),
-                    (
-                        "Violin_Music_Staff",
-                        [
-                            baca.Memento(
-                                context="Violin_Music_Voice",
-                                edition=abjad.Tag("-PARTS"),
-                                manifest="margin_markups",
-                                value="Vn.",
-                            ),
-                            baca.Memento(
-                                context="Violin_Music_Voice",
-                                manifest="instruments",
-                                value="Violin",
-                            ),
-                            baca.Memento(
-                                context="Violin_Music_Voice",
-                                prototype="abjad.Clef",
-                                value="treble",
-                            ),
-                        ],
+                ],
+                "Score": [
+                    baca.Memento(
+                        context="Global_Skips",
+                        manifest="metronome_marks",
+                        value="32",
                     ),
-                ]
-            ),
+                    baca.Memento(
+                        context="Global_Skips",
+                        prototype="abjad.TimeSignature",
+                        value="1/8",
+                    ),
+                ],
+                "Violin_Music_Staff": [
+                    baca.Memento(
+                        context="Violin_Music_Voice",
+                        edition=abjad.Tag("-PARTS"),
+                        manifest="margin_markups",
+                        value="Vn.",
+                    ),
+                    baca.Memento(
+                        context="Violin_Music_Voice",
+                        manifest="instruments",
+                        value="Violin",
+                    ),
+                    baca.Memento(
+                        context="Violin_Music_Voice",
+                        prototype="abjad.Clef",
+                        value="treble",
+                    ),
+                ],
+            },
         ),
     ]
 )

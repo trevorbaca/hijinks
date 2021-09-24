@@ -9,8 +9,6 @@ from hijinks import library as hijinks
 
 maker = baca.SegmentMaker(
     **baca.segments(),
-    error_on_not_yet_pitched=True,
-    final_segment=True,
     instruments=hijinks.instruments,
     margin_markups=hijinks.margin_markups,
     metronome_marks=hijinks.metronome_marks,
@@ -117,4 +115,6 @@ if __name__ == "__main__":
     baca.build.make_segment_pdf(
         maker,
         **baca.segments(runtime=True),
+        error_on_not_yet_pitched=True,
+        final_segment=True,
     )

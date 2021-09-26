@@ -7,7 +7,7 @@ from hijinks import library as hijinks
 ##################################### [_] #####################################
 ###############################################################################
 
-maker = baca.SegmentMaker(
+maker = baca.CommandAccumulator(
     **baca.segments(),
     instruments=hijinks.instruments,
     margin_markups=hijinks.margin_markups,

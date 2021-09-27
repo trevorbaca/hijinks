@@ -7,7 +7,7 @@ from hijinks import library as hijinks
 ##################################### [_] #####################################
 ###############################################################################
 
-maker = baca.CommandAccumulator(
+commands = baca.CommandAccumulator(
     **baca.segments(),
     instruments=hijinks.instruments,
     margin_markups=hijinks.margin_markups,
@@ -16,20 +16,20 @@ maker = baca.CommandAccumulator(
     time_signatures=15 * [(1, 8)],
 )
 
-maker(
+commands(
     "Global_Skips",
     baca.metronome_mark("32"),
     baca.bar_line("|.", baca.selectors.skip(-1)),
 )
 
-maker(
+commands(
     "vn",
     baca.suite(
         hijinks.margin_markup("Vn."),
         baca.start_markup("Violin", hcenter_in=10),
     ),
 )
-maker(
+commands(
     "rh",
     baca.suite(
         hijinks.margin_markup("Pf.", context="PianoStaffGroup"),
@@ -37,7 +37,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     "vn",
     baca.markup(
         r"\hijinks-pp-sempre-al-fino-markup",
@@ -54,7 +54,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     "rh",
     hijinks.piano_rhythm("rh"),
     baca.markup(
@@ -64,7 +64,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     "lh",
     baca.clef("bass"),
     baca.markup(
@@ -77,7 +77,7 @@ maker(
     hijinks.piano_rhythm("lh"),
 )
 
-maker(
+commands(
     (["rh", "lh"], (1, -1)),
     baca.staccato(
         selector=lambda _: baca.Selection(_).notes().filter_duration("<=", (1, 64)),
@@ -91,7 +91,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     "lh",
     baca.literal(
         r"\override Score.SpanBar #'transparent = ##f",
@@ -99,7 +99,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("lh", -1),
     baca.chunk(
         baca.mark(r"\hijinks-colophon-markup"),
@@ -113,7 +113,7 @@ maker(
 
 if __name__ == "__main__":
     baca.build.make_segment_pdf(
-        maker,
+        commands,
         **baca.segments(runtime=True),
         error_on_not_yet_pitched=True,
         final_segment=True,

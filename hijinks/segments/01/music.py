@@ -8,7 +8,7 @@ from hijinks import library as hijinks
 ###############################################################################
 
 commands = baca.CommandAccumulator(
-    **baca.segments(),
+    **baca.segment_accumulation_defaults(),
     instruments=hijinks.instruments,
     margin_markups=hijinks.margin_markups,
     metronome_marks=hijinks.metronome_marks,
@@ -114,7 +114,7 @@ commands(
 if __name__ == "__main__":
     baca.build.make_segment_pdf(
         commands,
-        **baca.segments(runtime=True),
+        **baca.segment_interpretation_defaults(),
         error_on_not_yet_pitched=True,
         final_segment=True,
     )

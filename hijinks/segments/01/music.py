@@ -3,17 +3,18 @@ import baca
 
 from hijinks import library as hijinks
 
-###############################################################################
-##################################### [_] #####################################
-###############################################################################
+#########################################################################################
+########################################## [01] #########################################
+#########################################################################################
 
 commands = baca.CommandAccumulator(
     **baca.segment_accumulation_defaults(),
     instruments=hijinks.instruments,
     margin_markups=hijinks.margin_markups,
     metronome_marks=hijinks.metronome_marks,
-    score_template=hijinks.ScoreTemplate(),
+    score_template=hijinks.make_empty_score,
     time_signatures=15 * [(1, 8)],
+    voice_abbreviations=hijinks.voice_abbreviations,
 )
 
 commands(
@@ -115,6 +116,8 @@ if __name__ == "__main__":
     baca.build.make_segment_pdf(
         commands,
         **baca.segment_interpretation_defaults(),
+        always_make_global_rests=True,
         error_on_not_yet_pitched=True,
         final_segment=True,
+        global_rests_in_topmost_staff=True,
     )

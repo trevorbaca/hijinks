@@ -4,17 +4,20 @@ import baca
 from hijinks import library as hijinks
 
 #########################################################################################
-########################################## [01] #########################################
+########################################### 01 ##########################################
 #########################################################################################
+
+score = hijinks.make_empty_score()
+voice_names = baca.accumulator.get_voice_names(score)
 
 commands = baca.CommandAccumulator(
     **baca.segment_accumulation_defaults(),
     instruments=hijinks.instruments,
     margin_markups=hijinks.margin_markups,
     metronome_marks=hijinks.metronome_marks,
-    score_template=hijinks.make_empty_score,
     time_signatures=15 * [(1, 8)],
     voice_abbreviations=hijinks.voice_abbreviations,
+    voice_names=voice_names,
 )
 
 commands(
@@ -120,4 +123,5 @@ if __name__ == "__main__":
         error_on_not_yet_pitched=True,
         final_segment=True,
         global_rests_in_topmost_staff=True,
+        score=score,
     )

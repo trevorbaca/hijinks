@@ -981,7 +981,7 @@ segment.01.Violin.Music.Voice = {
     %! PHANTOM
     >>
 
-%! hijinks.ScoreTemplate.__call__()
+%! hijinks.make_empty_score()
 %! baca.path.extern()
 }
 
@@ -995,13 +995,13 @@ segment.01.Violin.Music.Staff = <<
     %! baca.path.extern()
     { \segment.01.Global.Rests }
 
-    %! hijinks.ScoreTemplate.__call__()
+    %! hijinks.make_empty_score()
     \context Voice = "Violin_Music_Voice"
-    %! hijinks.ScoreTemplate.__call__()
+    %! hijinks.make_empty_score()
     %! baca.path.extern()
     { \segment.01.Violin.Music.Voice }
 
-%! hijinks.ScoreTemplate.__call__()
+%! hijinks.make_empty_score()
 %! baca.path.extern()
 >>
 
@@ -1647,7 +1647,7 @@ segment.01.Piano.RH.Music.Voice = {
     %! PHANTOM
     >>
 
-%! hijinks.ScoreTemplate.__call__()
+%! hijinks.make_empty_score()
 %! baca.path.extern()
 }
 
@@ -1655,13 +1655,13 @@ segment.01.Piano.RH.Music.Voice = {
 %! baca.path.extern()
 segment.01.Piano.RH.Music.Staff = {
 
-    %! hijinks.ScoreTemplate.__call__()
+    %! hijinks.make_empty_score()
     \context Voice = "Piano_RH_Music_Voice"
-    %! hijinks.ScoreTemplate.__call__()
+    %! hijinks.make_empty_score()
     %! baca.path.extern()
     { \segment.01.Piano.RH.Music.Voice }
 
-%! hijinks.ScoreTemplate.__call__()
+%! hijinks.make_empty_score()
 %! baca.path.extern()
 }
 
@@ -2239,7 +2239,7 @@ segment.01.Piano.LH.Music.Voice = {
     %! PHANTOM
     >>
 
-%! hijinks.ScoreTemplate.__call__()
+%! hijinks.make_empty_score()
 %! baca.path.extern()
 }
 
@@ -2247,12 +2247,12 @@ segment.01.Piano.LH.Music.Voice = {
 %! baca.path.extern()
 segment.01.Piano.LH.Music.Staff = {
 
-    %! hijinks.ScoreTemplate.__call__()
+    %! hijinks.make_empty_score()
     \context Voice = "Piano_LH_Music_Voice"
-    %! hijinks.ScoreTemplate.__call__()
+    %! hijinks.make_empty_score()
     %! baca.path.extern()
     { \segment.01.Piano.LH.Music.Voice }
 
-%! hijinks.ScoreTemplate.__call__()
+%! hijinks.make_empty_score()
 %! baca.path.extern()
 }

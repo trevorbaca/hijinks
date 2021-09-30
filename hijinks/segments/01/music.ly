@@ -27,9 +27,9 @@
         %! baca._make_lilypond_file()
         }
 
-        %! hijinks.ScoreTemplate.__call__()
+        %! hijinks.make_empty_score()
         \context Score = "Score"
-        %! hijinks.ScoreTemplate.__call__()
+        %! hijinks.make_empty_score()
         <<
 
             %! abjad.ScoreTemplate._make_global_context()
@@ -46,41 +46,41 @@
             %! abjad.ScoreTemplate._make_global_context()
             >>
 
-            %! hijinks.ScoreTemplate.__call__()
+            %! hijinks.make_empty_score()
             \context MusicContext = "Music_Context"
-            %! hijinks.ScoreTemplate.__call__()
+            %! hijinks.make_empty_score()
             <<
 
-                %! hijinks.ScoreTemplate.__call__()
+                %! hijinks.make_empty_score()
                 \context ViolinMusicStaff = "Violin_Music_Staff"
-                %! hijinks.ScoreTemplate.__call__()
+                %! hijinks.make_empty_score()
                 %! baca.path.extern()
                 { \segment.01.Violin.Music.Staff }
 
-                %! hijinks.ScoreTemplate.__call__()
+                %! hijinks.make_empty_score()
                 \context PianoStaffGroup = "Piano_Staff_Group"
-                %! hijinks.ScoreTemplate.__call__()
+                %! hijinks.make_empty_score()
                 <<
 
-                    %! hijinks.ScoreTemplate.__call__()
+                    %! hijinks.make_empty_score()
                     \context PianoRHMusicStaff = "Piano_RH_Music_Staff"
-                    %! hijinks.ScoreTemplate.__call__()
+                    %! hijinks.make_empty_score()
                     %! baca.path.extern()
                     { \segment.01.Piano.RH.Music.Staff }
 
-                    %! hijinks.ScoreTemplate.__call__()
+                    %! hijinks.make_empty_score()
                     \context PianoLHMusicStaff = "Piano_LH_Music_Staff"
-                    %! hijinks.ScoreTemplate.__call__()
+                    %! hijinks.make_empty_score()
                     %! baca.path.extern()
                     { \segment.01.Piano.LH.Music.Staff }
 
-                %! hijinks.ScoreTemplate.__call__()
+                %! hijinks.make_empty_score()
                 >>
 
-            %! hijinks.ScoreTemplate.__call__()
+            %! hijinks.make_empty_score()
             >>
 
-        %! hijinks.ScoreTemplate.__call__()
+        %! hijinks.make_empty_score()
         >>
 
     %! baca._make_lilypond_file()

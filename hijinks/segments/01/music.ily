@@ -645,9 +645,9 @@ segment.01.Global.Rests = {
 %! baca.path.extern()
 segment.01.Violin.Music.Voice = {
 
-    %! hijinks.violin_rhythm()
+    %! baca.skeleton()
     \times 4/5
-    %! hijinks.violin_rhythm()
+    %! baca.skeleton()
     {
 
         %! baca._comment_measure_numbers()
@@ -662,7 +662,7 @@ segment.01.Violin.Music.Voice = {
         %! -PARTS
         %! baca.IndicatorCommand._call()
         \set Staff.instrumentName = \markup \hcenter-in #10 "Violin"
-        %! abjad.ScoreTemplate.attach_defaults(3)
+        %! baca._attach_default_indicators(3)
         %! baca._set_status_tag()
         %! DEFAULT_CLEF
         \clef "treble"
@@ -672,7 +672,7 @@ segment.01.Violin.Music.Voice = {
         %! baca.attach_color_literal(1)
         %! DEFAULT_CLEF_COLOR_CANCELLATION
         %@% \override ViolinMusicStaff.Clef.color = ##f
-        %! abjad.ScoreTemplate.attach_defaults(3)
+        %! baca._attach_default_indicators(3)
         %! baca.treat_persistent_wrapper(2)
         %! baca._set_status_tag()
         %! DEFAULT_CLEF
@@ -680,7 +680,7 @@ segment.01.Violin.Music.Voice = {
         %! baca.attach_color_literal(2)
         %! EXPLICIT_MARGIN_MARKUP_COLOR
         \once \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'blue)
-        %! hijinks.violin_rhythm()
+        %! baca.skeleton()
         bf'!4
         %! baca.tenuto()
         %! baca.IndicatorCommand._call()
@@ -743,7 +743,7 @@ segment.01.Violin.Music.Voice = {
         %! REDRAWN_EXPLICIT_MARGIN_MARKUP
         \set ViolinMusicStaff.shortInstrumentName = \markup \hcenter-in #10 Vn.
 
-        %! hijinks.violin_rhythm()
+        %! baca.skeleton()
         c'''8
         %! baca.tenuto()
         %! baca.IndicatorCommand._call()
@@ -751,13 +751,13 @@ segment.01.Violin.Music.Voice = {
         %! hijinks.violin_rhythm()
         [
 
-        %! hijinks.violin_rhythm()
+        %! baca.skeleton()
         d'''8
         %! baca.tenuto()
         %! baca.IndicatorCommand._call()
         - \tenuto
 
-        %! hijinks.violin_rhythm()
+        %! baca.skeleton()
         fs'''!8
         %! baca.tenuto()
         %! baca.IndicatorCommand._call()
@@ -765,17 +765,17 @@ segment.01.Violin.Music.Voice = {
         %! hijinks.violin_rhythm()
         ]
 
-    %! hijinks.violin_rhythm()
+    %! baca.skeleton()
     }
 
-    %! hijinks.violin_rhythm()
+    %! baca.skeleton()
     \times 4/5
-    %! hijinks.violin_rhythm()
+    %! baca.skeleton()
     {
 
         %! baca._comment_measure_numbers()
         % [Violin_Music_Voice measure 5]
-        %! hijinks.violin_rhythm()
+        %! baca.skeleton()
         af''!8
         %! baca.tenuto()
         %! baca.IndicatorCommand._call()
@@ -783,7 +783,7 @@ segment.01.Violin.Music.Voice = {
         %! hijinks.violin_rhythm()
         [
 
-        %! hijinks.violin_rhythm()
+        %! baca.skeleton()
         g''8
         %! baca.tenuto()
         %! baca.IndicatorCommand._call()
@@ -791,13 +791,13 @@ segment.01.Violin.Music.Voice = {
         %! hijinks.violin_rhythm()
         ]
 
-        %! hijinks.violin_rhythm()
+        %! baca.skeleton()
         f'''4
         %! baca.tenuto()
         %! baca.IndicatorCommand._call()
         - \tenuto
 
-        %! hijinks.violin_rhythm()
+        %! baca.skeleton()
         ef'''!16
         %! baca.staccato()
         %! baca.IndicatorCommand._call()
@@ -805,7 +805,7 @@ segment.01.Violin.Music.Voice = {
         %! hijinks.violin_rhythm()
         [
 
-        %! hijinks.violin_rhythm()
+        %! baca.skeleton()
         cs''''!16
         %! baca.staccato()
         %! baca.IndicatorCommand._call()
@@ -813,23 +813,23 @@ segment.01.Violin.Music.Voice = {
         %! hijinks.violin_rhythm()
         ]
 
-    %! hijinks.violin_rhythm()
+    %! baca.skeleton()
     }
 
-    %! hijinks.violin_rhythm()
+    %! baca.skeleton()
     \times 4/5
-    %! hijinks.violin_rhythm()
+    %! baca.skeleton()
     {
 
         %! baca._comment_measure_numbers()
         % [Violin_Music_Voice measure 9]
-        %! hijinks.violin_rhythm()
+        %! baca.skeleton()
         a'''4
         %! baca.tenuto()
         %! baca.IndicatorCommand._call()
         - \tenuto
 
-        %! hijinks.violin_rhythm()
+        %! baca.skeleton()
         e''''8
         %! baca.tenuto()
         %! baca.IndicatorCommand._call()
@@ -837,13 +837,13 @@ segment.01.Violin.Music.Voice = {
         %! hijinks.violin_rhythm()
         [
 
-        %! hijinks.violin_rhythm()
+        %! baca.skeleton()
         b''8
         %! baca.tenuto()
         %! baca.IndicatorCommand._call()
         - \tenuto
 
-        %! hijinks.violin_rhythm()
+        %! baca.skeleton()
         f'''8
         %! baca.tenuto()
         %! baca.IndicatorCommand._call()
@@ -851,22 +851,22 @@ segment.01.Violin.Music.Voice = {
         %! hijinks.violin_rhythm()
         ]
 
-    %! hijinks.violin_rhythm()
+    %! baca.skeleton()
     }
 
     %! baca._comment_measure_numbers()
     % [Violin_Music_Voice measure 13]
-    %! hijinks.violin_rhythm()
+    %! baca.skeleton()
     r8
 
-    %! hijinks.violin_rhythm()
+    %! baca.skeleton()
     \times 4/5
-    %! hijinks.violin_rhythm()
+    %! baca.skeleton()
     {
 
         %! baca._comment_measure_numbers()
         % [Violin_Music_Voice measure 14]
-        %! hijinks.violin_rhythm()
+        %! baca.skeleton()
         fs'''!8.
         %! baca.tenuto()
         %! baca.IndicatorCommand._call()
@@ -874,7 +874,7 @@ segment.01.Violin.Music.Voice = {
         %! hijinks.violin_rhythm()
         [
 
-        %! hijinks.violin_rhythm()
+        %! baca.skeleton()
         af''!8
         %! baca.tenuto()
         %! baca.IndicatorCommand._call()
@@ -887,7 +887,7 @@ segment.01.Violin.Music.Voice = {
         %! SPANNER_STOP
         <> \bacaStopTextSpanRhythmAnnotation
 
-    %! hijinks.violin_rhythm()
+    %! baca.skeleton()
     }
 
     %! baca._make_multimeasure_rest_container(7)
@@ -1026,7 +1026,7 @@ segment.01.Piano.RH.Music.Voice = {
         %! -PARTS
         %! baca.IndicatorCommand._call()
         \set PianoStaffGroup.instrumentName = \markup \hcenter-in #10 "Piano"
-        %! abjad.ScoreTemplate.attach_defaults(3)
+        %! baca._attach_default_indicators(3)
         %! baca._set_status_tag()
         %! DEFAULT_CLEF
         \clef "treble"
@@ -1036,7 +1036,7 @@ segment.01.Piano.RH.Music.Voice = {
         %! baca.attach_color_literal(1)
         %! DEFAULT_CLEF_COLOR_CANCELLATION
         %@% \override PianoRHMusicStaff.Clef.color = ##f
-        %! abjad.ScoreTemplate.attach_defaults(3)
+        %! baca._attach_default_indicators(3)
         %! baca.treat_persistent_wrapper(2)
         %! baca._set_status_tag()
         %! DEFAULT_CLEF

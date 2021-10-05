@@ -123,5 +123,9 @@ if __name__ == "__main__":
         error_on_not_yet_pitched=True,
         final_segment=True,
         global_rests_in_topmost_staff=True,
+        lilypond_file_keywords=baca.make_lilypond_file_dictionary(
+            include_layout_ly=True,
+            includes=["../../stylesheet.ily"],
+        ),
         score=score,
     )

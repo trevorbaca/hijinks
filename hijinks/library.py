@@ -5,7 +5,7 @@ import baca
 
 # instruments & margin markup
 
-instruments = abjad.OrderedDict([("Piano", abjad.Piano()), ("Violin", abjad.Violin())])
+instruments = dict([("Piano", abjad.Piano()), ("Violin", abjad.Violin())])
 
 
 def _make_margin_markup(markup, context="Staff"):
@@ -15,7 +15,7 @@ def _make_margin_markup(markup, context="Staff"):
     )
 
 
-margin_markups = abjad.OrderedDict(
+margin_markups = dict(
     [
         ("Vn.", _make_margin_markup("Vn.")),
         ("Pf.", _make_margin_markup("Pf.", context="PianoStaffGroup")),
@@ -44,7 +44,7 @@ def margin_markup(
 
 # metronome marks
 
-metronome_marks = abjad.OrderedDict([("32", abjad.MetronomeMark((1, 8), 32))])
+metronome_marks = dict([("32", abjad.MetronomeMark((1, 8), 32))])
 
 # circuit
 

@@ -46,7 +46,6 @@ commands(
     baca.markup(
         r"\hijinks-pp-sempre-al-fino-markup",
         direction=abjad.Down,
-        literal=True,
     ),
     baca.pitches(hijinks.violin_pitches),
     baca.skeleton(hijinks.violin_rhythm(), tag=None),
@@ -64,7 +63,6 @@ commands(
     baca.markup(
         r"\hijinks-pp-sempre-al-fino-markup",
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -74,7 +72,6 @@ commands(
     baca.markup(
         r"\hijinks-ped-ad-libitum-markup",
         direction=abjad.Down,
-        literal=True,
         selector=baca.selectors.note(1),
     ),
     baca.text_script_padding(2),

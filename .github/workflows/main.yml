@@ -47,10 +47,10 @@ jobs:
         wget -q -O $lilypond $lilypond_url/$lilypond_source
         sh $lilypond --batch
 
-    - name: Install Abjad trevor/dev branch
+    - name: Install Abjad trevor/dev branch ("editable" to include abjad.ily)
       run: |
         git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
-        python -m pip install --use-feature=in-tree-build /tmp/abjad
+        python -m pip install --use-feature=in-tree-build -e /tmp/abjad
         echo Priming Abjad parser tables ...
         import="import abjad; from abjad.parsers"
         python -c "${import}.parser import LilyPondParser; LilyPondParser()"
@@ -62,10 +62,10 @@ jobs:
         git clone https://github.com/Abjad/abjad-ext-rmakers.git /tmp/abjad-ext-rmakers
         python -m pip install --use-feature=in-tree-build /tmp/abjad-ext-rmakers
 
-    - name: Install Bača
+    - name: Install Bača ("editable" to include lilypond/baca.ily)
       run: |
         git clone https://github.com/trevorbaca/baca.git /tmp/baca
-        python -m pip install --use-feature=in-tree-build /tmp/baca
+        python -m pip install --use-feature=in-tree-build -e /tmp/baca
 
     # -e for doctest to process "import <score>" statements
     - name: Install this score ("editable")

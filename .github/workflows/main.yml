@@ -153,30 +153,4 @@ jobs:
                 exit -1
             fi
             echo
-#            clicktrack_midi="$segment_directory/clicktrack.midi"
-#            if [ -f "$clicktrack_midi" ]; then
-#                cp "$clicktrack_midi" "$clicktrack_midi_old"
-#                rm "$clicktrack_midi"
-#            fi
-#            cd "$segment_directory"
-#            python music.py --clicktrack
-#            cd "$current_directory"
-#            if [ -f "$clicktrack_midi" ]; then
-#                echo Found "$clicktrack_midi" ...
-#            else
-#                exit -1
-#            fi
-#            if [ -f "$clicktrack_midi_old" ]; then
-#                echo Calling diff ...
-#                differences=$(diff $clicktrack_midi $clicktrack_midi_old)
-#                echo Done calling diff ...
-#                if [ -z "$differences" ]; then
-#                    echo Found matching clicktrack.midi files ...
-#                else
-#                    echo Found mismatched clicktrack.midi files ...
-#                    diff $clicktrack_midi $clicktrack_midi_old
-#                    exit -1
-#                fi
-#            fi
-#            echo
         done

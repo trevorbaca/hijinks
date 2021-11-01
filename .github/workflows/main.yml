@@ -155,16 +155,18 @@ jobs:
             echo
             clicktrack_midi="$segment_directory/clicktrack.midi"
             if [ -f "$clicktrack_midi" ]; then
-              cp "$clicktrack_midi" "$clicktrack_midi_old"
+                cp "$clicktrack_midi" "$clicktrack_midi_old"
+                rm "$clicktrack_midi"
             fi
-            rm "$clicktrack_midi"
             cd "$segment_directory"
+            python music.py --clicktrack
+            cd "$current_directory"
             if [ -f "$clicktrack_midi" ]; then
                 echo Found "$clicktrack_midi" ...
             else
                 exit -1
             fi
-            if [ -f "$clicktrack_midi" ]; then
+            if [ -f "$clicktrack_midi_old" ]; then
                 echo Calling diff ...
                 differences=$(diff $clicktrack_midi $clicktrack_midi_old)
                 echo Done calling diff ...

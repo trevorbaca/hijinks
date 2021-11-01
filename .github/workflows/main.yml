@@ -202,7 +202,7 @@ jobs:
                 exit -1
             fi
             # check music.pdf
-            music_pdf = $segment_directory/music.pdf
+            music_pdf=$segment_directory/music.pdf
             if [ -f $music_pdf ]; then
               echo Found $music_pdf ...
             else

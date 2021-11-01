@@ -172,7 +172,9 @@ jobs:
             rm "$music_midi"
           fi
           cd "$segment_directory"
-          python music.py --pdf --clicktrack --midi
+          ls
+          python music.py --pdf --clicktrack --midi --print-file-handling
+          ls
           cd "$current_directory"
           # check music.ly
           if [ -f "$music_ly" ]; then

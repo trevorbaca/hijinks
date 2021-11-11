@@ -110,7 +110,6 @@ jobs:
         export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
         NAME=$(basename $GITHUB_WORKSPACE)
         BUILDS_DIRECTORY=$GITHUB_WORKSPACE/$NAME/builds
-        echo Builds directory is $BUILDS_DIRECTORY ...
         if [ -d $BUILDS_DIRECTORY ]; then
           cd $BUILDS_DIRECTORY
           /tmp/baca/scr/test-score-builds

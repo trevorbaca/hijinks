@@ -68,8 +68,7 @@ jobs:
         git clone https://github.com/trevorbaca/baca.git /tmp/baca
         python -m pip install --use-feature=in-tree-build -e /tmp/baca
 
-    # -e for doctest to process "import <score>" statements
-    - name: Install this score ("editable")
+    - name: Install this score ("editable" for doctest to import package)
       run: |
         python -m pip install --use-feature=in-tree-build -e .
 
@@ -104,7 +103,7 @@ jobs:
     - name: Test segments
       run: |
         export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
-        /tmp/baca/scr/github-test-segment
+        /tmp/baca/scr/test-segments
 
     - name: Test builds
       run: |

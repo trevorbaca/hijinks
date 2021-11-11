@@ -27,18 +27,18 @@
         %! hijinks.make_empty_score()
         <<
 
-            %! abjad.ScoreTemplate._make_global_context()
+            %! baca.make_global_context()
             \context GlobalContext = "Global_Context"
-            %! abjad.ScoreTemplate._make_global_context()
+            %! baca.make_global_context()
             <<
 
-                %! abjad.ScoreTemplate._make_global_context()
+                %! baca.make_global_context()
                 \context GlobalSkips = "Global_Skips"
-                %! abjad.ScoreTemplate._make_global_context()
+                %! baca.make_global_context()
                 %! baca.path.extern()
                 { \segment.01.Global.Skips }
 
-            %! abjad.ScoreTemplate._make_global_context()
+            %! baca.make_global_context()
             >>
 
             %! hijinks.make_empty_score()

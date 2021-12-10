@@ -1,22 +1,22 @@
 import abjad
 import baca
 
-from hijinks import library as hijinks
+from hijinks import library
 
 #########################################################################################
 ########################################### 01 ##########################################
 #########################################################################################
 
-score = hijinks.make_empty_score()
+score = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 
 commands = baca.CommandAccumulator(
     **baca.segment_accumulation_defaults(),
-    instruments=hijinks.instruments,
-    margin_markups=hijinks.margin_markups,
-    metronome_marks=hijinks.metronome_marks,
+    instruments=library.instruments,
+    margin_markups=library.margin_markups,
+    metronome_marks=library.metronome_marks,
     time_signatures=15 * [(1, 8)],
-    voice_abbreviations=hijinks.voice_abbreviations,
+    voice_abbreviations=library.voice_abbreviations,
     voice_names=voice_names,
 )
 
@@ -29,14 +29,14 @@ commands(
 commands(
     "vn",
     baca.suite(
-        hijinks.margin_markup("Vn."),
+        library.margin_markup("Vn."),
         baca.start_markup("Violin", hcenter_in=10),
     ),
 )
 commands(
     "rh",
     baca.suite(
-        hijinks.margin_markup("Pf.", context="PianoStaffGroup"),
+        library.margin_markup("Pf.", context="PianoStaffGroup"),
         baca.start_markup("Piano", context="PianoStaffGroup", hcenter_in=10),
     ),
 )
@@ -47,8 +47,8 @@ commands(
         r"\hijinks-pp-sempre-al-fino-markup",
         direction=abjad.Down,
     ),
-    baca.pitches(hijinks.violin_pitches),
-    baca.skeleton(hijinks.violin_rhythm(), tag=None),
+    baca.pitches(library.violin_pitches),
+    baca.skeleton(library.violin_rhythm(), tag=None),
     baca.staccato(
         selector=lambda _: baca.Selection(_).notes().filter_duration("<=", (1, 16)),
     ),
@@ -59,7 +59,7 @@ commands(
 
 commands(
     "rh",
-    hijinks.piano_rhythm("rh"),
+    library.piano_rhythm("rh"),
     baca.markup(
         r"\hijinks-pp-sempre-al-fino-markup",
         direction=abjad.Down,
@@ -75,7 +75,7 @@ commands(
         selector=baca.selectors.note(1),
     ),
     baca.text_script_padding(2),
-    hijinks.piano_rhythm("lh"),
+    library.piano_rhythm("lh"),
 )
 
 commands(

@@ -40,19 +40,19 @@
         "Piano_Staff_Group": [
             baca.Memento(
                 context="Piano_RH_Music_Voice",
-                edition=Tag("-PARTS"),
-                manifest="margin_markups",
-                prototype=None,
-                synthetic_offset=None,
-                value="Pf.",
-            ),
-            baca.Memento(
-                context="Piano_RH_Music_Voice",
                 edition=None,
                 manifest="instruments",
                 prototype=None,
                 synthetic_offset=None,
                 value="Piano",
+            ),
+            baca.Memento(
+                context="Piano_RH_Music_Voice",
+                edition=Tag("-PARTS"),
+                manifest="margin_markups",
+                prototype=None,
+                synthetic_offset=None,
+                value="Pf.",
             ),
         ],
         "Score": [
@@ -76,14 +76,6 @@
         "Violin_Music_Staff": [
             baca.Memento(
                 context="Violin_Music_Voice",
-                edition=Tag("-PARTS"),
-                manifest="margin_markups",
-                prototype=None,
-                synthetic_offset=None,
-                value="Vn.",
-            ),
-            baca.Memento(
-                context="Violin_Music_Voice",
                 edition=None,
                 manifest="instruments",
                 prototype=None,
@@ -97,6 +89,14 @@
                 prototype="abjad.Clef",
                 synthetic_offset=None,
                 value="treble",
+            ),
+            baca.Memento(
+                context="Violin_Music_Voice",
+                edition=Tag("-PARTS"),
+                manifest="margin_markups",
+                prototype=None,
+                synthetic_offset=None,
+                value="Vn.",
             ),
         ],
     },

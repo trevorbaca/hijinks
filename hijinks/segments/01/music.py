@@ -50,10 +50,14 @@ commands(
     baca.pitches(library.violin_pitches),
     baca.skeleton(library.violin_rhythm(), tag=None),
     baca.staccato(
-        selector=lambda _: baca.Selection(_).notes().filter_duration("<=", (1, 16)),
+        selector=lambda _: baca.Selection(_)
+        .notes()
+        .filter(lambda _: _.written_duration <= abjad.Duration((1, 16)))
     ),
     baca.tenuto(
-        selector=lambda _: baca.Selection(_).notes().filter_duration(">", (1, 16)),
+        selector=lambda _: baca.Selection(_)
+        .notes()
+        .filter(lambda _: _.written_duration > abjad.Duration((1, 16)))
     ),
 )
 
@@ -81,10 +85,14 @@ commands(
 commands(
     (["rh", "lh"], (1, -1)),
     baca.staccato(
-        selector=lambda _: baca.Selection(_).notes().filter_duration("<=", (1, 64)),
+        selector=lambda _: baca.Selection(_)
+        .notes()
+        .filter(lambda _: _.written_duration <= abjad.Duration((1, 64)))
     ),
     baca.tenuto(
-        selector=lambda _: baca.Selection(_).notes().filter_duration(">", (1, 64)),
+        selector=lambda _: baca.Selection(_)
+        .notes()
+        .filter(lambda _: _.written_duration > abjad.Duration((1, 64)))
     ),
     baca.tuplet_bracket_shorten_pair(
         (0, 0.6),

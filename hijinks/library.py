@@ -147,15 +147,15 @@ def piano_rhythm(staff):
         tuplet.denominator = duration.numerator
         if tuplet.trivial():
             tuplet.hide = True
-        leaves = abjad.select(tuplet).leaves()
+        leaves = abjad.Selection(tuplet).leaves()
         # TODO: teach baca.music() to tag indicators
         abjad.beam(leaves, tag=tag)
-        notes = abjad.select(tuplet).leaves(pitched=True)
+        notes = abjad.Selection(tuplet).leaves(pitched=True)
         for note, pitch_number in zip(notes, aggregate):
             note.written_pitch = pitch_number
         music.append(tuplet)
     music.insert(-1, abjad.Rest("r8"))
-    selection = abjad.select(music)
+    selection = abjad.Selection(music)
     return baca.music(selection, tag=tag)
 
 
@@ -176,11 +176,11 @@ def violin_rhythm():
         ratio, pair = definition
         assert isinstance(ratio, tuple)
         tuplet = maker(ratio, pair, tag=tag)
-        leaves = abjad.select(tuplet).leaves()
+        leaves = abjad.Selection(tuplet).leaves()
         abjad.beam(leaves, tag=tag)
         components.append(tuplet)
     components.insert(-1, abjad.Rest("r8", tag=tag))
-    selection = abjad.select(components)
+    selection = abjad.Selection(components)
     return selection
 
 

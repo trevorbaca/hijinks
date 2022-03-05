@@ -87,21 +87,26 @@ commands(
     library.piano_rhythm("lh"),
 )
 
+
+def short_notes(argument):
+    result = abjad.select.notes(argument)
+    result = [_ for _ in result if _.written_duration <= abjad.Duration((1, 64))]
+    return result
+
+
+def long_notes(argument):
+    result = abjad.select.notes(argument)
+    result = [_ for _ in result if _.written_duration > abjad.Duration((1, 64))]
+    return result
+
+
 commands(
     (["rh", "lh"], (1, -1)),
-    baca.staccato(
-        selector=lambda _: baca.Selection(_)
-        .notes()
-        .filter(lambda _: _.written_duration <= abjad.Duration((1, 64)))
-    ),
-    baca.tenuto(
-        selector=lambda _: baca.Selection(_)
-        .notes()
-        .filter(lambda _: _.written_duration > abjad.Duration((1, 64)))
-    ),
+    baca.staccato(selector=short_notes),
+    baca.tenuto(selector=long_notes),
     baca.tuplet_bracket_shorten_pair(
         (0, 0.6),
-        selector=lambda _: baca.Selection(_).top().tuplet(-1),
+        selector=lambda _: abjad.select.tuplet(abjad.select.top(_), -1),
     ),
 )
 

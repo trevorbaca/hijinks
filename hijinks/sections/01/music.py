@@ -41,6 +41,19 @@ commands(
     ),
 )
 
+
+def short_notes(argument):
+    result = abjad.select.notes(argument)
+    result = [_ for _ in result if _.written_duration <= abjad.Duration((1, 16))]
+    return result
+
+
+def long_notes(argument):
+    result = abjad.select.notes(argument)
+    result = [_ for _ in result if _.written_duration > abjad.Duration((1, 16))]
+    return result
+
+
 commands(
     "vn",
     baca.markup(
@@ -49,16 +62,8 @@ commands(
     ),
     baca.pitches(library.violin_pitches),
     baca.skeleton(library.violin_rhythm(), tag=None),
-    baca.staccato(
-        selector=lambda _: baca.Selection(_)
-        .notes()
-        .filter(lambda _: _.written_duration <= abjad.Duration((1, 16)))
-    ),
-    baca.tenuto(
-        selector=lambda _: baca.Selection(_)
-        .notes()
-        .filter(lambda _: _.written_duration > abjad.Duration((1, 16)))
-    ),
+    baca.staccato(selector=short_notes),
+    baca.tenuto(selector=long_notes),
 )
 
 commands(

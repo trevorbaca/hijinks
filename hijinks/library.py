@@ -97,7 +97,8 @@ aggregate_ = abjad.PitchSet(items=aggregate, item_class=abjad.NumberedPitch)
 violin_pitches = []
 orders = (order_1, order_2, order_3)
 for order in orders:
-    pitches_ = aggregate_.register(order)
+    order = [abjad.NumberedPitchClass(_) for _ in order]
+    pitches_ = baca.pcollections.register_pcs(aggregate_, order)
     violin_pitches.extend(pitches_)
 
 # functions

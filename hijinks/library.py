@@ -92,7 +92,7 @@ order_3 = abjad.sequence.flatten(order_3)
 order_3 = [_ % 12 for _ in order_3]
 assert order_3 == [4, 11, 3, 1, 9, 0, 2, 10, 7, 5, 6, 8]
 
-aggregate_ = abjad.PitchSet(items=aggregate, item_class=abjad.NumberedPitch)
+aggregate_ = abjad.NumberedPitchSet(aggregate)
 
 violin_pitches = []
 orders = (order_1, order_2, order_3)

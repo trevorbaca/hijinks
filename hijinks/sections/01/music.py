@@ -58,7 +58,7 @@ commands(
     "vn",
     baca.markup(
         r"\hijinks-pp-sempre-al-fino-markup",
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
     baca.pitches(library.violin_pitches),
     baca.skeleton(library.violin_rhythm(), tag=None),
@@ -71,7 +71,7 @@ commands(
     library.piano_rhythm("rh"),
     baca.markup(
         r"\hijinks-pp-sempre-al-fino-markup",
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -80,7 +80,7 @@ commands(
     baca.clef("bass"),
     baca.markup(
         r"\hijinks-ped-ad-libitum-markup",
-        direction=abjad.Down,
+        direction=abjad.DOWN,
         selector=baca.selectors.note(1),
     ),
     baca.text_script_padding(2),
@@ -125,7 +125,7 @@ commands(
         baca.rehearsal_mark_down(),
         baca.rehearsal_mark_extra_offset((-12, 6)),
         baca.rehearsal_mark_padding(0),
-        baca.rehearsal_mark_self_alignment_x(abjad.Right),
+        baca.rehearsal_mark_self_alignment_x(abjad.RIGHT),
         selector=baca.selectors.rleaf(-1),
     ),
 )

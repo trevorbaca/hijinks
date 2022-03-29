@@ -61,7 +61,7 @@ commands(
         direction=abjad.DOWN,
     ),
     baca.pitches(library.violin_pitches),
-    baca.skeleton(library.violin_rhythm(), tag=None),
+    baca.skeleton(library.violin_rhythm(), tag=abjad.Tag()),
     baca.staccato(selector=short_notes),
     baca.tenuto(selector=long_notes),
 )

@@ -48,7 +48,7 @@
             ),
             baca.Memento(
                 context="Piano_RH_Music_Voice",
-                edition=Tag("-PARTS"),
+                edition=Tag(string="-PARTS"),
                 manifest="margin_markups",
                 prototype=None,
                 synthetic_offset=None,
@@ -92,7 +92,7 @@
             ),
             baca.Memento(
                 context="Violin_Music_Voice",
-                edition=Tag("-PARTS"),
+                edition=Tag(string="-PARTS"),
                 manifest="margin_markups",
                 prototype=None,
                 synthetic_offset=None,

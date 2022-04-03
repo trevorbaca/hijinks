@@ -24,14 +24,14 @@
             %! baca._comment_measure_numbers()
             % [Page_Layout measure 1]
             %! BREAK
+            %! baca.IndicatorCommand._call()
+            \baca-lbsd #35 #'(4 20 22)
+            %! BREAK
             %! baca._apply_breaks(1)
             \autoPageBreaksOff
             %! BREAK
             %! baca._apply_breaks(2)
             \noBreak
-            %! BREAK
-            %! baca.IndicatorCommand._call()
-            \baca-lbsd #35 #'(4 20 22)
             %! BREAK
             %! baca.IndicatorCommand._call()
             \pageBreak
@@ -73,11 +73,11 @@
             %! baca._comment_measure_numbers()
             % [Page_Layout measure 6]
             %! BREAK
-            %! baca._apply_breaks(2)
-            \noBreak
-            %! BREAK
             %! baca.IndicatorCommand._call()
             \baca-lbsd #85 #'(4 20 22)
+            %! BREAK
+            %! baca._apply_breaks(2)
+            \noBreak
             %! BREAK
             %! baca.IndicatorCommand._call()
             \break
@@ -119,11 +119,11 @@
             %! baca._comment_measure_numbers()
             % [Page_Layout measure 11]
             %! BREAK
-            %! baca._apply_breaks(2)
-            \noBreak
-            %! BREAK
             %! baca.IndicatorCommand._call()
             \baca-lbsd #147.5 #'(4 20 22)
+            %! BREAK
+            %! baca._apply_breaks(2)
+            \noBreak
             %! BREAK
             %! baca.IndicatorCommand._call()
             \break

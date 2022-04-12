@@ -114,7 +114,7 @@ commands(
     "lh",
     baca.literal(
         r"\override Score.SpanBar #'transparent = ##f",
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
     ),
 )
 

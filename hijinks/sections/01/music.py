@@ -81,7 +81,7 @@ commands(
     baca.markup(
         r"\hijinks-ped-ad-libitum-markup",
         direction=abjad.DOWN,
-        selector=baca.selectors.note(1),
+        selector=lambda _: abjad.select.note(_, 1),
     ),
     baca.text_script_padding(2),
     library.piano_rhythm("lh"),

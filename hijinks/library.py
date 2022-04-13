@@ -191,7 +191,7 @@ voice_abbreviations = {
 
 
 def make_empty_score():
-    tag = baca.function_name(inspect.currentframe())
+    tag = baca.tags.function_name(inspect.currentframe())
     global_context = baca.score.make_global_context()
     violin_music_voice = abjad.Voice(name="Violin_Music_Voice", tag=tag)
     violin_music_staff = abjad.Staff(

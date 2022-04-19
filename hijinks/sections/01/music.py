@@ -26,21 +26,6 @@ commands(
     baca.bar_line("|.", lambda _: baca.select.skip(_, -1)),
 )
 
-commands(
-    "vn",
-    baca.suite(
-        library.margin_markup("Vn."),
-        baca.start_markup("Violin", hcenter_in=10),
-    ),
-)
-commands(
-    "rh",
-    baca.suite(
-        library.margin_markup("Pf.", context="PianoStaffGroup"),
-        baca.start_markup("Piano", context="PianoStaffGroup", hcenter_in=10),
-    ),
-)
-
 
 def short_notes(argument):
     result = abjad.select.notes(argument)
@@ -56,12 +41,17 @@ def long_notes(argument):
 
 commands(
     "vn",
+    baca.skeleton(library.violin_rhythm(), tag=abjad.Tag()),
+    baca.attach_first_segment_default_indicators(),
+    baca.suite(
+        library.margin_markup("Vn."),
+        baca.start_markup("Violin", hcenter_in=10),
+    ),
     baca.markup(
         r"\hijinks-pp-sempre-al-fino-markup",
         direction=abjad.DOWN,
     ),
     baca.pitches(library.violin_pitches),
-    baca.skeleton(library.violin_rhythm(), tag=abjad.Tag()),
     baca.staccato(selector=short_notes),
     baca.tenuto(selector=long_notes),
 )
@@ -69,6 +59,11 @@ commands(
 commands(
     "rh",
     library.piano_rhythm("rh"),
+    baca.attach_first_segment_default_indicators(),
+    baca.suite(
+        library.margin_markup("Pf.", context="PianoStaffGroup"),
+        baca.start_markup("Piano", context="PianoStaffGroup", hcenter_in=10),
+    ),
     baca.markup(
         r"\hijinks-pp-sempre-al-fino-markup",
         direction=abjad.DOWN,
@@ -77,6 +72,8 @@ commands(
 
 commands(
     "lh",
+    library.piano_rhythm("lh"),
+    baca.attach_first_segment_default_indicators(),
     baca.clef("bass"),
     baca.markup(
         r"\hijinks-ped-ad-libitum-markup",
@@ -84,7 +81,10 @@ commands(
         selector=lambda _: abjad.select.note(_, 1),
     ),
     baca.text_script_padding(2),
-    library.piano_rhythm("lh"),
+    baca.literal(
+        r"\override Score.SpanBar #'transparent = ##f",
+        selector=lambda _: abjad.select.leaf(_, -1),
+    ),
 )
 
 
@@ -101,20 +101,12 @@ def long_notes(argument):
 
 
 commands(
-    (["rh", "lh"], (1, -1)),
+    ["rh", "lh"],
     baca.staccato(selector=short_notes),
     baca.tenuto(selector=long_notes),
     baca.tuplet_bracket_shorten_pair(
         (0, 0.6),
         selector=lambda _: abjad.select.tuplet(abjad.select.top(_), -1),
-    ),
-)
-
-commands(
-    "lh",
-    baca.literal(
-        r"\override Score.SpanBar #'transparent = ##f",
-        selector=lambda _: abjad.select.leaf(_, -1),
     ),
 )
 

@@ -162,26 +162,26 @@
             %! baca._make_global_skips(1)
             s1 * 1/8
 
+            %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(1)
-            %! PHANTOM
             % [Page_Layout measure 16]
             %! BREAK
+            %! PHANTOM
             %! baca._apply_breaks(2)
             %! baca._style_phantom_measures(1)
-            %! PHANTOM
             \noBreak
+            %! PHANTOM
             %! baca._style_phantom_measures(2)
-            %! PHANTOM
             \baca-time-signature-transparent
+            %! PHANTOM
             %! baca._make_global_skips(3)
-            %! PHANTOM
             s1 * 1/4
-            %! baca._style_phantom_measures(3)
             %! PHANTOM
+            %! baca._style_phantom_measures(3)
             \once \override Score.BarLine.transparent = ##t
-            %! baca._style_phantom_measures(3)
             %! PHANTOM
+            %! baca._style_phantom_measures(3)
             \once \override Score.SpanBar.transparent = ##t
 
         %! baca.make_global_context()

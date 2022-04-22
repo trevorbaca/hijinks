@@ -24,11 +24,11 @@
             %! baca._comment_measure_numbers()
             % [Page_Layout measure 1]
             %! BREAK
-            %! baca.IndicatorCommand._call()
-            \baca-lbsd #35 #'(4 20 22)
-            %! BREAK
             %! baca._apply_breaks(1)
             \autoPageBreaksOff
+            %! BREAK
+            %! baca.IndicatorCommand._call()
+            \baca-lbsd #35 #'(4 20 22)
             %! BREAK
             %! baca._apply_breaks(2)
             \noBreak

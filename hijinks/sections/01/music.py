@@ -39,9 +39,16 @@ def long_notes(argument):
     return result
 
 
+# vn
+
 commands(
     "vn",
     baca.skeleton(library.violin_rhythm(), tag=abjad.Tag()),
+    baca.append_phantom_measure(),
+)
+
+commands(
+    "vn",
     baca.attach_first_segment_default_indicators(),
     baca.suite(
         library.margin_markup("Vn."),
@@ -56,9 +63,16 @@ commands(
     baca.tenuto(selector=long_notes),
 )
 
+# rh
+
 commands(
     "rh",
     library.piano_rhythm("rh"),
+    baca.append_phantom_measure(),
+)
+
+commands(
+    "rh",
     baca.attach_first_segment_default_indicators(),
     baca.suite(
         library.margin_markup("Pf.", context="PianoStaffGroup"),
@@ -70,9 +84,16 @@ commands(
     ),
 )
 
+# lh
+
 commands(
     "lh",
     library.piano_rhythm("lh"),
+    baca.append_phantom_measure(),
+)
+
+commands(
+    "lh",
     baca.attach_first_segment_default_indicators(),
     baca.clef("bass"),
     baca.markup(
@@ -128,9 +149,12 @@ if __name__ == "__main__":
         commands,
         **baca.score_interpretation_defaults(),
         always_make_global_rests=True,
+        append_phantom_measures_by_hand=True,
+        do_not_sort_commands=True,
         error_on_not_yet_pitched=True,
         final_segment=True,
         global_rests_in_topmost_staff=True,
+        intercalate_mmrests_by_hand=True,
     )
     lilypond_file = baca.make_lilypond_file(
         score,

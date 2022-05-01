@@ -48,7 +48,7 @@ jobs:
         # wget -q -O $lilypond $lilypond_url/$lilypond_source
         # sh $lilypond --batch
         cd /tmp
-        wget -q -O https://gitlab.com/lilypond/lilypond/-/releases/v2.23.8/downloads/lilypond-2.23.8-linux-x86_64.tar.gz
+        wget https://gitlab.com/lilypond/lilypond/-/releases/v2.23.8/downloads/lilypond-2.23.8-linux-x86_64.tar.gz
         ls
         tar -xf lilypond-2.23.8-linux-x86_64.tar.gz
         ls

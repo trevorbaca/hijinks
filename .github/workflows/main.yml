@@ -48,10 +48,14 @@ jobs:
         # wget -q -O $lilypond $lilypond_url/$lilypond_source
         # sh $lilypond --batch
         cd /tmp
-        pwd
+        wget -q -O https://gitlab.com/lilypond/lilypond/-/releases/v2.23.8/downloads/lilypond-2.23.8-linux-x86_64.tar.gz
         ls
-        wget https://gitlab.com/lilypond/lilypond/-/releases/v2.23.8/downloads/lilypond-2.23.8-linux-x86_64.tar.gz
+        tar -xf lilypond-2.23.8-linux-x86_64.tar.gz
         ls
+        which lilypond
+        export PATH=/tmp/lilypond-2.23.8/bin:${PATH}
+        echo $PATH
+        which lilypond
 
     - name: Install Abjad trevor/dev branch ("editable" to include abjad.ily)
       run: |

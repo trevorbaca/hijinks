@@ -45,8 +45,6 @@ jobs:
         cd /tmp
         wget https://gitlab.com/lilypond/lilypond/-/releases/v2.23.8/downloads/lilypond-2.23.8-linux-x86_64.tar.gz
         tar -xf lilypond-2.23.8-linux-x86_64.tar.gz
-        ls
-        echo SETTING PATH ...
         export PATH=/tmp/lilypond-2.23.8/bin:${PATH}
         echo $PATH
         which lilypond
@@ -96,13 +94,13 @@ jobs:
 
     - name: Test sections
       run: |
-        export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
+        export PATH=/tmp/lilypond-2.23.8/bin:/tmp/baca/scr:/home/runner/bin:$PATH
         export PYTHONUNBUFFERED=TRUE
         /tmp/baca/scr/test-sections
 
     - name: Test score builds
       run: |
-        export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
+        export PATH=/tmp/lilypond-2.23.8/bin:/tmp/baca/scr:/home/runner/bin:$PATH
         export PYTHONUNBUFFERED=TRUE
         NAME=$(basename $GITHUB_WORKSPACE)
         BUILDS_DIRECTORY=$GITHUB_WORKSPACE/$NAME/builds

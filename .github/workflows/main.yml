@@ -41,18 +41,12 @@ jobs:
 
     - name: Install LilyPond
       run: |
-        lilypond=/tmp/lilypond
-        # lilypond_url=http://lilypond.org/download/binaries/linux-64/
         lilypond_url=https://gitlab.com/lilypond/lilypond/-/releases/v2.23.8/downloads/lilypond-2.23.8-linux-x86_64.tar.gz
-        # lilypond_source=lilypond-2.23.8-1.linux-64.sh
-        # wget -q -O $lilypond $lilypond_url/$lilypond_source
-        # sh $lilypond --batch
         cd /tmp
         wget https://gitlab.com/lilypond/lilypond/-/releases/v2.23.8/downloads/lilypond-2.23.8-linux-x86_64.tar.gz
-        ls
         tar -xf lilypond-2.23.8-linux-x86_64.tar.gz
         ls
-        which lilypond
+        echo SETTING PATH ...
         export PATH=/tmp/lilypond-2.23.8/bin:${PATH}
         echo $PATH
         which lilypond

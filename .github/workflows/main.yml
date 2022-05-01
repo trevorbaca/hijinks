@@ -41,13 +41,10 @@ jobs:
 
     - name: Install LilyPond
       run: |
-        lilypond_url=https://gitlab.com/lilypond/lilypond/-/releases/v2.23.8/downloads/lilypond-2.23.8-linux-x86_64.tar.gz
+        lilypond_version=2.23.8
         cd /tmp
-        wget -q https://gitlab.com/lilypond/lilypond/-/releases/v2.23.8/downloads/lilypond-2.23.8-linux-x86_64.tar.gz
-        tar -xf lilypond-2.23.8-linux-x86_64.tar.gz
-        export PATH=/tmp/lilypond-2.23.8/bin:${PATH}
-        echo $PATH
-        which lilypond
+        wget -q https://gitlab.com/lilypond/lilypond/-/releases/v${lilypond_version}/downloads/lilypond-${lilypond_version}-linux-x86_64.tar.gz
+        tar -xf lilypond-${lilypond_version}-linux-x86_64.tar.gz
 
     - name: Install Abjad trevor/dev branch ("editable" to include abjad.ily)
       run: |

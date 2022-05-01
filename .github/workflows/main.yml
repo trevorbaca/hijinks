@@ -43,7 +43,7 @@ jobs:
       run: |
         lilypond_url=https://gitlab.com/lilypond/lilypond/-/releases/v2.23.8/downloads/lilypond-2.23.8-linux-x86_64.tar.gz
         cd /tmp
-        wget https://gitlab.com/lilypond/lilypond/-/releases/v2.23.8/downloads/lilypond-2.23.8-linux-x86_64.tar.gz
+        wget -q https://gitlab.com/lilypond/lilypond/-/releases/v2.23.8/downloads/lilypond-2.23.8-linux-x86_64.tar.gz
         tar -xf lilypond-2.23.8-linux-x86_64.tar.gz
         export PATH=/tmp/lilypond-2.23.8/bin:${PATH}
         echo $PATH

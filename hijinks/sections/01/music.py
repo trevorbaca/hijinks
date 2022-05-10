@@ -43,7 +43,7 @@ def long_notes(argument):
 
 commands(
     "vn",
-    baca.skeleton(library.violin_rhythm(), tag=abjad.Tag()),
+    baca.make_skeleton(library.violin_rhythm(), tag=abjad.Tag()),
     baca.append_phantom_measure(),
 )
 

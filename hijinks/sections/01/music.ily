@@ -770,9 +770,9 @@ segment.01.Violin.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \times 4/5
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -811,7 +811,7 @@ segment.01.Violin.Music.Voice = {
           %! baca._set_status_tag()
           %! baca.treat_persistent_wrapper(2)
         \set ViolinMusicStaff.forceClef = ##t
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         bf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -858,7 +858,7 @@ segment.01.Violin.Music.Voice = {
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
           %! baca.rhythm_annotation_spanner()
-        - \baca-text-spanner-left-text "baca.skeleton()"
+        - \baca-text-spanner-left-text "baca.make_skeleton()"
           %! RHYTHM_ANNOTATION_SPANNER
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
@@ -882,7 +882,7 @@ segment.01.Violin.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         c'''8
         % AFTER:
         % ARTICULATIONS:
@@ -895,7 +895,7 @@ segment.01.Violin.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         d'''8
         % AFTER:
         % ARTICULATIONS:
@@ -905,7 +905,7 @@ segment.01.Violin.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         fs'''!8
         % AFTER:
         % ARTICULATIONS:
@@ -919,22 +919,22 @@ segment.01.Violin.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \times 4/5
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Violin_Music_Voice measure 5]
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         af''!8
         % AFTER:
         % ARTICULATIONS:
@@ -947,7 +947,7 @@ segment.01.Violin.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         g''8
         % AFTER:
         % ARTICULATIONS:
@@ -960,7 +960,7 @@ segment.01.Violin.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         f'''4
         % AFTER:
         % ARTICULATIONS:
@@ -970,7 +970,7 @@ segment.01.Violin.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         ef'''!16
         % AFTER:
         % ARTICULATIONS:
@@ -983,7 +983,7 @@ segment.01.Violin.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         cs''''!16
         % AFTER:
         % ARTICULATIONS:
@@ -997,22 +997,22 @@ segment.01.Violin.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \times 4/5
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Violin_Music_Voice measure 9]
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         a'''4
         % AFTER:
         % ARTICULATIONS:
@@ -1022,7 +1022,7 @@ segment.01.Violin.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         e''''8
         % AFTER:
         % ARTICULATIONS:
@@ -1035,7 +1035,7 @@ segment.01.Violin.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         b''8
         % AFTER:
         % ARTICULATIONS:
@@ -1045,7 +1045,7 @@ segment.01.Violin.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         f'''8
         % AFTER:
         % ARTICULATIONS:
@@ -1059,29 +1059,29 @@ segment.01.Violin.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Violin_Music_Voice measure 13]
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \times 4/5
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Violin_Music_Voice measure 14]
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         fs'''!8.
         % AFTER:
         % ARTICULATIONS:
@@ -1094,7 +1094,7 @@ segment.01.Violin.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         af''!8
         % AFTER:
         % ARTICULATIONS:
@@ -1120,7 +1120,7 @@ segment.01.Violin.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:

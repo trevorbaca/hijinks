@@ -59,6 +59,7 @@ jobs:
         python -c "${import}.parser import LilyPondParser; LilyPondParser()"
         python -c "${import}.reduced import ReducedLyParser; ReducedLyParser()"
         python -c "${import}.scheme import SchemeParser; SchemeParser()"
+        ls tmp/abjad
 
     - name: Install rmakers
       run: |
@@ -69,6 +70,7 @@ jobs:
       run: |
         git clone https://github.com/trevorbaca/baca.git /tmp/baca
         python -m pip install /tmp/baca
+        ls /tmp/baca
 
     - name: Install this score ("editable" for doctest to import package)
       run: |

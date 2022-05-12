@@ -67,6 +67,8 @@ jobs:
         ls /tmp/abjad/abjad/scm
         echo Here is /tmp/abjad/abjad.egg-info/SOURCES.txt
         cat /tmp/abjad/abjad.egg-info/SOURCES.txt
+        echo Here is /opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/abjad
+        ls /opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/abjad
 
     - name: Install rmakers
       run: |
@@ -85,6 +87,8 @@ jobs:
         ls /tmp/baca/baca/scm
         echo Here is /tmp/baca/baca.egg-info/SOURCES.txt
         cat /tmp/baca/baca.egg-info/SOURCES.txt
+        echo Here is /opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/baca
+        ls /opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/baca
 
     - name: Install this score ("editable" for doctest to import package)
       run: |

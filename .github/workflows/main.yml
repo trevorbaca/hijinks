@@ -59,7 +59,7 @@ jobs:
         python -c "${import}.parser import LilyPondParser; LilyPondParser()"
         python -c "${import}.reduced import ReducedLyParser; ReducedLyParser()"
         python -c "${import}.scheme import SchemeParser; SchemeParser()"
-        ls tmp/abjad
+        ls /tmp/abjad
 
     - name: Install rmakers
       run: |

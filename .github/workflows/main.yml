@@ -65,6 +65,8 @@ jobs:
         ls /tmp/abjad/abjad
         echo Here is /tmp/abjad/abjad/scm ...
         ls /tmp/abjad/abjad/scm
+        echo Here is /tmp/abjad/abjad.egg-info/SOURCES.txt
+        cat /tmp/abjad/abjad.egg-info/SOURCES.txt
 
     - name: Install rmakers
       run: |
@@ -81,6 +83,8 @@ jobs:
         ls /tmp/baca/baca
         echo Here is /tmp/baca/baca/scm ...
         ls /tmp/baca/baca/scm
+        echo Here is /tmp/baca/baca.egg-info/SOURCES.txt
+        cat /tmp/baca/baca.egg-info/SOURCES.txt
 
     - name: Install this score ("editable" for doctest to import package)
       run: |

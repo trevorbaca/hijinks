@@ -149,14 +149,14 @@ def piano_rhythm(staff):
         if tuplet.trivial():
             tuplet.hide = True
         leaves = abjad.select.leaves(tuplet)
-        # TODO: teach baca.music() to tag indicators
+        # TODO: teach baca.make_music() to tag indicators
         abjad.beam(leaves, tag=tag)
         notes = abjad.select.leaves(tuplet, pitched=True)
         for note, pitch_number in zip(notes, aggregate):
             note.written_pitch = pitch_number
         music.append(tuplet)
     music.insert(-1, abjad.Rest("r8"))
-    return baca.music(music, tag=tag)
+    return baca.make_music(music, tag=tag)
 
 
 def violin_rhythm():

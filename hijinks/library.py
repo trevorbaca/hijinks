@@ -130,12 +130,9 @@ proportions["lh"] = [
 ]
 
 
-def piano_rhythm(staff):
-    """
-    Makes piano rhythm for ``staff``.
-    """
+def make_piano_rhythm(staff):
     assert staff in ("rh", "lh")
-    tag = abjad.Tag("hijinks.piano_rhythm()")
+    tag = baca.tags.function_name(inspect.currentframe())
     maker = abjad.makers.tuplet_from_ratio_and_pair
     music = []
     for proportion, pair, aggregate in zip(proportions[staff], pairs[staff], circuit):
@@ -159,11 +156,8 @@ def piano_rhythm(staff):
     return baca.make_music(music, tag=tag)
 
 
-def violin_rhythm():
-    """
-    Makes violin rhythm.
-    """
-    tag = abjad.Tag("hijinks.violin_rhythm()")
+def make_violin_rhythm():
+    tag = baca.tags.function_name(inspect.currentframe())
     definitions = [
         ((4, 2, 2, 2), (8, 16)),
         ((2, 2, 4, 1, 1), (8, 16)),

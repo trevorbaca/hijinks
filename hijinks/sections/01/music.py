@@ -43,17 +43,18 @@ def long_notes(argument):
 
 commands(
     "vn",
-    baca.make_skeleton(library.violin_rhythm(), tag=abjad.Tag()),
+    baca.make_skeleton(
+        library.make_violin_rhythm(),
+        tag=abjad.Tag(),
+    ),
     baca.append_phantom_measure(),
 )
 
 commands(
     "vn",
     baca.attach_first_segment_default_indicators(),
-    baca.suite(
-        library.margin_markup("Vn."),
-        baca.start_markup("Violin", hcenter_in=10),
-    ),
+    library.margin_markup("Vn."),
+    baca.start_markup("Violin", hcenter_in=10),
     baca.markup(
         r"\hijinks-pp-sempre-al-fino-markup",
         direction=abjad.DOWN,
@@ -67,7 +68,7 @@ commands(
 
 commands(
     "rh",
-    library.piano_rhythm("rh"),
+    library.make_piano_rhythm("rh"),
     baca.append_phantom_measure(),
 )
 
@@ -88,7 +89,7 @@ commands(
 
 commands(
     "lh",
-    library.piano_rhythm("lh"),
+    library.make_piano_rhythm("lh"),
     baca.append_phantom_measure(),
 )
 

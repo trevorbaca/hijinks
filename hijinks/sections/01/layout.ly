@@ -162,28 +162,6 @@
               %! baca._make_global_skips(1)
             s1 * 1/8
 
-              %! PHANTOM
-              %! baca._comment_measure_numbers()
-              %! baca._style_phantom_measures(1)
-            % [Page_Layout measure 16]
-              %! BREAK
-              %! PHANTOM
-              %! baca._apply_breaks(2)
-              %! baca._style_phantom_measures(1)
-            \noBreak
-              %! PHANTOM
-              %! baca._style_phantom_measures(2)
-            \baca-time-signature-transparent
-              %! PHANTOM
-              %! baca._make_global_skips(3)
-            s1 * 1/4
-              %! PHANTOM
-              %! baca._style_phantom_measures(3)
-            \once \override Score.BarLine.transparent = ##t
-              %! PHANTOM
-              %! baca._style_phantom_measures(3)
-            \once \override Score.SpanBar.transparent = ##t
-
           %! baca.make_global_context()
         }   %*% Page.Layout
 

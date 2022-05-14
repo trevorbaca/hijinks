@@ -563,6 +563,12 @@ segment.01.Global.Skips = {
       %! baca.IndicatorCommand._call()
       %! baca.bar_line()
     \bar "|."
+      %! baca.IndicatorCommand._call()
+      %! baca.literal()
+    \override Score.BarLine.transparent = ##f
+      %! baca.IndicatorCommand._call()
+      %! baca.literal()
+    \override Score.SpanBar.transparent = ##f
     % CLOSING:
     % COMMANDS:
 
@@ -2720,9 +2726,23 @@ segment.01.Piano.LH.Music.Voice = {
 
         % BEFORE:
         % COMMANDS:
+          %! baca.OverrideCommand._call(1)
+          %! baca.rehearsal_mark_down()
+        \once \override Score.RehearsalMark.direction = #down
+          %! baca.OverrideCommand._call(1)
+          %! baca.rehearsal_mark_extra_offset()
+        \once \override Score.RehearsalMark.extra-offset = #'(-7 . -7)
+          %! baca.OverrideCommand._call(1)
+          %! baca.rehearsal_mark_padding()
+        \once \override Score.RehearsalMark.padding = 0
+          %! baca.OverrideCommand._call(1)
+          %! baca.rehearsal_mark_self_alignment_x()
+        \once \override Score.RehearsalMark.self-alignment-X = #right
+        % OPENING:
+        % COMMANDS:
           %! baca.IndicatorCommand._call()
-          %! baca.literal()
-        \override Score.SpanBar #'transparent = ##f
+          %! baca.mark()
+        \mark \hijinks-colophon-markup
           %! baca.make_music()
           %! hijinks.make_piano_material()
         ef!64

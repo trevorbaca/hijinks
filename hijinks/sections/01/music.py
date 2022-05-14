@@ -24,6 +24,16 @@ commands(
     "Global_Skips",
     baca.metronome_mark("32"),
     baca.bar_line("|.", lambda _: baca.select.skip(_, -1)),
+    baca.literal(
+        r"\override Score.BarLine.transparent = ##f",
+        selector=lambda _: baca.select.skip(_, -1),
+        site="after",
+    ),
+    baca.literal(
+        r"\override Score.SpanBar.transparent = ##f",
+        selector=lambda _: baca.select.skip(_, -1),
+        site="after",
+    ),
 )
 
 
@@ -110,10 +120,6 @@ commands(
         selector=lambda _: abjad.select.note(_, 1),
     ),
     baca.text_script_padding(2),
-    baca.literal(
-        r"\override Score.SpanBar #'transparent = ##f",
-        selector=lambda _: abjad.select.leaf(_, -1),
-    ),
 )
 
 
@@ -141,14 +147,14 @@ commands(
 
 commands(
     "lh",
-    #    baca.chunk(
-    #        baca.mark(r"\hijinks-colophon-markup"),
-    #        baca.rehearsal_mark_down(),
-    #        # baca.rehearsal_mark_extra_offset((-12, 6)),
-    #        baca.rehearsal_mark_padding(0),
-    #        baca.rehearsal_mark_self_alignment_x(abjad.RIGHT),
-    #        selector=lambda _: abjad.select.leaf(_, -1),
-    #    ),
+    baca.chunk(
+        baca.mark(r"\hijinks-colophon-markup"),
+        baca.rehearsal_mark_down(),
+        baca.rehearsal_mark_extra_offset((-7, -7)),
+        baca.rehearsal_mark_padding(0),
+        baca.rehearsal_mark_self_alignment_x(abjad.RIGHT),
+        selector=lambda _: abjad.select.leaf(_, -1),
+    ),
 )
 
 if __name__ == "__main__":

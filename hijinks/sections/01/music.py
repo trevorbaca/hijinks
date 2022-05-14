@@ -11,7 +11,7 @@ score = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 
 commands = baca.CommandAccumulator(
-    **baca.segment_accumulation_defaults(),
+    # **baca.segment_accumulation_defaults(),
     instruments=library.instruments(),
     margin_markups=library.margin_markups(),
     metronome_marks=library.metronome_marks(),
@@ -27,13 +27,13 @@ commands(
 )
 
 
-def select_short_notes(argument):
+def _select_short_notes(argument):
     result = abjad.select.notes(argument)
     result = [_ for _ in result if _.written_duration <= abjad.Duration((1, 16))]
     return result
 
 
-def select_long_notes(argument):
+def _select_long_notes(argument):
     result = abjad.select.notes(argument)
     result = [_ for _ in result if _.written_duration > abjad.Duration((1, 16))]
     return result
@@ -60,16 +60,9 @@ commands(
     library.make_piano_material("lh", library.circuit()),
 )
 
-# phantom
+# persistence
 
 all_voices = [_ for _ in voice_names if "Music_Voice" in _]
-
-commands(
-    all_voices,
-    baca.append_phantom_measure(),
-)
-
-# persistence
 
 commands(
     all_voices,
@@ -88,8 +81,8 @@ commands(
         direction=abjad.DOWN,
     ),
     baca.pitches(library.violin_pitches()),
-    baca.staccato(selector=select_short_notes),
-    baca.tenuto(selector=select_long_notes),
+    baca.staccato(selector=_select_short_notes),
+    baca.tenuto(selector=_select_long_notes),
 )
 
 # rh
@@ -124,13 +117,13 @@ commands(
 )
 
 
-def select_short_notes(argument):
+def _select_short_notes(argument):
     result = abjad.select.notes(argument)
     result = [_ for _ in result if _.written_duration <= abjad.Duration((1, 64))]
     return result
 
 
-def select_long_notes(argument):
+def _select_long_notes(argument):
     result = abjad.select.notes(argument)
     result = [_ for _ in result if _.written_duration > abjad.Duration((1, 64))]
     return result
@@ -138,8 +131,8 @@ def select_long_notes(argument):
 
 commands(
     ["rh", "lh"],
-    baca.staccato(selector=select_short_notes),
-    baca.tenuto(selector=select_long_notes),
+    baca.staccato(selector=_select_short_notes),
+    baca.tenuto(selector=_select_long_notes),
     baca.tuplet_bracket_shorten_pair(
         (0, 0.6),
         selector=lambda _: abjad.select.tuplet(abjad.select.top(_), -1),
@@ -147,15 +140,15 @@ commands(
 )
 
 commands(
-    ("lh", -1),
-    baca.chunk(
-        baca.mark(r"\hijinks-colophon-markup"),
-        baca.rehearsal_mark_down(),
-        baca.rehearsal_mark_extra_offset((-12, 6)),
-        baca.rehearsal_mark_padding(0),
-        baca.rehearsal_mark_self_alignment_x(abjad.RIGHT),
-        selector=lambda _: baca.select.rleaf(_, -1),
-    ),
+    "lh",
+    #    baca.chunk(
+    #        baca.mark(r"\hijinks-colophon-markup"),
+    #        baca.rehearsal_mark_down(),
+    #        # baca.rehearsal_mark_extra_offset((-12, 6)),
+    #        baca.rehearsal_mark_padding(0),
+    #        baca.rehearsal_mark_self_alignment_x(abjad.RIGHT),
+    #        selector=lambda _: abjad.select.leaf(_, -1),
+    #    ),
 )
 
 if __name__ == "__main__":
@@ -164,6 +157,11 @@ if __name__ == "__main__":
         commands,
         **baca.score_interpretation_defaults(),
         always_make_global_rests=True,
+        deactivate=(
+            baca.tags.DEFAULT_INSTRUMENT_ALERT,
+            baca.tags.EXPLICIT_MARGIN_MARKUP_ALERT,
+            baca.tags.RHYTHM_ANNOTATION_SPANNER,
+        ),
         error_on_not_yet_pitched=True,
         final_segment=True,
         global_rests_in_topmost_staff=True,

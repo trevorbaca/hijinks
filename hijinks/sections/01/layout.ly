@@ -28,7 +28,7 @@
             \autoPageBreaksOff
               %! BREAK
               %! baca.IndicatorCommand._call()
-            \baca-lbsd #35 #'(4 20 22)
+            \baca-lbsd #32 #'(12 26 26)
               %! BREAK
               %! baca._apply_breaks(2)
             \noBreak
@@ -74,7 +74,7 @@
             % [Page_Layout measure 6]
               %! BREAK
               %! baca.IndicatorCommand._call()
-            \baca-lbsd #85 #'(4 20 22)
+            \baca-lbsd #98 #'(4 26 26)
               %! BREAK
               %! baca._apply_breaks(2)
             \noBreak
@@ -120,7 +120,7 @@
             % [Page_Layout measure 11]
               %! BREAK
               %! baca.IndicatorCommand._call()
-            \baca-lbsd #147.5 #'(4 20 22)
+            \baca-lbsd #160 #'(4 26 26)
               %! BREAK
               %! baca._apply_breaks(2)
             \noBreak

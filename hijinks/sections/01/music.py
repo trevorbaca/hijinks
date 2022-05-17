@@ -72,10 +72,10 @@ commands(
 
 # persistence
 
-all_voices = [_ for _ in voice_names if "Music_Voice" in _]
+music_voice_names = [_ for _ in voice_names if "Music_Voice" in _]
 
 commands(
-    all_voices,
+    music_voice_names,
     baca.attach_first_segment_default_indicators(),
 )
 

@@ -1,5 +1,5 @@
   %! baca.path.extern()
-segment.01.Global.Skips = {
+segment.01.Global_Skips = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -579,7 +579,7 @@ segment.01.Global.Skips = {
 
 
   %! baca.path.extern()
-segment.01.Global.Rests = {
+segment.01.Global_Rests = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -695,7 +695,7 @@ segment.01.Global.Rests = {
 
 
   %! baca.path.extern()
-segment.01.Violin.Music.Voice = {
+segment.01.Violin_Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1023,7 +1023,7 @@ segment.01.Violin.Music.Staff = <<
     \context GlobalRests = "Global_Rests"
       %! baca.make_global_context()
       %! baca.path.extern()
-    { \segment.01.Global.Rests }
+    { \segment.01.Global_Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1032,7 +1032,7 @@ segment.01.Violin.Music.Staff = <<
     \context Voice = "Violin_Music_Voice"
       %! hijinks.make_empty_score()
       %! baca.path.extern()
-    { \segment.01.Violin.Music.Voice }
+    { \segment.01.Violin_Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -1043,7 +1043,7 @@ segment.01.Violin.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.01.Piano.RH.Music.Voice = {
+segment.01.Piano_RH_Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1950,7 +1950,7 @@ segment.01.Piano.RH.Music.Staff = {
     \context Voice = "Piano_RH_Music_Voice"
       %! hijinks.make_empty_score()
       %! baca.path.extern()
-    { \segment.01.Piano.RH.Music.Voice }
+    { \segment.01.Piano_RH_Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -1961,7 +1961,7 @@ segment.01.Piano.RH.Music.Staff = {
 
 
   %! baca.path.extern()
-segment.01.Piano.LH.Music.Voice = {
+segment.01.Piano_LH_Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2719,7 +2719,7 @@ segment.01.Piano.LH.Music.Staff = {
     \context Voice = "Piano_LH_Music_Voice"
       %! hijinks.make_empty_score()
       %! baca.path.extern()
-    { \segment.01.Piano.LH.Music.Voice }
+    { \segment.01.Piano_LH_Music_Voice }
     % CLOSING:
     % COMMANDS:
 

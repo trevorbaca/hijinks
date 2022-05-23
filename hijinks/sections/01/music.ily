@@ -695,7 +695,7 @@ segment.01.Global_Rests = {
 
 
   %! baca.path.extern()
-segment.01.Violin_Music_Voice = {
+segment.01.Violin.Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -708,7 +708,7 @@ segment.01.Violin_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Violin_Music_Voice measure 1]
+        % [Violin.Music_Voice measure 1]
         % BEFORE:
         % COMMANDS:
           %! -PARTS
@@ -827,7 +827,7 @@ segment.01.Violin_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Violin_Music_Voice measure 5]
+        % [Violin.Music_Voice measure 5]
           %! baca.make_skeleton()
         af''!8
         % AFTER:
@@ -905,7 +905,7 @@ segment.01.Violin_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Violin_Music_Voice measure 9]
+        % [Violin.Music_Voice measure 9]
           %! baca.make_skeleton()
         a'''4
         % AFTER:
@@ -959,7 +959,7 @@ segment.01.Violin_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Violin_Music_Voice measure 13]
+    % [Violin.Music_Voice measure 13]
       %! baca.make_skeleton()
     r8
     % ABSOLUTE_BEFORE:
@@ -974,7 +974,7 @@ segment.01.Violin_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Violin_Music_Voice measure 14]
+        % [Violin.Music_Voice measure 14]
           %! baca.make_skeleton()
         fs'''!8.
         % AFTER:
@@ -1029,10 +1029,10 @@ segment.01.Violin.Music.Staff = <<
 
     % OPEN_BRACKETS:
       %! hijinks.make_empty_score()
-    \context Voice = "Violin_Music_Voice"
+    \context Voice = "Violin.Music_Voice"
       %! hijinks.make_empty_score()
       %! baca.path.extern()
-    { \segment.01.Violin_Music_Voice }
+    { \segment.01.Violin.Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -1043,7 +1043,7 @@ segment.01.Violin.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.01.Piano_RH_Music_Voice = {
+segment.01.Piano_RH.Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1058,7 +1058,7 @@ segment.01.Piano_RH_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_RH_Music_Voice measure 1]
+        % [Piano_RH.Music_Voice measure 1]
         % BEFORE:
         % COMMANDS:
           %! -PARTS
@@ -1220,7 +1220,7 @@ segment.01.Piano_RH_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_RH_Music_Voice measure 3]
+        % [Piano_RH.Music_Voice measure 3]
           %! baca.make_music()
           %! hijinks.make_piano_material()
         cs'''!64
@@ -1392,7 +1392,7 @@ segment.01.Piano_RH_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_RH_Music_Voice measure 6]
+        % [Piano_RH.Music_Voice measure 6]
           %! baca.make_music()
           %! hijinks.make_piano_material()
         e''''16
@@ -1552,7 +1552,7 @@ segment.01.Piano_RH_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_RH_Music_Voice measure 8]
+        % [Piano_RH.Music_Voice measure 8]
           %! baca.make_music()
           %! hijinks.make_piano_material()
         cs'''!16
@@ -1779,7 +1779,7 @@ segment.01.Piano_RH_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_RH_Music_Voice measure 11]
+        % [Piano_RH.Music_Voice measure 11]
           %! baca.make_music()
           %! hijinks.make_piano_material()
         g'16
@@ -1827,7 +1827,7 @@ segment.01.Piano_RH_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Piano_RH_Music_Voice measure 13]
+    % [Piano_RH.Music_Voice measure 13]
       %! baca.make_music()
       %! hijinks.make_piano_material()
     r8
@@ -1845,7 +1845,7 @@ segment.01.Piano_RH_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_RH_Music_Voice measure 14]
+        % [Piano_RH.Music_Voice measure 14]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -1947,10 +1947,10 @@ segment.01.Piano.RH.Music.Staff = {
 
     % OPEN_BRACKETS:
       %! hijinks.make_empty_score()
-    \context Voice = "Piano_RH_Music_Voice"
+    \context Voice = "Piano_RH.Music_Voice"
       %! hijinks.make_empty_score()
       %! baca.path.extern()
-    { \segment.01.Piano_RH_Music_Voice }
+    { \segment.01.Piano_RH.Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -1961,7 +1961,7 @@ segment.01.Piano.RH.Music.Staff = {
 
 
   %! baca.path.extern()
-segment.01.Piano_LH_Music_Voice = {
+segment.01.Piano_LH.Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1979,7 +1979,7 @@ segment.01.Piano_LH_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_LH_Music_Voice measure 1]
+        % [Piano_LH.Music_Voice measure 1]
         % BEFORE:
         % COMMANDS:
           %! MEASURE_1
@@ -2240,7 +2240,7 @@ segment.01.Piano_LH_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_LH_Music_Voice measure 5]
+        % [Piano_LH.Music_Voice measure 5]
           %! baca.make_music()
           %! hijinks.make_piano_material()
         e,16
@@ -2295,7 +2295,7 @@ segment.01.Piano_LH_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_LH_Music_Voice measure 6]
+        % [Piano_LH.Music_Voice measure 6]
           %! baca.make_music()
           %! hijinks.make_piano_material()
         r8
@@ -2320,7 +2320,7 @@ segment.01.Piano_LH_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_LH_Music_Voice measure 7]
+        % [Piano_LH.Music_Voice measure 7]
           %! baca.make_music()
           %! hijinks.make_piano_material()
         e16.
@@ -2378,7 +2378,7 @@ segment.01.Piano_LH_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_LH_Music_Voice measure 9]
+        % [Piano_LH.Music_Voice measure 9]
           %! baca.make_music()
           %! hijinks.make_piano_material()
         e,16
@@ -2416,7 +2416,7 @@ segment.01.Piano_LH_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_LH_Music_Voice measure 10]
+        % [Piano_LH.Music_Voice measure 10]
           %! baca.make_music()
           %! hijinks.make_piano_material()
         d16.
@@ -2460,7 +2460,7 @@ segment.01.Piano_LH_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_LH_Music_Voice measure 11]
+        % [Piano_LH.Music_Voice measure 11]
           %! baca.make_music()
           %! hijinks.make_piano_material()
         c,,32
@@ -2574,7 +2574,7 @@ segment.01.Piano_LH_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Piano_LH_Music_Voice measure 13]
+    % [Piano_LH.Music_Voice measure 13]
       %! baca.make_music()
       %! hijinks.make_piano_material()
     r8
@@ -2592,7 +2592,7 @@ segment.01.Piano_LH_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_LH_Music_Voice measure 14]
+        % [Piano_LH.Music_Voice measure 14]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -2716,10 +2716,10 @@ segment.01.Piano.LH.Music.Staff = {
 
     % OPEN_BRACKETS:
       %! hijinks.make_empty_score()
-    \context Voice = "Piano_LH_Music_Voice"
+    \context Voice = "Piano_LH.Music_Voice"
       %! hijinks.make_empty_score()
       %! baca.path.extern()
-    { \segment.01.Piano_LH_Music_Voice }
+    { \segment.01.Piano_LH.Music_Voice }
     % CLOSING:
     % COMMANDS:
 

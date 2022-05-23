@@ -75,7 +75,7 @@
 
                 % OPEN_BRACKETS:
                   %! hijinks.make_empty_score()
-                \context ViolinMusicStaff = "Violin_Music_Staff"
+                \context ViolinMusicStaff = "Violin.Music_Staff"
                   %! hijinks.make_empty_score()
                   %! baca.path.extern()
                 { \segment.01.Violin.Music.Staff }
@@ -84,7 +84,7 @@
 
                 % OPEN_BRACKETS:
                   %! hijinks.make_empty_score()
-                \context PianoStaffGroup = "Piano_Staff_Group"
+                \context PianoStaffGroup = "Piano.Staff_Group"
                   %! hijinks.make_empty_score()
                 <<
                     % ABSOLUTE_BEFORE:
@@ -92,7 +92,7 @@
 
                     % OPEN_BRACKETS:
                       %! hijinks.make_empty_score()
-                    \context PianoRHMusicStaff = "Piano_RH_Music_Staff"
+                    \context PianoRHMusicStaff = "Piano_RH.Music_Staff"
                       %! hijinks.make_empty_score()
                       %! baca.path.extern()
                     { \segment.01.Piano.RH.Music.Staff }
@@ -101,7 +101,7 @@
 
                     % OPEN_BRACKETS:
                       %! hijinks.make_empty_score()
-                    \context PianoLHMusicStaff = "Piano_LH_Music_Staff"
+                    \context PianoLHMusicStaff = "Piano_LH.Music_Staff"
                       %! hijinks.make_empty_score()
                       %! baca.path.extern()
                     { \segment.01.Piano.LH.Music.Staff }

@@ -3,7 +3,7 @@
 \version "2.19.82"
 
 \include "stylesheet.ily"
-\include "_segments/01.ily"
+\include "_sections/01.ily"
 
 
 \score {
@@ -12,7 +12,7 @@
         \include "layout.ly"
         }
         {
-        \include "_segments/01.ly"
+        \include "_sections/01.ly"
         }
     >>
 }

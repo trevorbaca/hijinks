@@ -1,5 +1,5 @@
   %! baca.path.extern()
-segment.01.Global_Skips = {
+section_number.01.Global_Skips = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -579,7 +579,7 @@ segment.01.Global_Skips = {
 
 
   %! baca.path.extern()
-segment.01.Global_Rests = {
+section_number.01.Global_Rests = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -695,7 +695,7 @@ segment.01.Global_Rests = {
 
 
   %! baca.path.extern()
-segment.01.Violin.Music_Voice = {
+section_number.01.Violin.Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1014,7 +1014,7 @@ segment.01.Violin.Music_Voice = {
 
 
   %! baca.path.extern()
-segment.01.Violin.Music.Staff = <<
+section_number.01.Violin.Music_Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1023,7 +1023,7 @@ segment.01.Violin.Music.Staff = <<
     \context GlobalRests = "Global_Rests"
       %! baca.make_global_context()
       %! baca.path.extern()
-    { \segment.01.Global_Rests }
+    { \section_number.01.Global_Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1032,7 +1032,7 @@ segment.01.Violin.Music.Staff = <<
     \context Voice = "Violin.Music_Voice"
       %! hijinks.make_empty_score()
       %! baca.path.extern()
-    { \segment.01.Violin.Music_Voice }
+    { \section_number.01.Violin.Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -1043,7 +1043,7 @@ segment.01.Violin.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.01.Piano_RH.Music_Voice = {
+section_number.01.Piano_RH.Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1941,7 +1941,7 @@ segment.01.Piano_RH.Music_Voice = {
 
 
   %! baca.path.extern()
-segment.01.Piano.RH.Music.Staff = {
+section_number.01.Piano_RH.Music_Staff = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1950,7 +1950,7 @@ segment.01.Piano.RH.Music.Staff = {
     \context Voice = "Piano_RH.Music_Voice"
       %! hijinks.make_empty_score()
       %! baca.path.extern()
-    { \segment.01.Piano_RH.Music_Voice }
+    { \section_number.01.Piano_RH.Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -1961,7 +1961,7 @@ segment.01.Piano.RH.Music.Staff = {
 
 
   %! baca.path.extern()
-segment.01.Piano_LH.Music_Voice = {
+section_number.01.Piano_LH.Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2710,7 +2710,7 @@ segment.01.Piano_LH.Music_Voice = {
 
 
   %! baca.path.extern()
-segment.01.Piano.LH.Music.Staff = {
+section_number.01.Piano_LH.Music_Staff = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2719,7 +2719,7 @@ segment.01.Piano.LH.Music.Staff = {
     \context Voice = "Piano_LH.Music_Voice"
       %! hijinks.make_empty_score()
       %! baca.path.extern()
-    { \segment.01.Piano_LH.Music_Voice }
+    { \section_number.01.Piano_LH.Music_Voice }
     % CLOSING:
     % COMMANDS:
 

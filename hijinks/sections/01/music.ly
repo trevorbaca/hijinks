@@ -55,7 +55,7 @@
                 \context GlobalSkips = "Global_Skips"
                   %! baca.make_global_context()
                   %! baca.path.extern()
-                { \section_number.1.Global_Skips }
+                { \number.1.Global_Skips }
                 % CLOSING:
                 % COMMANDS:
 
@@ -78,7 +78,7 @@
                 \context ViolinMusicStaff = "Violin.Music_Staff"
                   %! hijinks.make_empty_score()
                   %! baca.path.extern()
-                { \section_number.1.Violin.Music_Staff }
+                { \number.1.Violin.Music_Staff }
                 % ABSOLUTE_BEFORE:
                 % COMMANDS:
 
@@ -95,7 +95,7 @@
                     \context PianoRHMusicStaff = "Piano_RH.Music_Staff"
                       %! hijinks.make_empty_score()
                       %! baca.path.extern()
-                    { \section_number.1.Piano_RH.Music_Staff }
+                    { \number.1.Piano_RH.Music_Staff }
                     % ABSOLUTE_BEFORE:
                     % COMMANDS:
 
@@ -104,7 +104,7 @@
                     \context PianoLHMusicStaff = "Piano_LH.Music_Staff"
                       %! hijinks.make_empty_score()
                       %! baca.path.extern()
-                    { \section_number.1.Piano_LH.Music_Staff }
+                    { \number.1.Piano_LH.Music_Staff }
                     % CLOSING:
                     % COMMANDS:
 

@@ -76,14 +76,16 @@ music_voice_names = [_ for _ in voice_names if "MusicVoice" in _]
 
 commands(
     music_voice_names,
-    baca.attach_first_section_default_indicators(),
+    baca.attach_first_section_default_indicators(
+        attach_instruments_by_hand=True,
+    ),
 )
 
 # vn
 
 commands(
     "vn",
-    baca.attach_first_section_default_indicators(),
+    baca.instrument(commands.instruments["Violin"]),
     baca.start_markup("Violin", hcenter_in=10),
     library.margin_markup("Vn."),
     baca.markup(
@@ -99,7 +101,7 @@ commands(
 
 commands(
     "rh",
-    baca.attach_first_section_default_indicators(),
+    baca.instrument(commands.instruments["Piano"]),
     baca.start_markup("Piano", context="PianoStaffGroup", hcenter_in=10),
     library.margin_markup("Pf.", context="PianoStaffGroup"),
     baca.markup(
@@ -112,7 +114,6 @@ commands(
 
 commands(
     "lh",
-    baca.attach_first_section_default_indicators(),
     baca.clef("bass"),
     baca.markup(
         r"\hijinks-ped-ad-libitum-markup",

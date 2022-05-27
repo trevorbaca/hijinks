@@ -749,9 +749,9 @@ number.1.Violin.MusicVoice = {
           %! baca.tenuto()
         - \tenuto
         % MARKUP:
-          %! DEFAULT_INSTRUMENT_ALERT
+          %! EXPLICIT_INSTRUMENT_ALERT
           %! baca._attach_latent_indicator_alert()
-        %@% ^ \baca-default-indicator-markup "(“Violin”)"
+        ^ \baca-explicit-indicator-markup "(“Violin”)"
           %! EXPLICIT_MARGIN_MARKUP_ALERT
           %! baca._attach_latent_indicator_alert()
         %@% ^ \baca-explicit-indicator-markup "[“Vn.”]"
@@ -1100,9 +1100,9 @@ number.1.Piano_RH.MusicVoice = {
           %! baca.tenuto()
         - \tenuto
         % MARKUP:
-          %! DEFAULT_INSTRUMENT_ALERT
+          %! EXPLICIT_INSTRUMENT_ALERT
           %! baca._attach_latent_indicator_alert()
-        %@% ^ \baca-default-indicator-markup "(“Piano”)"
+        ^ \baca-explicit-indicator-markup "(“Piano”)"
           %! EXPLICIT_MARGIN_MARKUP_ALERT
           %! baca._attach_latent_indicator_alert()
         %@% ^ \baca-explicit-indicator-markup "[“Pf.”]"

@@ -21,7 +21,7 @@ commands = baca.CommandAccumulator(
 )
 
 commands(
-    "Global_Skips",
+    "GlobalSkips",
     baca.metronome_mark("32"),
     baca.bar_line("|.", lambda _: baca.select.skip(_, -1)),
     baca.literal(

@@ -29,7 +29,6 @@ def instruments():
 
 def make_empty_score():
     tag = baca.tags.function_name(inspect.currentframe())
-    _instruments = instruments()
     global_context = baca.score.make_global_context()
     violin_music_voice = abjad.Voice(name="Violin.MusicVoice", tag=tag)
     violin_music_staff = abjad.Staff(

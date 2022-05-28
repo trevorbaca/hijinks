@@ -711,6 +711,18 @@ number.1.Violin.MusicVoice = {
         % [Violin.MusicVoice measure 1]
         % BEFORE:
         % COMMANDS:
+          %! MEASURE_1
+          %! SHIFTED_CLEF
+          %! baca.OverrideCommand._call(1)
+          %! baca.clef_shift()
+          %! baca.clef_x_extent_false()
+    %%% \once \override ViolinMusicStaff.Clef.X-extent = ##f
+          %! MEASURE_1
+          %! SHIFTED_CLEF
+          %! baca.OverrideCommand._call(1)
+          %! baca.clef_extra_offset()
+          %! baca.clef_shift()
+    %%% \once \override ViolinMusicStaff.Clef.extra-offset = #'(-2.5 . 0)
           %! -PARTS
           %! baca.IndicatorCommand._call()
           %! baca.start_markup()
@@ -723,22 +735,24 @@ number.1.Violin.MusicVoice = {
         \set Staff.shortInstrumentName = \markup \hcenter-in #10 Vn.
         % OPENING:
         % COMMANDS:
-          %! DEFAULT_CLEF
-          %! baca._attach_default_indicators(3)
+          %! EXPLICIT_CLEF
+          %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
+          %! baca.clef()
         \clef "treble"
-          %! DEFAULT_CLEF_COLOR
+          %! EXPLICIT_CLEF_COLOR
           %! baca._attach_color_literal(2)
-        \once \override ViolinMusicStaff.Clef.color = #(x11-color 'DarkViolet)
+        \once \override ViolinMusicStaff.Clef.color = #(x11-color 'blue)
           %! EXPLICIT_MARGIN_MARKUP_COLOR
           %! baca._attach_color_literal(2)
         \once \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'blue)
-          %! DEFAULT_CLEF_COLOR_CANCELLATION
+          %! EXPLICIT_CLEF_COLOR_CANCELLATION
           %! baca._attach_color_literal(1)
         %@% \override ViolinMusicStaff.Clef.color = ##f
-          %! DEFAULT_CLEF
-          %! baca._attach_default_indicators(3)
+          %! EXPLICIT_CLEF
+          %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
+          %! baca.clef()
           %! baca.treat_persistent_wrapper(2)
         \set ViolinMusicStaff.forceClef = ##t
           %! baca.make_skeleton()
@@ -760,9 +774,9 @@ number.1.Violin.MusicVoice = {
         _ \hijinks-pp-sempre-al-fino-markup
         % ABSOLUTE_AFTER:
         % COMMANDS:
-          %! DEFAULT_CLEF_REDRAW_COLOR
+          %! EXPLICIT_CLEF_REDRAW_COLOR
           %! baca._attach_color_literal(2)
-        \override ViolinMusicStaff.Clef.color = #(x11-color 'violet)
+        \override ViolinMusicStaff.Clef.color = #(x11-color 'DeepSkyBlue2)
           %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR
           %! baca._attach_color_literal(2)
         \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
@@ -1061,6 +1075,18 @@ number.1.Piano_RH.MusicVoice = {
         % [Piano_RH.MusicVoice measure 1]
         % BEFORE:
         % COMMANDS:
+          %! MEASURE_1
+          %! SHIFTED_CLEF
+          %! baca.OverrideCommand._call(1)
+          %! baca.clef_shift()
+          %! baca.clef_x_extent_false()
+    %%% \once \override PianoRHMusicStaff.Clef.X-extent = ##f
+          %! MEASURE_1
+          %! SHIFTED_CLEF
+          %! baca.OverrideCommand._call(1)
+          %! baca.clef_extra_offset()
+          %! baca.clef_shift()
+    %%% \once \override PianoRHMusicStaff.Clef.extra-offset = #'(-2.5 . 0)
           %! -PARTS
           %! baca.IndicatorCommand._call()
           %! baca.start_markup()
@@ -1073,22 +1099,24 @@ number.1.Piano_RH.MusicVoice = {
         \set PianoStaffGroup.shortInstrumentName = \markup \hcenter-in #10 Pf.
         % OPENING:
         % COMMANDS:
-          %! DEFAULT_CLEF
-          %! baca._attach_default_indicators(3)
+          %! EXPLICIT_CLEF
+          %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
+          %! baca.clef()
         \clef "treble"
-          %! DEFAULT_CLEF_COLOR
+          %! EXPLICIT_CLEF_COLOR
           %! baca._attach_color_literal(2)
-        \once \override PianoRHMusicStaff.Clef.color = #(x11-color 'DarkViolet)
+        \once \override PianoRHMusicStaff.Clef.color = #(x11-color 'blue)
           %! EXPLICIT_MARGIN_MARKUP_COLOR
           %! baca._attach_color_literal(2)
         \once \override PianoStaffGroup.InstrumentName.color = #(x11-color 'blue)
-          %! DEFAULT_CLEF_COLOR_CANCELLATION
+          %! EXPLICIT_CLEF_COLOR_CANCELLATION
           %! baca._attach_color_literal(1)
         %@% \override PianoRHMusicStaff.Clef.color = ##f
-          %! DEFAULT_CLEF
-          %! baca._attach_default_indicators(3)
+          %! EXPLICIT_CLEF
+          %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
+          %! baca.clef()
           %! baca.treat_persistent_wrapper(2)
         \set PianoRHMusicStaff.forceClef = ##t
           %! baca.make_music()
@@ -1114,9 +1142,9 @@ number.1.Piano_RH.MusicVoice = {
         [
         % ABSOLUTE_AFTER:
         % COMMANDS:
-          %! DEFAULT_CLEF_REDRAW_COLOR
+          %! EXPLICIT_CLEF_REDRAW_COLOR
           %! baca._attach_color_literal(2)
-        \override PianoRHMusicStaff.Clef.color = #(x11-color 'violet)
+        \override PianoRHMusicStaff.Clef.color = #(x11-color 'DeepSkyBlue2)
           %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR
           %! baca._attach_color_literal(2)
         \override PianoStaffGroup.InstrumentName.color = #(x11-color 'DeepSkyBlue2)

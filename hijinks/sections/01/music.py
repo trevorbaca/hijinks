@@ -86,6 +86,7 @@ commands(
 commands(
     "vn",
     baca.instrument(commands.instruments["Violin"]),
+    baca.clef("treble"),
     baca.start_markup("Violin", hcenter_in=10),
     library.margin_markup("Vn."),
     baca.markup(
@@ -102,6 +103,7 @@ commands(
 commands(
     "rh",
     baca.instrument(commands.instruments["Piano"]),
+    baca.clef("treble"),
     baca.start_markup("Piano", context="PianoStaffGroup", hcenter_in=10),
     library.margin_markup("Pf.", context="PianoStaffGroup"),
     baca.markup(

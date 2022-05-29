@@ -156,7 +156,6 @@ if __name__ == "__main__":
         **baca.score_interpretation_defaults(),
         always_make_global_rests=True,
         deactivate=(
-            baca.tags.DEFAULT_INSTRUMENT_ALERT,
             baca.tags.EXPLICIT_MARGIN_MARKUP_ALERT,
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),

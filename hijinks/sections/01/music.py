@@ -70,17 +70,6 @@ commands(
     library.make_piano_material("lh", library.circuit()),
 )
 
-# persistence
-
-music_voice_names = [_ for _ in voice_names if "MusicVoice" in _]
-
-commands(
-    music_voice_names,
-    baca.attach_first_section_default_indicators(
-        attach_instruments_by_hand=True,
-    ),
-)
-
 # vn
 
 commands(

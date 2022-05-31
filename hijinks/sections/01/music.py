@@ -11,7 +11,6 @@ score = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 
 commands = baca.CommandAccumulator(
-    # **baca.section_accumulation_defaults(),
     instruments=library.instruments(),
     margin_markups=library.margin_markups(),
     metronome_marks=library.metronome_marks(),
@@ -150,10 +149,12 @@ commands(
 )
 
 if __name__ == "__main__":
+    defaults = baca.score_interpretation_defaults()
+    del defaults["append_phantom_measure"]
     metadata, persist, score, timing = baca.build.interpret_section(
         score,
         commands,
-        **baca.score_interpretation_defaults(),
+        **defaults,
         always_make_global_rests=True,
         deactivate=(
             baca.tags.EXPLICIT_MARGIN_MARKUP_ALERT,

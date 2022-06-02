@@ -142,28 +142,28 @@ def make_violin_rhythm():
     return command
 
 
-def margin_markups():
-    def _make_margin_markup(markup, context="Staff"):
-        return abjad.MarginMarkup(
+def short_instrument_names():
+    def _make_short_instrument_name(markup, context="Staff"):
+        return abjad.ShortInstrumentName(
+            rf"\markup \hcenter-in #10 {markup}",
             context=context,
-            markup=rf"\markup \hcenter-in #10 {markup}",
         )
 
     return {
-        "Vn.": _make_margin_markup("Vn."),
-        "Pf.": _make_margin_markup("Pf.", context="PianoStaffGroup"),
+        "Vn.": _make_short_instrument_name("Vn."),
+        "Pf.": _make_short_instrument_name("Pf.", context="PianoStaffGroup"),
     }
 
 
-def margin_markup(
+def short_instrument_name(
     key,
     alert=None,
     context="Staff",
     selector=lambda _: abjad.select.leaf(_, 0),
 ):
-    margin_markup = margin_markups()[key]
-    command = baca.margin_markup(
-        margin_markup,
+    short_instrument_name = short_instrument_names()[key]
+    command = baca.short_instrument_name(
+        short_instrument_name,
         alert=alert,
         context=context,
         selector=selector,

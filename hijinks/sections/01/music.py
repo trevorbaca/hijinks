@@ -12,7 +12,7 @@ voice_names = baca.accumulator.get_voice_names(score)
 
 commands = baca.CommandAccumulator(
     instruments=library.instruments(),
-    margin_markups=library.margin_markups(),
+    short_instrument_names=library.short_instrument_names(),
     metronome_marks=library.metronome_marks(),
     time_signatures=15 * [(1, 8)],
     voice_abbreviations=library.voice_abbreviations(),
@@ -75,8 +75,8 @@ commands(
     "vn",
     baca.instrument(commands.instruments["Violin"]),
     baca.clef("treble"),
-    baca.start_markup("Violin", hcenter_in=10),
-    library.margin_markup("Vn."),
+    baca.instrument_name("Violin", hcenter_in=10),
+    library.short_instrument_name("Vn."),
     baca.markup(
         r"\hijinks-pp-sempre-al-fino-markup",
         direction=abjad.DOWN,
@@ -92,8 +92,8 @@ commands(
     "rh",
     baca.instrument(commands.instruments["Piano"]),
     baca.clef("treble"),
-    baca.start_markup("Piano", context="PianoStaffGroup", hcenter_in=10),
-    library.margin_markup("Pf.", context="PianoStaffGroup"),
+    baca.instrument_name("Piano", context="PianoStaffGroup", hcenter_in=10),
+    library.short_instrument_name("Pf.", context="PianoStaffGroup"),
     baca.markup(
         r"\hijinks-pp-sempre-al-fino-markup",
         direction=abjad.DOWN,
@@ -157,7 +157,7 @@ if __name__ == "__main__":
         **defaults,
         always_make_global_rests=True,
         deactivate=(
-            baca.tags.EXPLICIT_MARGIN_MARKUP_ALERT,
+            baca.tags.EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT,
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
         error_on_not_yet_pitched=True,

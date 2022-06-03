@@ -61,7 +61,7 @@ def make_empty_score():
         [violin_music_staff, piano_staff_group],
         lilypond_type="MusicContext",
         simultaneous=True,
-        name="Music_Context",
+        name="MusicContext",
         tag=tag,
     )
     score = abjad.Score([global_context, music_context], name="Score", tag=tag)

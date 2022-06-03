@@ -6,17 +6,17 @@
         "MusicContext",
         "Violin.Music_Staff",
         "GlobalRests",
-        "Violin.MusicVoice",
+        "Violin.Music",
         "Piano.Staff_Group",
         "Piano_RH.Music_Staff",
-        "Piano_RH.MusicVoice",
+        "Piano_RH.Music",
         "Piano_LH.Music_Staff",
-        "Piano_LH.MusicVoice",
+        "Piano_LH.Music",
     ],
     "persistent_indicators": {
         "Piano.Staff_Group": [
             baca.Memento(
-                context="Piano_RH.MusicVoice",
+                context="Piano_RH.Music",
                 edition=None,
                 manifest="instruments",
                 prototype=None,
@@ -24,7 +24,7 @@
                 value="Piano",
             ),
             baca.Memento(
-                context="Piano_RH.MusicVoice",
+                context="Piano_RH.Music",
                 edition=Tag(string="-PARTS"),
                 manifest="short_instrument_names",
                 prototype=None,
@@ -34,7 +34,7 @@
         ],
         "Piano_LH.Music_Staff": [
             baca.Memento(
-                context="Piano_LH.MusicVoice",
+                context="Piano_LH.Music",
                 edition=None,
                 manifest=None,
                 prototype="abjad.Clef",
@@ -44,7 +44,7 @@
         ],
         "Piano_RH.Music_Staff": [
             baca.Memento(
-                context="Piano_RH.MusicVoice",
+                context="Piano_RH.Music",
                 edition=None,
                 manifest=None,
                 prototype="abjad.Clef",
@@ -72,7 +72,7 @@
         ],
         "Violin.Music_Staff": [
             baca.Memento(
-                context="Violin.MusicVoice",
+                context="Violin.Music",
                 edition=None,
                 manifest="instruments",
                 prototype=None,
@@ -80,7 +80,7 @@
                 value="Violin",
             ),
             baca.Memento(
-                context="Violin.MusicVoice",
+                context="Violin.Music",
                 edition=None,
                 manifest=None,
                 prototype="abjad.Clef",
@@ -88,7 +88,7 @@
                 value="treble",
             ),
             baca.Memento(
-                context="Violin.MusicVoice",
+                context="Violin.Music",
                 edition=Tag(string="-PARTS"),
                 manifest="short_instrument_names",
                 prototype=None,

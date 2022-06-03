@@ -30,21 +30,21 @@ def instruments():
 def make_empty_score():
     tag = baca.tags.function_name(inspect.currentframe())
     global_context = baca.score.make_global_context()
-    violin_music_voice = abjad.Voice(name="Violin.MusicVoice", tag=tag)
+    violin_music_voice = abjad.Voice(name="Violin.Music", tag=tag)
     violin_music_staff = abjad.Staff(
         [violin_music_voice],
         lilypond_type="ViolinMusicStaff",
         name="Violin.Music_Staff",
         tag=tag,
     )
-    piano_rh_music_voice = abjad.Voice(name="Piano_RH.MusicVoice", tag=tag)
+    piano_rh_music_voice = abjad.Voice(name="Piano_RH.Music", tag=tag)
     piano_rh_music_staff = abjad.Staff(
         [piano_rh_music_voice],
         lilypond_type="PianoRHMusicStaff",
         name="Piano_RH.Music_Staff",
         tag=tag,
     )
-    piano_lh_music_voice = abjad.Voice(name="Piano_LH.MusicVoice", tag=tag)
+    piano_lh_music_voice = abjad.Voice(name="Piano_LH.Music", tag=tag)
     piano_lh_music_staff = abjad.Staff(
         [piano_lh_music_voice],
         lilypond_type="PianoLHMusicStaff",
@@ -209,7 +209,7 @@ def violin_pitches():
 
 def voice_abbreviations():
     return {
-        "vn": "Violin.MusicVoice",
-        "rh": "Piano_RH.MusicVoice",
-        "lh": "Piano_LH.MusicVoice",
+        "vn": "Violin.Music",
+        "rh": "Piano_RH.Music",
+        "lh": "Piano_LH.Music",
     }

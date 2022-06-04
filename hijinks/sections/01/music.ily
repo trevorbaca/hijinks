@@ -765,10 +765,10 @@ number.1.Violin.Music = {
         % MARKUP:
           %! EXPLICIT_INSTRUMENT_ALERT
           %! baca._attach_latent_indicator_alert()
-        ^ \baca-explicit-indicator-markup "(“Violin”)"
+        ^ \baca-explicit-instrument-markup "(“Violin”)"
           %! EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT
           %! baca._attach_latent_indicator_alert()
-        %@% ^ \baca-explicit-indicator-markup "[“Vn.”]"
+        %@% ^ \baca-explicit-short-instrument-name-markup "[“Vn.”]"
           %! baca.IndicatorCommand._call()
           %! baca.markup()
         _ \hijinks-pp-sempre-al-fino-markup
@@ -1130,10 +1130,10 @@ number.1.Piano_RH.Music = {
         % MARKUP:
           %! EXPLICIT_INSTRUMENT_ALERT
           %! baca._attach_latent_indicator_alert()
-        ^ \baca-explicit-indicator-markup "(“Piano”)"
+        ^ \baca-explicit-instrument-markup "(“Piano”)"
           %! EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT
           %! baca._attach_latent_indicator_alert()
-        %@% ^ \baca-explicit-indicator-markup "[“Pf.”]"
+        %@% ^ \baca-explicit-short-instrument-name-markup "[“Pf.”]"
           %! baca.IndicatorCommand._call()
           %! baca.markup()
         _ \hijinks-pp-sempre-al-fino-markup

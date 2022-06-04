@@ -143,15 +143,11 @@ def make_violin_rhythm():
 
 
 def short_instrument_names():
-    def _make_short_instrument_name(markup, context="Staff"):
-        return abjad.ShortInstrumentName(
-            rf"\markup \hcenter-in #10 {markup}",
-            context=context,
-        )
-
     return {
-        "Vn.": _make_short_instrument_name("Vn."),
-        "Pf.": _make_short_instrument_name("Pf.", context="PianoStaffGroup"),
+        "Vn.": abjad.ShortInstrumentName(r"\hijinks-vn-markup"),
+        "Pf.": abjad.ShortInstrumentName(
+            r"\hijinks-pf-markup", context="PianoStaffGroup"
+        ),
     }
 
 
@@ -162,6 +158,7 @@ def short_instrument_name(
     selector=lambda _: abjad.select.leaf(_, 0),
 ):
     short_instrument_name = short_instrument_names()[key]
+    print(short_instrument_name)
     command = baca.short_instrument_name(
         short_instrument_name,
         alert=alert,

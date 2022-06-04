@@ -74,8 +74,8 @@ commands(
 commands(
     "vn",
     baca.instrument(commands.instruments["Violin"]),
+    baca.instrument_name(r"\hijinks-violin-markup"),
     baca.clef("treble"),
-    baca.instrument_name("Violin", hcenter_in=10),
     library.short_instrument_name("Vn."),
     baca.markup(
         r"\hijinks-pp-sempre-al-fino-markup",
@@ -91,8 +91,8 @@ commands(
 commands(
     "rh",
     baca.instrument(commands.instruments["Piano"]),
+    baca.instrument_name(r"\hijinks-piano-markup", context="PianoStaffGroup"),
     baca.clef("treble"),
-    baca.instrument_name("Piano", context="PianoStaffGroup", hcenter_in=10),
     library.short_instrument_name("Pf.", context="PianoStaffGroup"),
     baca.markup(
         r"\hijinks-pp-sempre-al-fino-markup",

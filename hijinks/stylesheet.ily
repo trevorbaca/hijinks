@@ -173,6 +173,12 @@
   }
 }
 
+hijinks-piano-markup = \markup \hcenter-in #10 Piano
+hijinks-pf-markup = \markup \hcenter-in #10 Pf.
+
+hijinks-violin-markup = \markup \hcenter-in #10 Violin
+hijinks-vn-markup = \markup \hcenter-in #10 Vn.
+
 hijinks-colophon-markup = \markup
   \override #'(font-name . "Palatino")
   \with-dimensions-from \null

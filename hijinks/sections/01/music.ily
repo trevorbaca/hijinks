@@ -726,13 +726,13 @@ number.1.Violin.Music = {
           %! -PARTS
           %! baca.IndicatorCommand._call()
           %! baca.instrument_name()
-        \set Staff.instrumentName = \markup \hcenter-in #10 "Violin"
+        \set Staff.instrumentName = \hijinks-violin-markup
           %! -PARTS
           %! EXPLICIT_SHORT_INSTRUMENT_NAME
           %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
           %! baca.short_instrument_name()
-        \set Staff.shortInstrumentName = \markup \hcenter-in #10 Vn.
+        \set Staff.shortInstrumentName = \hijinks-vn-markup
         % OPENING:
         % COMMANDS:
           %! EXPLICIT_CLEF
@@ -783,7 +783,7 @@ number.1.Violin.Music = {
           %! baca._set_status_tag()
           %! baca.short_instrument_name()
           %! baca.treat_persistent_wrapper(3)
-        \set ViolinMusicStaff.shortInstrumentName = \markup \hcenter-in #10 Vn.
+        \set ViolinMusicStaff.shortInstrumentName = \hijinks-vn-markup
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
@@ -1087,13 +1087,13 @@ number.1.Piano_RH.Music = {
           %! -PARTS
           %! baca.IndicatorCommand._call()
           %! baca.instrument_name()
-        \set PianoStaffGroup.instrumentName = \markup \hcenter-in #10 "Piano"
+        \set PianoStaffGroup.instrumentName = \hijinks-piano-markup
           %! -PARTS
           %! EXPLICIT_SHORT_INSTRUMENT_NAME
           %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
           %! baca.short_instrument_name()
-        \set PianoStaffGroup.shortInstrumentName = \markup \hcenter-in #10 Pf.
+        \set PianoStaffGroup.shortInstrumentName = \hijinks-pf-markup
         % OPENING:
         % COMMANDS:
           %! EXPLICIT_CLEF
@@ -1148,7 +1148,7 @@ number.1.Piano_RH.Music = {
           %! baca._set_status_tag()
           %! baca.short_instrument_name()
           %! baca.treat_persistent_wrapper(3)
-        \set PianoStaffGroup.shortInstrumentName = \markup \hcenter-in #10 Pf.
+        \set PianoStaffGroup.shortInstrumentName = \hijinks-pf-markup
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 

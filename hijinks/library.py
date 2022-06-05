@@ -158,7 +158,6 @@ def short_instrument_name(
     selector=lambda _: abjad.select.leaf(_, 0),
 ):
     short_instrument_name = short_instrument_names()[key]
-    print(short_instrument_name)
     command = baca.short_instrument_name(
         short_instrument_name,
         alert=alert,

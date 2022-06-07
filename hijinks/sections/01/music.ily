@@ -560,7 +560,6 @@ number.1.Skips = {
       %! baca._label_measure_numbers()
     %@% \bacaStopTextSpanMN
     % COMMANDS:
-      %! baca.IndicatorCommand._call()
       %! baca.bar_line()
     \bar "|."
       %! baca.IndicatorCommand._call()

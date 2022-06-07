@@ -33,7 +33,7 @@ manifests = commands.manifests()
 
 baca.commands._metronome_mark(skips[1 - 1], commands.metronome_marks["32"], manifests)
 
-baca.commands._bar_line(score["Skips"][15 - 1], "|.")
+baca.bar_line(score["Skips"][15 - 1], "|.")
 
 commands(
     "Skips",

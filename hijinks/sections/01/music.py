@@ -33,22 +33,19 @@ manifests = commands.manifests()
 
 baca.commands._metronome_mark(skips[1 - 1], commands.metronome_marks["32"], manifests)
 
-baca.bar_line(score["Skips"][15 - 1], "|.")
+baca.bar_line(skips[15 - 1], "|.")
 
-commands(
-    "Skips",
-    baca.literal(
-        r"\override Score.BarLine.transparent = ##f",
-        selector=lambda _: baca.select.skip(_, -1),
-        site="after",
-    ),
-    baca.literal(
-        r"\override Score.SpanBar.transparent = ##f",
-        selector=lambda _: baca.select.skip(_, -1),
-        site="after",
-    ),
+baca.literal_function(
+    skips[15 - 1],
+    r"\override Score.BarLine.transparent = ##f",
+    site="after",
 )
 
+baca.literal_function(
+    skips[15 - 1],
+    r"\override Score.SpanBar.transparent = ##f",
+    site="after",
+)
 
 def _select_short_notes(argument):
     result = abjad.select.notes(argument)

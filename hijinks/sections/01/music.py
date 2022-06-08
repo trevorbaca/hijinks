@@ -47,6 +47,7 @@ baca.literal_function(
     site="after",
 )
 
+
 def _select_short_notes(argument):
     result = abjad.select.notes(argument)
     result = [_ for _ in result if _.written_duration <= abjad.Duration((1, 16))]

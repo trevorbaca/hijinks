@@ -103,7 +103,7 @@ def make_piano_material(staff, circuit):
     for proportion, pair, aggregate in zip(proportions[staff], pairs[staff], circuit):
         if staff == "rh":
             aggregate = list(reversed(aggregate))
-        tuplet = maker(proportion, pair)
+        tuplet = maker(proportion, pair, tag=tag)
         assert isinstance(tuplet, abjad.Tuplet)
         duration = abjad.get.duration(tuplet)
         duration = duration.with_denominator(32)
@@ -116,8 +116,8 @@ def make_piano_material(staff, circuit):
         for note, pitch_number in zip(notes, aggregate):
             note.written_pitch = pitch_number
         music.append(tuplet)
-    music.insert(-1, abjad.Rest("r8"))
-    return baca.make_music(music, tag=tag)
+    music.insert(-1, abjad.Rest("r8", tag=tag))
+    return music
 
 
 def make_violin_rhythm():
@@ -138,8 +138,7 @@ def make_violin_rhythm():
         abjad.beam(leaves, tag=tag)
         components.append(tuplet)
     components.insert(-1, abjad.Rest("r8", tag=tag))
-    command = baca.make_skeleton(components)
-    return command
+    return components
 
 
 def short_instrument_names():

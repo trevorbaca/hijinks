@@ -62,24 +62,24 @@ def _select_long_notes(argument):
 
 # VN
 
-commands(
-    "vn",
-    library.make_violin_rhythm(),
-)
+voice = score["Violin.Music"]
+
+music = library.make_violin_rhythm()
+voice.extend(music)
 
 # RH
 
-commands(
-    "rh",
-    library.make_piano_material("rh", library.circuit()),
-)
+voice = score["Piano_RH.Music"]
+
+music = library.make_piano_material("rh", library.circuit())
+voice.extend(music)
 
 # LH
 
-commands(
-    "lh",
-    library.make_piano_material("lh", library.circuit()),
-)
+voice = score["Piano_LH.Music"]
+
+music = library.make_piano_material("lh", library.circuit())
+voice.extend(music)
 
 # vn
 

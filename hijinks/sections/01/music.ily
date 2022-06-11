@@ -697,9 +697,9 @@ number.1.Violin.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_skeleton()
+      %! hijinks.make_violin_rhythm()
     \times 4/5
-      %! baca.make_skeleton()
+      %! hijinks.make_violin_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -752,7 +752,7 @@ number.1.Violin.Music = {
           %! baca.clef()
           %! baca.treat_persistent_wrapper(2)
         \set ViolinMusicStaff.forceClef = ##t
-          %! baca.make_skeleton()
+          %! hijinks.make_violin_rhythm()
         bf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -784,7 +784,7 @@ number.1.Violin.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_skeleton()
+          %! hijinks.make_violin_rhythm()
         c'''8
         % AFTER:
         % ARTICULATIONS:
@@ -797,7 +797,7 @@ number.1.Violin.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_skeleton()
+          %! hijinks.make_violin_rhythm()
         d'''8
         % AFTER:
         % ARTICULATIONS:
@@ -807,7 +807,7 @@ number.1.Violin.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_skeleton()
+          %! hijinks.make_violin_rhythm()
         fs'''!8
         % AFTER:
         % ARTICULATIONS:
@@ -821,22 +821,22 @@ number.1.Violin.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_skeleton()
+      %! hijinks.make_violin_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_skeleton()
+      %! hijinks.make_violin_rhythm()
     \times 4/5
-      %! baca.make_skeleton()
+      %! hijinks.make_violin_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Violin.Music measure 5]
-          %! baca.make_skeleton()
+          %! hijinks.make_violin_rhythm()
         af''!8
         % AFTER:
         % ARTICULATIONS:
@@ -849,7 +849,7 @@ number.1.Violin.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_skeleton()
+          %! hijinks.make_violin_rhythm()
         g''8
         % AFTER:
         % ARTICULATIONS:
@@ -862,7 +862,7 @@ number.1.Violin.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_skeleton()
+          %! hijinks.make_violin_rhythm()
         f'''4
         % AFTER:
         % ARTICULATIONS:
@@ -872,7 +872,7 @@ number.1.Violin.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_skeleton()
+          %! hijinks.make_violin_rhythm()
         ef'''!16
         % AFTER:
         % ARTICULATIONS:
@@ -885,7 +885,7 @@ number.1.Violin.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_skeleton()
+          %! hijinks.make_violin_rhythm()
         cs''''!16
         % AFTER:
         % ARTICULATIONS:
@@ -899,22 +899,22 @@ number.1.Violin.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_skeleton()
+      %! hijinks.make_violin_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_skeleton()
+      %! hijinks.make_violin_rhythm()
     \times 4/5
-      %! baca.make_skeleton()
+      %! hijinks.make_violin_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Violin.Music measure 9]
-          %! baca.make_skeleton()
+          %! hijinks.make_violin_rhythm()
         a'''4
         % AFTER:
         % ARTICULATIONS:
@@ -924,7 +924,7 @@ number.1.Violin.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_skeleton()
+          %! hijinks.make_violin_rhythm()
         e''''8
         % AFTER:
         % ARTICULATIONS:
@@ -937,7 +937,7 @@ number.1.Violin.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_skeleton()
+          %! hijinks.make_violin_rhythm()
         b''8
         % AFTER:
         % ARTICULATIONS:
@@ -947,7 +947,7 @@ number.1.Violin.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_skeleton()
+          %! hijinks.make_violin_rhythm()
         f'''8
         % AFTER:
         % ARTICULATIONS:
@@ -961,29 +961,29 @@ number.1.Violin.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_skeleton()
+      %! hijinks.make_violin_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Violin.Music measure 13]
-      %! baca.make_skeleton()
+      %! hijinks.make_violin_rhythm()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_skeleton()
+      %! hijinks.make_violin_rhythm()
     \times 4/5
-      %! baca.make_skeleton()
+      %! hijinks.make_violin_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Violin.Music measure 14]
-          %! baca.make_skeleton()
+          %! hijinks.make_violin_rhythm()
         fs'''!8.
         % AFTER:
         % ARTICULATIONS:
@@ -996,7 +996,7 @@ number.1.Violin.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_skeleton()
+          %! hijinks.make_violin_rhythm()
         af''!8
         % AFTER:
         % ARTICULATIONS:
@@ -1010,7 +1010,7 @@ number.1.Violin.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_skeleton()
+      %! hijinks.make_violin_rhythm()
     }
     % CLOSING:
     % COMMANDS:
@@ -1056,10 +1056,8 @@ number.1.Piano_RH.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \times 8/10
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     {
         % ABSOLUTE_BEFORE:
@@ -1113,7 +1111,6 @@ number.1.Piano_RH.Music = {
           %! baca.clef()
           %! baca.treat_persistent_wrapper(2)
         \set PianoRHMusicStaff.forceClef = ##t
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         f'''16
         % AFTER:
@@ -1149,7 +1146,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         c'''16
         % AFTER:
@@ -1160,7 +1156,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         bf''!16
         % AFTER:
@@ -1171,7 +1166,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         e''32
         % AFTER:
@@ -1182,7 +1176,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         d''32
         % AFTER:
@@ -1193,7 +1186,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         cs''!32
         % AFTER:
@@ -1204,7 +1196,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         ef'!32
         % AFTER:
@@ -1219,20 +1210,16 @@ number.1.Piano_RH.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \tweak text #tuplet-number::calc-fraction-text
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \times 6/7
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     {
         % ABSOLUTE_BEFORE:
@@ -1240,7 +1227,6 @@ number.1.Piano_RH.Music = {
 
           %! baca._comment_measure_numbers()
         % [Piano_RH.Music measure 3]
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         cs'''!64
         % AFTER:
@@ -1254,7 +1240,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         a''64
         % AFTER:
@@ -1265,7 +1250,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         e''16
         % AFTER:
@@ -1276,7 +1260,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         ef''!16
         % AFTER:
@@ -1287,7 +1270,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         f'16
         % AFTER:
@@ -1302,26 +1284,21 @@ number.1.Piano_RH.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \tweak text #tuplet-number::calc-fraction-text
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \times 6/7
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         a''''16
         % AFTER:
@@ -1335,7 +1312,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         fs''''!16
         % AFTER:
@@ -1346,7 +1322,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         g'''32
         % AFTER:
@@ -1357,7 +1332,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         b''32
         % AFTER:
@@ -1368,7 +1342,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         cs''!64
         % AFTER:
@@ -1379,7 +1352,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         ef'!64
         % AFTER:
@@ -1394,17 +1366,14 @@ number.1.Piano_RH.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \times 8/11
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     {
         % ABSOLUTE_BEFORE:
@@ -1412,7 +1381,6 @@ number.1.Piano_RH.Music = {
 
           %! baca._comment_measure_numbers()
         % [Piano_RH.Music measure 6]
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         e''''16
         % AFTER:
@@ -1426,7 +1394,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         cs''''!64
         % AFTER:
@@ -1437,7 +1404,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         a'''64
         % AFTER:
@@ -1448,7 +1414,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         fs'''!64
         % AFTER:
@@ -1459,7 +1424,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         f'''64
         % AFTER:
@@ -1470,7 +1434,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         ef'''!16
         % AFTER:
@@ -1481,7 +1444,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         d'''16
         % AFTER:
@@ -1492,7 +1454,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         c'''32
         % AFTER:
@@ -1503,7 +1464,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         b''64
         % AFTER:
@@ -1514,7 +1474,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         af''!64
         % AFTER:
@@ -1525,7 +1484,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         g''64
         % AFTER:
@@ -1536,7 +1494,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         bf'!64
         % AFTER:
@@ -1551,20 +1508,16 @@ number.1.Piano_RH.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \tweak text #tuplet-number::calc-fraction-text
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \times 6/8
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     {
         % ABSOLUTE_BEFORE:
@@ -1572,7 +1525,6 @@ number.1.Piano_RH.Music = {
 
           %! baca._comment_measure_numbers()
         % [Piano_RH.Music measure 8]
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         cs'''!16
         % AFTER:
@@ -1586,7 +1538,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         bf''!32
         % AFTER:
@@ -1597,7 +1548,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         a''32
         % AFTER:
@@ -1608,7 +1558,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         fs''!32
         % AFTER:
@@ -1619,7 +1568,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         ef''!32
         % AFTER:
@@ -1630,7 +1578,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         d''64
         % AFTER:
@@ -1641,7 +1588,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         c''64
         % AFTER:
@@ -1652,7 +1598,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         g'64
         % AFTER:
@@ -1663,7 +1608,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         f'64
         % AFTER:
@@ -1678,26 +1622,21 @@ number.1.Piano_RH.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \tweak text #tuplet-number::calc-fraction-text
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \times 6/8
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         fs'''!16
         % AFTER:
@@ -1711,7 +1650,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         g''16
         % AFTER:
@@ -1722,7 +1660,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         f''64
         % AFTER:
@@ -1733,7 +1670,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         cs''!64
         % AFTER:
@@ -1744,7 +1680,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         a'16
         % AFTER:
@@ -1755,7 +1690,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         af'!64
         % AFTER:
@@ -1766,7 +1700,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         ef'!64
         % AFTER:
@@ -1781,17 +1714,14 @@ number.1.Piano_RH.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \times 8/14
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     {
         % ABSOLUTE_BEFORE:
@@ -1799,7 +1729,6 @@ number.1.Piano_RH.Music = {
 
           %! baca._comment_measure_numbers()
         % [Piano_RH.Music measure 11]
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         g'16
         % AFTER:
@@ -1813,7 +1742,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         fs'!8.
         % AFTER:
@@ -1824,7 +1752,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         f'8.
         % AFTER:
@@ -1839,7 +1766,6 @@ number.1.Piano_RH.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     }
     % ABSOLUTE_BEFORE:
@@ -1847,17 +1773,14 @@ number.1.Piano_RH.Music = {
 
       %! baca._comment_measure_numbers()
     % [Piano_RH.Music measure 13]
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \times 8/14
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     {
         % ABSOLUTE_BEFORE:
@@ -1870,7 +1793,6 @@ number.1.Piano_RH.Music = {
           %! baca.OverrideCommand._call(1)
           %! baca.tuplet_bracket_shorten_pair()
         \override TupletBracket.shorten-pair = #'(0 . 0.6)
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         a''''32
         % AFTER:
@@ -1884,7 +1806,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         af'''!32
         % AFTER:
@@ -1895,7 +1816,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         fs'''!16
         % AFTER:
@@ -1906,7 +1826,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         b'16
         % AFTER:
@@ -1917,7 +1836,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         e'8
         % AFTER:
@@ -1928,7 +1846,6 @@ number.1.Piano_RH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         cs'!8
         % AFTER:
@@ -1947,7 +1864,6 @@ number.1.Piano_RH.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     }
     % CLOSING:
@@ -1985,13 +1901,10 @@ number.1.Piano_LH.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \tweak text #tuplet-number::calc-fraction-text
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \times 6/7
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     {
         % ABSOLUTE_BEFORE:
@@ -2035,7 +1948,6 @@ number.1.Piano_LH.Music = {
           %! baca.clef()
           %! baca.treat_persistent_wrapper(2)
         \set PianoLHMusicStaff.forceClef = ##t
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         b,,,16
         % AFTER:
@@ -2054,7 +1966,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         fs,!32.
         % AFTER:
@@ -2069,7 +1980,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         af,!32.
         % AFTER:
@@ -2080,7 +1990,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         g32.
         % AFTER:
@@ -2091,7 +2000,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         a64
         % AFTER:
@@ -2106,23 +2014,19 @@ number.1.Piano_LH.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \times 8/10
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         b,,16
         % AFTER:
@@ -2136,7 +2040,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         g,16
         % AFTER:
@@ -2147,7 +2050,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         c32.
         % AFTER:
@@ -2158,7 +2060,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         d32.
         % AFTER:
@@ -2169,7 +2070,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         fs!32
         % AFTER:
@@ -2180,7 +2080,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         af!32
         % AFTER:
@@ -2191,7 +2090,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         bf!32
         % AFTER:
@@ -2206,23 +2104,19 @@ number.1.Piano_LH.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \times 6/9
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         c,,32
         % AFTER:
@@ -2236,7 +2130,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         d,,32
         % AFTER:
@@ -2247,7 +2140,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         bf,,!32
         % AFTER:
@@ -2260,7 +2152,6 @@ number.1.Piano_LH.Music = {
 
           %! baca._comment_measure_numbers()
         % [Piano_LH.Music measure 5]
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         e,16
         % AFTER:
@@ -2271,7 +2162,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         af,!16
         % AFTER:
@@ -2282,7 +2172,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         f16
         % AFTER:
@@ -2297,17 +2186,14 @@ number.1.Piano_LH.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \scaleDurations #'(1 . 1)
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     {
         % ABSOLUTE_BEFORE:
@@ -2315,24 +2201,20 @@ number.1.Piano_LH.Music = {
 
           %! baca._comment_measure_numbers()
         % [Piano_LH.Music measure 6]
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         r8
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \times 8/10
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     {
         % ABSOLUTE_BEFORE:
@@ -2340,7 +2222,6 @@ number.1.Piano_LH.Music = {
 
           %! baca._comment_measure_numbers()
         % [Piano_LH.Music measure 7]
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         e16.
         % AFTER:
@@ -2354,7 +2235,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         af!16.
         % AFTER:
@@ -2365,7 +2245,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         b8
         % AFTER:
@@ -2380,17 +2259,14 @@ number.1.Piano_LH.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \times 8/14
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     {
         % ABSOLUTE_BEFORE:
@@ -2398,7 +2274,6 @@ number.1.Piano_LH.Music = {
 
           %! baca._comment_measure_numbers()
         % [Piano_LH.Music measure 9]
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         e,16
         % AFTER:
@@ -2412,7 +2287,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         b,16
         % AFTER:
@@ -2423,7 +2297,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         c16.
         % AFTER:
@@ -2436,7 +2309,6 @@ number.1.Piano_LH.Music = {
 
           %! baca._comment_measure_numbers()
         % [Piano_LH.Music measure 10]
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         d16.
         % AFTER:
@@ -2447,7 +2319,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         bf!8
         % AFTER:
@@ -2462,17 +2333,14 @@ number.1.Piano_LH.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \times 8/10
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     {
         % ABSOLUTE_BEFORE:
@@ -2480,7 +2348,6 @@ number.1.Piano_LH.Music = {
 
           %! baca._comment_measure_numbers()
         % [Piano_LH.Music measure 11]
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         c,,32
         % AFTER:
@@ -2494,7 +2361,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         e,,32
         % AFTER:
@@ -2505,7 +2371,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         b,,64
         % AFTER:
@@ -2516,7 +2381,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         d,64
         % AFTER:
@@ -2527,7 +2391,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         ef,!64
         % AFTER:
@@ -2538,7 +2401,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         bf,!64
         % AFTER:
@@ -2549,7 +2411,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         cs!16
         % AFTER:
@@ -2560,7 +2421,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         af!16
         % AFTER:
@@ -2571,7 +2431,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         a16
         % AFTER:
@@ -2586,7 +2445,6 @@ number.1.Piano_LH.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     }
     % ABSOLUTE_BEFORE:
@@ -2594,17 +2452,14 @@ number.1.Piano_LH.Music = {
 
       %! baca._comment_measure_numbers()
     % [Piano_LH.Music measure 13]
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     \times 8/9
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     {
         % ABSOLUTE_BEFORE:
@@ -2617,7 +2472,6 @@ number.1.Piano_LH.Music = {
           %! baca.OverrideCommand._call(1)
           %! baca.tuplet_bracket_shorten_pair()
         \override TupletBracket.shorten-pair = #'(0 . 0.6)
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         d,,16.
         % AFTER:
@@ -2631,7 +2485,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         g,,16.
         % AFTER:
@@ -2642,7 +2495,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         bf,,!32
         % AFTER:
@@ -2653,7 +2505,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         f,32
         % AFTER:
@@ -2664,7 +2515,6 @@ number.1.Piano_LH.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         c64
         % AFTER:
@@ -2694,7 +2544,6 @@ number.1.Piano_LH.Music = {
           %! baca.IndicatorCommand._call()
           %! baca.mark()
         \mark \hijinks-colophon-markup
-          %! baca.make_music()
           %! hijinks.make_piano_material()
         ef!64
         % AFTER:
@@ -2716,7 +2565,6 @@ number.1.Piano_LH.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.make_music()
       %! hijinks.make_piano_material()
     }
     % CLOSING:

@@ -69,14 +69,14 @@ voice.extend(music)
 
 # RH
 
-voice = score["Piano_RH.Music"]
+voice = score["Piano.RH.Music"]
 
 music = library.make_piano_material("rh", library.circuit())
 voice.extend(music)
 
 # LH
 
-voice = score["Piano_LH.Music"]
+voice = score["Piano.LH.Music"]
 
 music = library.make_piano_material("lh", library.circuit())
 voice.extend(music)
@@ -96,6 +96,7 @@ commands(
     baca.pitches(library.violin_pitches()),
     baca.staccato(selector=_select_short_notes),
     baca.tenuto(selector=_select_long_notes),
+    baca.beam_positions(-4),
 )
 
 # rh
@@ -103,13 +104,15 @@ commands(
 commands(
     "rh",
     baca.instrument(commands.instruments["Piano"]),
-    baca.instrument_name(r"\hijinks-piano-markup", context="PianoStaffGroup"),
+    baca.instrument_name(r"\hijinks-piano-markup", context="PianoStaff"),
+    library.short_instrument_name("Pf.", context="PianoStaff"),
     baca.clef("treble"),
-    library.short_instrument_name("Pf.", context="PianoStaffGroup"),
     baca.markup(
         r"\hijinks-pp-sempre-al-fino-markup",
         direction=abjad.DOWN,
     ),
+    baca.beam_positions(-6),
+    baca.stem_down(),
 )
 
 # lh
@@ -123,6 +126,8 @@ commands(
         selector=lambda _: abjad.select.note(_, 1),
     ),
     baca.text_script_padding(2),
+    baca.beam_positions(6),
+    baca.stem_up(),
 )
 
 

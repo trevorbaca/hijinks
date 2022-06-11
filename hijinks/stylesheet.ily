@@ -80,49 +80,10 @@
   }
   \context
   {
-    \Staff
-    \name ViolinMusicStaff
-    \type Engraver_group
-    \alias Staff
-    \override Beam.positions = #'(-4 . -4)
-  }
-  \context
-  {
-    \Staff
-    \name PianoRHMusicStaff
-    \type Engraver_group
-    \alias Staff
-    \accepts PianoRHMusicVoice
-    \override Beam.positions = #'(-6 . -6)
-    \override Stem.direction = #down
-  }
-  \context
-  {
-    \Staff
-    \name PianoLHMusicStaff
-    \type Engraver_group
-    \alias Staff
-    \override Beam.positions = #'(6 . 6)
-    \override Stem.direction = #up
-  }
-  \context
-  {
-    \PianoStaff
-    \name PianoStaffGroup
-    \type Engraver_group
-    \alias PianoStaff
-    \accepts PianoRHMusicStaff
-    \accepts PianoLHMusicStaff
-    \override StaffGrouper.staff-staff-spacing.minimum-distance = 21
-  }
-  \context
-  {
     \ChoirStaff
     \name MusicContext
     \type Engraver_group
     \alias ChoirStaff
-    \accepts ViolinMusicStaff
-    \accepts PianoStaffGroup
     systemStartDelimiter = #'SystemStartBar
   }
   \context

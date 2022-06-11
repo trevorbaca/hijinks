@@ -713,13 +713,16 @@ number.1.Violin.Music = {
           %! baca.OverrideCommand._call(1)
           %! baca.clef_shift()
           %! baca.clef_x_extent_false()
-    %%% \once \override ViolinMusicStaff.Clef.X-extent = ##f
+    %%% \once \override Staff.Clef.X-extent = ##f
           %! MEASURE_1
           %! SHIFTED_CLEF
           %! baca.OverrideCommand._call(1)
           %! baca.clef_extra_offset()
           %! baca.clef_shift()
-    %%% \once \override ViolinMusicStaff.Clef.extra-offset = #'(-2.5 . 0)
+    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+          %! baca.OverrideCommand._call(1)
+          %! baca.beam_positions()
+        \override Beam.positions = #'(-4 . -4)
           %! -PARTS
           %! baca.IndicatorCommand._call()
           %! baca.instrument_name()
@@ -739,19 +742,19 @@ number.1.Violin.Music = {
         \clef "treble"
           %! EXPLICIT_CLEF_COLOR
           %! baca._attach_color_literal(2)
-        \once \override ViolinMusicStaff.Clef.color = #(x11-color 'blue)
+        \once \override Staff.Clef.color = #(x11-color 'blue)
           %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
           %! baca._attach_color_literal(2)
-        \once \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'blue)
+        \once \override Staff.InstrumentName.color = #(x11-color 'blue)
           %! EXPLICIT_CLEF_COLOR_CANCELLATION
           %! baca._attach_color_literal(1)
-        %@% \override ViolinMusicStaff.Clef.color = ##f
+        %@% \override Staff.Clef.color = ##f
           %! EXPLICIT_CLEF
           %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
           %! baca.clef()
           %! baca.treat_persistent_wrapper(2)
-        \set ViolinMusicStaff.forceClef = ##t
+        \set Staff.forceClef = ##t
           %! hijinks.make_violin_rhythm()
         bf'!4
         % AFTER:
@@ -770,17 +773,17 @@ number.1.Violin.Music = {
         % COMMANDS:
           %! EXPLICIT_CLEF_REDRAW_COLOR
           %! baca._attach_color_literal(2)
-        \override ViolinMusicStaff.Clef.color = #(x11-color 'DeepSkyBlue2)
+        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
           %! baca._attach_color_literal(2)
-        \override ViolinMusicStaff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+        \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
           %! -PARTS
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
           %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
           %! baca.short_instrument_name()
           %! baca.treat_persistent_wrapper(3)
-        \set ViolinMusicStaff.shortInstrumentName = \hijinks-vn-markup
+        \set Staff.shortInstrumentName = \hijinks-vn-markup
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
@@ -1006,6 +1009,10 @@ number.1.Violin.Music = {
         % STOP_BEAM:
           %! hijinks.make_violin_rhythm()
         ]
+        % COMMANDS:
+          %! baca.OverrideCommand._call(2)
+          %! baca.beam_positions()
+        \revert Beam.positions
         % CLOSING:
         % COMMANDS:
 
@@ -1022,7 +1029,7 @@ number.1.Violin.Music = {
 
 
   %! baca.path.extern()
-number.1.Violin.Music_Staff = <<
+number.1.Violin.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1051,7 +1058,7 @@ number.1.Violin.Music_Staff = <<
 
 
   %! baca.path.extern()
-number.1.Piano_RH.Music = {
+number.1.Piano.RH.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1064,7 +1071,7 @@ number.1.Piano_RH.Music = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_RH.Music measure 1]
+        % [Piano.RH.Music measure 1]
         % BEFORE:
         % COMMANDS:
           %! MEASURE_1
@@ -1072,23 +1079,29 @@ number.1.Piano_RH.Music = {
           %! baca.OverrideCommand._call(1)
           %! baca.clef_shift()
           %! baca.clef_x_extent_false()
-    %%% \once \override PianoRHMusicStaff.Clef.X-extent = ##f
+    %%% \once \override Staff.Clef.X-extent = ##f
           %! MEASURE_1
           %! SHIFTED_CLEF
           %! baca.OverrideCommand._call(1)
           %! baca.clef_extra_offset()
           %! baca.clef_shift()
-    %%% \once \override PianoRHMusicStaff.Clef.extra-offset = #'(-2.5 . 0)
+    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+          %! baca.OverrideCommand._call(1)
+          %! baca.beam_positions()
+        \override Beam.positions = #'(-6 . -6)
+          %! baca.OverrideCommand._call(1)
+          %! baca.stem_down()
+        \override Stem.direction = #down
           %! -PARTS
           %! baca.IndicatorCommand._call()
           %! baca.instrument_name()
-        \set PianoStaffGroup.instrumentName = \hijinks-piano-markup
+        \set PianoStaff.instrumentName = \hijinks-piano-markup
           %! -PARTS
           %! EXPLICIT_SHORT_INSTRUMENT_NAME
           %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
           %! baca.short_instrument_name()
-        \set PianoStaffGroup.shortInstrumentName = \hijinks-pf-markup
+        \set PianoStaff.shortInstrumentName = \hijinks-pf-markup
         % OPENING:
         % COMMANDS:
           %! EXPLICIT_CLEF
@@ -1096,21 +1109,21 @@ number.1.Piano_RH.Music = {
           %! baca._set_status_tag()
           %! baca.clef()
         \clef "treble"
-          %! EXPLICIT_CLEF_COLOR
-          %! baca._attach_color_literal(2)
-        \once \override PianoRHMusicStaff.Clef.color = #(x11-color 'blue)
           %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
           %! baca._attach_color_literal(2)
-        \once \override PianoStaffGroup.InstrumentName.color = #(x11-color 'blue)
+        \once \override PianoStaff.InstrumentName.color = #(x11-color 'blue)
+          %! EXPLICIT_CLEF_COLOR
+          %! baca._attach_color_literal(2)
+        \once \override Staff.Clef.color = #(x11-color 'blue)
           %! EXPLICIT_CLEF_COLOR_CANCELLATION
           %! baca._attach_color_literal(1)
-        %@% \override PianoRHMusicStaff.Clef.color = ##f
+        %@% \override Staff.Clef.color = ##f
           %! EXPLICIT_CLEF
           %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
           %! baca.clef()
           %! baca.treat_persistent_wrapper(2)
-        \set PianoRHMusicStaff.forceClef = ##t
+        \set Staff.forceClef = ##t
           %! hijinks.make_piano_material()
         f'''16
         % AFTER:
@@ -1130,19 +1143,19 @@ number.1.Piano_RH.Music = {
         [
         % ABSOLUTE_AFTER:
         % COMMANDS:
-          %! EXPLICIT_CLEF_REDRAW_COLOR
-          %! baca._attach_color_literal(2)
-        \override PianoRHMusicStaff.Clef.color = #(x11-color 'DeepSkyBlue2)
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
           %! baca._attach_color_literal(2)
-        \override PianoStaffGroup.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+        \override PianoStaff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+          %! EXPLICIT_CLEF_REDRAW_COLOR
+          %! baca._attach_color_literal(2)
+        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
           %! -PARTS
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
           %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
           %! baca.short_instrument_name()
           %! baca.treat_persistent_wrapper(3)
-        \set PianoStaffGroup.shortInstrumentName = \hijinks-pf-markup
+        \set PianoStaff.shortInstrumentName = \hijinks-pf-markup
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
@@ -1226,7 +1239,7 @@ number.1.Piano_RH.Music = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_RH.Music measure 3]
+        % [Piano.RH.Music measure 3]
           %! hijinks.make_piano_material()
         cs'''!64
         % AFTER:
@@ -1380,7 +1393,7 @@ number.1.Piano_RH.Music = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_RH.Music measure 6]
+        % [Piano.RH.Music measure 6]
           %! hijinks.make_piano_material()
         e''''16
         % AFTER:
@@ -1524,7 +1537,7 @@ number.1.Piano_RH.Music = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_RH.Music measure 8]
+        % [Piano.RH.Music measure 8]
           %! hijinks.make_piano_material()
         cs'''!16
         % AFTER:
@@ -1728,7 +1741,7 @@ number.1.Piano_RH.Music = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_RH.Music measure 11]
+        % [Piano.RH.Music measure 11]
           %! hijinks.make_piano_material()
         g'16
         % AFTER:
@@ -1772,7 +1785,7 @@ number.1.Piano_RH.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Piano_RH.Music measure 13]
+    % [Piano.RH.Music measure 13]
       %! hijinks.make_piano_material()
     r8
     % ABSOLUTE_BEFORE:
@@ -1787,7 +1800,7 @@ number.1.Piano_RH.Music = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_RH.Music measure 14]
+        % [Piano.RH.Music measure 14]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -1858,6 +1871,12 @@ number.1.Piano_RH.Music = {
         ]
         % COMMANDS:
           %! baca.OverrideCommand._call(2)
+          %! baca.beam_positions()
+        \revert Beam.positions
+          %! baca.OverrideCommand._call(2)
+          %! baca.stem_down()
+        \revert Stem.direction
+          %! baca.OverrideCommand._call(2)
           %! baca.tuplet_bracket_shorten_pair()
         \revert TupletBracket.shorten-pair
         % CLOSING:
@@ -1876,16 +1895,16 @@ number.1.Piano_RH.Music = {
 
 
   %! baca.path.extern()
-number.1.Piano_RH.Music_Staff = {
+number.1.Piano.RH.Staff = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
       %! hijinks.make_empty_score()
-    \context Voice = "Piano_RH.Music"
+    \context Voice = "Piano.RH.Music"
       %! hijinks.make_empty_score()
       %! baca.path.extern()
-    { \number.1.Piano_RH.Music }
+    { \number.1.Piano.RH.Music }
     % CLOSING:
     % COMMANDS:
 
@@ -1896,7 +1915,7 @@ number.1.Piano_RH.Music_Staff = {
 
 
   %! baca.path.extern()
-number.1.Piano_LH.Music = {
+number.1.Piano.LH.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1911,7 +1930,7 @@ number.1.Piano_LH.Music = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_LH.Music measure 1]
+        % [Piano.LH.Music measure 1]
         % BEFORE:
         % COMMANDS:
           %! MEASURE_1
@@ -1919,13 +1938,19 @@ number.1.Piano_LH.Music = {
           %! baca.OverrideCommand._call(1)
           %! baca.clef_shift()
           %! baca.clef_x_extent_false()
-    %%% \once \override PianoLHMusicStaff.Clef.X-extent = ##f
+    %%% \once \override Staff.Clef.X-extent = ##f
           %! MEASURE_1
           %! SHIFTED_CLEF
           %! baca.OverrideCommand._call(1)
           %! baca.clef_extra_offset()
           %! baca.clef_shift()
-    %%% \once \override PianoLHMusicStaff.Clef.extra-offset = #'(-2.75 . 0)
+    %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+          %! baca.OverrideCommand._call(1)
+          %! baca.beam_positions()
+        \override Beam.positions = #'(6 . 6)
+          %! baca.OverrideCommand._call(1)
+          %! baca.stem_up()
+        \override Stem.direction = #up
           %! baca.OverrideCommand._call(1)
           %! baca.text_script_padding()
         \override TextScript.padding = 2
@@ -1938,16 +1963,16 @@ number.1.Piano_LH.Music = {
         \clef "bass"
           %! EXPLICIT_CLEF_COLOR
           %! baca._attach_color_literal(2)
-        \once \override PianoLHMusicStaff.Clef.color = #(x11-color 'blue)
+        \once \override Staff.Clef.color = #(x11-color 'blue)
           %! EXPLICIT_CLEF_COLOR_CANCELLATION
           %! baca._attach_color_literal(1)
-        %@% \override PianoLHMusicStaff.Clef.color = ##f
+        %@% \override Staff.Clef.color = ##f
           %! EXPLICIT_CLEF
           %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
           %! baca.clef()
           %! baca.treat_persistent_wrapper(2)
-        \set PianoLHMusicStaff.forceClef = ##t
+        \set Staff.forceClef = ##t
           %! hijinks.make_piano_material()
         b,,,16
         % AFTER:
@@ -1962,7 +1987,7 @@ number.1.Piano_LH.Music = {
         % COMMANDS:
           %! EXPLICIT_CLEF_REDRAW_COLOR
           %! baca._attach_color_literal(2)
-        \override PianoLHMusicStaff.Clef.color = #(x11-color 'DeepSkyBlue2)
+        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
@@ -2151,7 +2176,7 @@ number.1.Piano_LH.Music = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_LH.Music measure 5]
+        % [Piano.LH.Music measure 5]
           %! hijinks.make_piano_material()
         e,16
         % AFTER:
@@ -2200,7 +2225,7 @@ number.1.Piano_LH.Music = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_LH.Music measure 6]
+        % [Piano.LH.Music measure 6]
           %! hijinks.make_piano_material()
         r8
         % CLOSING:
@@ -2221,7 +2246,7 @@ number.1.Piano_LH.Music = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_LH.Music measure 7]
+        % [Piano.LH.Music measure 7]
           %! hijinks.make_piano_material()
         e16.
         % AFTER:
@@ -2273,7 +2298,7 @@ number.1.Piano_LH.Music = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_LH.Music measure 9]
+        % [Piano.LH.Music measure 9]
           %! hijinks.make_piano_material()
         e,16
         % AFTER:
@@ -2308,7 +2333,7 @@ number.1.Piano_LH.Music = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_LH.Music measure 10]
+        % [Piano.LH.Music measure 10]
           %! hijinks.make_piano_material()
         d16.
         % AFTER:
@@ -2347,7 +2372,7 @@ number.1.Piano_LH.Music = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_LH.Music measure 11]
+        % [Piano.LH.Music measure 11]
           %! hijinks.make_piano_material()
         c,,32
         % AFTER:
@@ -2451,7 +2476,7 @@ number.1.Piano_LH.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Piano_LH.Music measure 13]
+    % [Piano.LH.Music measure 13]
       %! hijinks.make_piano_material()
     r8
     % ABSOLUTE_BEFORE:
@@ -2466,7 +2491,7 @@ number.1.Piano_LH.Music = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Piano_LH.Music measure 14]
+        % [Piano.LH.Music measure 14]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -2556,6 +2581,12 @@ number.1.Piano_LH.Music = {
         ]
         % COMMANDS:
           %! baca.OverrideCommand._call(2)
+          %! baca.beam_positions()
+        \revert Beam.positions
+          %! baca.OverrideCommand._call(2)
+          %! baca.stem_up()
+        \revert Stem.direction
+          %! baca.OverrideCommand._call(2)
           %! baca.text_script_padding()
         \revert TextScript.padding
           %! baca.OverrideCommand._call(2)
@@ -2577,16 +2608,16 @@ number.1.Piano_LH.Music = {
 
 
   %! baca.path.extern()
-number.1.Piano_LH.Music_Staff = {
+number.1.Piano.LH.Staff = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
       %! hijinks.make_empty_score()
-    \context Voice = "Piano_LH.Music"
+    \context Voice = "Piano.LH.Music"
       %! hijinks.make_empty_score()
       %! baca.path.extern()
-    { \number.1.Piano_LH.Music }
+    { \number.1.Piano.LH.Music }
     % CLOSING:
     % COMMANDS:
 

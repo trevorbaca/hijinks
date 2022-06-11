@@ -33,28 +33,25 @@ def make_empty_score():
     violin_music_voice = abjad.Voice(name="Violin.Music", tag=tag)
     violin_music_staff = abjad.Staff(
         [violin_music_voice],
-        lilypond_type="ViolinMusicStaff",
-        name="Violin.Music_Staff",
+        name="Violin.Staff",
         tag=tag,
     )
-    piano_rh_music_voice = abjad.Voice(name="Piano_RH.Music", tag=tag)
+    piano_rh_music_voice = abjad.Voice(name="Piano.RH.Music", tag=tag)
     piano_rh_music_staff = abjad.Staff(
         [piano_rh_music_voice],
-        lilypond_type="PianoRHMusicStaff",
-        name="Piano_RH.Music_Staff",
+        name="Piano.RH.Staff",
         tag=tag,
     )
-    piano_lh_music_voice = abjad.Voice(name="Piano_LH.Music", tag=tag)
+    piano_lh_music_voice = abjad.Voice(name="Piano.LH.Music", tag=tag)
     piano_lh_music_staff = abjad.Staff(
         [piano_lh_music_voice],
-        lilypond_type="PianoLHMusicStaff",
-        name="Piano_LH.Music_Staff",
+        name="Piano.LH.Staff",
         tag=tag,
     )
     piano_staff_group = abjad.StaffGroup(
         [piano_rh_music_staff, piano_lh_music_staff],
-        lilypond_type="PianoStaffGroup",
-        name="Piano.Staff_Group",
+        lilypond_type="PianoStaff",
+        name="PianoStaff",
         tag=tag,
     )
     music_context = abjad.Context(
@@ -144,9 +141,7 @@ def make_violin_rhythm():
 def short_instrument_names():
     return {
         "Vn.": abjad.ShortInstrumentName(r"\hijinks-vn-markup"),
-        "Pf.": abjad.ShortInstrumentName(
-            r"\hijinks-pf-markup", context="PianoStaffGroup"
-        ),
+        "Pf.": abjad.ShortInstrumentName(r"\hijinks-pf-markup", context="PianoStaff"),
     }
 
 
@@ -205,6 +200,6 @@ def violin_pitches():
 def voice_abbreviations():
     return {
         "vn": "Violin.Music",
-        "rh": "Piano_RH.Music",
-        "lh": "Piano_LH.Music",
+        "rh": "Piano.RH.Music",
+        "lh": "Piano.LH.Music",
     }

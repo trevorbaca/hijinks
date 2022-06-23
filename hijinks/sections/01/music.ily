@@ -562,9 +562,9 @@ number.1.Skips = {
     % COMMANDS:
       %! baca.bar_line()
     \bar "|."
-      %! baca.literal_function()
+      %! baca.literal()
     \override Score.BarLine.transparent = ##f
-      %! baca.literal_function()
+      %! baca.literal()
     \override Score.SpanBar.transparent = ##f
     % CLOSING:
     % COMMANDS:

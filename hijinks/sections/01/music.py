@@ -170,9 +170,11 @@ if __name__ == "__main__":
     del defaults["append_anchor_skip"]
     metadata, persist, score, timing = baca.build.interpret_section(
         score,
-        commands,
+        commands.manifests(),
+        commands.time_signatures,
         **defaults,
         always_make_global_rests=True,
+        commands=commands,
         deactivate=(
             baca.tags.EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT,
             baca.tags.RHYTHM_ANNOTATION_SPANNER,

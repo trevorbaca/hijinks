@@ -10,7 +10,7 @@ from hijinks import library
 score = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 
-commands = baca.CommandAccumulator(
+accumulator = baca.CommandAccumulator(
     instruments=library.instruments(),
     short_instrument_names=library.short_instrument_names(),
     metronome_marks=library.metronome_marks(),
@@ -21,17 +21,17 @@ commands = baca.CommandAccumulator(
 
 baca.interpret.set_up_score(
     score,
-    commands,
-    commands.manifests(),
-    commands.time_signatures,
+    accumulator,
+    accumulator.manifests(),
+    accumulator.time_signatures,
     always_make_global_rests=True,
     attach_nonfirst_empty_start_bar=True,
 )
 
 skips = score["Skips"]
-manifests = commands.manifests()
+manifests = accumulator.manifests()
 
-baca.metronome_mark(skips[1 - 1], commands.metronome_marks["32"], manifests)
+baca.metronome_mark(skips[1 - 1], accumulator.metronome_marks["32"], manifests)
 
 baca.bar_line(skips[15 - 1], "|.")
 
@@ -83,9 +83,9 @@ voice.extend(music)
 
 # vn
 
-commands(
+accumulator(
     "vn",
-    baca.instrument(commands.instruments["Violin"]),
+    baca.instrument(accumulator.instruments["Violin"]),
     baca.instrument_name(r"\hijinks-violin-markup"),
     baca.clef("treble"),
     library.short_instrument_name("Vn."),
@@ -101,9 +101,9 @@ commands(
 
 # rh
 
-commands(
+accumulator(
     "rh",
-    baca.instrument(commands.instruments["Piano"]),
+    baca.instrument(accumulator.instruments["Piano"]),
     baca.instrument_name(r"\hijinks-piano-markup", context="PianoStaff"),
     library.short_instrument_name("Pf.", context="PianoStaff"),
     baca.clef("treble"),
@@ -117,7 +117,7 @@ commands(
 
 # lh
 
-commands(
+accumulator(
     "lh",
     baca.clef("bass"),
     baca.markup(
@@ -143,7 +143,7 @@ def _select_long_notes(argument):
     return result
 
 
-commands(
+accumulator(
     ["rh", "lh"],
     baca.staccato(selector=_select_short_notes),
     baca.tenuto(selector=_select_long_notes),
@@ -153,7 +153,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     "lh",
     baca.chunk(
         baca.mark(r"\hijinks-colophon-markup"),
@@ -166,15 +166,15 @@ commands(
 )
 
 if __name__ == "__main__":
-    defaults = baca.score_interpretation_defaults()
+    defaults = baca.interpret.section_defaults()
     del defaults["append_anchor_skip"]
-    metadata, persist, score, timing = baca.build.interpret_section(
+    metadata, persist, score, timing = baca.build.section(
         score,
-        commands.manifests(),
-        commands.time_signatures,
+        accumulator.manifests(),
+        accumulator.time_signatures,
         **defaults,
         always_make_global_rests=True,
-        commands=commands,
+        commands=accumulator.commands,
         deactivate=(
             baca.tags.EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT,
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
@@ -183,7 +183,7 @@ if __name__ == "__main__":
         final_section=True,
         global_rests_in_topmost_staff=True,
     )
-    lilypond_file = baca.make_lilypond_file(
+    lilypond_file = baca.lilypond.file(
         score,
         include_layout_ly=True,
         includes=["../stylesheet.ily", "header.ily"],

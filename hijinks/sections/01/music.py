@@ -73,49 +73,47 @@ def vn(voice):
         result = [_ for _ in result if _.written_duration > abjad.Duration((1, 16))]
         return result
 
-    accumulator(
-        "vn",
-        baca.instrument(accumulator.instruments["Violin"]),
-        baca.instrument_name(r"\hijinks-violin-markup"),
-        baca.clef("treble"),
-        library.short_instrument_name("Vn."),
-        baca.markup(
+    with baca.scope(abjad.select.leaves(voice)) as o:
+        baca.instrument_function(o.leaf(0), accumulator.instruments["Violin"])
+        baca.instrument_name_function(o.leaf(0), r"\hijinks-violin-markup")
+        baca.clef_function(o.leaf(0), "treble")
+        library.short_instrument_name_function(o.leaf(0), "Vn.")
+        baca.markup_function(
+            o.leaf(0),
             r"\hijinks-pp-sempre-al-fino-markup",
             direction=abjad.DOWN,
-        ),
-        baca.pitches(library.violin_pitches()),
-        baca.staccato(selector=_select_short_notes),
-        baca.tenuto(selector=_select_long_notes),
-        baca.beam_positions(-4),
-    )
+        )
+        baca.pitches_function(o, library.violin_pitches())
+        baca.staccato_function(_select_short_notes(o))
+        baca.tenuto_function(_select_long_notes(o))
+        baca.beam_positions_function(o, -4)
 
 
 def pf(score):
-    accumulator(
-        "rh",
-        baca.instrument(accumulator.instruments["Piano"]),
-        baca.instrument_name(r"\hijinks-piano-markup", context="PianoStaff"),
-        library.short_instrument_name("Pf.", context="PianoStaff"),
-        baca.clef("treble"),
-        baca.markup(
+    with baca.scope(accumulator.voice("rh")) as o:
+        baca.instrument_function(o.leaf(0), accumulator.instruments["Piano"])
+        baca.instrument_name_function(
+            o.leaf(0), r"\hijinks-piano-markup", context="PianoStaff"
+        )
+        library.short_instrument_name_function(o.leaf(0), "Pf.", context="PianoStaff")
+        baca.clef_function(o.leaf(0), "treble")
+        baca.markup_function(
+            o.leaf(0),
             r"\hijinks-pp-sempre-al-fino-markup",
             direction=abjad.DOWN,
-        ),
-        baca.beam_positions(-6),
-        baca.stem_down(),
-    )
-    accumulator(
-        "lh",
-        baca.clef("bass"),
-        baca.markup(
+        )
+        baca.beam_positions_function(o.leaves(), -6)
+        baca.stem_down_function(o.leaves())
+    with baca.scope(accumulator.voice("lh")) as o:
+        baca.clef_function(o.leaf(0), "bass")
+        baca.markup_function(
+            o.leaf(1),
             r"\hijinks-ped-ad-libitum-markup",
             direction=abjad.DOWN,
-            selector=lambda _: abjad.select.note(_, 1),
         ),
-        baca.text_script_padding(2),
-        baca.beam_positions(6),
-        baca.stem_up(),
-    )
+        baca.text_script_padding_function(o.leaves(), 2)
+        baca.beam_positions_function(o.leaves(), 6)
+        baca.stem_up_function(o.leaves())
 
     def _select_short_notes(argument):
         result = abjad.select.notes(argument)
@@ -152,7 +150,7 @@ def pf(score):
 def main():
     VN(accumulator.voice("vn"))
     PF(score)
-    vn(score)
+    vn(accumulator.voice("vn"))
     pf(score)
 
 

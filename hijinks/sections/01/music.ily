@@ -716,16 +716,13 @@ number.1.Violin.Music = {
           %! SHIFTED_CLEF
           %! baca.clef_extra_offset_function(1)
     %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
-          %! baca.OverrideCommand._call(1)
-          %! baca.beam_positions()
+          %! baca.beam_positions_function(1)
         \override Beam.positions = #'(-4 . -4)
           %! -PARTS
-          %! baca.IndicatorCommand._call()
           %! baca.instrument_name()
         \set Staff.instrumentName = \hijinks-violin-markup
           %! -PARTS
           %! EXPLICIT_SHORT_INSTRUMENT_NAME
-          %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
           %! baca.short_instrument_name()
         \set Staff.shortInstrumentName = \hijinks-vn-markup
@@ -755,14 +752,12 @@ number.1.Violin.Music = {
         bf'!4
         % AFTER:
         % ARTICULATIONS:
-          %! baca.IndicatorCommand._call()
           %! baca.tenuto()
         - \tenuto
         % MARKUP:
           %! EXPLICIT_INSTRUMENT_ALERT
           %! baca._attach_latent_indicator_alert()
         ^ \baca-explicit-instrument-markup "(“Violin”)"
-          %! baca.IndicatorCommand._call()
           %! baca.markup()
         _ \hijinks-pp-sempre-al-fino-markup
         % ABSOLUTE_AFTER:
@@ -775,7 +770,6 @@ number.1.Violin.Music = {
         \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
           %! -PARTS
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-          %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
           %! baca.short_instrument_name()
           %! baca.treat_persistent_wrapper(3)
@@ -787,7 +781,6 @@ number.1.Violin.Music = {
         c'''8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.IndicatorCommand._call()
           %! baca.tenuto()
         - \tenuto
         % START_BEAM:
@@ -800,7 +793,6 @@ number.1.Violin.Music = {
         d'''8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.IndicatorCommand._call()
           %! baca.tenuto()
         - \tenuto
         % ABSOLUTE_BEFORE:
@@ -810,7 +802,6 @@ number.1.Violin.Music = {
         fs'''!8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.IndicatorCommand._call()
           %! baca.tenuto()
         - \tenuto
         % STOP_BEAM:
@@ -839,7 +830,6 @@ number.1.Violin.Music = {
         af''!8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.IndicatorCommand._call()
           %! baca.tenuto()
         - \tenuto
         % START_BEAM:
@@ -852,7 +842,6 @@ number.1.Violin.Music = {
         g''8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.IndicatorCommand._call()
           %! baca.tenuto()
         - \tenuto
         % STOP_BEAM:
@@ -865,7 +854,6 @@ number.1.Violin.Music = {
         f'''4
         % AFTER:
         % ARTICULATIONS:
-          %! baca.IndicatorCommand._call()
           %! baca.tenuto()
         - \tenuto
         % ABSOLUTE_BEFORE:
@@ -875,7 +863,6 @@ number.1.Violin.Music = {
         ef'''!16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.IndicatorCommand._call()
           %! baca.staccato()
         - \staccato
         % START_BEAM:
@@ -888,7 +875,6 @@ number.1.Violin.Music = {
         cs''''!16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.IndicatorCommand._call()
           %! baca.staccato()
         - \staccato
         % STOP_BEAM:
@@ -917,7 +903,6 @@ number.1.Violin.Music = {
         a'''4
         % AFTER:
         % ARTICULATIONS:
-          %! baca.IndicatorCommand._call()
           %! baca.tenuto()
         - \tenuto
         % ABSOLUTE_BEFORE:
@@ -927,7 +912,6 @@ number.1.Violin.Music = {
         e''''8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.IndicatorCommand._call()
           %! baca.tenuto()
         - \tenuto
         % START_BEAM:
@@ -940,7 +924,6 @@ number.1.Violin.Music = {
         b''8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.IndicatorCommand._call()
           %! baca.tenuto()
         - \tenuto
         % ABSOLUTE_BEFORE:
@@ -950,7 +933,6 @@ number.1.Violin.Music = {
         f'''8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.IndicatorCommand._call()
           %! baca.tenuto()
         - \tenuto
         % STOP_BEAM:
@@ -986,7 +968,6 @@ number.1.Violin.Music = {
         fs'''!8.
         % AFTER:
         % ARTICULATIONS:
-          %! baca.IndicatorCommand._call()
           %! baca.tenuto()
         - \tenuto
         % START_BEAM:
@@ -999,15 +980,13 @@ number.1.Violin.Music = {
         af''!8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.IndicatorCommand._call()
           %! baca.tenuto()
         - \tenuto
         % STOP_BEAM:
           %! hijinks.make_violin_rhythm()
         ]
         % COMMANDS:
-          %! baca.OverrideCommand._call(2)
-          %! baca.beam_positions()
+          %! baca.beam_positions_function(2)
         \revert Beam.positions
         % CLOSING:
         % COMMANDS:
@@ -1078,19 +1057,15 @@ number.1.Piano.RH.Music = {
           %! SHIFTED_CLEF
           %! baca.clef_extra_offset_function(1)
     %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
-          %! baca.OverrideCommand._call(1)
-          %! baca.beam_positions()
+          %! baca.beam_positions_function(1)
         \override Beam.positions = #'(-6 . -6)
-          %! baca.OverrideCommand._call(1)
-          %! baca.stem_down()
+          %! baca.stem_down_function(1)
         \override Stem.direction = #down
           %! -PARTS
-          %! baca.IndicatorCommand._call()
           %! baca.instrument_name()
         \set PianoStaff.instrumentName = \hijinks-piano-markup
           %! -PARTS
           %! EXPLICIT_SHORT_INSTRUMENT_NAME
-          %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
           %! baca.short_instrument_name()
         \set PianoStaff.shortInstrumentName = \hijinks-pf-markup
@@ -1127,7 +1102,6 @@ number.1.Piano.RH.Music = {
           %! EXPLICIT_INSTRUMENT_ALERT
           %! baca._attach_latent_indicator_alert()
         ^ \baca-explicit-instrument-markup "(“Piano”)"
-          %! baca.IndicatorCommand._call()
           %! baca.markup()
         _ \hijinks-pp-sempre-al-fino-markup
         % START_BEAM:
@@ -1143,7 +1117,6 @@ number.1.Piano.RH.Music = {
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
           %! -PARTS
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-          %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
           %! baca.short_instrument_name()
           %! baca.treat_persistent_wrapper(3)
@@ -1862,11 +1835,9 @@ number.1.Piano.RH.Music = {
           %! hijinks.make_piano_material()
         ]
         % COMMANDS:
-          %! baca.OverrideCommand._call(2)
-          %! baca.beam_positions()
+          %! baca.beam_positions_function(2)
         \revert Beam.positions
-          %! baca.OverrideCommand._call(2)
-          %! baca.stem_down()
+          %! baca.stem_down_function(2)
         \revert Stem.direction
           %! baca.OverrideCommand._call(2)
           %! baca.tuplet_bracket_shorten_pair()
@@ -1933,14 +1904,11 @@ number.1.Piano.LH.Music = {
           %! SHIFTED_CLEF
           %! baca.clef_extra_offset_function(1)
     %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
-          %! baca.OverrideCommand._call(1)
-          %! baca.beam_positions()
+          %! baca.beam_positions_function(1)
         \override Beam.positions = #'(6 . 6)
-          %! baca.OverrideCommand._call(1)
-          %! baca.stem_up()
+          %! baca.stem_up_function(1)
         \override Stem.direction = #up
-          %! baca.OverrideCommand._call(1)
-          %! baca.text_script_padding()
+          %! baca.text_script_padding_function(1)
         \override TextScript.padding = 2
         % OPENING:
         % COMMANDS:
@@ -1987,7 +1955,6 @@ number.1.Piano.LH.Music = {
           %! baca.tenuto()
         - \tenuto
         % MARKUP:
-          %! baca.IndicatorCommand._call()
           %! baca.markup()
         _ \hijinks-ped-ad-libitum-markup
         % ABSOLUTE_BEFORE:
@@ -2568,14 +2535,11 @@ number.1.Piano.LH.Music = {
           %! hijinks.make_piano_material()
         ]
         % COMMANDS:
-          %! baca.OverrideCommand._call(2)
-          %! baca.beam_positions()
+          %! baca.beam_positions_function(2)
         \revert Beam.positions
-          %! baca.OverrideCommand._call(2)
-          %! baca.stem_up()
+          %! baca.stem_up_function(2)
         \revert Stem.direction
-          %! baca.OverrideCommand._call(2)
-          %! baca.text_script_padding()
+          %! baca.text_script_padding_function(2)
         \revert TextScript.padding
           %! baca.OverrideCommand._call(2)
           %! baca.tuplet_bracket_shorten_pair()

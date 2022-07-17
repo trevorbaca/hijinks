@@ -90,6 +90,16 @@ def vn(voice):
 
 
 def pf(score):
+    def _select_short_notes(argument):
+        result = abjad.select.notes(argument)
+        result = [_ for _ in result if _.written_duration <= abjad.Duration((1, 64))]
+        return result
+
+    def _select_long_notes(argument):
+        result = abjad.select.notes(argument)
+        result = [_ for _ in result if _.written_duration > abjad.Duration((1, 64))]
+        return result
+
     with baca.scope(accumulator.voice("rh")) as o:
         baca.instrument_function(o.leaf(0), accumulator.instruments["Piano"])
         baca.instrument_name_function(
@@ -104,6 +114,8 @@ def pf(score):
         )
         baca.beam_positions_function(o.leaves(), -6)
         baca.stem_down_function(o.leaves())
+        tuplet = abjad.select.tuplet(abjad.select.top(o), -1)
+        baca.tuplet_bracket_shorten_pair_function(tuplet, (0, 0.6))
     with baca.scope(accumulator.voice("lh")) as o:
         baca.clef_function(o.leaf(0), "bass")
         baca.markup_function(
@@ -114,37 +126,17 @@ def pf(score):
         baca.text_script_padding_function(o.leaves(), 2)
         baca.beam_positions_function(o.leaves(), 6)
         baca.stem_up_function(o.leaves())
-
-    def _select_short_notes(argument):
-        result = abjad.select.notes(argument)
-        result = [_ for _ in result if _.written_duration <= abjad.Duration((1, 64))]
-        return result
-
-    def _select_long_notes(argument):
-        result = abjad.select.notes(argument)
-        result = [_ for _ in result if _.written_duration > abjad.Duration((1, 64))]
-        return result
-
-    accumulator(
-        ["rh", "lh"],
-        baca.staccato(selector=_select_short_notes),
-        baca.tenuto(selector=_select_long_notes),
-        baca.tuplet_bracket_shorten_pair(
-            (0, 0.6),
-            selector=lambda _: abjad.select.tuplet(abjad.select.top(_), -1),
-        ),
-    )
-    accumulator(
-        "lh",
-        baca.chunk(
-            baca.mark(r"\hijinks-colophon-markup"),
-            baca.rehearsal_mark_down(),
-            baca.rehearsal_mark_extra_offset((-7, -7)),
-            baca.rehearsal_mark_padding(0),
-            baca.rehearsal_mark_self_alignment_x(abjad.RIGHT),
-            selector=lambda _: abjad.select.leaf(_, -1),
-        ),
-    )
+        tuplet = abjad.select.tuplet(abjad.select.top(o), -1)
+        baca.tuplet_bracket_shorten_pair_function(tuplet, (0, 0.6))
+    with baca.scope(score["PianoStaff"]) as o:
+        baca.staccato_function(_select_short_notes(o))
+        baca.tenuto_function(_select_long_notes(o))
+    with baca.scope(accumulator.voice("lh")) as o:
+        baca.mark_function(o.leaf(-1), r"\hijinks-colophon-markup")
+        baca.rehearsal_mark_down_function(o.leaf(-1))
+        baca.rehearsal_mark_extra_offset_function(o.leaf(-1), (-7, -7))
+        baca.rehearsal_mark_padding_function(o.leaf(-1), 0)
+        baca.rehearsal_mark_self_alignment_x_function(o.leaf(-1), abjad.RIGHT)
 
 
 def main():
@@ -164,7 +156,6 @@ if __name__ == "__main__":
         accumulator.time_signatures,
         **defaults,
         always_make_global_rests=True,
-        commands=accumulator.commands,
         deactivate=(
             baca.tags.EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT,
             baca.tags.RHYTHM_ANNOTATION_SPANNER,

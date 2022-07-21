@@ -723,6 +723,7 @@ number.1.Violin.Music = {
         \set Staff.instrumentName = \hijinks-violin-markup
           %! -PARTS
           %! EXPLICIT_SHORT_INSTRUMENT_NAME
+          %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
           %! baca.short_instrument_name()
         \set Staff.shortInstrumentName = \hijinks-vn-markup
@@ -770,6 +771,7 @@ number.1.Violin.Music = {
         \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
           %! -PARTS
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
+          %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
           %! baca.short_instrument_name()
           %! baca.treat_persistent_wrapper(3)
@@ -1066,6 +1068,7 @@ number.1.Piano.RH.Music = {
         \set PianoStaff.instrumentName = \hijinks-piano-markup
           %! -PARTS
           %! EXPLICIT_SHORT_INSTRUMENT_NAME
+          %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
           %! baca.short_instrument_name()
         \set PianoStaff.shortInstrumentName = \hijinks-pf-markup
@@ -1116,6 +1119,7 @@ number.1.Piano.RH.Music = {
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
           %! -PARTS
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
+          %! baca.IndicatorCommand._call()
           %! baca._set_status_tag()
           %! baca.short_instrument_name()
           %! baca.treat_persistent_wrapper(3)

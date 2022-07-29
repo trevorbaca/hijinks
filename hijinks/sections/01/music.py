@@ -31,9 +31,9 @@ baca.interpret.set_up_score(
 skips = score["Skips"]
 manifests = accumulator.manifests()
 
-baca.metronome_mark(skips[1 - 1], accumulator.metronome_marks["32"], manifests)
+baca.metronome_mark_function(skips[1 - 1], accumulator.metronome_marks["32"], manifests)
 
-baca.bar_line(skips[15 - 1], "|.")
+baca.bar_line_function(skips[15 - 1], "|.")
 
 baca.literal_function(
     skips[15 - 1],

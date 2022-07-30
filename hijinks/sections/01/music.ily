@@ -31,19 +31,19 @@ number.1.Skips = {
       %! baca._attach_metronome_marks(2)
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.metronome_mark()
+      %! baca.metronome_mark_function()
     %@% - \abjad-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! baca._attach_metronome_marks(2)
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.metronome_mark()
+      %! baca.metronome_mark_function()
     %@% - \baca-metronome-mark-spanner-left-text 3 0 1 "32"
       %! EXPLICIT_METRONOME_MARK
       %! baca._attach_metronome_marks(2)
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.metronome_mark()
+      %! baca.metronome_mark_function()
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
       %! baca._label_clock_time()
@@ -566,11 +566,11 @@ number.1.Skips = {
       %! baca._label_measure_numbers()
     %@% \bacaStopTextSpanMN
     % COMMANDS:
-      %! baca.bar_line()
+      %! baca.bar_line_function()
     \bar "|."
-      %! baca.literal()
+      %! baca.literal_function()
     \override Score.BarLine.transparent = ##f
-      %! baca.literal()
+      %! baca.literal_function()
     \override Score.SpanBar.transparent = ##f
     % CLOSING:
     % COMMANDS:
@@ -725,20 +725,20 @@ number.1.Violin.Music = {
           %! baca.beam_positions_function(1)
         \override Beam.positions = #'(-4 . -4)
           %! -PARTS
-          %! baca.instrument_name()
+          %! baca.instrument_name_function()
         \set Staff.instrumentName = \hijinks-violin-markup
           %! -PARTS
           %! EXPLICIT_SHORT_INSTRUMENT_NAME
           %! baca._attach_persistent_indicator()
           %! baca._set_status_tag()
-          %! baca.short_instrument_name()
+          %! baca.short_instrument_name_function()
         \set Staff.shortInstrumentName = \hijinks-vn-markup
         % OPENING:
         % COMMANDS:
           %! EXPLICIT_CLEF
           %! baca._attach_persistent_indicator()
           %! baca._set_status_tag()
-          %! baca.clef()
+          %! baca.clef_function()
         \clef "treble"
           %! EXPLICIT_CLEF_COLOR
           %! baca._attach_color_literal(2)
@@ -752,20 +752,20 @@ number.1.Violin.Music = {
           %! EXPLICIT_CLEF
           %! baca._attach_persistent_indicator()
           %! baca._set_status_tag()
-          %! baca.clef()
+          %! baca.clef_function()
           %! baca.treat_persistent_wrapper(2)
         \set Staff.forceClef = ##t
           %! hijinks.make_violin_rhythm()
         bf'!4
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % MARKUP:
           %! EXPLICIT_INSTRUMENT_ALERT
           %! baca._attach_latent_indicator_alert()
         ^ \baca-explicit-instrument-markup "(“Violin”)"
-          %! baca.markup()
+          %! baca.markup_function()
         _ \hijinks-pp-sempre-al-fino-markup
         % ABSOLUTE_AFTER:
         % COMMANDS:
@@ -779,7 +779,7 @@ number.1.Violin.Music = {
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
           %! baca._attach_persistent_indicator()
           %! baca._set_status_tag()
-          %! baca.short_instrument_name()
+          %! baca.short_instrument_name_function()
           %! baca.treat_persistent_wrapper(3)
         \set Staff.shortInstrumentName = \hijinks-vn-markup
         % ABSOLUTE_BEFORE:
@@ -789,7 +789,7 @@ number.1.Violin.Music = {
         c'''8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % START_BEAM:
           %! hijinks.make_violin_rhythm()
@@ -801,7 +801,7 @@ number.1.Violin.Music = {
         d'''8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -810,7 +810,7 @@ number.1.Violin.Music = {
         fs'''!8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % STOP_BEAM:
           %! hijinks.make_violin_rhythm()
@@ -838,7 +838,7 @@ number.1.Violin.Music = {
         af''!8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % START_BEAM:
           %! hijinks.make_violin_rhythm()
@@ -850,7 +850,7 @@ number.1.Violin.Music = {
         g''8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % STOP_BEAM:
           %! hijinks.make_violin_rhythm()
@@ -862,7 +862,7 @@ number.1.Violin.Music = {
         f'''4
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -871,7 +871,7 @@ number.1.Violin.Music = {
         ef'''!16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % START_BEAM:
           %! hijinks.make_violin_rhythm()
@@ -883,7 +883,7 @@ number.1.Violin.Music = {
         cs''''!16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % STOP_BEAM:
           %! hijinks.make_violin_rhythm()
@@ -911,7 +911,7 @@ number.1.Violin.Music = {
         a'''4
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -920,7 +920,7 @@ number.1.Violin.Music = {
         e''''8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % START_BEAM:
           %! hijinks.make_violin_rhythm()
@@ -932,7 +932,7 @@ number.1.Violin.Music = {
         b''8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -941,7 +941,7 @@ number.1.Violin.Music = {
         f'''8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % STOP_BEAM:
           %! hijinks.make_violin_rhythm()
@@ -976,7 +976,7 @@ number.1.Violin.Music = {
         fs'''!8.
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % START_BEAM:
           %! hijinks.make_violin_rhythm()
@@ -988,7 +988,7 @@ number.1.Violin.Music = {
         af''!8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % STOP_BEAM:
           %! hijinks.make_violin_rhythm()
@@ -1070,20 +1070,20 @@ number.1.Piano.RH.Music = {
           %! baca.stem_down_function(1)
         \override Stem.direction = #down
           %! -PARTS
-          %! baca.instrument_name()
+          %! baca.instrument_name_function()
         \set PianoStaff.instrumentName = \hijinks-piano-markup
           %! -PARTS
           %! EXPLICIT_SHORT_INSTRUMENT_NAME
           %! baca._attach_persistent_indicator()
           %! baca._set_status_tag()
-          %! baca.short_instrument_name()
+          %! baca.short_instrument_name_function()
         \set PianoStaff.shortInstrumentName = \hijinks-pf-markup
         % OPENING:
         % COMMANDS:
           %! EXPLICIT_CLEF
           %! baca._attach_persistent_indicator()
           %! baca._set_status_tag()
-          %! baca.clef()
+          %! baca.clef_function()
         \clef "treble"
           %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
           %! baca._attach_color_literal(2)
@@ -1097,20 +1097,20 @@ number.1.Piano.RH.Music = {
           %! EXPLICIT_CLEF
           %! baca._attach_persistent_indicator()
           %! baca._set_status_tag()
-          %! baca.clef()
+          %! baca.clef_function()
           %! baca.treat_persistent_wrapper(2)
         \set Staff.forceClef = ##t
           %! hijinks.make_piano_material()
         f'''16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % MARKUP:
           %! EXPLICIT_INSTRUMENT_ALERT
           %! baca._attach_latent_indicator_alert()
         ^ \baca-explicit-instrument-markup "(“Piano”)"
-          %! baca.markup()
+          %! baca.markup_function()
         _ \hijinks-pp-sempre-al-fino-markup
         % START_BEAM:
           %! hijinks.make_piano_material()
@@ -1127,7 +1127,7 @@ number.1.Piano.RH.Music = {
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
           %! baca._attach_persistent_indicator()
           %! baca._set_status_tag()
-          %! baca.short_instrument_name()
+          %! baca.short_instrument_name_function()
           %! baca.treat_persistent_wrapper(3)
         \set PianoStaff.shortInstrumentName = \hijinks-pf-markup
         % ABSOLUTE_BEFORE:
@@ -1137,7 +1137,7 @@ number.1.Piano.RH.Music = {
         c'''16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1146,7 +1146,7 @@ number.1.Piano.RH.Music = {
         bf''!16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1155,7 +1155,7 @@ number.1.Piano.RH.Music = {
         e''32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1164,7 +1164,7 @@ number.1.Piano.RH.Music = {
         d''32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1173,7 +1173,7 @@ number.1.Piano.RH.Music = {
         cs''!32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1182,7 +1182,7 @@ number.1.Piano.RH.Music = {
         ef'!32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % STOP_BEAM:
           %! hijinks.make_piano_material()
@@ -1212,7 +1212,7 @@ number.1.Piano.RH.Music = {
         cs'''!64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % START_BEAM:
           %! hijinks.make_piano_material()
@@ -1224,7 +1224,7 @@ number.1.Piano.RH.Music = {
         a''64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1233,7 +1233,7 @@ number.1.Piano.RH.Music = {
         e''16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1242,7 +1242,7 @@ number.1.Piano.RH.Music = {
         ef''!16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1251,7 +1251,7 @@ number.1.Piano.RH.Music = {
         f'16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % STOP_BEAM:
           %! hijinks.make_piano_material()
@@ -1279,7 +1279,7 @@ number.1.Piano.RH.Music = {
         a''''16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % START_BEAM:
           %! hijinks.make_piano_material()
@@ -1291,7 +1291,7 @@ number.1.Piano.RH.Music = {
         fs''''!16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1300,7 +1300,7 @@ number.1.Piano.RH.Music = {
         g'''32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1309,7 +1309,7 @@ number.1.Piano.RH.Music = {
         b''32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1318,7 +1318,7 @@ number.1.Piano.RH.Music = {
         cs''!64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1327,7 +1327,7 @@ number.1.Piano.RH.Music = {
         ef'!64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % STOP_BEAM:
           %! hijinks.make_piano_material()
@@ -1355,7 +1355,7 @@ number.1.Piano.RH.Music = {
         e''''16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % START_BEAM:
           %! hijinks.make_piano_material()
@@ -1367,7 +1367,7 @@ number.1.Piano.RH.Music = {
         cs''''!64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1376,7 +1376,7 @@ number.1.Piano.RH.Music = {
         a'''64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1385,7 +1385,7 @@ number.1.Piano.RH.Music = {
         fs'''!64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1394,7 +1394,7 @@ number.1.Piano.RH.Music = {
         f'''64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1403,7 +1403,7 @@ number.1.Piano.RH.Music = {
         ef'''!16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1412,7 +1412,7 @@ number.1.Piano.RH.Music = {
         d'''16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1421,7 +1421,7 @@ number.1.Piano.RH.Music = {
         c'''32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1430,7 +1430,7 @@ number.1.Piano.RH.Music = {
         b''64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1439,7 +1439,7 @@ number.1.Piano.RH.Music = {
         af''!64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1448,7 +1448,7 @@ number.1.Piano.RH.Music = {
         g''64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1457,7 +1457,7 @@ number.1.Piano.RH.Music = {
         bf'!64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % STOP_BEAM:
           %! hijinks.make_piano_material()
@@ -1487,7 +1487,7 @@ number.1.Piano.RH.Music = {
         cs'''!16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % START_BEAM:
           %! hijinks.make_piano_material()
@@ -1499,7 +1499,7 @@ number.1.Piano.RH.Music = {
         bf''!32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1508,7 +1508,7 @@ number.1.Piano.RH.Music = {
         a''32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1517,7 +1517,7 @@ number.1.Piano.RH.Music = {
         fs''!32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1526,7 +1526,7 @@ number.1.Piano.RH.Music = {
         ef''!32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1535,7 +1535,7 @@ number.1.Piano.RH.Music = {
         d''64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1544,7 +1544,7 @@ number.1.Piano.RH.Music = {
         c''64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1553,7 +1553,7 @@ number.1.Piano.RH.Music = {
         g'64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1562,7 +1562,7 @@ number.1.Piano.RH.Music = {
         f'64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % STOP_BEAM:
           %! hijinks.make_piano_material()
@@ -1590,7 +1590,7 @@ number.1.Piano.RH.Music = {
         fs'''!16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % START_BEAM:
           %! hijinks.make_piano_material()
@@ -1602,7 +1602,7 @@ number.1.Piano.RH.Music = {
         g''16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1611,7 +1611,7 @@ number.1.Piano.RH.Music = {
         f''64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1620,7 +1620,7 @@ number.1.Piano.RH.Music = {
         cs''!64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1629,7 +1629,7 @@ number.1.Piano.RH.Music = {
         a'16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1638,7 +1638,7 @@ number.1.Piano.RH.Music = {
         af'!64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1647,7 +1647,7 @@ number.1.Piano.RH.Music = {
         ef'!64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % STOP_BEAM:
           %! hijinks.make_piano_material()
@@ -1675,7 +1675,7 @@ number.1.Piano.RH.Music = {
         g'16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % START_BEAM:
           %! hijinks.make_piano_material()
@@ -1687,7 +1687,7 @@ number.1.Piano.RH.Music = {
         fs'!8.
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1696,7 +1696,7 @@ number.1.Piano.RH.Music = {
         f'8.
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % STOP_BEAM:
           %! hijinks.make_piano_material()
@@ -1735,7 +1735,7 @@ number.1.Piano.RH.Music = {
         a''''32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % START_BEAM:
           %! hijinks.make_piano_material()
@@ -1747,7 +1747,7 @@ number.1.Piano.RH.Music = {
         af'''!32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1756,7 +1756,7 @@ number.1.Piano.RH.Music = {
         fs'''!16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1765,7 +1765,7 @@ number.1.Piano.RH.Music = {
         b'16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1774,7 +1774,7 @@ number.1.Piano.RH.Music = {
         e'8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1783,7 +1783,7 @@ number.1.Piano.RH.Music = {
         cs'!8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % STOP_BEAM:
           %! hijinks.make_piano_material()
@@ -1868,7 +1868,7 @@ number.1.Piano.LH.Music = {
           %! EXPLICIT_CLEF
           %! baca._attach_persistent_indicator()
           %! baca._set_status_tag()
-          %! baca.clef()
+          %! baca.clef_function()
         \clef "bass"
           %! EXPLICIT_CLEF_COLOR
           %! baca._attach_color_literal(2)
@@ -1879,14 +1879,14 @@ number.1.Piano.LH.Music = {
           %! EXPLICIT_CLEF
           %! baca._attach_persistent_indicator()
           %! baca._set_status_tag()
-          %! baca.clef()
+          %! baca.clef_function()
           %! baca.treat_persistent_wrapper(2)
         \set Staff.forceClef = ##t
           %! hijinks.make_piano_material()
         b,,,16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % START_BEAM:
           %! hijinks.make_piano_material()
@@ -1903,10 +1903,10 @@ number.1.Piano.LH.Music = {
         fs,!32.
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % MARKUP:
-          %! baca.markup()
+          %! baca.markup_function()
         _ \hijinks-ped-ad-libitum-markup
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1915,7 +1915,7 @@ number.1.Piano.LH.Music = {
         af,!32.
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1924,7 +1924,7 @@ number.1.Piano.LH.Music = {
         g32.
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1933,7 +1933,7 @@ number.1.Piano.LH.Music = {
         a64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % STOP_BEAM:
           %! hijinks.make_piano_material()
@@ -1959,7 +1959,7 @@ number.1.Piano.LH.Music = {
         b,,16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % START_BEAM:
           %! hijinks.make_piano_material()
@@ -1971,7 +1971,7 @@ number.1.Piano.LH.Music = {
         g,16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1980,7 +1980,7 @@ number.1.Piano.LH.Music = {
         c32.
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1989,7 +1989,7 @@ number.1.Piano.LH.Music = {
         d32.
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1998,7 +1998,7 @@ number.1.Piano.LH.Music = {
         fs!32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2007,7 +2007,7 @@ number.1.Piano.LH.Music = {
         af!32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2016,7 +2016,7 @@ number.1.Piano.LH.Music = {
         bf!32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % STOP_BEAM:
           %! hijinks.make_piano_material()
@@ -2042,7 +2042,7 @@ number.1.Piano.LH.Music = {
         c,,32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % START_BEAM:
           %! hijinks.make_piano_material()
@@ -2054,7 +2054,7 @@ number.1.Piano.LH.Music = {
         d,,32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2063,7 +2063,7 @@ number.1.Piano.LH.Music = {
         bf,,!32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2074,7 +2074,7 @@ number.1.Piano.LH.Music = {
         e,16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2083,7 +2083,7 @@ number.1.Piano.LH.Music = {
         af,!16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2092,7 +2092,7 @@ number.1.Piano.LH.Music = {
         f16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % STOP_BEAM:
           %! hijinks.make_piano_material()
@@ -2141,7 +2141,7 @@ number.1.Piano.LH.Music = {
         e16.
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % START_BEAM:
           %! hijinks.make_piano_material()
@@ -2153,7 +2153,7 @@ number.1.Piano.LH.Music = {
         af!16.
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2162,7 +2162,7 @@ number.1.Piano.LH.Music = {
         b8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % STOP_BEAM:
           %! hijinks.make_piano_material()
@@ -2190,7 +2190,7 @@ number.1.Piano.LH.Music = {
         e,16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % START_BEAM:
           %! hijinks.make_piano_material()
@@ -2202,7 +2202,7 @@ number.1.Piano.LH.Music = {
         b,16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2211,7 +2211,7 @@ number.1.Piano.LH.Music = {
         c16.
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2222,7 +2222,7 @@ number.1.Piano.LH.Music = {
         d16.
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2231,7 +2231,7 @@ number.1.Piano.LH.Music = {
         bf!8
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % STOP_BEAM:
           %! hijinks.make_piano_material()
@@ -2259,7 +2259,7 @@ number.1.Piano.LH.Music = {
         c,,32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % START_BEAM:
           %! hijinks.make_piano_material()
@@ -2271,7 +2271,7 @@ number.1.Piano.LH.Music = {
         e,,32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2280,7 +2280,7 @@ number.1.Piano.LH.Music = {
         b,,64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2289,7 +2289,7 @@ number.1.Piano.LH.Music = {
         d,64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2298,7 +2298,7 @@ number.1.Piano.LH.Music = {
         ef,!64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2307,7 +2307,7 @@ number.1.Piano.LH.Music = {
         bf,!64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2316,7 +2316,7 @@ number.1.Piano.LH.Music = {
         cs!16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2325,7 +2325,7 @@ number.1.Piano.LH.Music = {
         af!16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2334,7 +2334,7 @@ number.1.Piano.LH.Music = {
         a16
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % STOP_BEAM:
           %! hijinks.make_piano_material()
@@ -2373,7 +2373,7 @@ number.1.Piano.LH.Music = {
         d,,16.
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % START_BEAM:
           %! hijinks.make_piano_material()
@@ -2385,7 +2385,7 @@ number.1.Piano.LH.Music = {
         g,,16.
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2394,7 +2394,7 @@ number.1.Piano.LH.Music = {
         bf,,!32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2403,7 +2403,7 @@ number.1.Piano.LH.Music = {
         f,32
         % AFTER:
         % ARTICULATIONS:
-          %! baca.tenuto()
+          %! baca.tenuto_function()
         - \tenuto
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2412,7 +2412,7 @@ number.1.Piano.LH.Music = {
         c64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2429,13 +2429,13 @@ number.1.Piano.LH.Music = {
         \once \override Score.RehearsalMark.self-alignment-X = #right
         % OPENING:
         % COMMANDS:
-          %! baca.mark()
+          %! baca.mark_function()
         \mark \hijinks-colophon-markup
           %! hijinks.make_piano_material()
         ef!64
         % AFTER:
         % ARTICULATIONS:
-          %! baca.staccato()
+          %! baca.staccato_function()
         - \staccato
         % STOP_BEAM:
           %! hijinks.make_piano_material()

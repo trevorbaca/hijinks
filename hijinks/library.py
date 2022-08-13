@@ -144,22 +144,6 @@ def short_instrument_names():
     }
 
 
-def short_instrument_name(
-    key,
-    alert=None,
-    context="Staff",
-    selector=lambda _: abjad.select.leaf(_, 0),
-):
-    short_instrument_name = short_instrument_names()[key]
-    command = baca.short_instrument_name(
-        short_instrument_name,
-        alert=alert,
-        context=context,
-        selector=selector,
-    )
-    return baca.not_parts(command)
-
-
 def short_instrument_name_function(argument, key, manifests, *, context="Staff"):
     short_instrument_name = short_instrument_names()[key]
     baca.short_instrument_name_function(

@@ -79,8 +79,10 @@ def vn(voice):
         )
         baca.instrument_name_function(o.leaf(0), r"\hijinks-violin-markup")
         baca.clef_function(o.leaf(0), "treble")
-        library.short_instrument_name_function(
-            o.leaf(0), "Vn.", accumulator.manifests()
+        baca.short_instrument_name_function(
+            o.leaf(0),
+            accumulator.short_instrument_names["Vn."],
+            accumulator.manifests(),
         )
         baca.markup_function(
             o.leaf(0),
@@ -111,8 +113,11 @@ def pf(score):
         baca.instrument_name_function(
             o.leaf(0), r"\hijinks-piano-markup", context="PianoStaff"
         )
-        library.short_instrument_name_function(
-            o.leaf(0), "Pf.", accumulator.manifests(), context="PianoStaff"
+        baca.short_instrument_name_function(
+            o.leaf(0),
+            accumulator.short_instrument_names["Pf."],
+            accumulator.manifests(),
+            context="PianoStaff",
         )
         baca.clef_function(o.leaf(0), "treble")
         baca.markup_function(

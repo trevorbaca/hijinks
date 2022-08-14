@@ -74,16 +74,10 @@ def vn(voice):
         return result
 
     with baca.scope(abjad.select.leaves(voice)) as o:
-        baca.instrument_function(
-            o.leaf(0), accumulator.instruments["Violin"], accumulator.manifests()
-        )
+        baca.instrument_function(o.leaf(0), "Violin", accumulator.manifests())
         baca.instrument_name_function(o.leaf(0), r"\hijinks-violin-markup")
         baca.clef_function(o.leaf(0), "treble")
-        baca.short_instrument_name_function(
-            o.leaf(0),
-            accumulator.short_instrument_names["Vn."],
-            accumulator.manifests(),
-        )
+        baca.short_instrument_name_function(o.leaf(0), "Vn.", accumulator.manifests())
         baca.markup_function(
             o.leaf(0),
             r"\hijinks-pp-sempre-al-fino-markup",
@@ -107,15 +101,13 @@ def pf(score):
         return result
 
     with baca.scope(accumulator.voice("rh")) as o:
-        baca.instrument_function(
-            o.leaf(0), accumulator.instruments["Piano"], accumulator.manifests()
-        )
+        baca.instrument_function(o.leaf(0), "Piano", accumulator.manifests())
         baca.instrument_name_function(
             o.leaf(0), r"\hijinks-piano-markup", context="PianoStaff"
         )
         baca.short_instrument_name_function(
             o.leaf(0),
-            accumulator.short_instrument_names["Pf."],
+            "Pf.",
             accumulator.manifests(),
             context="PianoStaff",
         )

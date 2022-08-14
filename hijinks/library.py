@@ -144,16 +144,6 @@ def short_instrument_names():
     }
 
 
-def short_instrument_name_function(argument, key, manifests, *, context="Staff"):
-    short_instrument_name = short_instrument_names()[key]
-    baca.short_instrument_name_function(
-        argument,
-        short_instrument_name,
-        manifests,
-        context=context,
-    )
-
-
 def metronome_marks():
     return {
         "32": abjad.MetronomeMark((1, 8), 32),

@@ -11,9 +11,9 @@ score = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 
 accumulator = baca.CommandAccumulator(
-    instruments=library.instruments(),
-    short_instrument_names=library.short_instrument_names(),
-    metronome_marks=library.metronome_marks(),
+    instruments=library.instruments,
+    short_instrument_names=library.short_instrument_names,
+    metronome_marks=library.metronome_marks,
     time_signatures=15 * [(1, 8)],
     voice_abbreviations=library.voice_abbreviations(),
     voice_names=voice_names,
@@ -22,14 +22,14 @@ accumulator = baca.CommandAccumulator(
 baca.interpret.set_up_score(
     score,
     accumulator,
-    accumulator.manifests(),
+    library.manifests,
     accumulator.time_signatures,
     always_make_global_rests=True,
     attach_nonfirst_empty_start_bar=True,
 )
 
 skips = score["Skips"]
-manifests = accumulator.manifests()
+manifests = library.manifests
 
 baca.metronome_mark_function(skips[1 - 1], accumulator.metronome_marks["32"], manifests)
 
@@ -74,10 +74,10 @@ def vn(voice):
         return result
 
     with baca.scope(abjad.select.leaves(voice)) as o:
-        baca.instrument_function(o.leaf(0), "Violin", accumulator.manifests())
+        baca.instrument_function(o.leaf(0), "Violin", library.manifests)
         baca.instrument_name_function(o.leaf(0), r"\hijinks-violin-markup")
         baca.clef_function(o.leaf(0), "treble")
-        baca.short_instrument_name_function(o.leaf(0), "Vn.", accumulator.manifests())
+        baca.short_instrument_name_function(o.leaf(0), "Vn.", library.manifests)
         baca.markup_function(
             o.leaf(0),
             r"\hijinks-pp-sempre-al-fino-markup",
@@ -101,14 +101,14 @@ def pf(score):
         return result
 
     with baca.scope(accumulator.voice("rh")) as o:
-        baca.instrument_function(o.leaf(0), "Piano", accumulator.manifests())
+        baca.instrument_function(o.leaf(0), "Piano", library.manifests)
         baca.instrument_name_function(
             o.leaf(0), r"\hijinks-piano-markup", context="PianoStaff"
         )
         baca.short_instrument_name_function(
             o.leaf(0),
             "Pf.",
-            accumulator.manifests(),
+            library.manifests,
             context="PianoStaff",
         )
         baca.clef_function(o.leaf(0), "treble")
@@ -157,7 +157,7 @@ if __name__ == "__main__":
     del defaults["append_anchor_skip"]
     metadata, persist, score, timing = baca.build.section(
         score,
-        accumulator.manifests(),
+        library.manifests,
         accumulator.time_signatures,
         **defaults,
         always_make_global_rests=True,

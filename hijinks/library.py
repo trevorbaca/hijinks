@@ -20,13 +20,6 @@ def circuit():
     return circuit
 
 
-def instruments():
-    return {
-        "Piano": abjad.Piano(),
-        "Violin": abjad.Violin(),
-    }
-
-
 def make_empty_score():
     tag = baca.tags.function_name(inspect.currentframe())
     global_context = baca.score.make_global_context()
@@ -137,19 +130,6 @@ def make_violin_rhythm():
     return components
 
 
-def short_instrument_names():
-    return {
-        "Vn.": abjad.ShortInstrumentName(r"\hijinks-vn-markup"),
-        "Pf.": abjad.ShortInstrumentName(r"\hijinks-pf-markup", context="PianoStaff"),
-    }
-
-
-def metronome_marks():
-    return {
-        "32": abjad.MetronomeMark((1, 8), 32),
-    }
-
-
 def violin_pitches():
     """
     1-175
@@ -186,3 +166,27 @@ def voice_abbreviations():
         "rh": "Piano.RH.Music",
         "lh": "Piano.LH.Music",
     }
+
+
+instruments = {
+    "Piano": abjad.Piano(),
+    "Violin": abjad.Violin(),
+}
+
+
+metronome_marks = {
+    "32": abjad.MetronomeMark((1, 8), 32),
+}
+
+
+short_instrument_names = {
+    "Vn.": abjad.ShortInstrumentName(r"\hijinks-vn-markup"),
+    "Pf.": abjad.ShortInstrumentName(r"\hijinks-pf-markup", context="PianoStaff"),
+}
+
+
+manifests = {
+    "abjad.Instrument": instruments,
+    "abjad.MetronomeMark": metronome_marks,
+    "abjad.ShortInstrumentName": short_instrument_names,
+}

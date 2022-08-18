@@ -160,14 +160,6 @@ def violin_pitches():
     return violin_pitches
 
 
-def voice_abbreviations():
-    return {
-        "vn": "Violin.Music",
-        "rh": "Piano.RH.Music",
-        "lh": "Piano.LH.Music",
-    }
-
-
 instruments = {
     "Piano": abjad.Piano(),
     "Violin": abjad.Violin(),
@@ -189,4 +181,11 @@ manifests = {
     "abjad.Instrument": instruments,
     "abjad.MetronomeMark": metronome_marks,
     "abjad.ShortInstrumentName": short_instrument_names,
+}
+
+
+voice_abbreviations = {
+    "vn": "Violin.Music",
+    "rh": "Piano.RH.Music",
+    "lh": "Piano.LH.Music",
 }

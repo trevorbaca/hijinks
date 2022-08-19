@@ -15,7 +15,7 @@ accumulator = baca.CommandAccumulator(
     short_instrument_names=library.short_instrument_names,
     metronome_marks=library.metronome_marks,
     time_signatures=15 * [(1, 8)],
-    voice_abbreviations=library.voice_abbreviations,
+    _voice_abbreviations=library.voice_abbreviations,
     voice_names=voice_names,
 )
 

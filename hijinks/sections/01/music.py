@@ -22,7 +22,7 @@ baca.interpret.set_up_score(
     accumulator,
     library.manifests,
     always_make_global_rests=True,
-    attach_nonfirst_empty_start_bar=True,
+    first_section=True,
 )
 
 skips = score["Skips"]

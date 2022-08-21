@@ -26,9 +26,10 @@ baca.interpret.set_up_score(
 )
 
 skips = score["Skips"]
-manifests = library.manifests
 
-baca.metronome_mark_function(skips[1 - 1], library.metronome_marks["32"], manifests)
+baca.metronome_mark_function(
+    skips[1 - 1], library.metronome_marks["32"], library.manifests
+)
 
 baca.bar_line_function(skips[15 - 1], "|.")
 
@@ -45,12 +46,12 @@ baca.literal_function(
 )
 
 
-def VN(voice):
+def VN(voice, accumulator):
     music = library.make_violin_rhythm()
     voice.extend(music)
 
 
-def PF(score):
+def PF(score, accumulator):
     voice = score["Piano.RH.Music"]
     music = library.make_piano_material("rh", library.circuit())
     voice.extend(music)
@@ -142,8 +143,8 @@ def pf(score):
 
 
 def main():
-    VN(accumulator.voice("vn"))
-    PF(score)
+    VN(accumulator.voice("vn"), accumulator)
+    PF(score, accumulator)
     vn(accumulator.voice("vn"))
     pf(score)
 

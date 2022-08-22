@@ -142,15 +142,15 @@ def pf(score):
         baca.rehearsal_mark_self_alignment_x_function(o.leaf(-1), abjad.RIGHT)
 
 
-def main():
+def make_score():
     VN(accumulator.voice("vn"), accumulator)
     PF(score, accumulator)
     vn(accumulator.voice("vn"))
     pf(score)
 
 
-if __name__ == "__main__":
-    main()
+def main():
+    make_score()
     defaults = baca.interpret.section_defaults()
     del defaults["append_anchor_skip"]
     metadata, persist, timing = baca.build.section(
@@ -173,3 +173,7 @@ if __name__ == "__main__":
         includes=["../stylesheet.ily", "header.ily"],
     )
     baca.build.persist(lilypond_file, metadata, persist, timing)
+
+
+if __name__ == "__main__":
+    main()

@@ -7,43 +7,33 @@ from hijinks import library
 ########################################### 01 ##########################################
 #########################################################################################
 
-score = library.make_empty_score()
-voice_names = baca.accumulator.get_voice_names(score)
 
-accumulator = baca.CommandAccumulator(
-    time_signatures=15 * [(1, 8)],
-    _voice_abbreviations=library.voice_abbreviations,
-    _voice_names=voice_names,
-)
+def make_empty_score():
+    score = library.make_empty_score()
+    voice_names = baca.accumulator.get_voice_names(score)
+    accumulator = baca.CommandAccumulator(
+        time_signatures=15 * [(1, 8)],
+        _voice_abbreviations=library.voice_abbreviations,
+        _voice_names=voice_names,
+    )
+    return score, accumulator
 
-baca.interpret.set_up_score(
-    score,
-    accumulator.time_signatures,
-    accumulator,
-    library.manifests,
-    always_make_global_rests=True,
-    first_section=True,
-)
 
-skips = score["Skips"]
-
-baca.metronome_mark_function(
-    skips[1 - 1], library.metronome_marks["32"], library.manifests
-)
-
-baca.bar_line_function(skips[15 - 1], "|.")
-
-baca.literal_function(
-    skips[15 - 1],
-    r"\override Score.BarLine.transparent = ##f",
-    site="after",
-)
-
-baca.literal_function(
-    skips[15 - 1],
-    r"\override Score.SpanBar.transparent = ##f",
-    site="after",
-)
+def GLOBALS(skips):
+    baca.metronome_mark_function(
+        skips[1 - 1], library.metronome_marks["32"], library.manifests
+    )
+    baca.bar_line_function(skips[15 - 1], "|.")
+    baca.literal_function(
+        skips[15 - 1],
+        r"\override Score.BarLine.transparent = ##f",
+        site="after",
+    )
+    baca.literal_function(
+        skips[15 - 1],
+        r"\override Score.SpanBar.transparent = ##f",
+        site="after",
+    )
 
 
 def VN(voice, accumulator):
@@ -60,7 +50,7 @@ def PF(score, accumulator):
     voice.extend(music)
 
 
-def vn(voice):
+def vn(voice, accumulator):
     def _select_short_notes(argument):
         result = abjad.select.notes(argument)
         result = [_ for _ in result if _.written_duration <= abjad.Duration((1, 16))]
@@ -87,7 +77,7 @@ def vn(voice):
         baca.beam_positions_function(o, -4)
 
 
-def pf(score):
+def pf(score, accumulator):
     def _select_short_notes(argument):
         result = abjad.select.notes(argument)
         result = [_ for _ in result if _.written_duration <= abjad.Duration((1, 64))]
@@ -143,14 +133,25 @@ def pf(score):
 
 
 def make_score():
+    score, accumulator = make_empty_score()
+    baca.interpret.set_up_score(
+        score,
+        accumulator.time_signatures,
+        accumulator,
+        library.manifests,
+        always_make_global_rests=True,
+        first_section=True,
+    )
+    GLOBALS(score["Skips"])
     VN(accumulator.voice("vn"), accumulator)
     PF(score, accumulator)
-    vn(accumulator.voice("vn"))
-    pf(score)
+    vn(accumulator.voice("vn"), accumulator)
+    pf(score, accumulator)
+    return score, accumulator
 
 
 def main():
-    make_score()
+    score, accumulator = make_score()
     defaults = baca.interpret.section_defaults()
     del defaults["append_anchor_skip"]
     metadata, persist, timing = baca.build.section(

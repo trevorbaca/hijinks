@@ -160,10 +160,10 @@ def main():
         accumulator.time_signatures,
         **defaults,
         always_make_global_rests=True,
-        deactivate=(
+        deactivate=[
             baca.tags.EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT,
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
-        ),
+        ],
         error_on_not_yet_pitched=True,
         final_section=True,
         global_rests_in_topmost_staff=True,

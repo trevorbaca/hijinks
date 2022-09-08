@@ -20,9 +20,7 @@ def make_empty_score():
 
 
 def GLOBALS(skips):
-    baca.metronome_mark(
-        skips[1 - 1], library.metronome_marks["32"], library.manifests
-    )
+    baca.metronome_mark(skips[1 - 1], library.metronome_marks["32"], library.manifests)
     baca.bar_line(skips[15 - 1], "|.")
     baca.literal(
         skips[15 - 1],
@@ -90,9 +88,7 @@ def pf(score, accumulator):
 
     with baca.scope(accumulator.voice("rh")) as o:
         baca.instrument(o.leaf(0), "Piano", library.manifests)
-        baca.instrument_name(
-            o.leaf(0), r"\hijinks-piano-markup", context="PianoStaff"
-        )
+        baca.instrument_name(o.leaf(0), r"\hijinks-piano-markup", context="PianoStaff")
         baca.short_instrument_name(
             o.leaf(0),
             "Pf.",

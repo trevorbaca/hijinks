@@ -20,16 +20,16 @@ def make_empty_score():
 
 
 def GLOBALS(skips):
-    baca.metronome_mark_function(
+    baca.metronome_mark(
         skips[1 - 1], library.metronome_marks["32"], library.manifests
     )
-    baca.bar_line_function(skips[15 - 1], "|.")
-    baca.literal_function(
+    baca.bar_line(skips[15 - 1], "|.")
+    baca.literal(
         skips[15 - 1],
         r"\override Score.BarLine.transparent = ##f",
         site="after",
     )
-    baca.literal_function(
+    baca.literal(
         skips[15 - 1],
         r"\override Score.SpanBar.transparent = ##f",
         site="after",
@@ -62,19 +62,19 @@ def vn(voice, accumulator):
         return result
 
     with baca.scope(abjad.select.leaves(voice)) as o:
-        baca.instrument_function(o.leaf(0), "Violin", library.manifests)
-        baca.instrument_name_function(o.leaf(0), r"\hijinks-violin-markup")
-        baca.clef_function(o.leaf(0), "treble")
-        baca.short_instrument_name_function(o.leaf(0), "Vn.", library.manifests)
-        baca.markup_function(
+        baca.instrument(o.leaf(0), "Violin", library.manifests)
+        baca.instrument_name(o.leaf(0), r"\hijinks-violin-markup")
+        baca.clef(o.leaf(0), "treble")
+        baca.short_instrument_name(o.leaf(0), "Vn.", library.manifests)
+        baca.markup(
             o.leaf(0),
             r"\hijinks-pp-sempre-al-fino-markup",
             direction=abjad.DOWN,
         )
-        baca.pitches_function(o, library.violin_pitches())
-        baca.staccato_function(_select_short_notes(o))
-        baca.tenuto_function(_select_long_notes(o))
-        baca.beam_positions_function(o, -4)
+        baca.pitches(o, library.violin_pitches())
+        baca.staccato(_select_short_notes(o))
+        baca.tenuto(_select_long_notes(o))
+        baca.beam_positions(o, -4)
 
 
 def pf(score, accumulator):
@@ -89,47 +89,47 @@ def pf(score, accumulator):
         return result
 
     with baca.scope(accumulator.voice("rh")) as o:
-        baca.instrument_function(o.leaf(0), "Piano", library.manifests)
-        baca.instrument_name_function(
+        baca.instrument(o.leaf(0), "Piano", library.manifests)
+        baca.instrument_name(
             o.leaf(0), r"\hijinks-piano-markup", context="PianoStaff"
         )
-        baca.short_instrument_name_function(
+        baca.short_instrument_name(
             o.leaf(0),
             "Pf.",
             library.manifests,
             context="PianoStaff",
         )
-        baca.clef_function(o.leaf(0), "treble")
-        baca.markup_function(
+        baca.clef(o.leaf(0), "treble")
+        baca.markup(
             o.leaf(0),
             r"\hijinks-pp-sempre-al-fino-markup",
             direction=abjad.DOWN,
         )
-        baca.beam_positions_function(o.leaves(), -6)
-        baca.stem_down_function(o.leaves())
+        baca.beam_positions(o.leaves(), -6)
+        baca.stem_down(o.leaves())
         tuplet = abjad.select.tuplet(abjad.select.top(o), -1)
-        baca.tuplet_bracket_shorten_pair_function(tuplet, (0, 0.6))
+        baca.tuplet_bracket_shorten_pair(tuplet, (0, 0.6))
     with baca.scope(accumulator.voice("lh")) as o:
-        baca.clef_function(o.leaf(0), "bass")
-        baca.markup_function(
+        baca.clef(o.leaf(0), "bass")
+        baca.markup(
             o.leaf(1),
             r"\hijinks-ped-ad-libitum-markup",
             direction=abjad.DOWN,
         ),
-        baca.text_script_padding_function(o.leaves(), 2)
-        baca.beam_positions_function(o.leaves(), 6)
-        baca.stem_up_function(o.leaves())
+        baca.text_script_padding(o.leaves(), 2)
+        baca.beam_positions(o.leaves(), 6)
+        baca.stem_up(o.leaves())
         tuplet = abjad.select.tuplet(abjad.select.top(o), -1)
-        baca.tuplet_bracket_shorten_pair_function(tuplet, (0, 0.6))
+        baca.tuplet_bracket_shorten_pair(tuplet, (0, 0.6))
     with baca.scope(score["PianoStaff"]) as o:
-        baca.staccato_function(_select_short_notes(o))
-        baca.tenuto_function(_select_long_notes(o))
+        baca.staccato(_select_short_notes(o))
+        baca.tenuto(_select_long_notes(o))
     with baca.scope(accumulator.voice("lh")) as o:
-        baca.mark_function(o.leaf(-1), r"\hijinks-colophon-markup")
-        baca.rehearsal_mark_down_function(o.leaf(-1))
-        baca.rehearsal_mark_extra_offset_function(o.leaf(-1), (-7, -7))
-        baca.rehearsal_mark_padding_function(o.leaf(-1), 0)
-        baca.rehearsal_mark_self_alignment_x_function(o.leaf(-1), abjad.RIGHT)
+        baca.mark(o.leaf(-1), r"\hijinks-colophon-markup")
+        baca.rehearsal_mark_down(o.leaf(-1))
+        baca.rehearsal_mark_extra_offset(o.leaf(-1), (-7, -7))
+        baca.rehearsal_mark_padding(o.leaf(-1), 0)
+        baca.rehearsal_mark_self_alignment_x(o.leaf(-1), abjad.RIGHT)
 
 
 def make_score():

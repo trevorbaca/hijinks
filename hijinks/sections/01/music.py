@@ -147,7 +147,7 @@ def make_score():
 
 
 def main():
-    arguments = baca.build.arguments()
+    environment = baca.build.read_environment(__file__, baca.build.argv())
     score, accumulator = make_score()
     defaults = baca.interpret.section_defaults()
     del defaults["append_anchor_skip"]
@@ -155,7 +155,7 @@ def main():
         score,
         library.manifests,
         accumulator.time_signatures,
-        baca.path.dictionaries(__file__),
+        environment,
         **defaults,
         always_make_global_rests=True,
         deactivate=[
@@ -171,7 +171,13 @@ def main():
         include_layout_ly=True,
         includes=["../stylesheet.ily", "header.ily"],
     )
-    baca.build.persist(lilypond_file, metadata, persist, timing, arguments)
+    baca.build.persist(
+        lilypond_file,
+        environment.metadata,
+        environment.persist,
+        timing,
+        environment.arguments,
+    )
 
 
 if __name__ == "__main__":

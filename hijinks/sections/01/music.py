@@ -130,7 +130,7 @@ def pf(score, accumulator):
 
 def make_score():
     score, accumulator = make_empty_score()
-    baca.interpret.set_up_score(
+    baca.section.set_up_score(
         score,
         accumulator.time_signatures,
         accumulator,
@@ -149,7 +149,7 @@ def make_score():
 def main():
     environment = baca.build.read_environment(__file__, baca.build.argv())
     score, accumulator = make_score()
-    defaults = baca.interpret.section_defaults()
+    defaults = baca.section.section_defaults()
     del defaults["append_anchor_skip"]
     metadata, persist, timing = baca.build.section(
         score,

@@ -128,6 +128,7 @@ def pf(score, accumulator):
         baca.rehearsal_mark_self_alignment_x(o.leaf(-1), abjad.RIGHT)
 
 
+@baca.build.timed
 def make_score():
     score, accumulator = make_empty_score()
     baca.section.set_up_score(
@@ -148,7 +149,8 @@ def make_score():
 
 def main():
     environment = baca.build.read_environment(__file__, baca.build.argv())
-    score, accumulator = make_score()
+    timing = baca.build.Timing()
+    score, accumulator = make_score(timing)
     defaults = baca.section.section_defaults()
     del defaults["append_anchor_skip"]
     metadata, persist, timing = baca.build.postprocess_score(

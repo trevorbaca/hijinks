@@ -92,7 +92,7 @@ def pf(score, accumulator):
         baca.short_instrument_name(
             o.leaf(0),
             "Pf.",
-            library.manifests,
+            manifests=library.manifests,
             context="PianoStaff",
         )
         baca.clef(o.leaf(0), "treble")
@@ -135,9 +135,9 @@ def make_score():
         score,
         accumulator.time_signatures,
         accumulator,
-        library.manifests,
         always_make_global_rests=True,
         first_section=True,
+        manifests=library.manifests,
     )
     GLOBALS(score["Skips"])
     VN(accumulator.voice("vn"), accumulator)
@@ -153,20 +153,21 @@ def main():
     score, accumulator = make_score(timing)
     defaults = baca.section.section_defaults()
     del defaults["append_anchor_skip"]
-    metadata, persist, timing = baca.build.postprocess_score(
+    metadata, persist = baca.section.postprocess_score(
         score,
-        library.manifests,
         accumulator.time_signatures,
-        environment,
         **defaults,
         always_make_global_rests=True,
         deactivate=[
             baca.tags.EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT,
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ],
+        environment=environment,
         error_on_not_yet_pitched=True,
         final_section=True,
         global_rests_in_topmost_staff=True,
+        manifests=library.manifests,
+        timing=timing,
     )
     lilypond_file = baca.lilypond.file(
         score,

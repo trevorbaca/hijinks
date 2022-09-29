@@ -10,13 +10,10 @@ from hijinks import library
 
 def make_empty_score():
     score = library.make_empty_score()
-    voice_names = baca.accumulator.get_voice_names(score)
-    accumulator = baca.CommandAccumulator(
-        time_signatures=15 * [(1, 8)],
-        _voice_abbreviations=library.voice_abbreviations,
-        _voice_names=voice_names,
-    )
-    return score, accumulator
+    voices = baca.section.cache_voices(score, library.voice_abbreviations)
+    time_signatures = 15 * [(1, 8)]
+    measures = baca.measures(time_signatures)
+    return score, voices, measures
 
 
 def GLOBALS(skips):
@@ -34,12 +31,12 @@ def GLOBALS(skips):
     )
 
 
-def VN(voice, accumulator):
+def VN(voice):
     music = library.make_violin_rhythm()
     voice.extend(music)
 
 
-def PF(score, accumulator):
+def PF(score):
     voice = score["Piano.RH.Music"]
     music = library.make_piano_material("rh", library.circuit())
     voice.extend(music)
@@ -48,7 +45,7 @@ def PF(score, accumulator):
     voice.extend(music)
 
 
-def vn(voice, accumulator):
+def vn(voice):
     def _select_short_notes(argument):
         result = abjad.select.notes(argument)
         result = [_ for _ in result if _.written_duration <= abjad.Duration((1, 16))]
@@ -75,7 +72,7 @@ def vn(voice, accumulator):
         baca.beam_positions(o, -4)
 
 
-def pf(score, accumulator):
+def pf(score, voices):
     def _select_short_notes(argument):
         result = abjad.select.notes(argument)
         result = [_ for _ in result if _.written_duration <= abjad.Duration((1, 64))]
@@ -86,7 +83,7 @@ def pf(score, accumulator):
         result = [_ for _ in result if _.written_duration > abjad.Duration((1, 64))]
         return result
 
-    with baca.scope(accumulator.voice("rh")) as o:
+    with baca.scope(voices("rh")) as o:
         baca.instrument(o.leaf(0), "Piano", library.manifests)
         baca.instrument_name(o.leaf(0), r"\hijinks-piano-markup", context="PianoStaff")
         baca.short_instrument_name(
@@ -105,7 +102,7 @@ def pf(score, accumulator):
         baca.stem_down(o.leaves())
         tuplet = abjad.select.tuplet(abjad.select.top(o), -1)
         baca.tuplet_bracket_shorten_pair(tuplet, (0, 0.6))
-    with baca.scope(accumulator.voice("lh")) as o:
+    with baca.scope(voices("lh")) as o:
         baca.clef(o.leaf(0), "bass")
         baca.markup(
             o.leaf(1),
@@ -120,7 +117,7 @@ def pf(score, accumulator):
     with baca.scope(score["PianoStaff"]) as o:
         baca.staccato(_select_short_notes(o))
         baca.tenuto(_select_long_notes(o))
-    with baca.scope(accumulator.voice("lh")) as o:
+    with baca.scope(voices("lh")) as o:
         baca.mark(o.leaf(-1), r"\hijinks-colophon-markup")
         baca.rehearsal_mark_down(o.leaf(-1))
         baca.rehearsal_mark_extra_offset(o.leaf(-1), (-7, -7))
@@ -130,32 +127,31 @@ def pf(score, accumulator):
 
 @baca.build.timed("make_score")
 def make_score():
-    score, accumulator = make_empty_score()
+    score, voices, measures = make_empty_score()
     baca.section.set_up_score(
         score,
-        accumulator.time_signatures,
-        accumulator,
+        measures(),
         always_make_global_rests=True,
         first_section=True,
         manifests=library.manifests,
     )
     GLOBALS(score["Skips"])
-    VN(accumulator.voice("vn"), accumulator)
-    PF(score, accumulator)
-    vn(accumulator.voice("vn"), accumulator)
-    pf(score, accumulator)
-    return score, accumulator
+    VN(voices("vn"))
+    PF(score)
+    vn(voices("vn"))
+    pf(score, voices)
+    return score, measures
 
 
 def main():
     environment = baca.build.read_environment(__file__, baca.build.argv())
     timing = baca.build.Timing()
-    score, accumulator = make_score(timing)
+    score, measures = make_score(timing)
     defaults = baca.section.section_defaults()
     del defaults["append_anchor_skip"]
     metadata, persist = baca.section.postprocess_score(
         score,
-        accumulator.time_signatures,
+        measures(),
         **defaults,
         always_make_global_rests=True,
         deactivate=[

@@ -145,8 +145,7 @@ def make_score():
 
 def main():
     environment = baca.build.read_environment(__file__, baca.build.argv())
-    timing = baca.build.Timing()
-    score, measures = make_score(timing)
+    score, measures = make_score(environment.timing)
     defaults = baca.section.section_defaults()
     del defaults["append_anchor_skip"]
     metadata, persist = baca.section.postprocess_score(
@@ -163,7 +162,6 @@ def main():
         final_section=True,
         global_rests_in_topmost_staff=True,
         manifests=library.manifests,
-        timing=timing,
     )
     lilypond_file = baca.lilypond.file(
         score,
@@ -174,7 +172,7 @@ def main():
         lilypond_file,
         metadata,
         persist,
-        timing,
+        environment.timing,
         environment.arguments,
     )
 

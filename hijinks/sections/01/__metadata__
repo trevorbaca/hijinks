@@ -1,8 +1,106 @@
 {
+    "alive_during_section": [
+        "Score",
+        "GlobalContext",
+        "Skips",
+        "MusicContext",
+        "Violin.Staff",
+        "Rests",
+        "Violin.Music",
+        "PianoStaff",
+        "Piano.RH.Staff",
+        "Piano.RH.Music",
+        "Piano.LH.Staff",
+        "Piano.LH.Music",
+    ],
     "bol_measure_numbers": [1, 6, 11],
     "duration": "0'28''",
     "final_measure_number": 15,
     "first_measure_number": 1,
+    "persistent_indicators": {
+        "Piano.LH.Staff": [
+            baca.Memento(
+                context="Piano.LH.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Clef",
+                synthetic_offset=None,
+                value="bass",
+            )
+        ],
+        "Piano.RH.Staff": [
+            baca.Memento(
+                context="Piano.RH.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Clef",
+                synthetic_offset=None,
+                value="treble",
+            )
+        ],
+        "PianoStaff": [
+            baca.Memento(
+                context="Piano.RH.Music",
+                edition=None,
+                manifest="instruments",
+                prototype=None,
+                synthetic_offset=None,
+                value="Piano",
+            ),
+            baca.Memento(
+                context="Piano.RH.Music",
+                edition=Tag(string="-PARTS"),
+                manifest="short_instrument_names",
+                prototype=None,
+                synthetic_offset=None,
+                value="Pf.",
+            ),
+        ],
+        "Score": [
+            baca.Memento(
+                context="Skips",
+                edition=None,
+                manifest="metronome_marks",
+                prototype=None,
+                synthetic_offset=None,
+                value="32",
+            ),
+            baca.Memento(
+                context="Skips",
+                edition=None,
+                manifest=None,
+                prototype="abjad.TimeSignature",
+                synthetic_offset=None,
+                value="1/8",
+            ),
+        ],
+        "Violin.Staff": [
+            baca.Memento(
+                context="Violin.Music",
+                edition=None,
+                manifest="instruments",
+                prototype=None,
+                synthetic_offset=None,
+                value="Violin",
+            ),
+            baca.Memento(
+                context="Violin.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Clef",
+                synthetic_offset=None,
+                value="treble",
+            ),
+            baca.Memento(
+                context="Violin.Music",
+                edition=Tag(string="-PARTS"),
+                manifest="short_instrument_names",
+                prototype=None,
+                synthetic_offset=None,
+                value="Vn.",
+            ),
+        ],
+    },
     "start_clock_time": "0'00''",
     "stop_clock_time": "0'28''",
     "time_signatures": [

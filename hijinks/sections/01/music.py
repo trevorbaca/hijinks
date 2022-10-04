@@ -140,17 +140,16 @@ def make_score():
     PF(score)
     vn(voices("vn"))
     pf(score, voices)
-    return score, measures
+    return score
 
 
 def main():
     environment = baca.build.read_environment(__file__, baca.build.argv())
-    score, measures = make_score(environment.timing)
+    score = make_score(environment.timing)
     defaults = baca.section.section_defaults()
     del defaults["append_anchor_skip"]
     metadata = baca.section.postprocess_score(
         score,
-        measures(),
         **defaults,
         always_make_global_rests=True,
         deactivate=[

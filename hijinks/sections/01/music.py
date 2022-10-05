@@ -152,15 +152,17 @@ def main():
         score,
         **defaults,
         always_make_global_rests=True,
-        deactivate=[
-            baca.tags.EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT,
-            baca.tags.RHYTHM_ANNOTATION_SPANNER,
-        ],
         environment=environment,
         error_on_not_yet_pitched=True,
         final_section=True,
         global_rests_in_topmost_staff=True,
         manifests=library.manifests,
+        tags=baca.tags.Tags(
+            deactivate=[
+                baca.tags.EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT,
+                baca.tags.RHYTHM_ANNOTATION_SPANNER,
+            ],
+        ),
     )
     lilypond_file = baca.lilypond.file(
         score,

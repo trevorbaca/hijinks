@@ -17,6 +17,7 @@
     "duration": "0'28''",
     "final_measure_number": 15,
     "first_measure_number": 1,
+    "has_anchor_skip": False,
     "persistent_indicators": {
         "Piano.LH.Staff": [
             baca.Memento(

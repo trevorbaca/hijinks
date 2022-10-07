@@ -146,11 +146,9 @@ def make_score():
 def main():
     environment = baca.build.read_environment(__file__, baca.build.argv())
     score = make_score(environment.timing)
-    defaults = baca.section.section_defaults()
-    del defaults["append_anchor_skip"]
     metadata = baca.section.postprocess_score(
         score,
-        **defaults,
+        **baca.section.section_defaults(),
         always_make_global_rests=True,
         environment=environment,
         error_on_not_yet_pitched=True,

@@ -92,7 +92,7 @@ def make_piano_material(staff, circuit):
     for proportion, pair, aggregate in zip(proportions[staff], pairs[staff], circuit):
         if staff == "rh":
             aggregate = list(reversed(aggregate))
-        tuplet = maker(proportion, pair, tag=tag)
+        tuplet = maker(tuple(proportion), pair, tag=tag)
         assert isinstance(tuplet, abjad.Tuplet)
         duration = abjad.get.duration(tuplet)
         pair = abjad.duration.with_denominator(duration, 32)

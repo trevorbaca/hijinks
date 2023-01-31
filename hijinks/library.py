@@ -96,8 +96,7 @@ def make_piano_material(staff, circuit):
         assert isinstance(tuplet, abjad.Tuplet)
         duration = abjad.get.duration(tuplet)
         pair = abjad.duration.with_denominator(duration, 32)
-        duration = abjad.NonreducedFraction(pair)
-        tuplet.denominator = duration.numerator
+        tuplet.denominator = pair[0]
         if tuplet.trivial():
             tuplet.hide = True
         leaves = abjad.select.leaves(tuplet)

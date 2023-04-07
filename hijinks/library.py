@@ -2,6 +2,7 @@ import inspect
 
 import abjad
 import baca
+from abjadext import rmakers
 
 
 def circuit():
@@ -97,8 +98,6 @@ def make_piano_material(staff, circuit):
         duration = abjad.get.duration(tuplet)
         pair = abjad.duration.with_denominator(duration, 32)
         tuplet.denominator = pair[0]
-        if tuplet.trivial():
-            tuplet.hide = True
         leaves = abjad.select.leaves(tuplet)
         abjad.beam(leaves, tag=tag)
         notes = abjad.select.leaves(tuplet, pitched=True)
@@ -106,6 +105,7 @@ def make_piano_material(staff, circuit):
             note.written_pitch = pitch_number
         music.append(tuplet)
     music.insert(-1, abjad.Rest("r8", tag=tag))
+    rmakers.hide_trivial(music)
     return music
 
 

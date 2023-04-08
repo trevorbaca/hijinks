@@ -21,8 +21,6 @@
               %! BREAK
             \baca-lbsd #32 #'(12 26 26)
               %! BREAK
-            \noBreak
-              %! BREAK
             \pageBreak
             s1 * 1/8
 
@@ -51,8 +49,6 @@
             \baca-lbsd #98 #'(4 26 26)
               %! BREAK
             \break
-              %! BREAK
-            \noBreak
             s1 * 1/8
 
             % [PageLayout measure 7]
@@ -80,8 +76,6 @@
             \baca-lbsd #160 #'(4 26 26)
               %! BREAK
             \break
-              %! BREAK
-            \noBreak
             s1 * 1/8
 
             % [PageLayout measure 12]

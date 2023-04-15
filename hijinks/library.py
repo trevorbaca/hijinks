@@ -167,7 +167,7 @@ instruments = {
 
 
 metronome_marks = {
-    "32": abjad.MetronomeMark((1, 8), 32),
+    "32": abjad.MetronomeMark(abjad.Duration(1, 8), 32),
 }
 
 

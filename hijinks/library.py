@@ -89,12 +89,12 @@ def make_piano_material(staff, circuit):
         (2, 2, 1, 1, 1, 1, 4, 4, 4),
         (6, 6, 2, 2, 1, 1),
     ]
-    music = []
+    music = abjad.Voice(name="Temporary")
     for proportion, pair, aggregate in zip(proportions[staff], pairs[staff], circuit):
         if staff == "rh":
             aggregate = list(reversed(aggregate))
         tuplet = maker(tuple(proportion), pair, tag=tag)
-        assert isinstance(tuplet, abjad.Tuplet)
+        music.append(tuplet)
         duration = abjad.get.duration(tuplet)
         pair = abjad.duration.with_denominator(duration, 32)
         tuplet.denominator = pair[0]
@@ -103,9 +103,9 @@ def make_piano_material(staff, circuit):
         notes = abjad.select.leaves(tuplet, pitched=True)
         for note, pitch_number in zip(notes, aggregate):
             note.written_pitch = pitch_number
-        music.append(tuplet)
     music.insert(-1, abjad.Rest("r8", tag=tag))
     rmakers.hide_trivial(music)
+    music = abjad.mutate.eject_contents(music)
     return music
 
 
@@ -118,15 +118,16 @@ def make_violin_rhythm():
         ((3, 2), (4, 16)),
     ]
     maker = abjad.makers.tuplet_from_ratio_and_pair
-    components = []
+    voice = abjad.Voice(name="Temporary")
     for definition in definitions:
         ratio, pair = definition
         assert isinstance(ratio, tuple)
         tuplet = maker(ratio, pair, tag=tag)
+        voice.append(tuplet)
         leaves = abjad.select.leaves(tuplet)
         abjad.beam(leaves, tag=tag)
-        components.append(tuplet)
-    components.insert(-1, abjad.Rest("r8", tag=tag))
+    voice.insert(-1, abjad.Rest("r8", tag=tag))
+    components = abjad.mutate.eject_contents(voice)
     return components
 
 

@@ -120,6 +120,7 @@
     %            makes LilyPond ignore self-alignment-X tweaks;
     %            probably should never be done at stylesheet level.
     % NOTE:      may be best to override NO text script properties.
+    \override TextSpanner.to-barline = ##t
     \override TimeSignature.stencil = ##f
     \override TrillSpanner.bound-details.right.padding = 2
     \override TupletBracket.breakable = ##t

@@ -17,7 +17,9 @@ def make_empty_score():
 
 
 def GLOBALS(skips):
-    baca.metronome_mark(skips[1 - 1], library.metronome_marks["32"], library.manifests)
+    baca.metronome_mark(
+        skips[1 - 1], library.metronome_marks["32"], manifests=library.manifests
+    )
     baca.bar_line(skips[15 - 1], "|.")
     baca.literal(
         skips[15 - 1],

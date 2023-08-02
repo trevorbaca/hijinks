@@ -22,7 +22,7 @@ def circuit():
 
 
 def make_empty_score():
-    tag = baca.tags.function_name(inspect.currentframe())
+    tag = baca.helpers.function_name(inspect.currentframe())
     global_context = baca.score.make_global_context()
     violin_music_voice = abjad.Voice(name="Violin.Music", tag=tag)
     violin_music_staff = abjad.Staff(
@@ -63,7 +63,7 @@ def make_empty_score():
 
 def make_piano_material(staff, circuit):
     assert staff in ("rh", "lh")
-    tag = baca.tags.function_name(inspect.currentframe())
+    tag = baca.helpers.function_name(inspect.currentframe())
     maker = abjad.makers.tuplet_from_ratio_and_pair
     pairs = {}
     pairs["rh"] = [(n, 16) for n in (4, 3, 3, 4, 3, 3, 4, 4)]
@@ -110,7 +110,7 @@ def make_piano_material(staff, circuit):
 
 
 def make_violin_rhythm():
-    tag = baca.tags.function_name(inspect.currentframe())
+    tag = baca.helpers.function_name(inspect.currentframe())
     definitions = [
         ((4, 2, 2, 2), (8, 16)),
         ((2, 2, 4, 1, 1), (8, 16)),

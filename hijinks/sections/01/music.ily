@@ -2,7 +2,7 @@ number.1.Skips = {
 
     % [Skips measure 1]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue
+    \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 1/8
     s1 * 1/8

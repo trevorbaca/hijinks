@@ -133,7 +133,6 @@ def make_score():
     baca.section.set_up_score(
         score,
         time_signatures(),
-        always_make_global_rests=True,
         manifests=library.manifests,
     )
     GLOBALS(score["Skips"])
@@ -149,7 +148,6 @@ def persist_score(score, environment):
         score,
         environment,
         library.manifests,
-        always_make_global_rests=True,
         error_on_not_yet_pitched=True,
         final_section=True,
         first_section=True,

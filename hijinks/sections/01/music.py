@@ -71,7 +71,7 @@ def vn(voice):
         baca.pitches(o, library.violin_pitches())
         baca.staccato(_select_short_notes(o))
         baca.tenuto(_select_long_notes(o))
-        baca.beam_positions(o, -4)
+        baca.override.beam_positions(o, -4)
 
 
 def pf(score, voices):
@@ -100,7 +100,7 @@ def pf(score, voices):
             r"\hijinks-pp-sempre-al-fino-markup",
             direction=abjad.DOWN,
         )
-        baca.beam_positions(o.leaves(), -6)
+        baca.override.beam_positions(o.leaves(), -6)
         baca.override.stem_down(o.leaves())
         tuplet = abjad.select.tuplet(abjad.select.top(o), -1)
         baca.override.tuplet_bracket_shorten_pair(tuplet, (0, 0.6))
@@ -112,7 +112,7 @@ def pf(score, voices):
             direction=abjad.DOWN,
         ),
         baca.override.text_script_padding(o.leaves(), 2)
-        baca.beam_positions(o.leaves(), 6)
+        baca.override.beam_positions(o.leaves(), 6)
         baca.override.stem_up(o.leaves())
         tuplet = abjad.select.tuplet(abjad.select.top(o), -1)
         baca.override.tuplet_bracket_shorten_pair(tuplet, (0, 0.6))

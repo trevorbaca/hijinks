@@ -994,11 +994,11 @@ number.1.Piano.LH.Music = {
         c64
         - \staccato
 
+        \mark \hijinks-colophon-markup
         \once \override Score.RehearsalMark.direction = #down
         \once \override Score.RehearsalMark.extra-offset = #'(-7 . -7)
         \once \override Score.RehearsalMark.padding = 0
         \once \override Score.RehearsalMark.self-alignment-X = #right
-        \mark \hijinks-colophon-markup
         ef!64
         - \staccato
         ]

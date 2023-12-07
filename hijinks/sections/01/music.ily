@@ -377,6 +377,8 @@ number.1.Violin.Music = {
     {
 
         % [Violin.Music measure 1]
+          %! EXPLICIT_CLEF
+        \clef "treble"
           %! MEASURE_1
           %! SHIFTED_CLEF
     %%% \once \override Staff.Clef.X-extent = ##f
@@ -397,8 +399,6 @@ number.1.Violin.Music = {
           %! -PARTS
           %! EXPLICIT_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \hijinks-vn-markup
-          %! EXPLICIT_CLEF
-        \clef "treble"
         bf'!4
         - \tenuto
           %! EXPLICIT_INSTRUMENT_ALERT
@@ -508,6 +508,8 @@ number.1.Piano.RH.Music = {
     {
 
         % [Piano.RH.Music measure 1]
+          %! EXPLICIT_CLEF
+        \clef "treble"
           %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
         \once \override PianoStaff.InstrumentName.color = #blue
           %! MEASURE_1
@@ -529,8 +531,6 @@ number.1.Piano.RH.Music = {
         \set PianoStaff.shortInstrumentName = \hijinks-pf-markup
           %! EXPLICIT_CLEF
         \set Staff.forceClef = ##t
-          %! EXPLICIT_CLEF
-        \clef "treble"
         f'''16
         - \tenuto
           %! EXPLICIT_INSTRUMENT_ALERT
@@ -793,6 +793,8 @@ number.1.Piano.LH.Music = {
     {
 
         % [Piano.LH.Music measure 1]
+          %! EXPLICIT_CLEF
+        \clef "bass"
           %! MEASURE_1
           %! SHIFTED_CLEF
     %%% \once \override Staff.Clef.X-extent = ##f
@@ -808,8 +810,6 @@ number.1.Piano.LH.Music = {
         \override TextScript.padding = 2
           %! EXPLICIT_CLEF
         \set Staff.forceClef = ##t
-          %! EXPLICIT_CLEF
-        \clef "bass"
         b,,,16
         - \tenuto
         [

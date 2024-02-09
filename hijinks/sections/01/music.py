@@ -156,7 +156,6 @@ def persist_score(score, environment):
     baca.tags.deactivate(
         score,
         baca.tags.EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT,
-        baca.tags.RHYTHM_ANNOTATION_SPANNER,
     )
     lilypond_file = baca.lilypond.file(
         score,

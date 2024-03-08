@@ -158,6 +158,7 @@ def violin_pitches():
         order = [abjad.NumberedPitchClass(_) for _ in order]
         pitches_ = baca.pcollections.register_pcs(aggregate_, order)
         violin_pitches.extend(pitches_)
+    violin_pitches = [_.get_name(locale="us") for _ in violin_pitches]
     return violin_pitches
 
 

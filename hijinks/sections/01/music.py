@@ -101,7 +101,7 @@ def pf(score, voices):
             direction=abjad.DOWN,
         )
         baca.override.beam_positions(o.leaves(), -6)
-        baca.override.stem_down(o.leaves())
+        baca.override.stem_direction_down(o.leaves())
         tuplet = abjad.select.tuplet(abjad.select.top(o), -1)
         baca.override.tuplet_bracket_shorten_pair(tuplet, (0, 0.6))
     with baca.scope(voices("lh")) as o:
@@ -113,7 +113,7 @@ def pf(score, voices):
         ),
         baca.override.text_script_padding(o.leaves(), 2)
         baca.override.beam_positions(o.leaves(), 6)
-        baca.override.stem_up(o.leaves())
+        baca.override.stem_direction_up(o.leaves())
         tuplet = abjad.select.tuplet(abjad.select.top(o), -1)
         baca.override.tuplet_bracket_shorten_pair(tuplet, (0, 0.6))
     with baca.scope(score["PianoStaff"]) as o:
@@ -121,7 +121,7 @@ def pf(score, voices):
         baca.tenuto(_select_long_notes(o))
     with baca.scope(voices("lh")) as o:
         baca.mark(o.leaf(-1), r"\hijinks-colophon-markup")
-        baca.override.rehearsal_mark_down(o.leaf(-1))
+        baca.override.rehearsal_mark_direction_down(o.leaf(-1))
         baca.override.rehearsal_mark_extra_offset(o.leaf(-1), (-7, -7))
         baca.override.rehearsal_mark_padding(o.leaf(-1), 0)
         baca.override.rehearsal_mark_self_alignment_x(o.leaf(-1), abjad.RIGHT)

@@ -388,7 +388,7 @@ number.1.Violin.Music = {
           %! SHIFTED_CLEF
     %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
           %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-        \once \override Staff.InstrumentName.color = #blue
+        %@% \once \override Staff.InstrumentName.color = #blue
         \override Beam.positions = #'(-4 . -4)
           %! EXPLICIT_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
@@ -402,15 +402,15 @@ number.1.Violin.Music = {
         bf'!4
         - \tenuto
           %! EXPLICIT_INSTRUMENT_ALERT
-        ^ \baca-explicit-instrument-markup "(“Violin”)"
+        %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
         _ \hijinks-pp-sempre-al-fino-markup
           %! EXPLICIT_CLEF_REDRAW_COLOR
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-        \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+        %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
           %! -PARTS
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-        \set Staff.shortInstrumentName = \hijinks-vn-markup
+        \set Staff.shortInstrumentName = \hijinks-vn-markup %@%
 
         c'''8
         - \tenuto
@@ -511,7 +511,7 @@ number.1.Piano.RH.Music = {
           %! EXPLICIT_CLEF
         \clef "treble"
           %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-        \once \override PianoStaff.InstrumentName.color = #blue
+        %@% \once \override PianoStaff.InstrumentName.color = #blue
           %! MEASURE_1
           %! SHIFTED_CLEF
     %%% \once \override Staff.Clef.X-extent = ##f
@@ -534,16 +534,16 @@ number.1.Piano.RH.Music = {
         f'''16
         - \tenuto
           %! EXPLICIT_INSTRUMENT_ALERT
-        ^ \baca-explicit-instrument-markup "(“Piano”)"
+        %@% ^ \baca-explicit-instrument-markup "(“Piano”)"
         _ \hijinks-pp-sempre-al-fino-markup
         [
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-        \override PianoStaff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+        %@% \override PianoStaff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
           %! EXPLICIT_CLEF_REDRAW_COLOR
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
           %! -PARTS
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-        \set PianoStaff.shortInstrumentName = \hijinks-pf-markup
+        \set PianoStaff.shortInstrumentName = \hijinks-pf-markup %@%
 
         c'''16
         - \tenuto

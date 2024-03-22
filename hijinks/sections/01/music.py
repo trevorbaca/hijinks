@@ -153,7 +153,7 @@ def persist_score(score, environment):
         first_section=True,
         global_rests_in_topmost_staff=True,
     )
-    baca.tags.deactivate(
+    baca.section.deactivate_tags(
         score,
         baca.tags.EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT,
     )

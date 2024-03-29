@@ -471,7 +471,9 @@ number.1.Violin.Music = {
     }
 
     % [Violin.Music measure 13]
-    r8
+    R1 * 1/8
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"8"
 
     \times 4/5
     {
@@ -743,7 +745,9 @@ number.1.Piano.RH.Music = {
     }
 
     % [Piano.RH.Music measure 13]
-    r8
+    R1 * 1/8
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"8"
 
     \times 8/14
     {
@@ -971,7 +975,9 @@ number.1.Piano.LH.Music = {
     }
 
     % [Piano.LH.Music measure 13]
-    r8
+    R1 * 1/8
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"8"
 
     \times 8/9
     {

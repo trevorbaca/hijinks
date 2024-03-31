@@ -10,7 +10,7 @@ def main():
             baca.layout.System(11, y_offset=167.5, distances=(4, 20, 22)),
         ),
     )
-    baca.section.write_layout_ly(layout)
+    baca.build.write_layout_ly(layout)
 
 
 if __name__ == "__main__":

@@ -180,7 +180,7 @@ def make_layout():
             baca.layout.System(11, y_offset=160, distances=(4, 26, 26)),
         ),
     )
-    baca.section.write_layout_ly(layout)
+    baca.build.write_layout_ly(layout)
 
 
 def main():

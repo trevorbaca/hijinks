@@ -375,7 +375,7 @@ number.1.Rests = {
 
 number.1.Violin.Music = {
 
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Violin.Music measure 1]
@@ -427,7 +427,7 @@ number.1.Violin.Music = {
 
     }
 
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Violin.Music measure 5]
@@ -452,7 +452,7 @@ number.1.Violin.Music = {
 
     }
 
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Violin.Music measure 9]
@@ -477,7 +477,7 @@ number.1.Violin.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"8"
 
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Violin.Music measure 14]
@@ -508,7 +508,7 @@ number.1.Violin.Staff = <<
 
 number.1.Piano.RH.Music = {
 
-    \times 8/10
+    \tuplet 10/8
     {
 
         % [Piano.RH.Music measure 1]
@@ -571,7 +571,7 @@ number.1.Piano.RH.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7
+    \tuplet 7/6
     {
 
         % [Piano.RH.Music measure 3]
@@ -595,7 +595,7 @@ number.1.Piano.RH.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7
+    \tuplet 7/6
     {
 
         a''''16
@@ -620,7 +620,7 @@ number.1.Piano.RH.Music = {
 
     }
 
-    \times 8/11
+    \tuplet 11/8
     {
 
         % [Piano.RH.Music measure 6]
@@ -665,7 +665,7 @@ number.1.Piano.RH.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/8
+    \tuplet 8/6
     {
 
         % [Piano.RH.Music measure 8]
@@ -701,7 +701,7 @@ number.1.Piano.RH.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/8
+    \tuplet 8/6
     {
 
         fs'''!16
@@ -729,7 +729,7 @@ number.1.Piano.RH.Music = {
 
     }
 
-    \times 8/14
+    \tuplet 14/8
     {
 
         % [Piano.RH.Music measure 11]
@@ -751,7 +751,7 @@ number.1.Piano.RH.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"8"
 
-    \times 8/14
+    \tuplet 14/8
     {
 
         % [Piano.RH.Music measure 14]
@@ -795,7 +795,7 @@ number.1.Piano.RH.Staff = {
 number.1.Piano.LH.Music = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7
+    \tuplet 7/6
     {
 
         % [Piano.LH.Music measure 1]
@@ -838,7 +838,7 @@ number.1.Piano.LH.Music = {
 
     }
 
-    \times 8/10
+    \tuplet 10/8
     {
 
         b,,16
@@ -866,7 +866,7 @@ number.1.Piano.LH.Music = {
 
     }
 
-    \times 6/9
+    \tuplet 9/6
     {
 
         c,,32
@@ -900,7 +900,7 @@ number.1.Piano.LH.Music = {
 
     }
 
-    \times 8/10
+    \tuplet 10/8
     {
 
         % [Piano.LH.Music measure 7]
@@ -917,7 +917,7 @@ number.1.Piano.LH.Music = {
 
     }
 
-    \times 8/14
+    \tuplet 14/8
     {
 
         % [Piano.LH.Music measure 9]
@@ -941,7 +941,7 @@ number.1.Piano.LH.Music = {
 
     }
 
-    \times 8/10
+    \tuplet 10/8
     {
 
         % [Piano.LH.Music measure 11]
@@ -981,7 +981,7 @@ number.1.Piano.LH.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"8"
 
-    \times 8/9
+    \tuplet 9/8
     {
 
         % [Piano.LH.Music measure 14]

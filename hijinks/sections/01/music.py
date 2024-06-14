@@ -158,7 +158,7 @@ def persist_score(score, environment):
     )
     lilypond_file = baca.lilypond.file(
         score,
-        include_layout_ly=True,
+        include_layout_ily=True,
         includes=["../stylesheet.ily", "header.ily"],
     )
     baca.build.persist_lilypond_file(
@@ -179,7 +179,7 @@ def make_layout():
             baca.layout.System(11, y_offset=160, distances=(4, 26, 26)),
         ),
     )
-    baca.build.write_layout_ly(breaks)
+    baca.build.write_layout_ily(breaks)
 
 
 def main():

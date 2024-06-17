@@ -183,6 +183,7 @@ def make_layout(environment):
         breaks,
         environment.metadata["time_signatures"],
         first_measure_number=environment.first_measure_number,
+        has_anchor_skip=environment.metadata["has_anchor_skip"],
     )
 
 

@@ -182,6 +182,7 @@ def make_layout(environment):
     baca.build.write_layout_ily(
         breaks,
         environment.metadata["time_signatures"],
+        fermata_measure_numbers=environment.metadata.get("fermata_measure_numbers", []),
         first_measure_number=environment.first_measure_number,
         has_anchor_skip=environment.metadata["has_anchor_skip"],
     )

@@ -3,16 +3,17 @@
 \version "2.25.16"
 
 \include "stylesheet.ily"
+\include "layout.ily"
 \include "_sections/01.ily"
 
-
-\score {
-    <<
-        {
-        \include "layout.ily"
-        }
-        {
-        \include "_sections/01.ly"
-        }
-    >>
+\score
+{
+  <<
+    {
+      \page-layout-score
+    }
+    {
+      \include "_sections/01.ly"
+    }
+  >>
 }

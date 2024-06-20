@@ -10,7 +10,7 @@ def main(environment):
             baca.layout.System(11, y_offset=167.5, distances=(4, 20, 22)),
         ),
     )
-    return baca.build.write_layout_ily(
+    return baca.section.make_layout_score(
         breaks,
         environment.time_signatures,
     )

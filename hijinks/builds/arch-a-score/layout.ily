@@ -119,6 +119,106 @@ Breaks = {
 }
 
 
+SpacingCommands = {
+
+    % [SpacingCommands measure 1]
+    s1 * 1/8
+
+    % [SpacingCommands measure 2]
+    s1 * 1/8
+
+    % [SpacingCommands measure 3]
+    s1 * 1/8
+
+    % [SpacingCommands measure 4]
+    s1 * 1/8
+
+    % [SpacingCommands measure 5]
+    s1 * 1/8
+
+    % [SpacingCommands measure 6]
+    s1 * 1/8
+
+    % [SpacingCommands measure 7]
+    s1 * 1/8
+
+    % [SpacingCommands measure 8]
+    s1 * 1/8
+
+    % [SpacingCommands measure 9]
+    s1 * 1/8
+
+    % [SpacingCommands measure 10]
+    s1 * 1/8
+
+    % [SpacingCommands measure 11]
+    s1 * 1/8
+
+    % [SpacingCommands measure 12]
+    s1 * 1/8
+
+    % [SpacingCommands measure 13]
+    s1 * 1/8
+
+    % [SpacingCommands measure 14]
+    s1 * 1/8
+
+    % [SpacingCommands measure 15]
+    s1 * 1/8
+
+}
+
+
+SpacingAnnotations = {
+
+    % [SpacingAnnotations measure 1]
+    s1 * 1/8
+
+    % [SpacingAnnotations measure 2]
+    s1 * 1/8
+
+    % [SpacingAnnotations measure 3]
+    s1 * 1/8
+
+    % [SpacingAnnotations measure 4]
+    s1 * 1/8
+
+    % [SpacingAnnotations measure 5]
+    s1 * 1/8
+
+    % [SpacingAnnotations measure 6]
+    s1 * 1/8
+
+    % [SpacingAnnotations measure 7]
+    s1 * 1/8
+
+    % [SpacingAnnotations measure 8]
+    s1 * 1/8
+
+    % [SpacingAnnotations measure 9]
+    s1 * 1/8
+
+    % [SpacingAnnotations measure 10]
+    s1 * 1/8
+
+    % [SpacingAnnotations measure 11]
+    s1 * 1/8
+
+    % [SpacingAnnotations measure 12]
+    s1 * 1/8
+
+    % [SpacingAnnotations measure 13]
+    s1 * 1/8
+
+    % [SpacingAnnotations measure 14]
+    s1 * 1/8
+
+    % [SpacingAnnotations measure 15]
+    s1 * 1/8
+
+}
+
+
 page-layout-score = \context Score = "Score"
 <<
 
@@ -130,6 +230,12 @@ page-layout-score = \context Score = "Score"
 
         \context GlobalSkips = "Breaks"
         { \Breaks }
+
+        \context GlobalSkips = "SpacingCommands"
+        { \SpacingCommands }
+
+        \context GlobalSkips = "SpacingAnnotations"
+        { \SpacingAnnotations }
 
     >>
 

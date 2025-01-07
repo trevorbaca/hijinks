@@ -16,7 +16,7 @@ if __name__ == "__main__":
         name="hijinks",
         packages=["hijinks"],
         platforms="Any",
-        python_requires=">=3.10",
+        python_requires=">=3.12",
         url="https://github.com/trevorbaca/hijinks",
         version="3.19",
     )

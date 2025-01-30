@@ -33,7 +33,7 @@ jobs:
         echo "PYTHONPATH: ${PYTHONPATH:-not set}"
 
     - name: Install LilyPond
-      uses: Abjad/install-lilypond@v2.25.22
+      uses: Abjad/install-lilypond@v2.25.23
 
     - name: Install Abjad trevor/dev branch
       run: |

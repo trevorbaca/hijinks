@@ -1,6 +1,6 @@
 % Red Shift Hijinks (2006) for violin & piano
 
-\version "2.25.22"
+\version "2.25.23"
 
 \include "stylesheet.ily"
 \include "layout.ily"

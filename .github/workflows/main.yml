@@ -43,7 +43,6 @@ jobs:
         black --version
         flake8 --version
         isort --version
-        mypy --version
         pip --version
         pytest --version
 

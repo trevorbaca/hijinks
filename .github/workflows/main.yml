@@ -35,16 +35,6 @@ jobs:
     - name: Install LilyPond
       uses: Abjad/install-lilypond@v2.25.23
 
-    - name: Install Abjad trevor/dev branch
-      run: |
-        git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
-        python -m pip install /tmp/abjad
-        echo Priming Abjad parser tables ...
-        import="import abjad; from abjad.parsers"
-        python -c "${import}.parser import LilyPondParser; LilyPondParser()"
-        python -c "${import}.reduced import ReducedLyParser; ReducedLyParser()"
-        python -c "${import}.scheme import SchemeParser; SchemeParser()"
-
     - name: Install rmakers
       run: |
         git clone https://github.com/Abjad/abjad-ext-rmakers.git /tmp/abjad-ext-rmakers

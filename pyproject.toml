@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hijinks"
-version = "1.0.0"
+version = "3.21"
 description = "Red Shift Hijinks (2006) for violin & piano"
 authors = [{ name = "Trevor Bača", email = "trevor.baca@gmail.com" }]
 license = { text = "MIT" }

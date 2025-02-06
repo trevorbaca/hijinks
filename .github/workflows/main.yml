@@ -83,7 +83,7 @@ jobs:
     - name: Install Bača
       run: |
         git clone https://github.com/trevorbaca/baca.git /tmp/baca
-        # include -e for access to baca/scr/doctest.py, test-sections.py, ...
+        # include -e for access to baca/scr/doctest-baca.py, test-sections.py, ...
         python -m pip install -e /tmp/baca
 
     - name: Install this package
@@ -104,9 +104,9 @@ jobs:
         make flake8
         make isort-check
 
-    - name: Run doctest.py
+    - name: Run doctest-baca.py
       run: |
-        /tmp/baca/scr/doctest.py $GITHUB_WORKSPACE
+        /tmp/baca/scr/doctest-baca.py $GITHUB_WORKSPACE
 
     - name: Set cores to get stored in /cores
       run: |

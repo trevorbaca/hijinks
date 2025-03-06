@@ -73,6 +73,7 @@ jobs:
 
     - name: Prime parser tables
       run: |
+        ls /tmp/abjad
         /tmp/abjad/scripts/prime_parser_tables.py
 
     - name: Install rmakers

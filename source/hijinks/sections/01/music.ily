@@ -3,21 +3,9 @@
 number.1.Skips = {
 
     % [Skips measure 1]
-      %! LILYPOND_TEMPO_COMMAND
+      %! EXPLICIT_METRONOME_MARK
     \tempo 8=32
     s1 * 1/8
-      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \baca-invisible-line
-      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \baca-metronome-mark-spanner-colored-left-text 3 0 1 "32" #blue
-      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    \bacaStartTextSpanMM
-      %! EXPLICIT_METRONOME_MARK
-    %@% - \baca-invisible-line
-      %! EXPLICIT_METRONOME_MARK
-    %@% - \baca-metronome-mark-spanner-left-text 3 0 1 "32"
-      %! EXPLICIT_METRONOME_MARK
-    %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'00'']"
       %! CLOCK_TIME
@@ -310,8 +298,6 @@ number.1.Skips = {
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     %@% \bacaStopTextSpanLMN
-      %! EOS_STOP_MM_SPANNER
-    \bacaStopTextSpanMM
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
     \bar "|."
@@ -475,9 +461,7 @@ number.1.Violin.Music = {
     }
 
     % [Violin.Music measure 13]
-    R1 * 1/8
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"8"
+    r8
 
     \tuplet 5/4
     {
@@ -746,9 +730,7 @@ number.1.Piano.RH.Music = {
     }
 
     % [Piano.RH.Music measure 13]
-    R1 * 1/8
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"8"
+    r8
 
     \tuplet 14/8
     {
@@ -976,9 +958,7 @@ number.1.Piano.LH.Music = {
     }
 
     % [Piano.LH.Music measure 13]
-    R1 * 1/8
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"8"
+    r8
 
     \tuplet 9/8
     {

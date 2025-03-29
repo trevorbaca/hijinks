@@ -148,6 +148,8 @@ def persist_score(score, environment):
         score,
         environment,
         library.manifests,
+        do_not_replace_rests_with_multimeasure_rests=True,
+        do_not_span_metronome_marks=True,
         final_section=True,
         first_section=True,
     )

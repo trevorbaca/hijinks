@@ -3,7 +3,6 @@
 number.1.Skips = {
 
     % [Skips measure 1]
-      %! EXPLICIT_METRONOME_MARK
     \tempo 8=32
     s1 * 1/8
       %! CLOCK_TIME
@@ -310,9 +309,6 @@ number.1.Skips = {
 number.1.TimeSignatures = {
 
     % [TimeSignatures measure 1]
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
-      %! EXPLICIT_TIME_SIGNATURE
     \time 1/8
     s1 * 1/8
 
@@ -367,40 +363,15 @@ number.1.Violin.Music = {
     {
 
         % [Violin.Music measure 1]
-          %! EXPLICIT_CLEF
         \clef "treble"
-          %! MEASURE_1
-          %! SHIFTED_CLEF
-    %%% \once \override Staff.Clef.X-extent = ##f
-          %! EXPLICIT_CLEF_COLOR
-        \once \override Staff.Clef.color = #blue
-          %! MEASURE_1
-          %! SHIFTED_CLEF
-    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
-          %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-        %@% \once \override Staff.InstrumentName.color = #blue
         \override Beam.positions = #'(-4 . -4)
-          %! EXPLICIT_CLEF_COLOR_CANCELLATION
-        %@% \override Staff.Clef.color = ##f
-          %! EXPLICIT_CLEF
-        \set Staff.forceClef = ##t
           %! -PARTS
         \set Staff.instrumentName = \hijinks-violin-markup
           %! -PARTS
-          %! EXPLICIT_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \hijinks-vn-markup
         bf'!4
         - \tenuto
-          %! EXPLICIT_INSTRUMENT_ALERT
-        %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
         _ \hijinks-pp-sempre-al-fino-markup
-          %! EXPLICIT_CLEF_REDRAW_COLOR
-        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
-          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-        %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
-          %! -PARTS
-          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-        \set Staff.shortInstrumentName = \hijinks-vn-markup %@%
 
         c'''8
         - \tenuto
@@ -495,42 +466,17 @@ number.1.Piano.RH.Music = {
     {
 
         % [Piano.RH.Music measure 1]
-          %! EXPLICIT_CLEF
         \clef "treble"
-          %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-        %@% \once \override PianoStaff.InstrumentName.color = #blue
-          %! MEASURE_1
-          %! SHIFTED_CLEF
-    %%% \once \override Staff.Clef.X-extent = ##f
-          %! EXPLICIT_CLEF_COLOR
-        \once \override Staff.Clef.color = #blue
-          %! MEASURE_1
-          %! SHIFTED_CLEF
-    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
         \override Beam.positions = #'(-6 . -6)
-          %! EXPLICIT_CLEF_COLOR_CANCELLATION
-        %@% \override Staff.Clef.color = ##f
         \override Stem.direction = #down
           %! -PARTS
         \set PianoStaff.instrumentName = \hijinks-piano-markup
           %! -PARTS
-          %! EXPLICIT_SHORT_INSTRUMENT_NAME
         \set PianoStaff.shortInstrumentName = \hijinks-pf-markup
-          %! EXPLICIT_CLEF
-        \set Staff.forceClef = ##t
         f'''16
         - \tenuto
-          %! EXPLICIT_INSTRUMENT_ALERT
-        %@% ^ \baca-explicit-instrument-markup "(“Piano”)"
         _ \hijinks-pp-sempre-al-fino-markup
         [
-          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-        %@% \override PianoStaff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
-          %! EXPLICIT_CLEF_REDRAW_COLOR
-        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
-          %! -PARTS
-          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-        \set PianoStaff.shortInstrumentName = \hijinks-pf-markup %@%
 
         c'''16
         - \tenuto
@@ -780,28 +726,13 @@ number.1.Piano.LH.Music = {
     {
 
         % [Piano.LH.Music measure 1]
-          %! EXPLICIT_CLEF
         \clef "bass"
-          %! MEASURE_1
-          %! SHIFTED_CLEF
-    %%% \once \override Staff.Clef.X-extent = ##f
-          %! EXPLICIT_CLEF_COLOR
-        \once \override Staff.Clef.color = #blue
-          %! MEASURE_1
-          %! SHIFTED_CLEF
-    %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
         \override Beam.positions = #'(6 . 6)
-          %! EXPLICIT_CLEF_COLOR_CANCELLATION
-        %@% \override Staff.Clef.color = ##f
         \override Stem.direction = #up
         \override TextScript.padding = 2
-          %! EXPLICIT_CLEF
-        \set Staff.forceClef = ##t
         b,,,16
         - \tenuto
         [
-          %! EXPLICIT_CLEF_REDRAW_COLOR
-        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
         fs,!32.
         - \tenuto

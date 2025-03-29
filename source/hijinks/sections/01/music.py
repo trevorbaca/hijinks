@@ -150,7 +150,6 @@ def persist_score(score, environment):
         library.manifests,
         final_section=True,
         first_section=True,
-        global_rests_in_topmost_staff=True,
     )
     baca.section.deactivate_tags(
         score,
@@ -174,9 +173,9 @@ def make_layout(environment):
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=32, distances=(12, 26, 26)),
-            baca.layout.System(6, y_offset=98, distances=(4, 26, 26)),
-            baca.layout.System(11, y_offset=160, distances=(4, 26, 26)),
+            baca.layout.System(1, y_offset=32, distances=(4, 22, 24)),
+            baca.layout.System(6, y_offset=88, distances=(4, 22, 24)),
+            baca.layout.System(11, y_offset=152, distances=(4, 22, 24)),
         ),
     )
     return baca.section.make_layout_score(

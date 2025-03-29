@@ -23,7 +23,10 @@ def circuit():
 
 def make_empty_score():
     tag = baca.helpers.function_name(inspect.currentframe())
-    global_context = baca.score.make_global_context(make_time_signatures_context=True)
+    global_context = baca.score.make_global_context(
+        do_not_make_rests_context=True,
+        make_time_signatures_context=True,
+    )
     violin_music_voice = abjad.Voice(name="Violin.Music", tag=tag)
     violin_music_staff = abjad.Staff(
         [violin_music_voice],

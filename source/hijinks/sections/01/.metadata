@@ -6,7 +6,6 @@
         "TimeSignatures",
         "MusicContext",
         "Violin.Staff",
-        "Rests",
         "Violin.Music",
         "PianoStaff",
         "Piano.RH.Staff",

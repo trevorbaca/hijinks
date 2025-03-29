@@ -375,56 +375,6 @@ number.1.TimeSignatures = {
 }
 
 
-number.1.Rests = {
-
-    % [Rests measure 1]
-    R1 * 1/8
-
-    % [Rests measure 2]
-    R1 * 1/8
-
-    % [Rests measure 3]
-    R1 * 1/8
-
-    % [Rests measure 4]
-    R1 * 1/8
-
-    % [Rests measure 5]
-    R1 * 1/8
-
-    % [Rests measure 6]
-    R1 * 1/8
-
-    % [Rests measure 7]
-    R1 * 1/8
-
-    % [Rests measure 8]
-    R1 * 1/8
-
-    % [Rests measure 9]
-    R1 * 1/8
-
-    % [Rests measure 10]
-    R1 * 1/8
-
-    % [Rests measure 11]
-    R1 * 1/8
-
-    % [Rests measure 12]
-    R1 * 1/8
-
-    % [Rests measure 13]
-    R1 * 1/8
-
-    % [Rests measure 14]
-    R1 * 1/8
-
-    % [Rests measure 15]
-    R1 * 1/8
-
-}
-
-
 number.1.Violin.Music = {
 
     \tuplet 5/4
@@ -547,15 +497,12 @@ number.1.Violin.Music = {
 }
 
 
-number.1.Violin.Staff = <<
-
-    \context GlobalRests = "Rests"
-    { \number.1.Rests }
+number.1.Violin.Staff = {
 
     \context Voice = "Violin.Music"
     { \number.1.Violin.Music }
 
->>
+}
 
 
 number.1.Piano.RH.Music = {

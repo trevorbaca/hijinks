@@ -9,296 +9,128 @@ number.1.Skips = {
     %@% - \baca-start-ct-left-only "[0'00'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% - \baca-start-lmn-left-only "1"
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "1"
-      %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
 
     % [Skips measure 2]
     s1 * 1/8
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'01'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% - \baca-start-lmn-left-only "2"
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "2"
-      %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
 
     % [Skips measure 3]
     s1 * 1/8
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'03'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% - \baca-start-lmn-left-only "3"
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "3"
-      %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
 
     % [Skips measure 4]
     s1 * 1/8
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'05'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% - \baca-start-lmn-left-only "4"
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "4"
-      %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
 
     % [Skips measure 5]
     s1 * 1/8
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'07'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% - \baca-start-lmn-left-only "5"
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "5"
-      %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
 
     % [Skips measure 6]
     s1 * 1/8
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'09'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% - \baca-start-lmn-left-only "6"
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "6"
-      %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
 
     % [Skips measure 7]
     s1 * 1/8
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'11'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% - \baca-start-lmn-left-only "7"
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "7"
-      %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
 
     % [Skips measure 8]
     s1 * 1/8
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'13'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% - \baca-start-lmn-left-only "8"
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "8"
-      %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
 
     % [Skips measure 9]
     s1 * 1/8
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'15'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% - \baca-start-lmn-left-only "9"
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "9"
-      %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
 
     % [Skips measure 10]
     s1 * 1/8
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'16'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% - \baca-start-lmn-left-only "10"
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "10"
-      %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
 
     % [Skips measure 11]
     s1 * 1/8
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'18'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% - \baca-start-lmn-left-only "11"
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "11"
-      %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
 
     % [Skips measure 12]
     s1 * 1/8
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'20'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% - \baca-start-lmn-left-only "12"
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "12"
-      %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
 
     % [Skips measure 13]
     s1 * 1/8
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'22'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% - \baca-start-lmn-left-only "13"
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "13"
-      %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
 
     % [Skips measure 14]
     s1 * 1/8
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-both "[0'24'']" "[0'26'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% - \baca-start-lmn-left-only "14"
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "14"
-      %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
 
     % [Skips measure 15]
     s1 * 1/8
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    %@% \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
     \bar "|."
     \once \override Score.BarLine.transparent = ##f
     \once \override Score.SpanBar.transparent = ##f

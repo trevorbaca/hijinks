@@ -117,6 +117,7 @@ def make_score():
     baca.section.set_up_score(
         score,
         time_signatures(),
+        do_not_attach_measure_number_spanners=True,
         manifests=library.manifests,
     )
     GLOBALS(score["Skips"])

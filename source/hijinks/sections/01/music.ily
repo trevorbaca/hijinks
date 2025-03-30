@@ -300,8 +300,8 @@ number.1.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
     \bar "|."
-    \override Score.BarLine.transparent = ##f
-    \override Score.SpanBar.transparent = ##f
+    \once \override Score.BarLine.transparent = ##f
+    \once \override Score.SpanBar.transparent = ##f
 
 }
 

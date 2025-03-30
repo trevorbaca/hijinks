@@ -62,6 +62,7 @@
     \override TimeSignature.stencil = ##f
     \override TupletBracket.full-length-to-extent = ##f
     \override TupletBracket.padding = 1.5
+    \override TupletBracket.span-all-note-heads = ##t
     \override TupletNumber.text = #tuplet-number::calc-fraction-text
     autoBeaming = ##f
     tupletFullLength = ##t

@@ -21,16 +21,8 @@ def GLOBALS(skips):
         skips[1 - 1], library.metronome_marks["32"], manifests=library.manifests
     )
     baca.bar_line(skips[15 - 1], "|.")
-    baca.literal(
-        skips[15 - 1],
-        r"\override Score.BarLine.transparent = ##f",
-        site="after",
-    )
-    baca.literal(
-        skips[15 - 1],
-        r"\override Score.SpanBar.transparent = ##f",
-        site="after",
-    )
+    baca.override.bar_line_transparent_false(skips[15 - 1], after=True)
+    baca.override.span_bar_transparent_false(skips[15 - 1], after=True)
 
 
 def VN(voice):
@@ -48,16 +40,6 @@ def PF(score):
 
 
 def vn(voice):
-    def _select_short_notes(argument):
-        result = abjad.select.notes(argument)
-        result = [_ for _ in result if _.written_duration <= abjad.Duration((1, 16))]
-        return result
-
-    def _select_long_notes(argument):
-        result = abjad.select.notes(argument)
-        result = [_ for _ in result if _.written_duration > abjad.Duration((1, 16))]
-        return result
-
     with baca.scope(abjad.select.leaves(voice)) as o:
         baca.instrument(o.leaf(0), "Violin", library.manifests)
         baca.instrument_name(o.leaf(0), r"\hijinks-violin-markup")
@@ -69,22 +51,17 @@ def vn(voice):
             direction=abjad.DOWN,
         )
         baca.pitches(o, library.violin_pitches())
-        baca.staccato(_select_short_notes(o))
-        baca.tenuto(_select_long_notes(o))
+        duration = abjad.Duration((1, 16))
+        notes = abjad.select.notes(o)
+        notes = [_ for _ in notes if _.written_duration <= duration]
+        baca.staccato(notes)
+        notes = abjad.select.notes(o)
+        notes = [_ for _ in notes if _.written_duration > duration]
+        baca.tenuto(notes)
         baca.override.beam_positions(o, -4)
 
 
 def pf(score, voices):
-    def _select_short_notes(argument):
-        result = abjad.select.notes(argument)
-        result = [_ for _ in result if _.written_duration <= abjad.Duration((1, 64))]
-        return result
-
-    def _select_long_notes(argument):
-        result = abjad.select.notes(argument)
-        result = [_ for _ in result if _.written_duration > abjad.Duration((1, 64))]
-        return result
-
     with baca.scope(voices("rh")) as o:
         baca.instrument(o.leaf(0), "Piano", library.manifests)
         baca.instrument_name(o.leaf(0), r"\hijinks-piano-markup", context="PianoStaff")
@@ -117,8 +94,13 @@ def pf(score, voices):
         tuplet = abjad.select.tuplet(abjad.select.top(o), -1)
         baca.override.tuplet_bracket_shorten_pair(tuplet, (0, 0.6))
     with baca.scope(score["PianoStaff"]) as o:
-        baca.staccato(_select_short_notes(o))
-        baca.tenuto(_select_long_notes(o))
+        duration = abjad.Duration((1, 64))
+        notes = abjad.select.notes(o)
+        notes = [_ for _ in notes if _.written_duration <= duration]
+        baca.staccato(notes)
+        notes = abjad.select.notes(o)
+        notes = [_ for _ in notes if _.written_duration > duration]
+        baca.tenuto(notes)
     with baca.scope(voices("lh")) as o:
         baca.mark(o.leaf(-1), r"\hijinks-colophon-markup")
         baca.override.rehearsal_mark_direction_down(o.leaf(-1))

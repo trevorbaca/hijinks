@@ -58,6 +58,8 @@ def vn(voice):
         notes = abjad.select.notes(o)
         notes = [_ for _ in notes if _.written_duration > duration]
         baca.tenuto(notes)
+        tuplet = abjad.select.tuplet(abjad.select.top(o), -1)
+        baca.override.tuplet_bracket_shorten_pair(tuplet, (0, 2))
         baca.override.beam_positions(o, -4)
 
 
@@ -80,7 +82,7 @@ def pf(score, voices):
         baca.override.beam_positions(o.leaves(), -6)
         baca.override.stem_direction_down(o.leaves())
         tuplet = abjad.select.tuplet(abjad.select.top(o), -1)
-        baca.override.tuplet_bracket_shorten_pair(tuplet, (0, 0.6))
+        baca.override.tuplet_bracket_shorten_pair(tuplet, (0, 2))
     with baca.scope(voices("lh")) as o:
         baca.clef(o.leaf(0), "bass")
         baca.markup(
@@ -92,7 +94,7 @@ def pf(score, voices):
         baca.override.beam_positions(o.leaves(), 6)
         baca.override.stem_direction_up(o.leaves())
         tuplet = abjad.select.tuplet(abjad.select.top(o), -1)
-        baca.override.tuplet_bracket_shorten_pair(tuplet, (0, 0.6))
+        baca.override.tuplet_bracket_shorten_pair(tuplet, (0, 2))
     with baca.scope(score["PianoStaff"]) as o:
         duration = abjad.Duration((1, 64))
         notes = abjad.select.notes(o)

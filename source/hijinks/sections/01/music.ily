@@ -438,6 +438,7 @@ number.1.Violin.Music = {
     {
 
         % [Violin.Music measure 14]
+        \override TupletBracket.shorten-pair = #'(0 . 2)
         fs'''!8.
         - \tenuto
         [
@@ -446,6 +447,7 @@ number.1.Violin.Music = {
         - \tenuto
         ]
         \revert Beam.positions
+        \revert TupletBracket.shorten-pair
 
     }
 
@@ -682,7 +684,7 @@ number.1.Piano.RH.Music = {
     {
 
         % [Piano.RH.Music measure 14]
-        \override TupletBracket.shorten-pair = #'(0 . 0.6)
+        \override TupletBracket.shorten-pair = #'(0 . 2)
         a''''32
         - \tenuto
         [
@@ -895,7 +897,7 @@ number.1.Piano.LH.Music = {
     {
 
         % [Piano.LH.Music measure 14]
-        \override TupletBracket.shorten-pair = #'(0 . 0.6)
+        \override TupletBracket.shorten-pair = #'(0 . 2)
         d,,16.
         - \tenuto
         [

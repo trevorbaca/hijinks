@@ -5,132 +5,48 @@ number.1.Skips = {
     % [Skips measure 1]
     \tempo 8=32
     s1 * 1/8
-      %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'00'']"
-      %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
 
     % [Skips measure 2]
     s1 * 1/8
-      %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
-      %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'01'']"
-      %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
 
     % [Skips measure 3]
     s1 * 1/8
-      %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
-      %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'03'']"
-      %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
 
     % [Skips measure 4]
     s1 * 1/8
-      %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
-      %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'05'']"
-      %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
 
     % [Skips measure 5]
     s1 * 1/8
-      %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
-      %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'07'']"
-      %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
 
     % [Skips measure 6]
     s1 * 1/8
-      %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
-      %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'09'']"
-      %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
 
     % [Skips measure 7]
     s1 * 1/8
-      %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
-      %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'11'']"
-      %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
 
     % [Skips measure 8]
     s1 * 1/8
-      %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
-      %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'13'']"
-      %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
 
     % [Skips measure 9]
     s1 * 1/8
-      %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
-      %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'15'']"
-      %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
 
     % [Skips measure 10]
     s1 * 1/8
-      %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
-      %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'16'']"
-      %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
 
     % [Skips measure 11]
     s1 * 1/8
-      %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
-      %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'18'']"
-      %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
 
     % [Skips measure 12]
     s1 * 1/8
-      %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
-      %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'20'']"
-      %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
 
     % [Skips measure 13]
     s1 * 1/8
-      %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
-      %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'22'']"
-      %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
 
     % [Skips measure 14]
     s1 * 1/8
-      %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
-      %! CLOCK_TIME
-    %@% - \baca-start-ct-both "[0'24'']" "[0'26'']"
-      %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
 
     % [Skips measure 15]
     s1 * 1/8
-      %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
     \bar "|."
     \once \override Score.BarLine.transparent = ##f
     \once \override Score.SpanBar.transparent = ##f

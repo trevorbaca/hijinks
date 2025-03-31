@@ -4,6 +4,8 @@ number.1.Skips =
 {
 
     % [Skips measure 1]
+    \once \override Score.MetronomeMark.break-align-symbols = #'(staff-bar)
+    \once \override Score.MetronomeMark.extra-offset = #'(0 . 10)
     \tempo 8=32
     s1 * 1/8
 

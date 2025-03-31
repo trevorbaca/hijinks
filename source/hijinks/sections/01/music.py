@@ -18,8 +18,12 @@ def make_empty_score():
 
 def GLOBALS(skips):
     baca.metronome_mark(
-        skips[1 - 1], library.metronome_marks["32"], manifests=library.manifests
+        skips[1 - 1],
+        library.metronome_marks["32"],
+        manifests=library.manifests,
     )
+    baca.override.metronome_mark_break_align_symbols(skips[1 - 1], "#'(staff-bar)")
+    baca.override.metronome_mark_extra_offset(skips[1 - 1], (0, 10))
     baca.bar_line(skips[15 - 1], "|.")
     baca.override.bar_line_transparent_false(skips[15 - 1], after=True)
     baca.override.span_bar_transparent_false(skips[15 - 1], after=True)
@@ -147,7 +151,7 @@ def persist_score(score, environment):
     lilypond_file = baca.lilypond.file(
         score,
         include_layout_ily=True,
-        includes=["../stylesheet.ily", "header.ily"],
+        includes=["../stylesheet.ily"],
     )
     baca.build.persist_lilypond_file(
         environment.arguments,
@@ -162,9 +166,9 @@ def make_layout(environment):
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=32, distances=(4, 22, 24)),
-            baca.layout.System(6, y_offset=88, distances=(4, 22, 24)),
-            baca.layout.System(11, y_offset=152, distances=(4, 22, 24)),
+            baca.layout.System(1, y_offset=30, distances=(4, 18, 20)),
+            baca.layout.System(6, y_offset=88, distances=(4, 18, 20)),
+            baca.layout.System(11, y_offset=152, distances=(4, 18, 20)),
         ),
     )
     return baca.section.make_layout_score(

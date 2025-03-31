@@ -4,11 +4,37 @@
 #(set-default-paper-size "letter")
 #(set-global-staff-size 14)
 
+\header
+{
+  composer = \markup
+    \override #'(font-name . "Adobe Garamond Pro")
+    \fontsize #3
+    "Trevor Bača (*1975)"
+  tagline = ##f
+  title = \markup
+    \override #'(font-name . "Adobe Garamond Pro Bold")
+    \fontsize #8
+    \line { RED \concat { SHIF \hspace #-0.2 T } HIJINKS }
+  subtitle = \markup
+    \override #'(font-name . "Adobe Garamond Pro")
+    \fontsize #4
+    \concat { "For Carl on his 60" \super th }
+}
+
 \paper
 {
-  bottom-margin = 40
+  bookTitleMarkup = ##f
+  bottom-margin = 0
   left-margin = 20
   right-margin = 20
+  scoreTitleMarkup = \markup \column
+  {
+    \fill-line { \fromproperty #'header:title }
+    \vspace #1
+    \fill-line { \fromproperty #'header:subtitle }
+    \vspace #2
+    \fill-line { \null \fromproperty #'header:composer }
+  }
   top-margin = 8
   top-markup-spacing.minimum-distance = 6
 }

@@ -13,7 +13,7 @@
             % [Breaks measure 1]
             \autoLineBreaksOff
             \autoPageBreaksOff
-            \baca-lbsd #32 #'(4 22 24)
+            \baca-lbsd #30 #'(4 18 20)
             s1 * 1/8
 
             % [Breaks measure 2]
@@ -29,7 +29,7 @@
             s1 * 1/8
 
             % [Breaks measure 6]
-            \baca-lbsd #88 #'(4 22 24)
+            \baca-lbsd #88 #'(4 18 20)
             \break
             s1 * 1/8
 
@@ -46,7 +46,7 @@
             s1 * 1/8
 
             % [Breaks measure 11]
-            \baca-lbsd #152 #'(4 22 24)
+            \baca-lbsd #152 #'(4 18 20)
             \break
             s1 * 1/8
 

@@ -1,6 +1,7 @@
 \version "2.25.24"
 
-number.1.Skips = {
+number.1.Skips =
+{
 
     % [Skips measure 1]
     \tempo 8=32
@@ -54,7 +55,8 @@ number.1.Skips = {
 }
 
 
-number.1.TimeSignatures = {
+number.1.TimeSignatures =
+{
 
     % [TimeSignatures measure 1]
     \time 1/8
@@ -105,7 +107,8 @@ number.1.TimeSignatures = {
 }
 
 
-number.1.Violin.Music = {
+number.1.Violin.Music =
+{
 
     \tuplet 5/4
     {
@@ -202,15 +205,19 @@ number.1.Violin.Music = {
 }
 
 
-number.1.Violin.Staff = {
+number.1.Violin.Staff =
+{
 
     \context Voice = "Violin.Music"
-    { \number.1.Violin.Music }
+    {
+        \number.1.Violin.Music
+    }
 
 }
 
 
-number.1.Piano.RH.Music = {
+number.1.Piano.RH.Music =
+{
 
     \tuplet 10/8
     {
@@ -461,15 +468,19 @@ number.1.Piano.RH.Music = {
 }
 
 
-number.1.Piano.RH.Staff = {
+number.1.Piano.RH.Staff =
+{
 
     \context Voice = "Piano.RH.Music"
-    { \number.1.Piano.RH.Music }
+    {
+        \number.1.Piano.RH.Music
+    }
 
 }
 
 
-number.1.Piano.LH.Music = {
+number.1.Piano.LH.Music =
+{
 
     \tweak text #tuplet-number::calc-fraction-text
     \tuplet 7/6
@@ -680,9 +691,12 @@ number.1.Piano.LH.Music = {
 }
 
 
-number.1.Piano.LH.Staff = {
+number.1.Piano.LH.Staff =
+{
 
     \context Voice = "Piano.LH.Music"
-    { \number.1.Piano.LH.Music }
+    {
+        \number.1.Piano.LH.Music
+    }
 
 }

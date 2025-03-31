@@ -1,6 +1,7 @@
 \version "2.25.24"
 
-Breaks = {
+Breaks =
+{
 
     % [Breaks measure 1]
     \autoLineBreaksOff
@@ -64,7 +65,9 @@ page-layout-score = \context Score = "Score"
     {
 
         \context GlobalSkips = "Breaks"
-        { \Breaks }
+        {
+            \Breaks
+        }
 
     }
 

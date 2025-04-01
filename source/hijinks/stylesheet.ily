@@ -10,15 +10,15 @@
     \override #'(font-name . "Adobe Garamond Pro")
     \fontsize #3
     "Trevor Bača (*1975)"
+  subtitle = \markup
+    \override #'(font-name . "Adobe Garamond Pro Bold")
+    \fontsize #4
+    \concat { "For Carl on his 60" \super th }
   tagline = ##f
   title = \markup
     \override #'(font-name . "Adobe Garamond Pro Bold")
     \fontsize #8
-    \line { RED \concat { SHIF \hspace #-0.2 T } HIJINKS }
-  subtitle = \markup
-    \override #'(font-name . "Adobe Garamond Pro")
-    \fontsize #4
-    \concat { "For Carl on his 60" \super th }
+    "RED SHIFT HIJINKS"
 }
 
 \paper
@@ -95,11 +95,23 @@
   }
 }
 
-hijinks-piano-markup = \markup \hcenter-in #10 Piano
-hijinks-pf-markup = \markup \hcenter-in #10 Pf.
+hijinks-piano-markup = \markup
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \hcenter-in #10
+  Piano
+hijinks-pf-markup = \markup
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \hcenter-in #10
+  Pf.
 
-hijinks-violin-markup = \markup \hcenter-in #10 Violin
-hijinks-vn-markup = \markup \hcenter-in #10 Vn.
+hijinks-violin-markup = \markup
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \hcenter-in #10
+  Violin
+hijinks-vn-markup = \markup
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \hcenter-in #10
+  Vn.
 
 hijinks-colophon-markup = \markup
   \override #'(font-name . "Adobe Garamond Pro")
@@ -107,11 +119,16 @@ hijinks-colophon-markup = \markup
   \right-column
   {
     "Austin, Tex."
-    "Oct. 2006."
+    "Feb. 2006."
   }
 
 hijinks-ped-ad-libitum-markup = \markup
-  \italic "ped. ad libitum"
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  "ped. ad libitum"
 
 hijinks-pp-sempre-al-fino-markup = \markup
-  { \dynamic pp \italic "sempre al fino" }
+  {
+    \dynamic pp
+    \override #'(font-name . "Adobe Garamond Pro Italic")
+    "sempre al fino"
+  }

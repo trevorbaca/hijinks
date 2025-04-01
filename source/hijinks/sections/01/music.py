@@ -146,10 +146,6 @@ def persist_score(score, environment):
         final_section=True,
         first_section=True,
     )
-    baca.section.deactivate_tags(
-        score,
-        baca.tags.EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT,
-    )
     lilypond_file = baca.lilypond.file(
         score,
         include_layout_ily=True,

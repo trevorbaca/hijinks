@@ -670,11 +670,6 @@ number.1.Piano.LH.Music =
         c64
         - \staccato
 
-        \mark \hijinks-colophon-markup
-        \once \override Score.RehearsalMark.direction = #down
-        \once \override Score.RehearsalMark.extra-offset = #'(-7 . -7)
-        \once \override Score.RehearsalMark.padding = 0
-        \once \override Score.RehearsalMark.self-alignment-X = #right
         ef!64
         - \staccato
         ]
@@ -682,6 +677,10 @@ number.1.Piano.LH.Music =
         \revert Stem.direction
         \revert TextScript.padding
         \revert TupletBracket.shorten-pair
+        \tweak direction #down
+        \tweak padding 4
+        \tweak self-alignment-X 1
+        \textEndMark \hijinks-colophon-markup
 
     }
 

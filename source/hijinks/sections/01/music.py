@@ -108,11 +108,13 @@ def pf(score, voices):
         notes = [_ for _ in notes if _.written_duration > duration]
         baca.tenuto(notes)
     with baca.scope(voices("lh")) as o:
-        baca.rehearsal_mark(o.leaf(-1), r"\hijinks-colophon-markup")
-        baca.override.rehearsal_mark_direction_down(o.leaf(-1))
-        baca.override.rehearsal_mark_extra_offset(o.leaf(-1), (-7, -7))
-        baca.override.rehearsal_mark_padding(o.leaf(-1), 0)
-        baca.override.rehearsal_mark_self_alignment_x(o.leaf(-1), abjad.RIGHT)
+        baca.text_end_mark(
+            o.leaf(-1),
+            r"\textEndMark \hijinks-colophon-markup",
+            abjad.Tweak(r"\tweak direction #down"),
+            abjad.Tweak(r"\tweak self-alignment-X 1"),
+            abjad.Tweak(r"\tweak padding 4"),
+        )
 
 
 @baca.build.timed("make_score")

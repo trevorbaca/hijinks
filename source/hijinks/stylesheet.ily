@@ -103,8 +103,7 @@ hijinks-vn-markup = \markup \hcenter-in #10 Vn.
 
 hijinks-colophon-markup = \markup
   \override #'(font-name . "Adobe Garamond Pro")
-  \with-dimensions-from \null
-  \override #'(baseline-skip . 4)
+  \override #'(baseline-skip . 3)
   \right-column
   {
     "Austin, Tex."

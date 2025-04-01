@@ -1,7 +1,7 @@
 \version "2.25.24"
 \include "baca.ily"
 
-#(set-default-paper-size "letter")
+#(set-default-paper-size "arch a")
 #(set-global-staff-size 14)
 
 \header

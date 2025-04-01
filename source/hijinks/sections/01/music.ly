@@ -1,5 +1,5 @@
 \version "2.25.24"
-\include "../stylesheet.ily"
+\include "../../stylesheet.ily"
 \include "music.ily"
 
 \score

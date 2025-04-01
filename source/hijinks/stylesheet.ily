@@ -12,12 +12,12 @@
     "Trevor Bača (*1975)"
   subtitle = \markup
     \override #'(font-name . "Adobe Garamond Pro Bold")
-    \fontsize #4
+    \fontsize #6
     \concat { "For Carl on his 60" \super th }
   tagline = ##f
   title = \markup
     \override #'(font-name . "Adobe Garamond Pro Bold")
-    \fontsize #8
+    \fontsize #12
     "RED SHIFT HIJINKS"
 }
 

@@ -2,7 +2,7 @@
 
 \version "2.25.24"
 
-\include "stylesheet.ily"
+\include "../../stylesheet.ily"
 \include "layout.ily"
 \include "_sections/01.ily"
 

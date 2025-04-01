@@ -567,13 +567,8 @@ number.1.Piano.LH.Music =
 
     }
 
-    \scaleDurations #'(1 . 1)
-    {
-
-        % [Piano.LH.Music measure 6]
-        r8
-
-    }
+    % [Piano.LH.Music measure 6]
+    r8
 
     \tuplet 10/8
     {

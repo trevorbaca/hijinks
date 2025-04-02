@@ -36,10 +36,11 @@ def VN(voice):
 
 def PF(score):
     voice = score["Piano.RH.Music"]
-    music = library.make_piano_material("rh", library.circuit())
+    circuit, labels = library.circuit()
+    music = library.make_piano_material("rh", circuit)
     voice.extend(music)
     voice = score["Piano.LH.Music"]
-    music = library.make_piano_material("lh", library.circuit())
+    music = library.make_piano_material("lh", circuit)
     voice.extend(music)
 
 

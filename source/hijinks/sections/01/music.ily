@@ -541,6 +541,7 @@ number.1.Piano.LH.Music =
 
     }
 
+    \tweak text #tuplet-number::calc-fraction-text
     \tuplet 9/6
     {
 

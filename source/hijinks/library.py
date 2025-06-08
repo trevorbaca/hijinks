@@ -99,9 +99,7 @@ def make_piano_material(staff, circuit):
             aggregate = list(reversed(aggregate))
         tuplet = maker(tuple(proportion), pair, tag=tag)
         voice.append(tuplet)
-        duration = abjad.get.duration(tuplet)
-        pair = abjad.duration.with_denominator(duration, 32)
-        tuplet.denominator = pair[0]
+        baca.rhythm.set_tuplet_ratios_in_terms_of([tuplet], 32)
         leaves = abjad.select.leaves(tuplet)
         abjad.beam(leaves, tag=tag)
         notes = abjad.select.leaves(tuplet, pitched=True)

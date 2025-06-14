@@ -68,7 +68,7 @@ def make_empty_score():
 def make_piano_material(staff, circuit):
     assert staff in ("rh", "lh")
     tag = baca.helpers.function_name(inspect.currentframe())
-    maker = abjad.makers.tuplet_from_ratio_and_pair
+    maker = abjad.makers.tuplet_from_proportion_and_pair
     pairs = {}
     pairs["rh"] = [(n, 16) for n in (4, 3, 3, 4, 3, 3, 4, 4)]
     pairs["lh"] = [(n, 16) for n in (3, 4, 3, 2, 4, 4, 4, 4)]
@@ -119,7 +119,7 @@ def make_violin_rhythm():
         ((4, 2, 2, 2), (8, 16)),
         ((3, 2), (4, 16)),
     ]
-    maker = abjad.makers.tuplet_from_ratio_and_pair
+    maker = abjad.makers.tuplet_from_proportion_and_pair
     voice = abjad.Voice(name="Temporary")
     for definition in definitions:
         ratio, pair = definition

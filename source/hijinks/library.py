@@ -68,7 +68,7 @@ def make_empty_score():
 def make_piano_material(staff, circuit):
     assert staff in ("rh", "lh")
     tag = baca.helpers.function_name(inspect.currentframe())
-    maker = abjad.makers.tuplet_from_proportion_and_pair
+    maker = abjad.makers.tuplet_from_duration_and_proportion
     pairs = {}
     pairs["rh"] = [(n, 16) for n in (4, 3, 3, 4, 3, 3, 4, 4)]
     pairs["lh"] = [(n, 16) for n in (3, 4, 3, 2, 4, 4, 4, 4)]
@@ -97,7 +97,7 @@ def make_piano_material(staff, circuit):
     for proportion, pair, aggregate in zip(proportions[staff], pairs[staff], circuit):
         if staff == "rh":
             aggregate = list(reversed(aggregate))
-        tuplet = maker(tuple(proportion), pair, tag=tag)
+        tuplet = maker(abjad.Duration(pair), tuple(proportion), tag=tag)
         voice.append(tuplet)
         baca.rhythm.set_tuplet_ratios_in_terms_of([tuplet], 32)
         leaves = abjad.select.leaves(tuplet)
@@ -119,12 +119,12 @@ def make_violin_rhythm():
         ((4, 2, 2, 2), (8, 16)),
         ((3, 2), (4, 16)),
     ]
-    maker = abjad.makers.tuplet_from_proportion_and_pair
+    maker = abjad.makers.tuplet_from_duration_and_proportion
     voice = abjad.Voice(name="Temporary")
     for definition in definitions:
         ratio, pair = definition
         assert isinstance(ratio, tuple)
-        tuplet = maker(ratio, pair, tag=tag)
+        tuplet = maker(abjad.Duration(pair), ratio, tag=tag)
         voice.append(tuplet)
         leaves = abjad.select.leaves(tuplet)
         abjad.beam(leaves, tag=tag)

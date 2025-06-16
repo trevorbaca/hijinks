@@ -97,7 +97,7 @@ def make_piano_material(staff, circuit):
     for proportion, pair, aggregate in zip(proportions[staff], pairs[staff], circuit):
         if staff == "rh":
             aggregate = list(reversed(aggregate))
-        tuplet = maker(tuple(proportion), pair, canonical=True, tag=tag)
+        tuplet = maker(tuple(proportion), pair, tag=tag)
         voice.append(tuplet)
         baca.rhythm.set_tuplet_ratios_in_terms_of([tuplet], 32)
         leaves = abjad.select.leaves(tuplet)
@@ -124,7 +124,7 @@ def make_violin_rhythm():
     for definition in definitions:
         ratio, pair = definition
         assert isinstance(ratio, tuple)
-        tuplet = maker(ratio, pair, canonical=True, tag=tag)
+        tuplet = maker(ratio, pair, tag=tag)
         voice.append(tuplet)
         leaves = abjad.select.leaves(tuplet)
         abjad.beam(leaves, tag=tag)

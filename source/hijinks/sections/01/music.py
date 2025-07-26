@@ -58,10 +58,10 @@ def vn(voice):
         baca.pitches(o, library.violin_pitches())
         duration = abjad.Duration((1, 16))
         notes = abjad.select.notes(o)
-        notes = [_ for _ in notes if _.written_duration <= duration]
+        notes = [_ for _ in notes if _.get_written_duration() <= duration]
         baca.staccato(notes)
         notes = abjad.select.notes(o)
-        notes = [_ for _ in notes if _.written_duration > duration]
+        notes = [_ for _ in notes if _.get_written_duration() > duration]
         baca.tenuto(notes)
         tuplet = abjad.select.tuplet(abjad.select.top(o), -1)
         baca.override.tuplet_bracket_shorten_pair(tuplet, (0, 2))
@@ -103,10 +103,10 @@ def pf(score, voices):
     with baca.scope(score["PianoStaff"]) as o:
         duration = abjad.Duration((1, 64))
         notes = abjad.select.notes(o)
-        notes = [_ for _ in notes if _.written_duration <= duration]
+        notes = [_ for _ in notes if _.get_written_duration() <= duration]
         baca.staccato(notes)
         notes = abjad.select.notes(o)
-        notes = [_ for _ in notes if _.written_duration > duration]
+        notes = [_ for _ in notes if _.get_written_duration() > duration]
         baca.tenuto(notes)
     with baca.scope(voices("lh")) as o:
         baca.text_end_mark(

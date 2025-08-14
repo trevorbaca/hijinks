@@ -104,7 +104,8 @@ def make_piano_material(staff, circuit):
         abjad.beam(leaves, tag=tag)
         notes = abjad.select.leaves(tuplet, pitched=True)
         for note, pitch_number in zip(notes, aggregate):
-            note.set_written_pitch(pitch_number)
+            pitch = abjad.NamedPitch(pitch_number)
+            note.set_written_pitch(pitch)
     voice.insert(-1, abjad.Rest("r8", tag=tag))
     rmakers.extract_trivial(voice)
     components = abjad.mutate.eject_contents(voice)

@@ -93,7 +93,9 @@ def make_piano_material(staff, circuit):
         (6, 6, 2, 2, 1, 1),
     ]
     voice = abjad.Voice(name="Temporary")
-    for pair, proportion, aggregate in zip(pairs[staff], proportions[staff], circuit):
+    for pair, proportion, aggregate in zip(
+        pairs[staff], proportions[staff], circuit, strict=True
+    ):
         if staff == "rh":
             aggregate = list(reversed(aggregate))
         duration = abjad.Duration(*pair)

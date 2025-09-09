@@ -98,7 +98,7 @@ def make_piano_material(staff, circuit):
     ):
         if staff == "rh":
             aggregate = list(reversed(aggregate))
-        duration = abjad.ValueDuration(*pair)
+        duration = abjad.Duration(*pair)
         tuplet = abjad.makers.make_tuplet(duration, proportion, tag=tag)
         voice.append(tuplet)
         baca.rhythm.set_tuplet_ratios_in_terms_of([tuplet], 32)
@@ -124,7 +124,7 @@ def make_violin_rhythm():
     ]
     voice = abjad.Voice(name="Temporary")
     for duration_pair, proportion in definitions:
-        duration = abjad.ValueDuration(*duration_pair)
+        duration = abjad.Duration(*duration_pair)
         tuplet = abjad.makers.make_tuplet(duration, proportion, tag=tag)
         voice.append(tuplet)
         leaves = abjad.select.leaves(tuplet)
@@ -172,7 +172,7 @@ instruments = {
 
 
 metronome_marks = {
-    "32": abjad.MetronomeMark(abjad.ValueDuration(1, 8), 32),
+    "32": abjad.MetronomeMark(abjad.Duration(1, 8), 32),
 }
 
 

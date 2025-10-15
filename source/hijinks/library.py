@@ -110,7 +110,7 @@ def make_piano_material(staff, circuit):
             note.set_written_pitch(pitch)
     voice.insert(-1, abjad.Rest("r8", tag=tag))
     tuplets = abjad.select.tuplets(voice)
-    rmakers.extract_trivial(tuplets)
+    rmakers.extract_trivial_tuplets(tuplets)
     components = abjad.mutate.eject_contents(voice)
     return components
 

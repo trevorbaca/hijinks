@@ -14,12 +14,13 @@
 # Tools (override from env or per-build Makefiles)
 # --------------------------------------------------
 
-PYTHON   ?= python3
-LILYPOND ?= lilypond
-LATEX    ?= xelatex
+PYTHON         ?= python3
+LILYPOND       ?= lilypond
+LILYPOND_FLAGS ?= --include=/Users/trevor/Repositories/Projects/abjad/source/abjad/scm  --include=/Users/trevor/Repositories/Projects/baca/source/baca/scm
+LATEX          ?= xelatex
 
 # layout.py → layout.ily by default
-LAYOUT_OUT ?= layout.ily
+LAYOUT_OUT     ?= layout.ily
 
 # --------------------------------------------------
 # Phony targets
@@ -115,46 +116,61 @@ endif
 # --------------------------------------------------
 
 ifneq ($(strip $(MUSIC_LY)),)
+
+MUSIC_PDF  := $(MUSIC_LY:.ly=.pdf)
+
+music: $(MUSIC_PDF)
+
 $(MUSIC_PDF): $(MUSIC_LY) $(LAYOUT_OUT)
-	$(LILYPOND) $(MUSIC_LY)
+	@echo "Calling LilyPond on $< ..."
+	@set -e; \
+	  if ! command -v $(LILYPOND) >/dev/null 2>&1; then \
+	    echo "Error: $(LILYPOND) not found on PATH" >&2; \
+	    exit 1; \
+	  fi; \
+	  ly="$<"; \
+	  log=".$$(basename "$$ly").log"; \
+	  $(LILYPOND) $(LILYPOND_FLAGS) "$$ly" > "$$log" 2>&1; \
+	  if [ ! -f "$@" ]; then \
+	    echo "Error: expected output $@ not found" >&2; \
+	    echo "See $$log for LilyPond output." >&2; \
+	    exit 1; \
+	  fi; \
+	  echo "LilyPond successfully produced $@"
+
 endif
 
 # --------------------------------------------------
 # LaTeX: *.tex → *.pdf (run LATEX twice, handle logs, clean aux)
 # --------------------------------------------------
-#
-# RUN_LATEX is a macro; per-build Makefiles can override it if needed.
 
-ifndef RUN_LATEX
-define RUN_LATEX
-@echo "Calling $(LATEX) on $< ..."
-@set -e; \
-  if ! command -v $(LATEX) >/dev/null 2>&1; then \
-    echo "Error: $(LATEX) not found on PATH" >&2; \
-    exit 1; \
-  fi; \
-  stem="$*"; \
-  outdir="$(@D)"; \
-  tex="$<"; \
-  # First run
-  $(LATEX) -halt-on-error -interaction=nonstopmode --jobname="$$stem" -output-directory="$$outdir" "$$tex" >  "$$stem.log" 2>&1; \
-  # Second run (for TOC / refs)
-  $(LATEX) -halt-on-error -interaction=nonstopmode --jobname="$$stem" -output-directory="$$outdir" "$$tex" >> "$$stem.log" 2>&1; \
-  # Move log to hidden file with explicit naming
-  mv "$$stem.log" ".$$stem.tex_file_path.log"; \
-  # Clean up aux files in outdir
-  rm -f "$$outdir"/*.aux; \
-  # Sanity check: did we get the PDF?
-  if [ ! -f "$@" ]; then \
-    echo "Error: expected output $@ not found" >&2; \
-    exit 1; \
-  fi
-endef
-endif
+LATEX ?= xelatex
 
-# Generic rule: any .tex in this directory builds a same-named .pdf
 %.pdf: %.tex
-	$(RUN_LATEX)
+	@echo "Calling $(LATEX) on $< ..."
+	@set -e; \
+	  if ! command -v $(LATEX) >/dev/null 2>&1; then \
+	    echo "Error: $(LATEX) not found on PATH" >&2; \
+	    exit 1; \
+	  fi; \
+	  stem="$*"; \
+	  outdir="$(@D)"; \
+	  if [ -z "$$outdir" ] || [ "$$outdir" = "." ]; then \
+	    outdir="."; \
+	  fi; \
+	  tex="$<"; \
+	  $(LATEX) -halt-on-error -interaction=nonstopmode \
+	           --jobname="$$stem" -output-directory="$$outdir" \
+	           "$$tex" >  "$$stem.log" 2>&1; \
+	  $(LATEX) -halt-on-error -interaction=nonstopmode \
+	           --jobname="$$stem" -output-directory="$$outdir" \
+	           "$$tex" >> "$$stem.log" 2>&1; \
+	  mv "$$stem.log" ".$$stem.tex_file_path.log" || true; \
+	  rm -f "$$outdir"/*.aux "$$outdir"/*.toc "$$outdir"/*.out "$$outdir"/*.xdv || true; \
+	  if [ ! -f "$@" ]; then \
+	    echo "Error: expected output $@ not found" >&2; \
+	    exit 1; \
+	  fi
 
 # --------------------------------------------------
 # Score dependencies

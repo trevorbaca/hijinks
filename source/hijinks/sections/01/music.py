@@ -161,37 +161,11 @@ def persist_score(score, environment):
     )
 
 
-def make_layout(environment):
-    breaks = baca.layout.Breaks(
-        baca.layout.Page(
-            1,
-            baca.layout.System(1, y_offset=30, distances=(4, 20, 23)),
-            baca.layout.System(6, y_offset=95, distances=(4, 20, 23)),
-            baca.layout.System(11, y_offset=162.5, distances=(4, 20, 23)),
-        ),
-    )
-    return baca.section.make_layout_score(
-        breaks,
-        environment.metadata["time_signatures"],
-        fermata_measure_numbers=environment.metadata.get("fermata_measure_numbers", []),
-        first_measure_number=environment.first_measure_number,
-        has_anchor_skip=environment.metadata["has_anchor_skip"],
-    )
-
-
 def main():
     environment = baca.build.read_environment(__file__, baca.build.argv())
     if environment.score():
         score = make_score(environment.timing)
         persist_score(score, environment)
-    if environment.arguments.layout:
-        lilypond_file, bol_measure_numbers = make_layout(environment)
-        baca.build.persist_section_layout_ily(
-            environment.section_directory, lilypond_file
-        )
-        baca.build.write_bol_metadata(
-            environment.section_directory, bol_measure_numbers
-        )
 
 
 if __name__ == "__main__":

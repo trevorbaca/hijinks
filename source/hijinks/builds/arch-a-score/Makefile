@@ -18,8 +18,7 @@ BLANK_TEXES  := blank.tex
 MUSIC_LY     := music.ly
 
 # Layout generation
-LAYOUT_PY    := layout.py
-LAYOUT_OUT   := layout.ily
+LAYOUT_ILY   := layout.ily
 
 # Pull in shared build logic for this score
 include ../../make/score-build.mk

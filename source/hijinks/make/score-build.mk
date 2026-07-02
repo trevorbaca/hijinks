@@ -8,7 +8,6 @@
 #   - provides rules for:
 #       *.tex → *.pdf  (via LATEX, run twice, log handling, aux cleanup)
 #       music.ly → music.pdf (via LILYPOND, depending on layout.ily)
-#       layout.py → layout.ily (via PYTHON)
 
 # --------------------------------------------------
 # Tools (override from env or per-build Makefiles)
@@ -18,9 +17,7 @@ PYTHON         ?= python3
 LILYPOND       ?= lilypond
 LILYPOND_FLAGS ?= --include=/Users/trevor/Repositories/Projects/abjad/source/abjad/scm  --include=/Users/trevor/Repositories/Projects/baca/source/baca/scm
 LATEX          ?= xelatex
-
-# layout.py → layout.ily by default
-LAYOUT_OUT     ?= layout.ily
+LAYOUT_ILY     ?= layout.ily
 
 # --------------------------------------------------
 # Phony targets
@@ -36,7 +33,6 @@ LAYOUT_OUT     ?= layout.ily
 # COVER_TEXES  := front-cover.tex back-cover.tex
 # BLANK_TEXES  := blank.tex
 # MUSIC_LY     := music.ly
-# LAYOUT_PY    := layout.py
 
 SCORE_PDF  := $(SCORE_TEX:.tex=.pdf)
 
@@ -74,7 +70,7 @@ blank: $(BLANK_PDFS)
 music: $(MUSIC_PDF)
 
 # Layout include
-layout: $(LAYOUT_OUT)
+layout: $(LAYOUT_ILY)
 
 help:
 	@echo "Build \"$(BUILD_NAME)\""
@@ -91,25 +87,12 @@ endif
 ifneq ($(strip $(MUSIC_PDF)),)
 	@echo "  music    - build: $(MUSIC_PDF)"
 endif
-ifneq ($(strip $(LAYOUT_PY)),)
-	@echo "  layout   - regenerate $(LAYOUT_OUT) from $(LAYOUT_PY)"
-endif
 	@echo "  clean    - remove PDFs and auxiliary files"
 	@echo
 	@echo "Variables (override on the command line if needed):"
 	@echo "  LATEX    = $(LATEX)"
 	@echo "  LILYPOND = $(LILYPOND)"
 	@echo "  PYTHON   = $(PYTHON)"
-
-# --------------------------------------------------
-# Layout: layout.py → layout.ily (or other LAYOUT_OUT)
-# --------------------------------------------------
-
-# Only if LAYOUT_PY is specified by the build.
-ifneq ($(strip $(LAYOUT_PY)),)
-$(LAYOUT_OUT): $(LAYOUT_PY)
-	$(PYTHON) $(LAYOUT_PY)
-endif
 
 # --------------------------------------------------
 # LilyPond: music.ly → music.pdf
@@ -121,7 +104,7 @@ MUSIC_PDF  := $(MUSIC_LY:.ly=.pdf)
 
 music: $(MUSIC_PDF)
 
-$(MUSIC_PDF): $(MUSIC_LY) $(LAYOUT_OUT)
+$(MUSIC_PDF): $(MUSIC_LY) $(LAYOUT_ILY)
 	@echo "Calling LilyPond on $< ..."
 	@set -e; \
 	  if ! command -v $(LILYPOND) >/dev/null 2>&1; then \
